@@ -1,13 +1,13 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>Add products</title>
+<title>Edit products</title>
 </head>
 <body>
 
-<form action='../Product/add' method='POST' align='center'>
-<h2>Add product</h2>
-<p>Name : <input type='text' name='name' /></p>
+<form action='../Product/edit' method='POST' align='center'>
+<h2>Edit product</h2>
+<p>Product : <input type='text' name='name' /></p>
 <p>Price : <input type='text' name='price' /></p>
 <p>Amount : <input type='text' name='amount' /></p><br />
 <input type="submit" value="Ok" />
