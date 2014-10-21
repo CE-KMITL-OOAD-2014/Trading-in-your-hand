@@ -15,7 +15,7 @@
   <section id="login">
     <div class="container">
       <div class="row">
-        <div class="col-xs-4">
+        <div class="col-xs-6">
         		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -55,7 +55,7 @@
       </a>
     </div>
         </div>
-        <div class="col-xs-4"></div>
+        <div class="col-xs-2"></div>
         <div class="col-xs-4">
           <div class="form-wrap">
             <h1>Log in </h1>
