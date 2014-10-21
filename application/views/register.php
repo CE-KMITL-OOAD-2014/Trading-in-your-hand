@@ -90,11 +90,9 @@
 			<h2>Please Sign Up <small>It's free and always will be.</small></h2>
 			<hr class="colorgraph">
 			<div class="row">
-					<div class="col-xs-12 col-sm-6 col-md-6">
 					<div class="form-group">
 						<input type="text" name="id" id="id" class="form-control input-lg" placeholder="username" tabindex="1" required autofocus>
 					</div>
-				</div>
                 	<div class="col-xs-12 col-sm-6 col-md-6">
 					<div class="form-group">
 						<input type="text" name="pass" id="pass" class="form-control input-lg" placeholder="Password" tabindex="2" required autofocus>
