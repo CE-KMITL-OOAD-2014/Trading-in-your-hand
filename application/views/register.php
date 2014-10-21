@@ -93,11 +93,6 @@
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="text" name="pass" id="pass" class="form-control input-lg" placeholder="Password" tabindex="2" required autofocus>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="form-group">
                 <input type="text" name="name" id="name" class="form-control input-lg" placeholder="First Name" tabindex="3" required autofocus>
               </div>
             </div>
