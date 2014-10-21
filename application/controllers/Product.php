@@ -10,7 +10,7 @@
 			$price = $_POST["price"];
 			$amount = $_POST["amount"];
 			$username = "admin"; // Get username from session
-			$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'owner'=>$username);
+			$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$username);
 			$this->load->model('Product_model');	
 			if($this->Product_model->add_product($data)){
 				echo"<h1>Your product has added to database</h1><br />";
