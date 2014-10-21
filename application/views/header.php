@@ -1,54 +1,3 @@
-<style>
-body{background:#E1E1E1;
-}
-.top-menu{
-	background:#666;
-	border:thick solid;
-	border-radius:5px;
-	border-top:none;
-	border-left:none;
-	border-right:none;
-	}
-.top-menu ul{
-
-	height:33px;
-	background:#666;
-	display:block;
-	margin-top:0;
-	list-style:none;
-	margin-left:50%;
-	margin-top:auto;
-	margin-right:auto;
-	border-left:thin;
-	border-right:thin;
-	color:white;
-	}
-
-.top-menu ul li a{
-	padding-left:5%;
-	padding-right:5%;
-	padding-top:14px;
-	padding-bottom:14px;
-	float:left;
-	text-decoration:none!important;
-	color:inherit;
-	border:1px solid;
-	border-top:none;
-	border-bottom:none;
-	border-right:none;
-	border-color:#CCC;
-	}
-.top-menu ul li a:hover{
-	background:#999;
-	color:#666;
-	}
-.top-menu ul li form{
-	float:left;
-	margin-top:2.2%;
-	margin-left:5%;
-	width:5%;	
-	}
-</style>
 <html>
   <head>
     <meta charset="utf-8">
@@ -58,41 +7,52 @@ body{background:#E1E1E1;
     <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-        <div class="top-menu">
-            <ul>
-                <li><a href='<? echo"".$menuone; ?>'>Home</a></li>
-                <li><a href='#'><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"></button>product</a></li>
-                <li><a href='<? echo"".$menuthree; ?>'>About</a></li>
-                
-                <li><img src="Search.png" style="height:50%; width:auto; magin-top:2.2%"/></li>
-            </ul>
-        </div>
-        
-        
-        
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+    	<nav class="navbar navbar-inverse" role="navigation" style="border-radius:0 !important; background-color:#666 !important">
+        	  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
     </div>
-  </div>
-</div>
 
-
-
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+       
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+         <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+        </nav>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-        </body>
+  </body>
 </html>
