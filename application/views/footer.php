@@ -11,8 +11,8 @@
 <div class="container">
   <div class="navbar navbar-fixed-bottom">
       <div class="span12">
-        <div class="col-md-9"></div>
-        <div class="col-md-2">
+        <div class="col-md-8"></div>
+        <div class="col-md-3">
           <p class="muted">© 2013 Company Name. All rights reserved</p>
         </div>
         <div class="col-md-1"></div>
