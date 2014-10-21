@@ -48,7 +48,7 @@
           </div>
         </div>
       </div>
-
+		<div class="col-xs-2"></div>
       <!-- Controls -->
       <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
