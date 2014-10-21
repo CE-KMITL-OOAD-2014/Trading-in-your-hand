@@ -13,7 +13,7 @@
       <div class="span12">
         <div class="span7"></div>
         <div class="span4">
-          <p class="muted pull-right">© 2013 Company Name. All rights reserved</p>
+          <p class="muted">© 2013 Company Name. All rights reserved</p>
         </div>
         <div class="span1"></div>
       </div>
