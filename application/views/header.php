@@ -6,7 +6,7 @@
     <title>Bootstrap 101 Template</title>
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
   </head>
-  <body>
+  <body><div style="background-color:#CCC">
     	<nav class="navbar navbar-inverse" role="navigation" style="border-radius:0 !important; background-color:#666 !important">
         	  <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -54,5 +54,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../js/bootstrap.min.js"></script>
-  </body>
+  </div></body>
 </html>
