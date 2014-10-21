@@ -1,5 +1,8 @@
 <?
 class member extends CI_Controller {
+	private function check($chk){ //Check that call from pages class
+		
+	}
 	public function register(){
 			$id = $_POST["id"];
 			$pass = md5($_POST["pass"]);
@@ -11,8 +14,8 @@ class member extends CI_Controller {
 			$this->member_model->register($data);
 		}
 	public function login(){
-			$id = $_POST["id"];
-			$pass = $_POST["pass"];
+			$id = $_POST["username"];
+			$pass = $_POST["password"];
 			$check = $this->db->where('id',$id)->where('pass',md5($pass))->count_all_results('member');
 			if($check>0){
 					echo"Success";

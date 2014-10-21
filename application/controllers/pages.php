@@ -18,5 +18,12 @@ class pages extends CI_Controller {
 	public function editproduct(){
 		$this->load->view('edit_product.php');	
 	}
+	public function displayproduct(){
+		$username = "admin"; // Get username from session
+		$this->load->model('Product_model');	
+		$data = $this->Product_model->display_product();
+		$data_send['data'] = $data;
+		$this->load->view('display_product.php',$data_send);
+	}
 }
 ?>
