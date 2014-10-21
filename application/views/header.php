@@ -25,7 +25,8 @@
       <ul class="nav navbar-nav">
        
       </ul>
-      <div class="input-group stylish-input-group" style="width:20%">
+     <div id="imaginary_container" style="width:20%"> 
+                <div class="input-group stylish-input-group">
                     <input type="text" class="form-control"  placeholder="Search" >
                     <span class="input-group-addon">
                         <button type="submit">
@@ -33,6 +34,7 @@
                         </button>  
                     </span>
                 </div>
+            </div>
       <ul class="nav navbar-nav navbar-right">
          <li class="active"><a href="#">Promotion</a></li>
         <li><a href="#">About</a></li>
