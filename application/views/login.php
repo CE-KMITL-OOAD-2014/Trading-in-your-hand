@@ -18,9 +18,9 @@
    <section id="login">
     <div class="container">
     	<div class="row">
-        	    <div class="col-xs-4"></div>
-                <div class="col-xs-4"></div>
-                <div class="col-xs-4">
+        	    <div class="col-xs-6"></div>
+                <div class="col-xs-6"></div>
+                <div class="col-xs-6">
                 	<div class="form-wrap">
                 <h1>Log in </h1>
                     <form role="form" action="../../member/login" method="post" id="login-form" autocomplete="off">
