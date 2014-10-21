@@ -21,7 +21,7 @@
     	    <div class="col-xs-12">
         	    <div class="form-wrap">
                 <h1>Log in </h1>
-                    <form role="form" action="../member/login" method="post" id="login-form" autocomplete="off">
+                    <form role="form" action="../../member/login" method="post" id="login-form" autocomplete="off">
                         <div class="form-group">
                             <label for="username" class="sr-only">username</label>
                             <input type="username" name="username" id="username" class="form-control" placeholder="User name">
