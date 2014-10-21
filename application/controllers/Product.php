@@ -1,6 +1,6 @@
 <?php
 	class Product extends CI_Controller{
-		private $username = "admin"; // Get username from session
+		
 		private function check($chk){ //Check that call from pages class
 		
 		}
@@ -8,6 +8,7 @@
 			$name = $_POST["name"];
 			$price = $_POST["price"];
 			$amount = $_POST["amount"];
+			$username = "admin"; // Get username from session
 			$data = array('name'=>$name,'price'=>$price,'amount'=>$amount,'owner'=>$username);
 			$this->load->model('Product_model');	
 			if($this->Product_model->add_product($data)){
