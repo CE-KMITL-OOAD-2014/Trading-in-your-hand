@@ -25,7 +25,7 @@
       <ul class="nav navbar-nav">
        
       </ul>
-      <div class="input-group stylish-input-group">
+      <div class="input-group stylish-input-group" style="width:20%">
                     <input type="text" class="form-control"  placeholder="Search" >
                     <span class="input-group-addon">
                         <button type="submit">
