@@ -5,6 +5,7 @@ class pages extends CI_Controller {
 	{
 		$this->load->helper('body.php');
 		$this->load->view('header.php');
+		$this->load->view('space.php');
 		$this->load->view('home.php');
 		$this->load->view('footer.php');
 	}
@@ -12,6 +13,7 @@ class pages extends CI_Controller {
 	{
 		$this->load->helper('body.php');
 		$this->load->view('header.php');
+		$this->load->view('space.php');
 		$this->load->view('register.php');
 		$this->load->view('footer.php');
 	}
@@ -25,12 +27,14 @@ class pages extends CI_Controller {
 	public function addproduct(){
 		$this->load->helper('body.php');
 		$this->load->view('header.php');
+		$this->load->view('space.php');
 		$this->load->view('add_product.php');	
 		$this->load->view('footer.php');
 	}
 	public function editproduct(){
 		$this->load->helper('body.php');
 		$this->load->view('header.php');
+		$this->load->view('space.php');
 		$this->load->view('edit_product.php');
 		$this->load->view('footer.php');	
 	}
@@ -41,6 +45,7 @@ class pages extends CI_Controller {
 		$data_send['data'] = $data;
 		$this->load->helper('body.php');
 		$this->load->view('header.php');
+		$this->load->view('space.php');
 		$this->load->view('display_product.php',$data_send);
 		$this->load->view('footer.php');
 	}
