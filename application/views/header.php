@@ -41,29 +41,6 @@
         </ul>
       </div>
       <!-- /.navbar-collapse --> 
-      <div class="row">
-        <div class="col-xs-4"></div>
-        <div class="col-xs-4"></div>
-        <div class="col-xs-4">
-          <div class="form-wrap">
-            <h1>Log in </h1>
-            <form role="form" action="../../member/login" method="post" id="login-form" autocomplete="off">
-              <div class="form-group">
-                <label for="username" class="sr-only">username</label>
-                <input type="username" name="username" id="username" class="form-control" placeholder="User name">
-              </div>
-              <div class="form-group">
-                <label for="key" class="sr-only">Password</label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Password">
-              </div>
-              <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" style="background-color:#0CF; 					color:#FFF" value="Log in">
-            </form>
-            <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a><br/>
-            <a >
-            <hr>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- /.container-fluid --> 
   </nav>
