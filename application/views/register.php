@@ -105,11 +105,9 @@
           <div class="form-group">
             <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="5" required autofocus>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-12">
               <div class="form-group">
               		 <textarea rows="3" class="form-control" placeholder="Address" required autofocus></textarea>
               </div>
-           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
