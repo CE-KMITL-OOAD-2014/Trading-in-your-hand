@@ -18,6 +18,7 @@ class pages extends CI_Controller {
 	public function login(){
 		$this->load->helper('body.php');
 		$this->load->view('header.php');
+		$this->load->view('space.php');
 		$this->load->view('login.php');	
 		$this->load->view('footer.php');
 	}
