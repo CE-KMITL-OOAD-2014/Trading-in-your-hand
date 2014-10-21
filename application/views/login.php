@@ -23,7 +23,7 @@
             <form role="form" action="../../member/login" method="post" id="login-form" autocomplete="off">
               <div class="form-group">
                 <label for="username" class="sr-only">username</label>
-                <input type="username" name="username" id="username" class="form-control" placeholder="User name">
+                <input type="username" name="username" id="username" class="form-control" placeholder="User name" required autofocus>
               </div>
               <div class="form-group">
                 <label for="key" class="sr-only">Password</label>
