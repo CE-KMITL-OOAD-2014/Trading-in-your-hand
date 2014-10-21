@@ -11,11 +11,11 @@
 <div class="container">
   <div class="navbar navbar-fixed-bottom">
       <div class="span12">
-        <div class="span7"></div>
-        <div class="span4">
+        <div class="col-md-9"></div>
+        <div class="col-md-2">
           <p class="muted">© 2013 Company Name. All rights reserved</p>
         </div>
-        <div class="span1"></div>
+        <div class="col-md-1"></div>
       </div>
   </div>
 </div>
