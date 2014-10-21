@@ -27,9 +27,9 @@
               </div>
               <div class="form-group">
                 <label for="key" class="sr-only">Password</label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Password" required autofocus>
-              </div>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Password" required autofocus>   
               <hr class="colorgraph"><input type="submit" value="Log in" class="btn btn-primary btn-block btn-lg" tabindex="7"></hr>
+              </div>
             </form>
             <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
             <hr>
