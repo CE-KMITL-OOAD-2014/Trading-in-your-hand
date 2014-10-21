@@ -3,7 +3,7 @@
 class pages extends CI_Controller {
 	public function index()
 	{
-		$this->load->view('header.php');
+		$this->load->view('header');
 		$this->load->view('home.php');
 	}
 	public function register()
