@@ -6,27 +6,32 @@ class pages extends CI_Controller {
 		$this->load->helper('body.php');
 		$this->load->view('header.php');
 		$this->load->view('home.php');
+		$this->load->view('footer.php');
 	}
 	public function register()
 	{
 		$this->load->helper('body.php');
 		$this->load->view('header.php');
 		$this->load->view('register.php');
+		$this->load->view('footer.php');
 	}
 	public function login(){
 		$this->load->helper('body.php');
 		$this->load->view('header.php');
 		$this->load->view('login.php');	
+		$this->load->view('footer.php');
 	}
 	public function addproduct(){
 		$this->load->helper('body.php');
 		$this->load->view('header.php');
 		$this->load->view('add_product.php');	
+		$this->load->view('footer.php');
 	}
 	public function editproduct(){
 		$this->load->helper('body.php');
 		$this->load->view('header.php');
-		$this->load->view('edit_product.php');	
+		$this->load->view('edit_product.php');
+		$this->load->view('footer.php');	
 	}
 	public function displayproduct(){
 		$username = "admin"; // Get username from session
@@ -36,6 +41,7 @@ class pages extends CI_Controller {
 		$this->load->helper('body.php');
 		$this->load->view('header.php');
 		$this->load->view('display_product.php',$data_send);
+		$this->load->view('footer.php');
 	}
 }
 ?>
