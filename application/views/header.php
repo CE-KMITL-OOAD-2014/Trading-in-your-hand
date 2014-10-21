@@ -11,7 +11,7 @@ body{background:#E1E1E1;
 	}
 .top-menu ul{
 
-	height:5%;
+	height:33px;
 	background:#666;
 	display:block;
 	margin-top:0;
@@ -27,8 +27,8 @@ body{background:#E1E1E1;
 .top-menu ul li a{
 	padding-left:5%;
 	padding-right:5%;
-	padding-top:2.2%;
-	padding-bottom:2.2%;
+	padding-top:14px;
+	padding-bottom:14px;
 	float:left;
 	text-decoration:none!important;
 	color:inherit;
