@@ -1,7 +1,7 @@
 <html>
 <head><title>Untitled Document</title>
 </head>
-<body>
+<body><div class="back">
 <?	
 	$point = 1;
 	foreach($data->result_array() as $row[$point]){
@@ -10,5 +10,6 @@
 	}
 	echo"<a href='../Pages'>Back</a>";
 ?>
+</div>
 </body>
 </html>

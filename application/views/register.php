@@ -3,6 +3,7 @@
 <title>Register</title>
 </head>
 <body>
+<div class="back">
 <form action="../member/register" method="post" align="center"> 
 <h3>Register</h3><br/>
 <p>id : <input type="text" name="id"/></p>
@@ -12,5 +13,6 @@
 <p>address : <input type="text" name="address"/></p></br>
 <input type="submit" value="OK"/>
 </form>
+</div>
 </body>
 </html>
