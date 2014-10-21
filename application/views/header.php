@@ -61,7 +61,7 @@ body{background:#E1E1E1;
         <div class="top-menu">
             <ul>
                 <li><a href='<? echo"".$menuone; ?>'>Home</a></li>
-                <li><a href='<? echo"".$menutwo; ?>'><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"></button>product</a></li>
+                <li><a href='#'><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"></button>product</a></li>
                 <li><a href='<? echo"".$menuthree; ?>'>About</a></li>
                 
                 <li><img src="Search.png" style="height:50%; width:auto; magin-top:2.2%"/></li>
