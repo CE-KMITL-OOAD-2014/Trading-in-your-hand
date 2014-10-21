@@ -19,7 +19,10 @@
     <div class="container">
     	<div class="row">
     	    <div class="col-xs-12">
-        	    <div class="form-wrap">
+        	    <div class="col-xs-3"></div>
+                <div class="col-xs-3"></div>
+                <div class="col-xs-3">
+                	<div class="form-wrap">
                 <h1>Log in </h1>
                     <form role="form" action="../../member/login" method="post" id="login-form" autocomplete="off">
                         <div class="form-group">
@@ -36,6 +39,7 @@
                     <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
                     <hr>
         	    </div>
+                </div>
     		</div> <!-- /.col-xs-12 -->
     	</div> <!-- /.row -->
     </div> <!-- /.container -->
