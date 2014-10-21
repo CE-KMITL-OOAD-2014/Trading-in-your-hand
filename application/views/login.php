@@ -16,8 +16,8 @@
     <div class="container">
       <div class="row">
         
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8 col-md-4">
+        <div class="col-xs-2 col-md-3"></div>
+        <div class="col-xs-8 col-md-6">
           <div class="form-wrap">
             <h1>Log in </h1>
             <form role="form" action="../../member/login" method="post" id="login-form" autocomplete="off">
