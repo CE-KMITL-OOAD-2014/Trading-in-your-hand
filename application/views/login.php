@@ -29,7 +29,7 @@
                 <label for="key" class="sr-only">Password</label>
                 <input type="password" name="password" id="password" class="form-control" placeholder="Password" required autofocus>
               </div>
-              <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" style="background-color:#0CF; 					color:#FFF" value="Log in">
+              <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" color:#FFF" value="Log in">
             </form>
             <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
             <hr>
