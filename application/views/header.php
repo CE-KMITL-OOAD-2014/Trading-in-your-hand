@@ -25,7 +25,7 @@
           <button type="submit" class="btn btn-default">Search</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Home</a></li>
+          <li><a href="../pages">Home</a></li>
           <li><a href="#">Promotion</a></li>
           <li class="active"><a href="#">About</a></li>
         </ul>
