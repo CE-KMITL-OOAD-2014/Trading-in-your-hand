@@ -18,7 +18,7 @@
   <section id="login">
     <div class="container">
       <div class="row">
-        <div class="col-xs-6">
+        <div class="col-xs-4">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -48,7 +48,6 @@
           </div>
         </div>
       </div>
-		<div class="col-xs-2"></div>
       <!-- Controls -->
       <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
