@@ -3,9 +3,9 @@
 		<title>Home</title>
 	</head>
 	<body>
-		<a href="../index.php/pages/register">Register<br/></a>
-        <a href="../index.php/pages/login">login<br/></a>
-        <a href="../index.php/pages/addproduct">Add product<br/></a>
-        <a href="../index.php/pages/displayproduct">Display product<br/></a>
+		<a href="../pages/register">Register<br/></a>
+        <a href="../pages/login">login<br/></a>
+        <a href="../pages/addproduct">Add product<br/></a>
+        <a href="../pages/displayproduct">Display product<br/></a>
 	</body>
 </html>
