@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container">
-  <div class="navbar navbar-fixed-bottom">
+  <div class="navbar navbar-bottom">
       <div class="span12">
         <div class="col-md-8"></div>
         <div class="col-md-3">
