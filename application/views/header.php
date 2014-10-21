@@ -26,8 +26,8 @@
         </form>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="../pages">Home</a></li>
-          <li><a href="#">Promotion</a></li>
-          <li class="active"><a href="#">About</a></li>
+          <li class="active"><a href="#">Promotion</a></li>
+          <li><a href="#">About</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse --> 
