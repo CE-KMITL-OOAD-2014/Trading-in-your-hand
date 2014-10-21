@@ -1,7 +1,7 @@
 <?php
 	class Product_model extends CI_Model{		
 		function add_product($pdata){
-			$check = $this->db->where('name',$pdata['name'])->where('owner',$username)->count_all_results('product');
+			$check = $this->db->where('name',$pdata['name'])->where('owner',$pdata['username'])->count_all_results('product');
 			if($check == 0){
 				$query = $this->db->insert('product',$pdata);
 				return 1;
