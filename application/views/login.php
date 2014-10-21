@@ -27,7 +27,7 @@
               </div>
               <div class="form-group">
                 <label for="key" class="sr-only">Password</label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                <input type="password" name="password" id="password" class="form-control" placeholder="Password" required autofocus>
               </div>
               <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" style="background-color:#0CF; 					color:#FFF" value="Log in">
             </form>
