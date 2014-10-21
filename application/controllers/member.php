@@ -18,8 +18,10 @@ class member extends CI_Controller {
 			$pass = $_POST["password"];
 			$check = $this->db->where('id',$id)->where('pass',md5($pass))->count_all_results('member');
 			if($check>0){
-					echo"Success";
+				echo"Success";
 			}
+			else
+				echo"Failed";
 		}
 	public function logout(){
 			
