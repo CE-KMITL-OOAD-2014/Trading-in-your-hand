@@ -10,7 +10,6 @@
 <body>
 <div class="container">
   <div class="navbar navbar-fixed-bottom">
-    <div class="row-fluid" >
       <div class="span12">
         <div class="span7"></div>
         <div class="span4">
@@ -18,7 +17,6 @@
         </div>
         <div class="span1"></div>
       </div>
-    </div>
   </div>
 </div>
 
