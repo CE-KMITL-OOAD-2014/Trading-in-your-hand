@@ -10,8 +10,9 @@
 <body>
 <div class="container">
   <div class="row-fluid">
+  <div class="span12">
     <div class="navbar navbar-fixed-bottom">
-      <div class="span12">
+      
         <div class="span8"> <a href="#">Terms of Service</a> <a href="#">Privacy</a> <a href="#">Security</a> </div>
         <div class="span4">
           <p class="muted pull-right">© 2013 Company Name. All rights reserved</p>
