@@ -3,9 +3,9 @@
 		<title>Home</title>
 	</head>
 	<body>
-		<a href="../register">Register<br/></a>
-        <a href="../login">login<br/></a>
-        <a href="../addproduct">Add product<br/></a>
-        <a href="../displayproduct">Display product<br/></a>
+		<a href="../pages/register">Register<br/></a>
+        <a href="../pages/login">login<br/></a>
+        <a href="../pages/addproduct">Add product<br/></a>
+        <a href="../pages/displayproduct">Display product<br/></a>
 	</body>
 </html>
