@@ -30,7 +30,7 @@
                 <input type="password" name="password" id="password" class="form-control" placeholder="Password" required autofocus>
               </div>
               <div class="form-group">	
-                <input type="submit" value="Log in" class="btn btn-primary btn-block btn-lg" tabindex="7">
+                <input type="submit" value="Log in" class="btn btn-primary btn-block btn-lg" tabindex="3">
               </div>
             </form>
             <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
