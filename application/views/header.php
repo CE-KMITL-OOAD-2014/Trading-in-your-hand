@@ -25,12 +25,14 @@
       <ul class="nav navbar-nav">
        
       </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Product name">
-        </div>
-        <button type="submit" class="btn btn-default">Search</button>
-      </form>
+      <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  placeholder="Search" >
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>  
+                    </span>
+                </div>
       <ul class="nav navbar-nav navbar-right">
          <li class="active"><a href="#">Promotion</a></li>
         <li><a href="#">About</a></li>
