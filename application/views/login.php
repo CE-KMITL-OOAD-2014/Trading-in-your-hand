@@ -17,8 +17,8 @@
         
         <div class="col-xs-2 col-md-3"></div>
         <div class="col-xs-8 col-md-6">
-        	<img src="../../images/account.png" align="middle"/><br/>
           <div class="form-wrap">
+            <h1>Log in </h1>
             <form role="form" action="../../member/login" method="post" id="login-form" autocomplete="off">
               <div class="form-group">
                 <label for="username" class="sr-only">username</label>
