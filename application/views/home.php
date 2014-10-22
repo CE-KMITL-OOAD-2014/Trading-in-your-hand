@@ -12,7 +12,7 @@
   <section class="section-white">
     <div class="container">
 
-      <div class="col-md-12">
+      <div class="col-md-12 col-xs-12">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> 
           <!-- Indicators -->
           <ol class="carousel-indicators">
