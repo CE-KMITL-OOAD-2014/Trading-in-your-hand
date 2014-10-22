@@ -6,7 +6,7 @@
 <title>Bootstrap 101 Template</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body><div class="back">
 <br/>
 <br/>
 <section class="section-white">
@@ -50,5 +50,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/bootstrap.min.js"></script>
+</div>
 </body>
 </html>
