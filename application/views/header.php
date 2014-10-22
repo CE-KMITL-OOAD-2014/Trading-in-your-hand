@@ -8,8 +8,8 @@
 </head>
 <body>
 <div style="background-color:#CCC">
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="border-radius:0 !important; background-color:#666 !important; border:thick !important; border-color:#000 !important;">
-    <div class="container-fluid"> 
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="border-radius:0 !important; background-color:#666 !important;">
+    <div class="container-fluid" style=" border:thick !important; border-color:#000 !important;"> 
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
@@ -29,7 +29,7 @@
           <li class="active"><a href="#">Promotion</a></li>
           <li><a href="../pages/register">Register</a></li>
           <li><a href="../pages/login">Log in</a></li>
-          <li><a href="../pages/about">Aboutt</a></li>
+          <li><a href="../pages/about">About</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse --> 
