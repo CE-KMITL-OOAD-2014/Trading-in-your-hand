@@ -27,7 +27,9 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="../pages">Home</a></li>
           <li class="active"><a href="#">Promotion</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="../pages/register">Register</a></li>
+          <li><a href="../pages/login">Log in</a></li>
+          <li><a href="../pages/about">About</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse --> 
