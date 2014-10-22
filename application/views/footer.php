@@ -8,6 +8,8 @@
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<br/>
+<br/>
 <div class="container">
   <div class="navbar navbar-bottom">
       <div class="span12">
