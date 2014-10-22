@@ -4,26 +4,26 @@ class pages extends CI_Controller {
 	public function index()
 	{	$data['page'] = "home";
 		$this->load->helper('body.php');
-		$this->load->view('header.php');
+		$this->load->view('header.php',$data);
 		$this->load->view('space.php');
-		$this->load->view('home.php',$data);
+		$this->load->view('home.php');
 		$this->load->view('footer.php');
 	}
 	public function register()
 	{
 		$data['page'] = "register";
 		$this->load->helper('body.php');
-		$this->load->view('header.php');
+		$this->load->view('header.php',$data);
 		$this->load->view('space.php');
-		$this->load->view('register.php',$data);
+		$this->load->view('register.php');
 		$this->load->view('footer.php');
 	}
 	public function login(){
 		$data['page'] = "login";
 		$this->load->helper('body.php');
-		$this->load->view('header.php');
+		$this->load->view('header.php',$data);
 		$this->load->view('space.php');
-		$this->load->view('login.php',$data);	
+		$this->load->view('login.php');	
 		$this->load->view('footer.php');
 	}
 	public function addproduct(){
