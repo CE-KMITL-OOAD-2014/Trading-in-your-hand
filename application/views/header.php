@@ -25,11 +25,27 @@
           <button type="submit" class="btn btn-default">Search</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="../pages">Home</a></li>
-          <li class="active"><a href="#">Promotion</a></li>
-          <li><a href="../pages/register">Register</a></li>
-          <li><a href="../pages/login">Log in</a></li>
-          <li><a href="../pages/about">Aboutt</a></li>
+          <? if($page=="home")
+          		echo"<li class='active'><a href='#'>Home</a></li>";
+          	else
+				echo"<li><a href='../pages'>Home</a></li>";
+			if($page=="promotion")
+          		echo"<li class='active'><a href='#'>Promotion</a></li>";
+          	else
+				echo"<li><a href='../pages/promotion'>Promotion</a></li>";
+			if($page=="register")
+          		echo"<li class='active'><a href='#'>Register</a></li>";
+          	else
+				echo"<li><a href='../pages/register'>Register</a></li>";
+			if($page=="login")
+          		echo"<li class='active'><a href='#'>Log in</a></li>";
+          	else
+				echo"<li><a href='../pages/login'>Log in</a></li>";
+			if($page=="about")
+          		echo"<li class='active'><a href='#'>About</a></li>";
+          	else
+				echo"<li><a href='../pages/about'>About</a></li>";
+          ?>
         </ul>
       </div>
       <!-- /.navbar-collapse --> 
