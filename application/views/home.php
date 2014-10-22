@@ -25,17 +25,17 @@
           <div class="carousel-inner">
             <div class="item active"> <a href="#"><img src="http://placehold.it/800x400" alt="..."/></a>
               <div class="carousel-caption">
-                <h2>Heading</h2>
+                <h2>Promotion 1</h2>
               </div>
             </div>
             <div class="item"> <a href="#"><img src="http://placehold.it/800x400" alt="..."></a>
               <div class="carousel-caption">
-                <h2>Heading</h2>
+                <h2>Promotion 2</h2>
               </div>
             </div>
             <div class="item"> <a href="#"><img src="http://placehold.it/800x400" alt="..."></a>
               <div class="carousel-caption">
-                <h2>Heading</h2>
+                <h2>Promotion 3</h2>
               </div>
             </div>
           </div>
