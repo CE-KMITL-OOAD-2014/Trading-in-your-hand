@@ -8,7 +8,7 @@
 </head>
 <body>
 <div style="background-color:#CCC">
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="border-radius:0 !important; background-color:#666 !important; border:thick; border-color:#000;">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="border-radius:0 !important; background-color:#666 !important; border:thick !important; border-color:#000 !important;">
     <div class="container-fluid"> 
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -29,7 +29,7 @@
           <li class="active"><a href="#">Promotion</a></li>
           <li><a href="../pages/register">Register</a></li>
           <li><a href="../pages/login">Log in</a></li>
-          <li><a href="../pages/about">About</a></li>
+          <li><a href="../pages/about">Aboutt</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse --> 
