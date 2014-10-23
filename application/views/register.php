@@ -87,35 +87,35 @@
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
               <div class="form-group">
-                <input type="text" name="username" id="username" class="form-control input-lg" placeholder="username" tabindex="1" >
+                <input type="text" name="username" id="username" class="form-control input-lg" placeholder="username" tabindex="1" required autofocus>
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="text" name="name" id="name" class="form-control input-lg" placeholder="First Name" tabindex="3" >
+                <input type="text" name="name" id="name" class="form-control input-lg" placeholder="First Name" tabindex="2" required autofocus>
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="text" name="sname" id="sname" class="form-control input-lg" placeholder="Last Name" tabindex="4" >
+                <input type="text" name="sname" id="sname" class="form-control input-lg" placeholder="Last Name" tabindex="3" required autofocus>
               </div>
             </div>
           </div>
           <div class="form-group">
-            <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="5" >
+            <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4" required autofocus>
           </div>
           <div class="form-group">
-            <textarea rows="3" class="form-control" id="address" name="address" placeholder="Address" style="resize:none" ></textarea>
+            <textarea rows="3" class="form-control" id="address" name="address" placeholder="Address" tabindex="5" style="resize:none" required autofocus></textarea>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="6">
+                <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="6"required autofocus>
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="7">
+                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="7" required autofocus>
               </div>
             </div>
           </div>
