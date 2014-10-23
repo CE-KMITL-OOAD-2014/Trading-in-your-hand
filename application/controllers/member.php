@@ -30,15 +30,21 @@ class member extends CI_Controller {
                    'logged_in' => TRUE
 				);
 				$this->session->set_userdata($newdata);
-				echo"success <a href='../pages'>home</a>";
+				echo"<script language='javascript'>
+    window.location.href = '../pages'
+</script>";
 			}
 			else
-				echo"Failed";
+				echo"<script language='javascript'>
+	alert('Log in success');
+    window.location.href = '../pages';
+</script>";
 		}
 	public function logout(){
 			$this->session->sess_destroy();
 			echo"<script language='javascript'>
-    window.location.href = '../pages'
+	alert('Log in failed');
+    window.location.href = '../pages';
 </script>";
 		}
 
