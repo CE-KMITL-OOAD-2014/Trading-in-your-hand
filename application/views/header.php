@@ -27,19 +27,19 @@ else if($page=="login")
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Product name">
           </div>
-          <div class="from-group">
-            <ul>
-              <li class='dropdown'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>catalogue<span class='caret'></span></a>
-                <ul class='dropdown-menu' role='menu'>
-                  <li><a href='#' style='color:#333;'>Electronics</a></li>
-                  <li><a href='#' style='color:#333;'>Cloths</a></li>
-                  <li><a href='#' style='color:#333;'>Others</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
           <button type="submit" class="btn btn-default">Search</button>
         </form>
+        <ul class="nav navbar-nav">
+          <li class='dropdown'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>catalogue<span class='caret'></span></a>
+            <ul class='dropdown-menu' role='menu'>
+              <li><a href='#' style='color:#333;'>All</a></li>
+              <li class='divider'></li>
+              <li><a href='#' style='color:#333;'>Electronics</a></li>
+              <li><a href='#' style='color:#333;'>Cloths</a></li>
+              <li><a href='#' style='color:#333;'>Others</a></li>
+            </ul>
+          </li>
+        </ul>
         <ul class="nav navbar-nav navbar-right">
           <? if($page=="home")
           		echo"<li class='active'><a href='#'>Home</a></li>";
@@ -66,9 +66,9 @@ else if($page=="login")
 			if($this->session->userdata('username'))
 				echo"<li><li class='dropdown'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Account<span class='caret'></span></a>
             <ul class='dropdown-menu' role='menu'>
-              <li><a href='#' style='color:#333;'>Action</a></li>
-              <li><a href='#' style='color:#333;'>Another action</a></li>
-              <li><a href='#' style='color:#333;'>Something else here</a></li>
+              <li><a href='#' style='color:#333;'>Edit</a></li>
+              <li><a href='#' style='color:#333;'>Message</a></li>
+              <li><a href='#' style='color:#333;'>My product</a></li>
               <li class='divider'></li>
               <li><a href='../member/logout' style='color:#333;'>Log out</a></li>
             </ul>
