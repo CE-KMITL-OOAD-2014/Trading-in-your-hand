@@ -22,9 +22,9 @@ class member extends CI_Controller {
 	public function login(){
 			$data['username'] = $_POST['username'];
 			$data['password'] = $_POST['password'];
-			$this->load->model('member_model');
+			$this->load->model('member_model');	
 			$check = $this->member_model->verifylogin($data);
-			if($check&&isset($_POST["captcha"])&&$_POST["captcha"]!=""&&$_SESSION["code"]==$_POST["captcha"]){
+			if($check){
 				$newdata = array(
                    'username'  => $data['username'],
                    'logged_in' => TRUE

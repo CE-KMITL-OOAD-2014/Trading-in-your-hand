@@ -28,13 +28,6 @@
                 <label for="key" class="sr-only">Password</label>
                 <input type="password" name="password" id="password" class="form-control" placeholder="Password" required autofocus>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="form-group">
-                <label for="captcha" class="sr-only">Captcha</label>
-                <input type="captcha" name="captcha" id="captcha" class="form-control" placeholder="Type the number you see" required autofocus>
-                <img src="../../pages/captcha.php" />
-              </div>
-              </div>
               <div class="form-group">	
                 <input type="submit" value="Log in" class="btn btn-primary btn-block btn-lg" tabindex="3">
               </div>
