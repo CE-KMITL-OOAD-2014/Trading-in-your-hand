@@ -52,6 +52,8 @@ else if($page=="login")
           		echo"<li class='active'><a href='#'>About</a></li>";
           	else
 				echo"<li><a href='../pages/about'>About</a></li>";
+			if($this->session->userdata('username'))
+				echo"<li><a href='../pages/about'>Loged in</a></li>"
           ?>
         </ul>
       </div>
