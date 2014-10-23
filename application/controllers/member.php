@@ -12,6 +12,7 @@ class member extends CI_Controller {
 			$email = $POST["email"];
 			$this->db->select_max('id');
 			$query = $this->db->get('member');
+			echo"success";
 			foreach($query as $row)
 				$id = $row['id']+1;
 			$data = array('id'=>$id,'username'=>$username,'password'=>$password,'name'=>$name,'sname'=>$sname,'address'=>$address,'email'=>$email);
