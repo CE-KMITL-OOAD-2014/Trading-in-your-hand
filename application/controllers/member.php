@@ -36,7 +36,7 @@ class member extends CI_Controller {
 				echo"Failed";
 		}
 	public function logout(){
-			
+			$this->session->sess_destroy();
 		}
 
 }
