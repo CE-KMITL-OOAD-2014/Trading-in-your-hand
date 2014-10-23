@@ -5,7 +5,7 @@ class member extends CI_Controller {
 	}
 	public function register(){
 			$username = $_POST['username'];
-			$pass = md5($_POST['password']);
+			$password = md5($_POST['password']);
 			$name = $_POST['name'];
 			$sname = $_POST['sname'];
 			$address = $_POST['address'];
@@ -14,7 +14,7 @@ class member extends CI_Controller {
 			$this->db->select_max('id');
 			$query = $this->db->get('member');
 			echo"success";
-			foreach($query as $row)
+			foreach($query->result_array() as $row)
 				$id = $row['id']+1;
 			$data = array('id'=>$id,'username'=>$username,'password'=>$password,'name'=>$name,'sname'=>$sname,'address'=>$address,'email'=>$email);
 			$this->member_model->register($data);
