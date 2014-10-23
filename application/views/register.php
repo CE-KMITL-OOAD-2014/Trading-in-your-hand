@@ -81,36 +81,36 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-        <form role="form">
+        <form role="form" action="../member/register">
           <h2>Please Sign Up <small>It's free and always will be.</small></h2>
           <hr class="colorgraph">
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
               <div class="form-group">
-                <input type="text" name="username" id="username" class="form-control input-lg" placeholder="username" tabindex="1" required autofocus>
+                <input type="text" name="username" id="username" class="form-control input-lg" placeholder="username" tabindex="1" >
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="text" name="name" id="name" class="form-control input-lg" placeholder="First Name" tabindex="3" required autofocus>
+                <input type="text" name="name" id="name" class="form-control input-lg" placeholder="First Name" tabindex="3" >
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="text" name="sname" id="sname" class="form-control input-lg" placeholder="Last Name" tabindex="4" required autofocus>
+                <input type="text" name="sname" id="sname" class="form-control input-lg" placeholder="Last Name" tabindex="4" >
               </div>
             </div>
           </div>
           <div class="form-group">
-            <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="5" required autofocus>
+            <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="5" >
           </div>
-              <div class="form-group">
-              		 <textarea rows="3" class="form-control" id="address" name="address" placeholder="Address" style="resize:none" required autofocus ></textarea>
-              </div>
+          <div class="form-group">
+            <textarea rows="3" class="form-control" id="address" name="address" placeholder="Address" style="resize:none" ></textarea>
+          </div>
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="6" required autofocus>
+                <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="6">
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
@@ -134,8 +134,8 @@
             <div class="col-xs-12 col-md-6"><a href="../pages/login" class="btn btn-success btn-block btn-lg">Sign In</a></div>
           </div>
         </form>
-      </div>
-    </div>
+      </div> <!--col md -->
+    </div> <!-- row -->
     <!-- Modal -->
     <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -153,7 +153,7 @@
       <!-- /.modal-dialog --> 
     </div>
     <!-- /.modal --> 
-  </div>
+  </div> <!-- container -->
   
   <!-----------------------------------End_Login----------------------------------------------------------------------------------------------------> 
   
