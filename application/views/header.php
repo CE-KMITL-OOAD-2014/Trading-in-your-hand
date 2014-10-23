@@ -40,11 +40,13 @@ else if($page=="login")
           		echo"<li class='active'><a href='#'>Promotion</a></li>";
           	else
 				echo"<li><a href='../pages/promotion'>Promotion</a></li>";
-			if($page=="register"&&!$this->session->userdata('username'))
+			if(!$this->session->userdata('username'))
+			if($page=="register")
           		echo"<li class='active'><a href='#'>Register</a></li>";
           	else
 				echo"<li><a href='../pages/register'>Register</a></li>";
-			if($page=="login"&&!$this->session->userdata('username'))
+			if(!$this->session->userdata('username'))
+			if($page=="login")
           		echo"<li class='active'><a href='#'>Log in</a></li>";
           	else
 				echo"<li><a href='../pages/login'>Log in</a></li>";
