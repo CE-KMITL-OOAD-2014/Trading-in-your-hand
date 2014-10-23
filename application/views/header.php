@@ -57,11 +57,11 @@ else if($page=="login")
 			if($this->session->userdata('username'))
 				echo"<li><li class='dropdown'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Account<span class='caret'></span></a>
             <ul class='dropdown-menu' role='menu'>
-              <li><a href='#'>Action</a></li>
-              <li><a href='#'>Another action</a></li>
-              <li><a href='#'>Something else here</a></li>
+              <li><a href='#' style='color:#333;'>Action</a></li>
+              <li><a href='#' style='color:#333;'>Another action</a></li>
+              <li><a href='#' style='color:#333;'>Something else here</a></li>
               <li class='divider'></li>
-              <li><a href='../member/logout'>Log out</a></li>
+              <li><a href='../member/logout' style='color:#333;'>Log out</a></li>
             </ul>
           </li></li>"
           ?>
