@@ -4,12 +4,12 @@ class member extends CI_Controller {
 		
 	}
 	public function register(){
-			$username = $_POST["username"];
-			$pass = md5($_POST["password"]);
-			$name = $_POST["name"];
-			$sname = $_POST["sname"];
-			$address = $_POST["address"];
-			$email = $POST["email"];
+			$username = $_POST['username'];
+			$pass = md5($_POST['password']);
+			$name = $_POST['name'];
+			$sname = $_POST['sname'];
+			$address = $_POST['address'];
+			$email = $POST['email'];
 			$this->db->select_max('id');
 			$query = $this->db->get('member');
 			echo"success";
@@ -20,8 +20,8 @@ class member extends CI_Controller {
 			$this->member_model->register($data);
 		}
 	public function login(){
-			$data['username'] = $_POST["username"];
-			$data['password'] = $_POST["password"];
+			$data['username'] = $_POST['username'];
+			$data['password'] = $_POST['password'];
 			$this->load->model('member_model');	
 			$check = $this->member_model->verifylogin($data);
 			if($check){
