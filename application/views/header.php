@@ -40,11 +40,11 @@ else if($page=="login")
           		echo"<li class='active'><a href='#'>Promotion</a></li>";
           	else
 				echo"<li><a href='../pages/promotion'>Promotion</a></li>";
-			if($page=="register")
+			if($page=="register"&&!$this->session->userdata('username'))
           		echo"<li class='active'><a href='#'>Register</a></li>";
           	else
 				echo"<li><a href='../pages/register'>Register</a></li>";
-			if($page=="login")
+			if($page=="login"&&!$this->session->userdata('username'))
           		echo"<li class='active'><a href='#'>Log in</a></li>";
           	else
 				echo"<li><a href='../pages/login'>Log in</a></li>";
@@ -53,17 +53,17 @@ else if($page=="login")
           	else
 				echo"<li><a href='../pages/about'>About</a></li>";
 			if($this->session->userdata('username'))
-				echo"<li><a href='../pages/about'>Loged in</a></li>"
-          ?>
-          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+				echo"<li><li class='dropdown'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Account<span class='caret'></span></a>
+            <ul class='dropdown-menu' role='menu'>
+              <li><a href='#'>Action</a></li>
+              <li><a href='#'>Another action</a></li>
+              <li><a href='#'>Something else here</a></li>
+              <li class='divider'></li>
+              <li><a href='../member/logout'>Log out</a></li>
             </ul>
-          </li>
+          </li></li>"
+          ?>
+          
         </ul>
       </div>
       <!-- /.navbar-collapse --> 
