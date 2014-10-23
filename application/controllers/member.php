@@ -10,13 +10,13 @@ class member extends CI_Controller {
 			$sname = $_POST['sname'];
 			$address = $_POST['address'];
 			$email = $POST['email'];
+			$this->load->model('member_model');	
 			$this->db->select_max('id');
 			$query = $this->db->get('member');
 			echo"success";
 			foreach($query as $row)
 				$id = $row['id']+1;
 			$data = array('id'=>$id,'username'=>$username,'password'=>$password,'name'=>$name,'sname'=>$sname,'address'=>$address,'email'=>$email);
-			$this->load->model('member_model');	
 			$this->member_model->register($data);
 		}
 	public function login(){
@@ -30,7 +30,7 @@ class member extends CI_Controller {
                    'logged_in' => TRUE
 				);
 				$this->session->set_userdata($newdata);
-				echo"success";
+				echo"success <a href='../pages'>home</a>";
 			}
 			else
 				echo"Failed";
