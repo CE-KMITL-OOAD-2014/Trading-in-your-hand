@@ -37,6 +37,9 @@ class member extends CI_Controller {
 		}
 	public function logout(){
 			$this->session->sess_destroy();
+			echo"<script language='javascript'>
+    window.location.href = '../pages'
+</script>";
 		}
 
 }
