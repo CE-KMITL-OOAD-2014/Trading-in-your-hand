@@ -9,7 +9,7 @@ class member extends CI_Controller {
 			$name = $_POST['name'];
 			$sname = $_POST['sname'];
 			$address = $_POST['address'];
-			$email = $POST['email'];
+			$email = $_POST['email'];
 			$this->load->model('member_model');	
 			$this->db->select_max('id');
 			$query = $this->db->get('member');
