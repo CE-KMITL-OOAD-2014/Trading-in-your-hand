@@ -32,7 +32,7 @@
               <div class="form-group">
                 <label for="captcha" class="sr-only">Captcha</label>
                 <input type="captcha" name="captcha" id="captcha" class="form-control" placeholder="Type the number you see" required autofocus>
-                <img src="../captcha.php" />
+                <img src="../../pages/captcha.php" />
               </div>
               </div>
               <div class="form-group">	
