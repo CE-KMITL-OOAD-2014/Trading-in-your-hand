@@ -17,7 +17,7 @@ echo"".$data['username'];
         <input type="text" id = "message" name = "message" />
         <input type="submit"/>    	
     </form>
-    <a href="../member/viewmessage">View message</a>
+    <a href="../pages/viewmessage">View message</a>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
   <!-- Include all compiled plugins (below), or include individual files as needed --> 
