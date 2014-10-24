@@ -68,6 +68,7 @@ class member extends CI_Controller {
 			foreach($query->result_array() as $row)
 				$id = $row['id']+1;
 			$data = array('id'=>$id,'sender'=>$temp['username'],'time'=>$dt,'receiver'=>$receiver,'message'=>$message);
+			$this->load->model('member_model');	
 			$this->member_model->sendmessage($data);
 			echo"<script language='javascript'>
 	alert('success');
