@@ -59,6 +59,7 @@ class pages extends CI_Controller {
 		$this->load->view('message.php');
 		$this->load->view('footer.php');
 	}
+	
 
 }
 ?>
