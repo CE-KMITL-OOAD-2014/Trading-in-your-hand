@@ -67,7 +67,7 @@ else if($page=="login")
 				echo"<li><li class='dropdown'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Account<span class='caret'></span></a>
             <ul class='dropdown-menu' role='menu'>
               <li><a href='#' style='color:#333;'>Edit</a></li>
-              	<li class='active'><a href='../pages/message' style='color:#333;'>Message</a></li>
+              	<li><a href='../pages/message' style='color:#333;'>Message</a></li>
               <li><a href='#' style='color:#333;'>My product</a></li>
               <li class='divider'></li>
               <li><a href='../member/logout' style='color:#333;'>Log out</a></li>

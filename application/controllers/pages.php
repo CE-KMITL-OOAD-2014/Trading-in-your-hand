@@ -55,7 +55,8 @@ class pages extends CI_Controller {
 		$data['page'] = "message"; 
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
-		
+		$this->load->view('message.php');
+		$this->load->view('footer.php');
 	}
 
 }
