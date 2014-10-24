@@ -7,6 +7,10 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<?
+$data = $this->session->all_userdata();
+echo"".$data['username'];
+?>
 <div class="back"> 
 	<form action="../member/sendmessage" method="post">
     	<input type="text" id = "receiver" name="receiver" />
