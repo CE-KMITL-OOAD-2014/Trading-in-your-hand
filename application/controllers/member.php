@@ -62,7 +62,7 @@ class member extends CI_Controller {
 			$receiver = $_POST['receiver'];
 			$message = $_POST['message'];
 			$temp = $this->session->all_userdata();
-			$dt = new DateTime();
+			$dt = date("D M d, Y G:i");
 			$this->db->select_max('id');
 			$query = $this->db->get('message');
 			foreach($query->result_array() as $row)
