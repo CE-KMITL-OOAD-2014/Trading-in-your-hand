@@ -8,8 +8,8 @@
 </head>
 <body>
 <?
-$data = $this->session->all_userdata();
-echo"".$data['username'];
+$username = $this->session->all_userdata();
+echo"".$username['username'];
 ?>
 <div class="back"> 
 	<?

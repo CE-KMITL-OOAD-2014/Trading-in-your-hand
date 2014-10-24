@@ -14,7 +14,8 @@
 			}
 			function getmessage(){
 				$data = $this->session->all_userdata();
-				return $this->db->where('receiver',$data['username'])->get('message');
+				$mdata = $this->db->where('receiver',$data['username'])->get('message');
+				return $mdata;
 			}
 			function sendmessage($data){
 				$this->db->insert('message',$data);	
