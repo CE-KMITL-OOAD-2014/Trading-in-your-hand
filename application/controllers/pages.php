@@ -57,8 +57,9 @@ class pages extends CI_Controller {
     window.location.href = '../pages';
 </script>";
 		else{
+			$data['page'] = "logedin"; 
 			$this->load->helper('body.php');
-			$this->load->view('header.php');
+			$this->load->view('header.php',$data);
 			$this->load->view('space.php');
 			$this->load->view('message.php');
 			$this->load->view('footer.php');
