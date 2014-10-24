@@ -47,13 +47,7 @@ class member extends CI_Controller {
     window.location.href = '../pages';
 </script>";
 		}
-	public function viewmessage(){
-			$this->load->model('member_model');	
-			$data = $this->member_model->getmessage();
-			foreach($data->result_array() as $row)
-				echo"".$data['sender']." ".$data['time']."".$data['message']."<br/>";
-			echo"<a href='../pages'>back</a>";
-		}
+
 	public function sendmessage(){
 			$receiver = $_POST['receiver'];
 			$message = $_POST['message'];
