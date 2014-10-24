@@ -14,7 +14,7 @@ echo"".$data['username'];
 <div class="back"> 
 	<?
     	foreach($data->result_array() as $row)
-			echo"".$data['sender']." ".$data['time']."".$data['message']."<br/>";
+			echo"".$data['sender']." ".$data['time']."..".$data['message']."<br/>";
 		echo"<a href='../pages'>back</a>";
 	?>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
