@@ -52,18 +52,12 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 	}
 	public function message(){
-		if(!$this->session->userdata('username'))
-			echo"<script language='javascript'>
-    window.location.href = '../pages';
-</script>";
-		else{
-			$data['page'] = "logedin"; 
-			$this->load->helper('body.php');
-			$this->load->view('header.php',$data);
-			$this->load->view('space.php');
-			$this->load->view('message.php');
-			$this->load->view('footer.php');
-		}
+		$data['page'] = "logedin"; 
+		$this->load->helper('body.php');
+		$this->load->view('header.php',$data);
+		$this->load->view('space.php');
+		$this->load->view('message.php');
+		$this->load->view('footer.php');
 	}
 
 }
