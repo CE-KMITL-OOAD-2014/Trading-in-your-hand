@@ -1,5 +1,4 @@
 <?php
-	if($this->session->userdata('username')){
 		class Member_model extends CI_Model{
 			function register($data){
 				$this->db->insert('member',$data);	
@@ -21,9 +20,5 @@
 				$this->db->insert('message',$data);	
 			}
 		}
-	}
-	else
-	echo"<script language='javascript'>
-    window.location.href = '../pages';
-</script>";
+	
 ?>
