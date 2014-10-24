@@ -48,11 +48,6 @@ class member extends CI_Controller {
 </script>";
 		}
 	public function viewmessage(){
-			if(!$this->session->userdata('username')){
-				echo"<script language='javascript'>
-    			window.location.href = '../pages';
-				</script>";
-			}
 			$this->load->model('member_model');	
 			$data = $this->member_model->getmessage();
 			foreach($data->result_array() as $row)
