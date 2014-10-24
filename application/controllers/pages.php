@@ -51,6 +51,19 @@ class pages extends CI_Controller {
 		$this->load->view('display_product.php',$data_send);
 		$this->load->view('footer.php');
 	}
+	public function message(){
+		if(!$this->session->userdata('username'))
+			echo"<script language='javascript'>
+    window.location.href = '../pages';
+</script>";
+		else{
+			$this->load->helper('body.php');
+			$this->load->view('header.php');
+			$this->load->view('space.php');
+			$this->load->view('message.php');
+			$this->load->view('footer.php');
+		}
+	}
 
 }
 ?>

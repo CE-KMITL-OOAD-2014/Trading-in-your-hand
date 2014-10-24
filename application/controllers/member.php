@@ -47,6 +47,33 @@ class member extends CI_Controller {
     window.location.href = '../pages';
 </script>";
 		}
+	public function viewmessage(){
+			if(!$this->session->userdata('username'))
+			echo"<script language='javascript'>
+    window.location.href = '../pages';
+</script>";
+			$this->load->model('member_model');	
+			$data = $this->member_model->getmessage();
+			foreach($data->result_array() as $row)
+				echo"".$data['sender']." ".$data['time']."".$data['message']."<br/>";
+			echo"<a href='../pages'>back</a>";
+		}
+	public function sendmessage(){
+			$receiver = $_POST['receiver'];
+			$message = $_POST['message'];
+			$temp = $this->session->all_userdata();
+			$dt = new DateTime();
+			$this->db->select_max('id');
+			$query = $this->db->get('message');
+			foreach($query->result_array() as $row)
+				$id = $row['id']+1;
+			$data = array('id'=>$id,'sender'=>$temp['username'],'time'=>$dt,'receiver'=>$receiver,'message'=>$message);
+			$this->member_model->sendmessage($data);
+			echo"<script language='javascript'>
+	alert('success');
+    window.location.href = '../pages';
+</script>";	
+		}
 
 }
 ?>
