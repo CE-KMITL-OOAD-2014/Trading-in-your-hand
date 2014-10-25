@@ -29,6 +29,7 @@
          <div class="form-group">
         <label for="cost" class="sr-only">cost</label>
         <input type="cost" name="cost" id="cost" class="form-control"style="background-color:#FFC" placeholder="Cost" required autofocus>
+        </div>
          <div class="form-group">
         <label for="Amount" class="sr-only">Amount</label>
         <input type="Amount" name="Amount" id="Amount" class="form-control"style="background-color:#FFC" placeholder="Amount" required autofocus>
