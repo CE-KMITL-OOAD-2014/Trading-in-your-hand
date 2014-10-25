@@ -27,8 +27,9 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 	}
 	public function addproduct(){
+		$data['page'] = "addproduct";
 		$this->load->helper('body.php');
-		$this->load->view('header.php');
+		$this->load->view('header.php',$data);
 		$this->load->view('space.php');
 		$this->load->view('add_product.php');	
 		$this->load->view('footer.php');
