@@ -52,7 +52,9 @@
   <!-----------------------------------End_show product--------------------------------------------------------------------------------------------->
   <div class="col-md-10">
     <div class="pull-right">
-      <button type="button" class="btn btn-default btn-lg" id="addproduct" value="Submit">Submit</button>>
+      <div class="form-group">
+        <button type="submit" class="btn btn-default btn-lg" form ="addproduct">Submit</button>
+      </div>
     </div>
   </div>
 </div>
