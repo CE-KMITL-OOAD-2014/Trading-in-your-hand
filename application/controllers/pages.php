@@ -69,5 +69,13 @@ class pages extends CI_Controller {
 		$this->load->view('viewmessage.php',$mdata);
 		$this->load->view('footer.php');		
 	}
+	public function upload(){
+		$data['page'] = "upload"; 
+		$this->load->helper('body.php');
+		$this->load->view('header.php',$data);
+		$this->load->view('space.php');
+		$this->load->view('message.php');
+		$this->load->view('footer.php');
+	}
 }
 ?>
