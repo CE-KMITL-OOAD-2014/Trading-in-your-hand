@@ -21,6 +21,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-4"> <a class="thumbnail" > <img src="http://fc07.deviantart.net/fs70/i/2012/358/7/2/_rurouni_kenshin__art_of_sword_drawing__by_eyjaynizel-d5p0jtr.jpg"></a> </div>
     <div class="col-md-4">
+    <div class="form-wrap">
       <form role="form" action="../pages/addproduct" method="post" id="addproduct" autocomplete="off">
         <div class="form-group">
           <label for="name" class="sr-only">name</label>
@@ -38,6 +39,7 @@
           <textarea rows="8" class="form-control" placeholder="Detail" style="resize:none;background-color:#FFC" required autofocus ></textarea>
         </div>
       </form>
+      </div>
     </div>
     <div class="row hidden-xs" >
       <div class="col-md-12">
