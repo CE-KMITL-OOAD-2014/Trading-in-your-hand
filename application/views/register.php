@@ -86,7 +86,7 @@ function checkPasswordMatch() {
 	}
     else{
 		$("#password_confirmation").css( "background-color", "#9FF781" );
-		if($("#t_and_c").val()=="0")
+		if($("#t_and_c").attr('checked'))
 			$("#regisbutton").prop("type", "submit");
 	}
         
