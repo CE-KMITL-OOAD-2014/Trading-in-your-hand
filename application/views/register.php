@@ -9,6 +9,7 @@
 <body>
 <div class="back"> 
   <script> 
+  var isChecked = 0;
    $(function () {
     $('.button-checkbox').each(function () {
 
@@ -85,7 +86,8 @@ function checkPasswordMatch() {
 	}
     else{
 		$("#password_confirmation").css( "background-color", "#9FF781" );
-		$("#regisbutton").prop("type", "submit");
+		if($("#t_and_c").val()==0)
+			$("#regisbutton").prop("type", "submit");
 	}
         
 }
