@@ -74,6 +74,20 @@
         init();
     });
 });
+
+function checkPasswordMatch() {
+    var password = $("#password").val();
+    var confirmPassword = $("#password_confirmation").val();
+
+    if (password != confirmPassword)
+        {alert("test");}
+    else{}
+        
+}
+
+$(document).ready(function () {
+   $("#password_confirmation").keyup(checkPasswordMatch);
+});
    
    </script> 
   
