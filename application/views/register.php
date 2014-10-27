@@ -9,72 +9,6 @@
 <body>
 <div class="back"> 
   <script> 
-  var isChecked = 0;
-   $(function () {
-    $('.button-checkbox').each(function () {
-
-        // Settings
-        var $widget = $(this),
-            $button = $widget.find('button'),
-            $checkbox = $widget.find('input:checkbox'),
-            color = $button.data('color'),
-            settings = {
-                on: {
-                    icon: 'glyphicon glyphicon-check'
-                },
-                off: {
-                    icon: 'glyphicon glyphicon-unchecked'
-                }
-            };
-
-        // Event Handlers
-        $button.on('click', function () {
-            $checkbox.prop('checked', !$checkbox.is(':checked'));
-            $checkbox.triggerHandler('change');
-            updateDisplay();
-        });
-        $checkbox.on('change', function () {
-            updateDisplay();
-        });
-
-        // Actions
-        function updateDisplay() {
-            var isChecked = $checkbox.is(':checked');
-
-            // Set the button's state
-            $button.data('state', (isChecked) ? "on" : "off");
-
-            // Set the button's icon
-            $button.find('.state-icon')
-                .removeClass()
-                .addClass('state-icon ' + settings[$button.data('state')].icon);
-
-            // Update the button's color
-            if (isChecked) {
-                $button
-                    .removeClass('btn-default')
-                    .addClass('btn-' + color + ' active');
-            }
-            else {
-                $button
-                    .removeClass('btn-' + color + ' active')
-                    .addClass('btn-default');
-            }
-        }
-
-        // Initialization
-        function init() {
-
-            updateDisplay();
-
-            // Inject the icon if applicable
-            if ($button.find('.state-icon').length == 0) {
-                $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i>');
-            }
-        }
-        init();
-    });
-});
 
 function checkPasswordMatch() {
     var password = $("#password").val();
@@ -86,8 +20,7 @@ function checkPasswordMatch() {
 	}
     else{
 		$("#password_confirmation").css( "background-color", "#9FF781" );
-		if($("#t_and_c").attr('checked'))
-			$("#regisbutton").prop("type", "submit");
+		$("#regisbutton").prop("type", "submit");
 	}
         
 }
@@ -140,13 +73,7 @@ $(document).ready(function () {
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-4 col-sm-3 col-md-3"> <span class="button-checkbox">
-              <button type="button" class="btn" data-color="info" tabindex="8">I Agree</button>
-              <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
-              </span> </div>
-            <div class="col-xs-8 col-sm-9 col-md-9"> By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="../member/register" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use. </div>
-          </div>
+         
           <hr class="colorgraph">
           <div class="row">
             <div class="col-xs-12 col-md-6">
