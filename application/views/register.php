@@ -71,16 +71,12 @@ $(document).ready(function () {
               <div class="form-group">
                 <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="7" required autofocus>
               </div>
+               <input type="button" value="Register" id="regisbutton" class="btn btn-primary btn-block btn-lg" tabindex="7">
+               <div class="col-xs-12 col-md-6"><a href="../pages/login" class="btn btn-success btn-block btn-lg">Sign In</a></div>
             </div>
           </div>
          
-          <hr class="colorgraph">
-          <div class="row">
-            <div class="col-xs-12 col-md-6">
-              <input type="button" value="Register" id="regisbutton" class="btn btn-primary btn-block btn-lg" tabindex="7">
-            </div>
-            <div class="col-xs-12 col-md-6"><a href="../pages/login" class="btn btn-success btn-block btn-lg">Sign In</a></div>
-          </div>
+         
         </form>
       </div> <!--col md -->
     </div> <!-- row -->
