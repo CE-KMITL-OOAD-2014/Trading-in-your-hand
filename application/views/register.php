@@ -79,11 +79,11 @@ function checkPasswordMatch() {
     var password = $("#password").val();
     var confirmPassword = $("#password_confirmation").val();
     if (password != confirmPassword){
-		  $("#password_confirmation").css( "background-color", "red" );
+		  $("#password_confirmation").css( "background-color", "#F78181" );
 		  $("#textpass").show();
 	}
     else{
-		$("#password_confirmation").css( "background-color", "yellow" );
+		$("#password_confirmation").css( "background-color", "#9FF781" );
 	}
         
 }
