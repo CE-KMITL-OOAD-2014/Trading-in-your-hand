@@ -84,6 +84,7 @@ function checkPasswordMatch() {
 	}
     else{
 		$("#password_confirmation").css( "background-color", "#9FF781" );
+		$("#regisbutton").prop("type", "submit");
 	}
         
 }
@@ -146,7 +147,7 @@ $(document).ready(function () {
           <hr class="colorgraph">
           <div class="row">
             <div class="col-xs-12 col-md-6">
-              <input type="button" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7">
+              <input type="button" value="Register" id="regisbutton" class="btn btn-primary btn-block btn-lg" tabindex="7">
             </div>
             <div class="col-xs-12 col-md-6"><a href="../pages/login" class="btn btn-success btn-block btn-lg">Sign In</a></div>
           </div>
