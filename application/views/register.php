@@ -78,12 +78,14 @@
 function checkPasswordMatch() {
     var password = $("#password").val();
     var confirmPassword = $("#password_confirmation").val();
-
+	$("#textpass").hide();
     if (password != confirmPassword){
 		  $("#password_confirmation").css( "color", "red" );
+		  $("#textpass").show();
 	}
     else{
 		$("#password_confirmation").css( "color", "green" );	
+		$("#textpass").hide();
 	}
         
 }
@@ -132,7 +134,7 @@ $(document).ready(function () {
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="7" required autofocus>
+                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="7" required autofocus><div id="textpass">Not match</div>
               </div>
             </div>
           </div>
