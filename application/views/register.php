@@ -79,9 +79,12 @@ function checkPasswordMatch() {
     var password = $("#password").val();
     var confirmPassword = $("#password_confirmation").val();
 
-    if (password != confirmPassword)
-        {alert("test");}
-    else{}
+    if (password != confirmPassword){
+		  $("#password_confirmation").css( "color", "red" );
+	}
+    else{
+		$("#password_confirmation").css( "color", "green" );	
+	}
         
 }
 
