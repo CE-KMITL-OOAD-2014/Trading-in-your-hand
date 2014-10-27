@@ -81,6 +81,7 @@ function checkPasswordMatch() {
     if (password != confirmPassword){
 		  $("#password_confirmation").css( "background-color", "#F78181" );
 		  $("#textpass").show();
+		  $("#regisbutton").prop("type", "button");
 	}
     else{
 		$("#password_confirmation").css( "background-color", "#9FF781" );
