@@ -32,7 +32,7 @@ $(document).ready(function () {
    
 function validateusername(){
 		var regex = /a-z/;
-		found = $("#username").match(regex);
+		found = $("#username").exec(regex);
 		alert(found);
 	}
    </script> 
