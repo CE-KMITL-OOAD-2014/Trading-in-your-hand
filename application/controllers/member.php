@@ -62,7 +62,7 @@ class member extends CI_Controller {
 			$this->member_model->sendmessage($data);
 			echo"<script language='javascript'>
 	alert('success');
-    window.location.href = '../pages';
+    window.location.href = '../pages/message';
 </script>";	
 		}
 
