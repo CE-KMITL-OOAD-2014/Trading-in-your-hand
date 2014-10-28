@@ -9,24 +9,29 @@
 <body>
 <div class="back"> 
   <script> 
-
+var checkname = false;
+var checkpass = false;
 function checkPasswordMatch() {
     var password = $("#password").val();
     var confirmPassword = $("#password_confirmation").val();
     if (password != confirmPassword){
 		  $("#password_confirmation").css( "background-color", "#F78181" );
 		  $("#textpass").show();
-		  $("#regisbutton").prop("type", "button");
+		  checkpass = false;
 	}
     else{
 		$("#password_confirmation").css( "background-color", "#9FF781" );
-		$("#regisbutton").prop("type", "submit");
+		checkpass = true;
 	}
 }
 
 $(document).ready(function () {
    $("#password_confirmation").keyup(checkPasswordMatch);
    $("#username").keyup(validateusername);
+ 	if(checkname&&checkpass)
+   		$("#regisbutton").prop("type", "submit");
+	else
+		$("#regisbutton").prop("type", "button");	
 });
    
    
@@ -35,9 +40,12 @@ function validateusername(){
 		var text = $("#username").val();
 			if(regex.test(text)){
 				$("#username").css( "background-color", "#9FF781" );
+				checkname = true;
 			}
-			else
+			else{
 				$("#username").css( "background-color", "#F78181" );
+				checkname = false;	
+			}
 	}
    </script> 
   
