@@ -42,6 +42,7 @@ function validateusername(){
 			else{
 				$("#username").css( "background-color", "#F78181" );
 				checkname = false;	
+				$("#regisbutton").prop("type", "button");
 			}
 	}
    </script> 
