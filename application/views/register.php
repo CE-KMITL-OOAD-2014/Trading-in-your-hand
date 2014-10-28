@@ -14,6 +14,7 @@ var checkpass = false;
 function checkPasswordMatch() {
     var password = $("#password").val();
     var confirmPassword = $("#password_confirmation").val();
+	if(password.length!=0&&confirmPassword.length!=0)
     if (password != confirmPassword){
 		  $("#password_confirmation").css( "background-color", "#F78181" );
 		  $("#regisbutton").prop("type", "button");	 
@@ -30,6 +31,7 @@ $(document).ready(function () {
    $("#username").keyup(validateusername);
    $("#username").keyup(checkPasswordMatch);
    $("#password").keyup(validatepass);
+   $("#password").keyup(checkPasswordMatch);
 });
 function validatepass(){
 		var regex = /^.{6,20}$/;
