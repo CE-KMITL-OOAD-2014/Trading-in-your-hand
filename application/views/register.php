@@ -10,28 +10,24 @@
 <div class="back"> 
   <script> 
 var checkname = false;
-var checkpass = false;
 function checkPasswordMatch() {
     var password = $("#password").val();
     var confirmPassword = $("#password_confirmation").val();
     if (password != confirmPassword){
 		  $("#password_confirmation").css( "background-color", "#F78181" );
-		  $("#textpass").show();
-		  checkpass = false;
+		  $("#regisbutton").prop("type", "button");	 
 	}
     else{
 		$("#password_confirmation").css( "background-color", "#9FF781" );
-		checkpass = true;
+		if(checkname)
+		$("#regisbutton").prop("type", "submit");
 	}
 }
 
 $(document).ready(function () {
    $("#password_confirmation").keyup(checkPasswordMatch);
    $("#username").keyup(validateusername);
- 	if(checkname&&checkpass)
-   		$("#regisbutton").prop("type", "submit");
-	else
-		$("#regisbutton").prop("type", "button");	
+		
 });
    
    
