@@ -32,8 +32,10 @@ $(document).ready(function () {
    
 function validateusername(){
 		var regex = /^[a-zA-Z0-9]{4,12}$/;
-		found = regex.test($("#username"));
-		alert(found);
+		if($("#username").search(regex)==-1)
+			alert("not found");
+		else
+			alert("found");
 	}
    </script> 
   
