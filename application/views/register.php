@@ -32,7 +32,7 @@ $(document).ready(function () {
    
 function validateusername(){
 		var regex = /^[a-zA-Z0-9]{4,12}$/;
-		alert(regex.test("+=-"))
+		alert(regex.test("aaaa"))
 	}
    </script> 
   
