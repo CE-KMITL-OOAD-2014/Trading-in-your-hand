@@ -27,6 +27,7 @@ function checkPasswordMatch() {
 $(document).ready(function () {
    $("#password_confirmation").keyup(checkPasswordMatch);
    $("#username").keyup(validateusername);
+   $("#username").keyup(checkPasswordMatch);
 		
 });
    
