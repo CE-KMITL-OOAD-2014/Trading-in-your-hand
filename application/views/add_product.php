@@ -19,13 +19,13 @@
       <div class="col-md-4"> <a class="thumbnail" > <img src="http://fc07.deviantart.net/fs70/i/2012/358/7/2/_rurouni_kenshin__art_of_sword_drawing__by_eyjaynizel-d5p0jtr.jpg"></a> </div>
       <div class="col-md-4">
         <label for="name" class="sr-only">name</label>
-        <input type="name" name="name" id="name" class="form-control"style="background-color:#FFC" placeholder="NameProduct" required autofocus>
+        <input type="name" name="name" id="name" class="form-control" placeholder="NameProduct" required autofocus>
         <label for="cost" class="sr-only">cost</label>
-        <input type="cost" name="cost" id="cost" class="form-control"style="background-color:#FFC" placeholder="Cost" required autofocus>
+        <input type="cost" name="cost" id="cost" class="form-control" placeholder="Cost" required autofocus>
         <label for="Amount" class="sr-only">Amount</label>
-        <input type="Amount" name="Amount" id="Amount" class="form-control"style="background-color:#FFC" placeholder="Amount" required autofocus>
+        <input type="Amount" name="Amount" id="Amount" class="form-control" placeholder="Amount" required autofocus>
         <div class="form-group">
-          <textarea rows="8" class="form-control" placeholder="Detail" style="resize:none;background-color:#FFC" required autofocus ></textarea>
+          <textarea rows="8" class="form-control" placeholder="Detail" style="resize:none" required autofocus ></textarea>
         </div>
       </div>
       <div class="row hidden-xs" >
