@@ -9,7 +9,20 @@
 </head>
 <body>
 <div class="back"> 
-  
+  <script>
+  $(document).ready(function () {
+   $("#username").keyup(validateusername);
+});
+	function validateusername(){
+		var regex = /^[a-zA-Z0-9]{4,12}$/;
+		var text = $("#username").val();
+			if(regex.test(text)){
+				$("#username").css( "background-color", "#9FF781" );
+			}
+			else
+				$("#username").css( "background-color", "#F78181" );
+	}
+  </script>
   <!--------------------------Login------------------------------------------------------------------------------------------------------------>
   <section id="login">
     <div class="container">
