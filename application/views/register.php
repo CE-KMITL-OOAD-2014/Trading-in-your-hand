@@ -31,7 +31,7 @@ $(document).ready(function () {
    
    
 function validateusername(){
-		var regex = /a-z/;
+		var regex = /^[a-zA-Z0-9]{4,12}$/;
 		found = regex.test($("#username"));
 		alert(found);
 	}
