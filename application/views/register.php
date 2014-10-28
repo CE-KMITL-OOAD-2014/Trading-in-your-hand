@@ -31,7 +31,7 @@ $(document).ready(function () {
    
    
 function validateusername(){
-		var regex = /^[a-z0-9_-]{3,15}$/;
+		var regex = /[a-z0-9_-]/;
 		found = $("#username").match(regex);
 		alert(found);
 	}
