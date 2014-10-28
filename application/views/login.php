@@ -18,9 +18,12 @@
 		var text = $("#username").val();
 			if(regex.test(text)){
 				$("#username").css( "background-color", "#9FF781" );
+				$("#loginbutton").prop("type", "submit");	 
 			}
-			else
+			else{
 				$("#username").css( "background-color", "#F78181" );
+				$("#loginbutton").prop("type", "button");
+			}
 	}
   </script>
   <!--------------------------Login------------------------------------------------------------------------------------------------------------>
@@ -42,7 +45,7 @@
                 <input type="password" name="password" id="password" class="form-control" placeholder="Password" required autofocus>
               </div>
               <div class="form-group">	
-                <input type="submit" value="Log in" class="btn btn-primary btn-block btn-lg" tabindex="3">
+                <input type="button" value="Log in" id="loginbutton" class="btn btn-primary btn-block btn-lg" tabindex="3">
               </div>
             </form>
             <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
