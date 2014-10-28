@@ -22,7 +22,6 @@ function checkPasswordMatch() {
 		$("#password_confirmation").css( "background-color", "#9FF781" );
 		$("#regisbutton").prop("type", "submit");
 	}
-        
 }
 
 $(document).ready(function () {
