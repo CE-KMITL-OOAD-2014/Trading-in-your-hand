@@ -27,8 +27,19 @@ function checkPasswordMatch() {
 
 $(document).ready(function () {
    $("#password_confirmation").keyup(checkPasswordMatch);
+   $("#username").keyup(validateusername);
 });
    
+   
+function validateusername(){
+		var regex = "^[a-z0-9_-]{3,15}$";
+		if($("#username").test(regex)){
+			$("#username").css( "background-color", "#9FF781" );
+		}
+		else{
+			$("#username").css( "background-color", "#F78181" );
+		}
+	}
    </script> 
   
   <!--------------------------Register---------------------------------------------------------------------------------->
