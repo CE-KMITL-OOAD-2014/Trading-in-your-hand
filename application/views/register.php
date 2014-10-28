@@ -32,15 +32,8 @@ $(document).ready(function () {
    
    
 function validateusername(){
-		var regex = "^[a-z0-9_-]{3,15}$";
-		if($("#username").test(regex)){
-			alert("yes");
-			$("#username").css( "background-color", "#9FF781" );
-		}
-		else{
-			alert("No");
-			$("#username").css( "background-color", "#F78181" );
-		}
+		var regex = new RegExp("^[a-z0-9_-]{3,15}$");
+		alert(regex.exec($("#username")));
 	}
    </script> 
   
