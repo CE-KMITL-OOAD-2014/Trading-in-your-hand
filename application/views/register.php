@@ -10,6 +10,7 @@
 <div class="back"> 
   <script> 
 var checkname = false;
+var checkpass = false;
 function checkPasswordMatch() {
     var password = $("#password").val();
     var confirmPassword = $("#password_confirmation").val();
@@ -19,7 +20,7 @@ function checkPasswordMatch() {
 	}
     else{
 		$("#password_confirmation").css( "background-color", "#9FF781" );
-		if(checkname)
+		if(checkname&&checkpass)
 		$("#regisbutton").prop("type", "submit");
 	}
 }
@@ -28,9 +29,21 @@ $(document).ready(function () {
    $("#password_confirmation").keyup(checkPasswordMatch);
    $("#username").keyup(validateusername);
    $("#username").keyup(checkPasswordMatch);
-		
+   $("#password").keyup(validatepass);
 });
-   
+function validatepass(){
+		var regex = /^.{6,20}$/;
+		var pass = $("#password").val();
+		if(regex.test(pass)){
+				$("#password").css( "background-color", "#9FF781" );
+				checkpass = true;
+			}
+			else{
+				$("#password").css( "background-color", "#F78181" );
+				checkpass = false;	
+				$("#regisbutton").prop("type", "button");
+			}
+}
    
 function validateusername(){
 		var regex = /^[a-zA-Z0-9]{4,12}$/;
@@ -80,7 +93,7 @@ function validateusername(){
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="password" name="password" id="password" class="form-control input-lg" autocomplete="off" placeholder="Password" tabindex="6"required autofocus>
+                <input type="password" name="password" id="password" class="form-control input-lg" autocomplete="off" placeholder="Password 6-20 Characters" tabindex="6"required autofocus>
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
