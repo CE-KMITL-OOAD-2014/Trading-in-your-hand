@@ -201,7 +201,7 @@ if($this->session->userdata('username')){
 <div class="back">
   <div class="container">
     <div class="col-md-3">
-      <div class="[ info-card ]"> <img style="width: 100%" src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc3/v/t1.0-9/943644_3168331383872_1982085005_n.jpg?oh=a5f8ef8e34d18e4e2279616d2f99a3ea&oe=54EA273F&__gda__=1420737788_fe56ec5b6a2987d60f1a199d77186d74" />
+      <div class="[ info-card ]"> <img style="width: 100%" src="http://www.gama-ksa.com/wp-content/uploads/2014/06/funny-default-facebook-pictures.jpg" />
         <div class="[ info-card-details ] animate">
           <div class="[ info-card-header ]">
             <h1><? echo"".$name." ".$sname; ?></h1>
@@ -294,7 +294,8 @@ if($this->session->userdata('username')){
       </div>
       <div class="text-center"><ul class="pagination pagination-large">
 		<li><a href="#" rel="prev">&laquo;</a></li>
-        <li><a href="#">1</a></li><li class="active"><span>2</span></li>
+        <li class="active"><span>1</span></li>
+        <li><a href="#">2</a></li>
         <li><a href="#">3</a></li>
         <li><a href="#">4</a></li>
         <li><a href="#">5</a></li>
