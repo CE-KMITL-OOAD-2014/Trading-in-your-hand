@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <html>
 <head>
 <<<<<<< HEAD
@@ -11,6 +12,8 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 >>>>>>> parent of 2763a06... test navbar home
 </head>
+=======
+>>>>>>> parent of 3486a51... Revert "fixed navbar in mobile"
 =======
 >>>>>>> parent of 3486a51... Revert "fixed navbar in mobile"
 <body>
