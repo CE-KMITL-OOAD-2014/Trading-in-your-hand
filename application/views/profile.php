@@ -268,6 +268,9 @@ a.linkedin:hover {
         </div>
         <!--class row--> 
       </div>
+      <div class="text-center"><ul class="pagination pagination-large">
+		<li><a href="http://bootsnipp.com?page=1" rel="prev">&laquo;</a></li><li><a href="http://bootsnipp.com?page=1">1</a></li><li class="active"><span>2</span></li><li><a href="http://bootsnipp.com?page=3">3</a></li><li><a href="http://bootsnipp.com?page=4">4</a></li><li><a href="http://bootsnipp.com?page=5">5</a></li><li><a href="http://bootsnipp.com?page=6">6</a></li><li><a href="http://bootsnipp.com?page=7">7</a></li><li><a href="http://bootsnipp.com?page=8">8</a></li><li class="disabled"><span>...</span></li><li><a href="http://bootsnipp.com?page=51">51</a></li><li><a href="http://bootsnipp.com?page=52">52</a></li><li><a href="http://bootsnipp.com?page=3" rel="next">&raquo;</a></li>	</ul>
+</div>
     </div>
   </div>
 </div>
