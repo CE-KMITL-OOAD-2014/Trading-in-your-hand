@@ -137,7 +137,6 @@ a.linkedin:hover {
 
 /* FONT AWESOME & not necessary for functions */
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
-
 /*REQUIRED*/
 .carousel-row {
 	margin-bottom: 10px;
@@ -151,24 +150,7 @@ a.linkedin:hover {
 	height: auto;
 	position: relative;
 }
-.slide-carousel {
-	width: 20%;
-	float: left;
-	display: inline-block;
-}
-.slide-carousel .carousel-indicators {
-	margin-bottom: 0;
-	bottom: 0;
-	background: rgba(0, 0, 0, .5);
-}
-.slide-carousel .carousel-indicators li {
-	border-radius: 0;
-	width: 20px;
-	height: 6px;
-}
-.slide-carousel .carousel-indicators .active {
-	margin: 1px;
-}
+
 .slide-content {
 	position: absolute;
 	top: 0;
@@ -231,17 +213,10 @@ a.linkedin:hover {
     <div class="col-md-9">
       <div class="row carousel-row">
         <div class="slide-row">
-          <div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel"> 
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-            </ol>
-            
+          <div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel">             
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="item active"> <img src="http://lorempixel.com/150/150?rand=1" alt="Image"> </div>
-              <div class="item"> <img src="http://lorempixel.com/150/150?rand=2" alt="Image"> </div>
-              <div class="item"> <img src="http://lorempixel.com/150/150?rand=3" alt="Image"> </div>
             </div>
           </div>
           <div class="slide-content">
@@ -254,6 +229,7 @@ a.linkedin:hover {
             <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-shopping-cart"></i> Buy</button>
             </span> </div>
         </div>
+        <!--class row--> 
       </div>
     </div>
   </div>

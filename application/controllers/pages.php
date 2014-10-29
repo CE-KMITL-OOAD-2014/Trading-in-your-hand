@@ -81,7 +81,7 @@ class pages extends CI_Controller {
 	public function member(){
 		if ($this->uri->segment(3) === FALSE){ 
 			echo"<script language='javascript'>
-    window.location.href = '../pages';
+    window.location.href = '../../pages';
 </script>";
 		}
 		else{

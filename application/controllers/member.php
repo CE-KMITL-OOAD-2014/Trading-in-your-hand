@@ -32,19 +32,19 @@ class member extends CI_Controller {
 				$this->session->set_userdata($newdata);
 				echo"<script language='javascript'>
 	alert('Log in success');
-    window.location.href = '../pages';
+    window.location.href = '../../pages';
 </script>";
 			}
 			else
 				echo"<script language='javascript'>
 	alert('Log in failed');
-    window.location.href = '../pages';
+    window.location.href = '../../pages';
 </script>";
 		}
 	public function logout(){
 			$this->session->sess_destroy();
 			echo"<script language='javascript'>
-    window.location.href = '../pages';
+    window.location.href = '../../pages';
 </script>";
 		}
 
@@ -62,7 +62,7 @@ class member extends CI_Controller {
 			$this->member_model->sendmessage($data);
 			echo"<script language='javascript'>
 	alert('success');
-    window.location.href = '../pages/message';
+    window.location.href = '../../pages/message';
 </script>";	
 		}
 
