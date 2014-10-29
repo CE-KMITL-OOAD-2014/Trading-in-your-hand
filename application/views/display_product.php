@@ -1,6 +1,3 @@
-<html>
-<head><title>Untitled Document</title>
-</head>
 <body><div class="back">
 <?	
 	$point = 1;
@@ -12,4 +9,3 @@
 ?>
 </div>
 </body>
-</html>
