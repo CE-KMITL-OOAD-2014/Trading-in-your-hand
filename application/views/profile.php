@@ -199,7 +199,7 @@ a.linkedin:hover {
       <div class="[ info-card ]"> <img style="width: 100%" src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc3/v/t1.0-9/943644_3168331383872_1982085005_n.jpg?oh=a5f8ef8e34d18e4e2279616d2f99a3ea&oe=54EA273F&__gda__=1420737788_fe56ec5b6a2987d60f1a199d77186d74" />
         <div class="[ info-card-details ] animate">
           <div class="[ info-card-header ]">
-            <h1> Nitipat Suttirak </h1>
+            <h1><? $username ?></h1>
             <h3> aka PaelnwZa55x </h3>
           </div>
           <div class="[ info-card-detail ]"> 
