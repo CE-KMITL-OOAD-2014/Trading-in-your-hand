@@ -3,7 +3,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
 <link href="../../css/bootstrap.min.css" rel="stylesheet">
+=======
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+>>>>>>> parent of 0cce663... fixed navbar in mobile
 <body>
 <div class="back"> <br/>
   <br/>
@@ -94,4 +100,8 @@
   <!-- End container --> 
 </div>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> parent of 0cce663... fixed navbar in mobile
