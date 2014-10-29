@@ -22,7 +22,7 @@ else if($page=="addproduct")
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand" href="../pages" onMouseOver="logo.src='../../images/logo2.png';" onMouseOut="logo.src='../../images/logo.png';"><img src="../../images/logo.png" width="25px" height="25px" id="logo"/>Trading in your hand</a> </div>
+        <a class="navbar-brand" href="../../pages" onMouseOver="logo.src='../../images/logo2.png';" onMouseOut="logo.src='../../images/logo.png';"><img src="../../images/logo.png" width="25px" height="25px" id="logo"/>Trading in your hand</a> </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <form class="navbar-form navbar-left" role="search">
@@ -46,33 +46,33 @@ else if($page=="addproduct")
           <? if($page=="home")
           		echo"<li class='active'><a href='#'>Home</a></li>";
           	else
-				echo"<li><a href='../pages'>Home</a></li>";
+				echo"<li><a href='../../pages'>Home</a></li>";
 			if($page=="promotion")
           		echo"<li class='active'><a href='#'>Promotion</a></li>";
           	else
-				echo"<li><a href='../pages/promotion'>Promotion</a></li>";
+				echo"<li><a href='../../pages/promotion'>Promotion</a></li>";
 			if(!$this->session->userdata('username'))
 			if($page=="register")
           		echo"<li class='active'><a href='#'>Register</a></li>";
           	else
-				echo"<li><a href='../pages/register'>Register</a></li>";
+				echo"<li><a href='../../pages/register'>Register</a></li>";
 			if(!$this->session->userdata('username'))
 			if($page=="login")
           		echo"<li class='active'><a href='#'>Log in</a></li>";
           	else
-				echo"<li><a href='../pages/login'>Log in</a></li>";
+				echo"<li><a href='../../pages/login'>Log in</a></li>";
 			if($page=="about")
           		echo"<li class='active'><a href='#'>About</a></li>";
           	else
-				echo"<li><a href='../pages/about'>About</a></li>";
+				echo"<li><a href='../../pages/about'>About</a></li>";
 			if($this->session->userdata('username'))
 				echo"<li><li class='dropdown'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Account<span class='caret'></span></a>
             <ul class='dropdown-menu' role='menu'>
               <li><a href='#' style='color:#333;'>Edit</a></li>
-              	<li><a href='../pages/message' style='color:#333;'>Message</a></li>
+              	<li><a href='../../pages/message' style='color:#333;'>Message</a></li>
               <li><a href='#' style='color:#333;'>My product</a></li>
               <li class='divider'></li>
-              <li><a href='../member/logout' style='color:#333;'>Log out</a></li>
+              <li><a href='../../member/logout' style='color:#333;'>Log out</a></li>
             </ul>
           </li></li>";
           ?>
