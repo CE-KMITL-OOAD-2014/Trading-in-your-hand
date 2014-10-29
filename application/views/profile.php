@@ -189,7 +189,7 @@ a.linkedin:hover {
  display: block;
 }
 </style>
-<? echo"<script> alert('test'); </script>"; ?>
+<? echo"<script> alert('".$page."'); </script>"; ?>
 <html>
 <head>
 </head>
