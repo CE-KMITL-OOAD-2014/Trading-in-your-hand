@@ -48,7 +48,7 @@ function validatepass(){
 }
    
 function validateusername(){
-		var regex = /^[a-zA-Z0-9](?:(?!admin).){4,12}$/;
+		var regex = /^[a-zA-Z0-9]{4,12}$/;
 		var text = $("#username").val();
 			if(regex.test(text)){
 				$("#username").css( "background-color", "#9FF781" );
