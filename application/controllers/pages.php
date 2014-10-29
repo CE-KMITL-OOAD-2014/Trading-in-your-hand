@@ -78,5 +78,17 @@ class pages extends CI_Controller {
 		$this->load->view('upload.php');
 		$this->load->view('footer.php');
 	}
+	public function member(){
+		if ($this->uri->segment(3) === FALSE){ 
+			echo"<script language='javascript'>
+    window.location.href = '../pages';
+</script>";
+		}
+		else{
+			$id = $this->uri->segment(3); 
+			$data['username'] = $username;
+			$this->load->view('profile',$data);
+		}
+	}
 }
 ?>
