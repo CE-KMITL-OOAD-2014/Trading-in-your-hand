@@ -244,7 +244,7 @@ a.linkedin:hover {
           </div>
           <div class="slide-footer"> <span class="pull-right buttons">
             <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button>
-            <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-shopping-cart"></i> Buy</button>
+            <button class="btn btn-sm btn-primary"><i class="fa fa-trash-o fa-lg"></i> Delete</button>
             </span> </div>
             
         </div>
