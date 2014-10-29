@@ -93,6 +93,9 @@ class pages extends CI_Controller {
 			$this->load->view('space.php');
 			$this->load->view('profile',$data);
 			$this->load->view('footer.php');
+			echo"<script language='javascript'>
+    alert(".$username.");
+</script>";
 		}
 	}
 }
