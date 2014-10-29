@@ -137,6 +137,7 @@ a.linkedin:hover {
 
 /* FONT AWESOME & not necessary for functions */
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+
 /*REQUIRED*/
 .carousel-row {
 	margin-bottom: 10px;
@@ -229,32 +230,33 @@ a.linkedin:hover {
     </div>
     <div class="col-md-9">
       <div class="row carousel-row">
-        <div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel"> 
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-          </ol>
-          
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active"> <img src="http://lorempixel.com/150/150?rand=1" alt="Image"> </div>
-            <div class="item"> <img src="http://lorempixel.com/150/150?rand=2" alt="Image"> </div>
-            <div class="item"> <img src="http://lorempixel.com/150/150?rand=3" alt="Image"> </div>
+        <div class="slide-row">
+          <div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel"> 
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+            </ol>
+            
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active"> <img src="http://lorempixel.com/150/150?rand=1" alt="Image"> </div>
+              <div class="item"> <img src="http://lorempixel.com/150/150?rand=2" alt="Image"> </div>
+              <div class="item"> <img src="http://lorempixel.com/150/150?rand=3" alt="Image"> </div>
+            </div>
           </div>
+          <div class="slide-content">
+            <h4>Example product</h4>
+            <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat </p>
+          </div>
+          <div class="slide-footer"> <span class="pull-right buttons">
+            <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button>
+            <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-shopping-cart"></i> Buy</button>
+            </span> </div>
         </div>
-        <div class="slide-content">
-          <h4>Example product</h4>
-          <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat </p>
-        </div>
-        <div class="slide-footer"> <span class="pull-right buttons">
-          <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button>
-          <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-shopping-cart"></i> Buy</button>
-          </span> </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 </body>
 </html>
