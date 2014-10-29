@@ -87,7 +87,12 @@ class pages extends CI_Controller {
 		else{
 			$username = $this->uri->segment(3); 
 			$data['username'] = $username;
+			$data['page'] = "profile"; 
+			$this->load->helper('body.php');
+			$this->load->view('header.php',$data);
+			$this->load->view('space.php');
 			$this->load->view('profile',$data);
+			$this->load->view('footer.php');
 		}
 	}
 }
