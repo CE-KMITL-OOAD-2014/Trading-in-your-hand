@@ -93,3 +93,4 @@ else if($page=="profile")
   <script src="../../js/bootstrap.min.js"></script> 
 </div>
 </body>
+</html>
