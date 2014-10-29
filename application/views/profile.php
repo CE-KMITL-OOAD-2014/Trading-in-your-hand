@@ -209,7 +209,11 @@ if($this->session->userdata('username')){
           <div class="[ info-card-detail ]"> 
             <!-- Description -->
             <p><? echo"".$about.""; ?></p>
-            <div class="social"> <a href="<? echo"".$facebook.""; ?>" class="[ social-icon facebook ] animate"><span class="fa fa-facebook"></span></a> <a href="<? echo"".$twitter.""; ?>" class="[ social-icon twitter ] animate"><span class="fa fa-twitter"></span></a> <a href="<? echo"".$github.""; ?>" class="[ social-icon github ] animate"><span class="fa fa-github-alt"></span></a> <a href="<? echo"".$googleplus.""; ?>" class="[ social-icon google-plus ] animate"><span class="fa fa-google-plus"></span></a></div>
+            <div class="social"> <a href="<? echo"".$facebook.""; ?>" class="[ social-icon facebook ] animate"><span class="fa fa-facebook"></span></a> <a href="<? echo"".$twitter.""; ?>" class="[ social-icon twitter ] animate"><span class="fa fa-twitter"></span></a> <a href="<? echo"".$github.""; ?>" class="[ social-icon github ] animate"><span class="fa fa-github-alt"></span></a> <a href="<? echo"".$googleplus.""; ?>" class="[ social-icon google-plus ] animate"><span class="fa fa-google-plus"></span></a>
+            <a class="btn btn-default btn-sm" href="#">
+  			<i class="fa fa-cog"></i>Edit</a>
+
+            </div>
           </div>
         </div>
       </div>
