@@ -85,7 +85,7 @@ class pages extends CI_Controller {
 </script>";
 		}
 		else{
-			$id = $this->uri->segment(3); 
+			$username = $this->uri->segment(3); 
 			$data['username'] = $username;
 			$this->load->view('profile',$data);
 		}
