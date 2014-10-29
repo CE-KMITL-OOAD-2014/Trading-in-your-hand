@@ -194,6 +194,9 @@ if($this->session->userdata('username')){
 			$id = $this->session->all_userdata();
 			$id = $id['username'];} ?>
 
+<html>
+<head>
+</head>
 <body>
 <div class="back">
   <div class="container">
@@ -305,3 +308,4 @@ if($this->session->userdata('username')){
   </div>
 </div>
 </body>
+</html>
