@@ -3,8 +3,8 @@
 			function register($data){
 				$this->db->insert('member',$data);	
 			}	
-			function memberDetail(){
-				$plist = $this->db->get('member');
+			function memberDetail($data){
+				return $this->db->where('username',$data['username'])->get('member');
 			}
 			function verifylogin($data){
 				$check = $this->db->where('username',$data['username'])->where('password',md5($data['password']))->count_all_results('member');
