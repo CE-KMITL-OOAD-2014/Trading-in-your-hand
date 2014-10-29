@@ -189,6 +189,10 @@ a.linkedin:hover {
  display: block;
 }
 </style>
+<?
+if($this->session->userdata('username')){
+			$id = $this->session->all_userdata();
+			$id = $id['username'];} ?>
 <html>
 <head>
 </head>
@@ -226,7 +230,35 @@ a.linkedin:hover {
           </div>
           <div class="slide-footer"> <span class="pull-right buttons">
             <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button>
-            <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-shopping-cart"></i> Buy</button>
+            <?
+			if($id==$username)
+            echo"<button class='btn btn-sm btn-danger'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
+			else
+			echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+            ?>
+			</span> </div>
+            
+        </div>
+        <div class="slide-row">
+          <div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel">             
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active"> <img src="http://lorempixel.com/150/150?rand=1" alt="Image"> </div>
+            </div>
+          </div>
+          <div class="slide-content">
+            <h4>Example product</h4>
+            <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat </p>
+          </div>
+          <div class="slide-footer"> <span class="pull-right buttons">
+            <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button>
+            <?
+			if($id==$username)
+            echo"<button class='btn btn-sm btn-danger'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
+			else
+			echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+            ?>
             </span> </div>
             
         </div>
@@ -244,25 +276,12 @@ a.linkedin:hover {
           </div>
           <div class="slide-footer"> <span class="pull-right buttons">
             <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button>
-            <button class="btn btn-sm btn-primary"><i class="fa fa-trash-o fa-lg"></i> Delete</button>
-            </span> </div>
-            
-        </div>
-        <div class="slide-row">
-          <div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel">             
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-              <div class="item active"> <img src="http://lorempixel.com/150/150?rand=1" alt="Image"> </div>
-            </div>
-          </div>
-          <div class="slide-content">
-            <h4>Example product</h4>
-            <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat </p>
-          </div>
-          <div class="slide-footer"> <span class="pull-right buttons">
-            <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button>
-            <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-shopping-cart"></i> Buy</button>
+            <?
+			if($id==$username)
+            echo"<button class='btn btn-sm btn-danger'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
+			else
+			echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+            ?>
             </span> </div>
             
         </div>
