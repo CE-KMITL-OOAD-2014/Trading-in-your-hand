@@ -89,7 +89,6 @@ class pages extends CI_Controller {
 			$this->load->model('member_model');	
 			$temp = $this->member_model->memberDetail($data);
 			foreach($temp->result_array() as $detail){}
-			echo"<script>alert('".$detail['username']."')</script>";
 			$data['page'] = "profile"; 
 			$this->load->helper('body.php');
 			$this->load->view('header.php',$data);
