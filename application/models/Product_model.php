@@ -13,8 +13,8 @@
 			$username = "admin"; // get username from session
 			$this->db->where('username',$username)->where('name',$data['name'])->set('name',$data['name'])->set('price',$data['price'])->set('amount',$data['amount'])->update('product');
 		}
-		public function display_product(){
-			$username = "admin";
+		public function display_product($pdata){
+			$username = $pdata['username'];
 			$plist = $this->db->where('username',$username)->get('product');
 			return $plist;
 		}
