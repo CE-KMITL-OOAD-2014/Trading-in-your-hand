@@ -228,9 +228,8 @@ a.linkedin:hover {
             <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button>
             <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-shopping-cart"></i> Buy</button>
             </span> </div>
+            
         </div>
-        <!--class row--> 
-        <div class="row carousel-row">
         <div class="slide-row">
           <div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel">             
             <!-- Wrapper for slides -->
@@ -247,44 +246,7 @@ a.linkedin:hover {
             <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button>
             <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-shopping-cart"></i> Buy</button>
             </span> </div>
-        </div>
-        <!--class row--> 
-        <div class="row carousel-row">
-        <div class="slide-row">
-          <div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel">             
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-              <div class="item active"> <img src="http://lorempixel.com/150/150?rand=1" alt="Image"> </div>
-            </div>
-          </div>
-          <div class="slide-content">
-            <h4>Example product</h4>
-            <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat </p>
-          </div>
-          <div class="slide-footer"> <span class="pull-right buttons">
-            <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button>
-            <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-shopping-cart"></i> Buy</button>
-            </span> </div>
-        </div>
-        <!--class row--> 
-        <div class="row carousel-row">
-        <div class="slide-row">
-          <div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel">             
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-              <div class="item active"> <img src="http://lorempixel.com/150/150?rand=1" alt="Image"> </div>
-            </div>
-          </div>
-          <div class="slide-content">
-            <h4>Example product</h4>
-            <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat </p>
-          </div>
-          <div class="slide-footer"> <span class="pull-right buttons">
-            <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button>
-            <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-shopping-cart"></i> Buy</button>
-            </span> </div>
+            
         </div>
         <!--class row--> 
       </div>
