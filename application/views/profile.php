@@ -23,7 +23,7 @@ body {
 	width: 100px;
 	margin-bottom: 60px;
 }
-.info-card .info-card-details,  .info-card .info-card-details .info-card-header {
+.info-card .info-card-details, .info-card .info-card-details .info-card-header {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -65,7 +65,7 @@ body {
 	padding-top: 45px;
 	padding-bottom: 25px;
 }
-.info-card .info-card-details .info-card-header h1,  .info-card .info-card-details .info-card-header h3 {
+.info-card .info-card-details .info-card-header h1, .info-card .info-card-details .info-card-header h3 {
 	color: rgb(62, 62, 62);
 	font-size: 22px;
 	font-weight: 900;
@@ -135,38 +135,28 @@ a.linkedin:hover {
 	background-color: rgb(1, 116, 179) !important;
 }
 </style>
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="../../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="back">
   <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <div class="[ info-card ]"> <img style="width: 100%" src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc3/v/t1.0-9/943644_3168331383872_1982085005_n.jpg?oh=a5f8ef8e34d18e4e2279616d2f99a3ea&oe=54EA273F&__gda__=1420737788_fe56ec5b6a2987d60f1a199d77186d74" />
-          <div class="[ info-card-details ] animate">
-            <div class="[ info-card-header ]">
-              <h1> Nitipat Suttirak </h1>
-              <h3> aka PaelnwZa55x </h3>
-            </div>
-            <div class="[ info-card-detail ]"> 
-              <!-- Description -->
-              <p>About me not about you :P</p>
-              <div class="social"> <a href="https://www.facebook.com/nitipat.suttirak" class="[ social-icon facebook ] animate"><span class="fa fa-facebook"></span></a> <a href="#" class="[ social-icon twitter ] animate"><span class="fa fa-twitter"></span></a> <a href="https://github.com/nitipatt" class="[ social-icon github ] animate"><span class="fa fa-github-alt"></span></a> <a href="#" class="[ social-icon google-plus ] animate"><span class="fa fa-google-plus"></span></a> <a href="#" class="[ social-icon linkedin ] animate"><span class="fa fa-linkedin"></span></a> </div>
-            </div>
+    <div class="col-md-3">
+      <div class="[ info-card ]"> <img style="width: 100%" src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc3/v/t1.0-9/943644_3168331383872_1982085005_n.jpg?oh=a5f8ef8e34d18e4e2279616d2f99a3ea&oe=54EA273F&__gda__=1420737788_fe56ec5b6a2987d60f1a199d77186d74" />
+        <div class="[ info-card-details ] animate">
+          <div class="[ info-card-header ]">
+            <h1> Nitipat Suttirak </h1>
+            <h3> aka PaelnwZa55x </h3>
+          </div>
+          <div class="[ info-card-detail ]"> 
+            <!-- Description -->
+            <p>About me not about you :P</p>
+            <div class="social"> <a href="https://www.facebook.com/nitipat.suttirak" class="[ social-icon facebook ] animate"><span class="fa fa-facebook"></span></a> <a href="#" class="[ social-icon twitter ] animate"><span class="fa fa-twitter"></span></a> <a href="https://github.com/nitipatt" class="[ social-icon github ] animate"><span class="fa fa-github-alt"></span></a> <a href="#" class="[ social-icon google-plus ] animate"><span class="fa fa-google-plus"></span></a> <a href="#" class="[ social-icon linkedin ] animate"><span class="fa fa-linkedin"></span></a> </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-  <!-- Include all compiled plugins (below), or include individual files as needed --> 
-  <script src="../../js/bootstrap.min.js"></script> 
 </div>
 </body>
 </html>
