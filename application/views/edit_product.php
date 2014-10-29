@@ -1,8 +1,4 @@
-<html>
-<head>
-<meta charset="utf-8"/>
-<title>Edit products</title>
-</head>
+
 <body>
 <div class="back">
 <form action='../Product/edit' method='POST' align='center'>
@@ -14,4 +10,3 @@
 </form>
 </div>
 </body>
-</html>
