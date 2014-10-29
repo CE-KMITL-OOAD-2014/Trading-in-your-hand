@@ -151,12 +151,12 @@ a.linkedin:hover {
         <div class="[ info-card ]"> <img style="width: 100%" src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc3/v/t1.0-9/943644_3168331383872_1982085005_n.jpg?oh=a5f8ef8e34d18e4e2279616d2f99a3ea&oe=54EA273F&__gda__=1420737788_fe56ec5b6a2987d60f1a199d77186d74" />
           <div class="[ info-card-details ] animate">
             <div class="[ info-card-header ]">
-              <h1> Robert McIntosh </h1>
-              <h3> aka Mouse0270 </h3>
+              <h1> Nitipat Suttirak </h1>
+              <h3> aka PaelnwZa55x </h3>
             </div>
             <div class="[ info-card-detail ]"> 
               <!-- Description -->
-              <p>The idea of creating something out of nothing has always generated a passion in my heart. This is what lead me to website development. I can literally create little worlds that hopefully thousands of people can see and even experience.</p>
+              <p>About me not about you :P</p>
               <div class="social"> <a href="https://www.facebook.com/nitipat.suttirak" class="[ social-icon facebook ] animate"><span class="fa fa-facebook"></span></a> <a href="#" class="[ social-icon twitter ] animate"><span class="fa fa-twitter"></span></a> <a href="https://github.com/nitipatt" class="[ social-icon github ] animate"><span class="fa fa-github-alt"></span></a> <a href="#" class="[ social-icon google-plus ] animate"><span class="fa fa-google-plus"></span></a> <a href="#" class="[ social-icon linkedin ] animate"><span class="fa fa-linkedin"></span></a> </div>
             </div>
           </div>
