@@ -101,7 +101,6 @@ class pages extends CI_Controller {
 			$data['page'] = "Edit profile"; 
 			$this->load->helper('body.php');
 			$this->load->view('header.php',$data);
-			$this->load->view('space.php');
 			$this->load->view('edit_profile');
 			$this->load->view('footer.php');
 		}

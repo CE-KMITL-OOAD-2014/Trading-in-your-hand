@@ -213,7 +213,7 @@ if($this->session->userdata('username')){
             <div class="social"> <a href="<? echo"".$facebook.""; ?>" class="[ social-icon facebook ] animate"><span class="fa fa-facebook"></span></a> <a href="<? echo"".$twitter.""; ?>" class="[ social-icon twitter ] animate"><span class="fa fa-twitter"></span></a> <a href="<? echo"".$github.""; ?>" class="[ social-icon github ] animate"><span class="fa fa-github-alt"></span></a> <a href="<? echo"".$googleplus.""; ?>" class="[ social-icon google-plus ] animate"><span class="fa fa-google-plus"></span></a>        
             <?
 			if($id==$username)
-  			echo"<a class='btn btn-default btn-sm' href='../../page/edit_profile'><i class='fa fa-cog' id='edit'></i>Edit</a>";
+  			echo"<a class='btn btn-default btn-sm' href='../../pages/edit_profile'><i class='fa fa-cog' id='edit'></i>Edit</a>";
 			?>
             </div>
           </div>
