@@ -22,6 +22,9 @@
 			function sendmessage($data){
 				$this->db->insert('message',$data);	
 			}
+			function edit_profile($data){
+				$this->db->where('username',$username)->set('name',$data['name'])->set('sname',$data['sname'])->set('about',$data['about'])->update('member');
+			}
 		}
 	
 ?>

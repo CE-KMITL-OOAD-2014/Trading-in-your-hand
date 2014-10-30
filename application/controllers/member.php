@@ -65,6 +65,17 @@ class member extends CI_Controller {
     window.location.href = '../../pages/message';
 </script>";	
 		}
+	public function edit(){
+			$data['name'] = $_POST["name"];
+			$data['sname'] = $_POST["sname"];
+			$data['about'] = $_POST["about"];
+			$data['email'] = $_POST["email"];
+			$data['address'] = $_POST["address"];
+			$data['facebook'] = $_POST["facebook"];
+			$data['twitter'] = $_POST["twitter"];
+			$data['googleplus'] = $_POST["googleplus"];
+			$data['github'] = $_POST["github"];
+		}
 
 }
 ?>
