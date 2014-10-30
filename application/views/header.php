@@ -5,16 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="../../images/logo.png" />
 <?
-if($page=="home")
-	echo"<title>Trading in your hand</title>";
-else if($page=="register")
-	echo"<title>Register - Trading in your hand</title>";
-else if($page=="login")
-	echo"<title>Log in - Trading in your hand</title>";
-else if($page=="addproduct")
-	echo"<title>Add Product - Trading in your hand</title>";
-else if($page=="profile")
+if($page=="profile")
 	echo"<title>".$username." - Trading in your hand</title>";
+else
+	echo"<title>".$page." - Trading in your hand</title>";
 ?>
 <link href="../../css/bootstrap.min.css" rel="stylesheet">
 </head>

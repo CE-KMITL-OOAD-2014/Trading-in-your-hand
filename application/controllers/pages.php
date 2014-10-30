@@ -2,7 +2,7 @@
 
 class pages extends CI_Controller {
 	public function index()
-	{	$data['page'] = "home";
+	{	$data['page'] = "Home";
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
 		$this->load->view('space.php');
@@ -11,7 +11,7 @@ class pages extends CI_Controller {
 	}
 	public function register()
 	{
-		$data['page'] = "register";
+		$data['page'] = "Register";
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
 		$this->load->view('space.php');
@@ -19,7 +19,7 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 	}
 	public function login(){
-		$data['page'] = "login";
+		$data['page'] = "Log in";
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
 		$this->load->view('space.php');
@@ -53,7 +53,7 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 	}
 	public function message(){
-		$data['page'] = "message"; 
+		$data['page'] = "Message"; 
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
 		$this->load->view('space.php');
@@ -61,7 +61,7 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 	}
 	public function viewmessage(){
-		$data['page'] = "message"; 
+		$data['page'] = "Message"; 
 		$this->load->model('member_model');	
 		$mdata['data'] = $this->member_model->getmessage();
 		$this->load->helper('body.php');
@@ -87,8 +87,7 @@ class pages extends CI_Controller {
 		else{
 			$data['username'] = $this->uri->segment(3);
 			$this->load->model('member_model');	
-			$temp = $this->member_model->memberDetail($data);
-			foreach($temp->result_array() as $detail){}
+			$detail = $this->member_model->memberDetail($data);
 			$data['page'] = "profile"; 
 			$this->load->helper('body.php');
 			$this->load->view('header.php',$data);
@@ -96,6 +95,20 @@ class pages extends CI_Controller {
 			$this->load->view('profile',$detail);
 			$this->load->view('footer.php');
 		}
+	}
+	public function edit_profile(){
+		if($this->session->userdata('username')){
+			$data['page'] = "Edit profile"; 
+			$this->load->helper('body.php');
+			$this->load->view('header.php',$data);
+			$this->load->view('space.php');
+			$this->load->view('edit_profile');
+			$this->load->view('footer.php');
+		}
+		else
+			echo"<script language='javascript'>
+    window.location.href = '../../pages';
+</script>";
 	}
 }
 ?>
