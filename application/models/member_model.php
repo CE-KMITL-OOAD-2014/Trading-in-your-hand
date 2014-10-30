@@ -4,7 +4,9 @@
 				$this->db->insert('member',$data);	
 			}	
 			function memberDetail($data){
-				return $this->db->where('username',$data['username'])->get('member');
+				$data = $this->db->where('username',$data['username'])->get('member');
+				foreach($data->result_array() as $row){}
+				return $row;
 			}
 			function verifylogin($data){
 				$check = $this->db->where('username',$data['username'])->where('password',md5($data['password']))->count_all_results('member');
