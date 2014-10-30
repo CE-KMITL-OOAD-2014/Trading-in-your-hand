@@ -102,9 +102,9 @@ class pages extends CI_Controller {
 			$data['page'] = "Edit profile"; 
 			$sess['username'] = "test02";	
 			$detail = $this->member_model->memberDetail($sess);
-			//$this->load->helper('body.php');
+			$this->load->helper('body.php');
 			$this->load->view('header.php',$data);
-			//$this->load->view('edit_profile',$detail);
+			$this->load->view('edit_profile',$detail);
 			$this->load->view('footer.php');
 		}
 		else
