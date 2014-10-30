@@ -78,7 +78,7 @@
         </div><div class="form-group">
           <label class="col-lg-3 control-label">Github:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<? echo"".$detail['github]; ?>" type="text">
+            <input class="form-control" value="<? echo"".$detail['github']; ?>" type="text">
           </div>
         </div>
         <div class="form-group">
