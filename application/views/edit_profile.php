@@ -13,14 +13,14 @@
     <br/>
   <div class="row">
     <!-- left column -->
-    <div class="col-md-6 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="text-center">
-        <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar">
+        <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="300x300">
         <input type="file" class="text-center center-block well well-sm">
       </div>
     </div>
     <!-- edit form column -->
-    <div class="col-md-6 col-sm-6 col-xs-12 personal-info">
+    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
       <div class="alert alert-info alert-dismissable">
         <a class="panel-close close" data-dismiss="alert">×</a> 
         <i class="fa fa-coffee"></i>
