@@ -31,25 +31,54 @@
         <div class="form-group">
           <label class="col-lg-3 control-label">First name:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="Jane" type="text">
+            <input class="form-control" value="<? echo $detail['name']; ?>" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Last name:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="Bishop" type="text">
+            <input class="form-control" value="<? echo $detail['sname']; ?>" type="text">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label">Company:</label>
+          <label class="col-lg-3 control-label">About:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="" type="text">
+            <input class="form-control" value="<? echo $detail['about']; ?>" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Email:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="janesemail@gmail.com" type="text">
+            <input class="form-control" value="<? echo $detail['email']; ?>" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Address:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="<? echo $detail['address']; ?>" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Facebook:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="<? echo $detail['facebook']; ?>" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Twitter:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="<? echo $detail['twitter']; ?>" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Google Plus:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="<? echo $detail['googleplus']; ?>" type="text">
+          </div>
+        </div><div class="form-group">
+          <label class="col-lg-3 control-label">Github:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="<? echo $detail['github]; ?>" type="text">
           </div>
         </div>
         <div class="form-group">
