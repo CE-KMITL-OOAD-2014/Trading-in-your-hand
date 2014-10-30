@@ -99,8 +99,9 @@ class pages extends CI_Controller {
 	public function edit_profile(){
 		if($this->session->userdata('username')){
 			$data['page'] = "Edit profile"; 
+			$sess = $this->session->all_userdata();
 			$this->load->model('member_model');	
-			$detail = $this->member_model->memberDetail($data);
+			$detail = $this->member_model->memberDetail($sess);
 			$this->load->helper('body.php');
 			$this->load->view('header.php',$data);
 			$this->load->view('edit_profile',$detail);
