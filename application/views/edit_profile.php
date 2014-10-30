@@ -9,8 +9,7 @@
 </head>
 <body>
 <div class="back"> 
-	<div class="container" style="padding-top: 60px;">
-  <h1 class="page-header">Edit Profile</h1>
+	<div class="container">
   <div class="row">
     <!-- left column -->
     <div class="col-md-4 col-sm-6 col-xs-12">
