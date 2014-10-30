@@ -31,54 +31,54 @@
         <div class="form-group">
           <label class="col-lg-3 control-label">First name:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<? echo"".$detail['name']; ?>" type="text">
+            <input class="form-control" value="<? echo"".$name; ?>" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Last name:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<? echo"".$detail['sname']; ?>" type="text">
+            <input class="form-control" value="<? echo"".$sname; ?>" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">About:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<? echo"".$detail['about']; ?>" type="text">
+            <input class="form-control" value="<? echo"".$about; ?>" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Email:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<? echo"".$detail['email']; ?>" type="text">
+            <input class="form-control" value="<? echo"".$email; ?>" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Address:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<? echo"".$detail['address']; ?>" type="text">
+            <input class="form-control" value="<? echo"".$address; ?>" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Facebook:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<? echo"".$detail['facebook']; ?>" type="text">
+            <input class="form-control" value="<? echo"".$facebook; ?>" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Twitter:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<? echo"".$detail['twitter']; ?>" type="text">
+            <input class="form-control" value="<? echo"".$twitter; ?>" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Google Plus:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<? echo"".$detail['googleplus']; ?>" type="text">
+            <input class="form-control" value="<? echo"".$googleplus; ?>" type="text">
           </div>
         </div><div class="form-group">
           <label class="col-lg-3 control-label">Github:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<? echo"".$detail['github']; ?>" type="text">
+            <input class="form-control" value="<? echo"".$github; ?>" type="text">
           </div>
         </div>
         <div class="form-group">
