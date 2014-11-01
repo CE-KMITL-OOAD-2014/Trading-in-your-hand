@@ -23,7 +23,7 @@
 				$this->db->insert('message',$data);	
 			}
 			function edit_profile($data){
-				$this->db->where('username',$username)->set('name',$data['name'])->set('sname',$data['sname'])->set('about',$data['about'])->update('member');
+				$this->db->where('username',$data['username'])->set('name',$data['name'])->set('sname',$data['sname'])->set('about',$data['about'])->set('email',$data['email'])->set('address',$data['address'])->set('facebook',$data['facebook'])->set('twitter',$data['twitter'])->set('googleplus',$data['googleplus'])->set('github',$data['github'])->update('member');
 			}
 		}
 	
