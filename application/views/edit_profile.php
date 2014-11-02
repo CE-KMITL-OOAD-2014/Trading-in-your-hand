@@ -14,7 +14,7 @@
     <br/>
   <div class="row">
     <!-- left column -->
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-3 col-sm-5 col-xs-12">
       <div class="text-center">
         <img src="../../userPic/<? echo"".md5(base64_encode($id)).".jpg"; ?>" class="avatar img-thumbnail" alt="300x300">
         <form action="../../member/uploaded" method="POST" enctype="multipart/form-data" >
