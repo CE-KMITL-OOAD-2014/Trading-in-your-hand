@@ -95,12 +95,12 @@ class member extends CI_Controller {
 		$this->load->library('upload', $config);
 		if($this->upload->do_upload())
 			echo"<script language='javascript'>
-    window.location.href = '../../pages/member/".$data['username']."';
+    window.location.href = '../../pages/member/editprofile';
 </script>";	
 		else
 			echo"<script language='javascript'>
 	alert('Please browse file');
-    window.location.href = '../../pages/member/".$data['username']."';
+    window.location.href = '../../pages/member/editprofile';
 </script>";	
 	}	
 }
