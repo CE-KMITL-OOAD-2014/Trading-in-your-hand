@@ -16,11 +16,9 @@
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="text-center">
         <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-thumbnail" alt="300x300">
-        <form action="../member/edit" method="POST" enctype="multipart/form-data" >
-            Select File To Upload:<br />
-            <input type="file" name="userfile"  />
-            <br /><br />
-            <input type="submit" name="submit" value="Upload" class="btn btn-success" />
+        <form action="../../member/edit" method="POST" enctype="multipart/form-data" >
+        <input type="file" name="pic" class="text-center center-block well well-sm"/>
+        <input type="submit" name="submit" value="Upload" class="btn btn-success" />
         </form>
       </div>
     </div>
