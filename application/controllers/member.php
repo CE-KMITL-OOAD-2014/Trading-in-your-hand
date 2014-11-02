@@ -68,24 +68,16 @@ class member extends CI_Controller {
 	public function edit(){
 		$data = $this->session->all_userdata();
 		$this->load->model('member_model');
-		if(isset($_POST['name']) && !empty($_POST['name']))			$data['name'] = $_POST["name"];
-		else			$data['name'] = "";
-		if(isset($_POST['sname']) && !empty($_POST['sname']))		$data['sname'] = $_POST["sname"];
-		else			$data['sname'] = "";
-		if(isset($_POST['about']) && !empty($_POST['about']))		$data['about'] = $_POST["about"];
-		else			$data['about'] = "";
-		if(isset($_POST['email']) && !empty($_POST['email']))		$data['email'] = $_POST["email"];
-		else			$data['email'] = "";
-		if(isset($_POST['address']) && !empty($_POST['address']))	$data['address'] = $_POST["address"];
-		else			$data['address'] = "";
-		if(isset($_POST['facebook']) && !empty($_POST['facebook']))	$data['facebook'] = $_POST["facebook"];
-		else			$data['facebook'] = "";
-		if(isset($_POST['twitter']) && !empty($_POST['twitter']))	$data['twitter'] = $_POST["twitter"];
-		else			$data['twitter'] = "";
-		if(isset($_POST['googleplus']) && !empty($_POST['googleplus']))		$data['googleplus'] = $_POST["googleplus"];
-		else			$data['googleplus'] = "";
-		if(isset($_POST['github']) && !empty($_POST['github']))		$data['github'] = $_POST["github"];
-		else 			$data['github'] = "";
+		$data['name'] = $_POST["name"];
+		$data['sname'] = $_POST["sname"];
+		$data['about'] = $_POST["about"];
+		$data['email'] = $_POST["email"];
+		$data['address'] = $_POST["address"];
+		$data['facebook'] = $_POST["facebook"];
+		$data['twitter'] = $_POST["twitter"];
+		$data['googleplus'] = $_POST["googleplus"];
+		$data['github'] = $_POST["github"];
+		$data['github'] = "";
 		$this->member_model->edit_profile($data);
 		echo"<script language='javascript'>
     window.location.href = '../../pages/member/".$data['username']."';
