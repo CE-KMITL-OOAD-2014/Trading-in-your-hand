@@ -69,20 +69,23 @@ class member extends CI_Controller {
 </script>";	
 		}
 	public function edit(){
-		$data = $this->session->all_userdata();
 		$config =  array(
-			  //'file_name'		=> md5(base64_encode($data['username'])),
-              'upload_path'     => "./userPic/",
-              'allowed_types'   => "gif|jpg|png|jpeg",
-              'overwrite'       => TRUE,
-              'max_size'        => "1000KB",
-              'max_height'      => "768",
-              'max_width'       => "1024"      );
-		$this->load->library('upload', $config);
-		if($this->upload->do_upload())
-			echo "file upload success";
-		else
-			echo "file upload failed";
+                  'upload_path'     => "./productPic/",
+                  'allowed_types'   => "gif|jpg|png|jpeg",
+                  'overwrite'       => TRUE,
+                  'max_size'        => "1000KB",
+                  'max_height'      => "768",
+                  'max_width'       => "1024"  
+                );
+			$this->load->library('upload', $config);
+			if($this->upload->do_upload())
+			{
+				echo "file upload success";
+			}
+			else
+			{
+			   echo "file upload failed";
+			}
 			
 	}
 }

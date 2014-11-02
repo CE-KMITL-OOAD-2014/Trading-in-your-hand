@@ -17,7 +17,7 @@
       <div class="text-center">
         <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-thumbnail" alt="300x300">
         <form action="../../member/edit" method="POST" enctype="multipart/form-data" >
-        <input type="file" id="pic" name="pic" class="text-center center-block well well-sm"/>
+        <input type="file" name="pic" class="text-center center-block well well-sm"/>
         <input class="btn btn-primary" value="Upload" type="submit">
         </form>
       </div>
