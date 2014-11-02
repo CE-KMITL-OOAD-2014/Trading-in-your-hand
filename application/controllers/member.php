@@ -73,7 +73,7 @@ class member extends CI_Controller {
 		
 		$config =  array(
 			 // 'file_name'		=> md5(base64_encode($data['username'])),
-              'upload_path'     => "./userPic/",
+              'upload_path'     => "./productPic/",
               'allowed_types'   => "gif|jpg|png|jpeg",
               'overwrite'       => TRUE,
               'max_size'        => "1000KB",
