@@ -70,17 +70,7 @@ class member extends CI_Controller {
 		}
 	public function edit(){
 		$data = $this->session->all_userdata();
-		$this->load->model('member_model');
-		$data['name'] = $_GET["name"];
-		$data['sname'] = $_GET["sname"];
-		$data['about'] = $_GET["about"];
-		$data['email'] = $_GET["email"];
-		$data['address'] = $_GET["address"];
-		$data['facebook'] = $_GET["facebook"];
-		$data['twitter'] = $_GET["twitter"];
-		$data['googleplus'] = $_GET["googleplus"];
-		$data['github'] = $_GET["github"];
-		$this->member_model->edit_profile($data);
+		
 		$config =  array(
 			  'file_name'		=> md5(base64_encode($data['username'])),
               'upload_path'     => "./userPic/",
