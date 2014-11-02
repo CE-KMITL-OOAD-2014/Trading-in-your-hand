@@ -201,7 +201,7 @@ if($this->session->userdata('username')){
 <div class="back">
   <div class="container">
     <div class="col-md-3">
-      <div class="[ info-card ]"> <img style="width: 100%" src="http://www.gama-ksa.com/wp-content/uploads/2014/06/funny-default-facebook-pictures.jpg" />
+      <div class="[ info-card ]"> <img style="width: 100%" src="../../userPic/<? echo"".md5(base64_encode($id)); ?>" />
         <div class="[ info-card-details ] animate">
           <div class="[ info-card-header ]">
             <h1><? echo"".$name." ".$sname; ?></h1>

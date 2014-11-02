@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../../css/bootstrap.min.css" rel="stylesheet">
-
+<? 			$id = $this->session->all_userdata();
+			$id = $id['username']; ?>
 </head>
 <body>
 <div class="back"> 
@@ -15,7 +16,7 @@
     <!-- left column -->
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="text-center">
-        <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-thumbnail" alt="300x300">
+        <img src="../../images/<? echo"".md5(base64_encode($id)); ?>" class="avatar img-thumbnail" alt="300x300">
         <form action="../../member/edit" method="POST" enctype="multipart/form-data" >
         <input type="file" name="userfile" class="text-center center-block well well-sm"/>
         <input type="submit" name="submit" value="Upload" class="btn btn-success" />
@@ -90,8 +91,6 @@
             <input class="btn btn-primary" value="Save Changes" type="submit">
             <span></span>
             <input class="btn btn-default" value="Cancel" type="button" onclick="location.href='<? 
-			$id = $this->session->all_userdata();
-			$id = $id['username'];
 			echo"../../pages/member/".$id; ?>'">
           </div>
         </div>

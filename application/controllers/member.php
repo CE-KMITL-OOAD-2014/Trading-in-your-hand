@@ -69,24 +69,36 @@ class member extends CI_Controller {
 </script>";	
 		}
 	public function edit(){
+		$this->load->model('member_model');
+		$data['name'] = $_GET["name"];
+		$data['sname'] = $_GET["sname"];
+		$data['about'] = $_GET["about"];
+		$data['email'] = $_GET["email"];
+		$data['address'] = $_GET["address"];
+		$data['facebook'] = $_GET["facebook"];
+		$data['twitter'] = $_GET["twitter"];
+		$data['googleplus'] = $_GET["googleplus"];
+		$data['github'] = $_GET["github"];
+		$this->member_model->edit_profile($data);
+	}
+	public function uploaded(){
+		$data = $this->session->all_userdata();
 		$config =  array(
-                  'upload_path'     => "./productPic/",
-                  'allowed_types'   => "gif|jpg|png|jpeg",
-                  'overwrite'       => TRUE,
-                  'max_size'        => "1000KB",
-                  'max_height'      => "768",
-                  'max_width'       => "1024"  
-                );
-			$this->load->library('upload', $config);
-			if($this->upload->do_upload())
-			{
-				echo "file upload success";
-			}
-			else
-			{
-			   echo "file upload failed";
-			}
-			
+				'file_name'		  => md5(base64_encode($data['username'])),
+                'upload_path'     => "./userPic/",
+                'allowed_types'   => "gif|jpg|png|jpeg",
+                'overwrite'       => TRUE,
+                'max_size'        => "1000KB",
+                'max_height'      => "768",
+                'max_width'       => "1024"  
+            );
+		$this->load->library('upload', $config);
+		if($this->upload->do_upload())
+			echo"<script language='javascript'>
+    window.location.href = '../../pages/member/".$data['username']."';
+</script>";	
+		else
+			echo "file upload failed";	
 	}
 }
 ?>
