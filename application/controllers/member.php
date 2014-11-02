@@ -98,7 +98,10 @@ class member extends CI_Controller {
     window.location.href = '../../pages/member/".$data['username']."';
 </script>";	
 		else
-			echo "file upload failed";	
-	}
+			echo"<script language='javascript'>
+	alert('Please browse file');
+    window.location.href = '../../pages/member/".$data['username']."';
+</script>";	
+	}	
 }
 ?>
