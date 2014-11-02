@@ -16,7 +16,7 @@ class member extends CI_Controller {
 			echo"success";
 			foreach($query->result_array() as $row)
 				$id = $row['id']+1;
-			$data = array('id'=>$id,'username'=>$username,'password'=>$password,'name'=>$name,'sname'=>$sname,'address'=>$address,'email'=>$email);
+			$data = array('id'=>$id,'username'=>$username,'password'=>$password,'name'=>$name,'sname'=>$sname,'address'=>$address,'email'=>$email,'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://");
 			$this->member_model->register($data);
 		}
 	public function login(){
@@ -77,7 +77,6 @@ class member extends CI_Controller {
 		$data['twitter'] = $_POST["twitter"];
 		$data['googleplus'] = $_POST["googleplus"];
 		$data['github'] = $_POST["github"];
-		$data['github'] = "";
 		$this->member_model->edit_profile($data);
 		echo"<script language='javascript'>
     window.location.href = '../../pages/member/".$data['username']."';
