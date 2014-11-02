@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="back"> 
-		<form action="../product/uploaded" method="POST" enctype="multipart/form-data" >
+		<form action="../member/edit" method="POST" enctype="multipart/form-data" >
             Select File To Upload:<br />
             <input type="file" name="userfile"  />
             <br /><br />
