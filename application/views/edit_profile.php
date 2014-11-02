@@ -16,9 +16,7 @@
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="text-center">
         <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-thumbnail" alt="300x300">
-        <form action="../../member/upload">
         <input type="file" id="pic" name="pic" class="text-center center-block well well-sm" />
-      	<input type="submit" class="btn btn-primary" value="upload" />
       </div>
     </div>
     <!-- edit form column -->
@@ -29,7 +27,7 @@
         This is an <strong>.alert</strong>. Use this to show important messages to the user.
       </div>
       <h3>Personal info</h3>
-      <form class="form-horizontal" id="profile" role="form" action="../../member/edit" method="post">
+      <form class="form-horizontal" id="profile" role="form" action="../../member/edit" method="get">
         <div class="form-group">
           <label class="col-lg-3 control-label">First name:</label>
           <div class="col-lg-8">

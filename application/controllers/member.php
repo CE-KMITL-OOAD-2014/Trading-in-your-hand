@@ -71,39 +71,30 @@ class member extends CI_Controller {
 	public function edit(){
 		$data = $this->session->all_userdata();
 		$this->load->model('member_model');
-		$data['name'] = $_POST["name"];
-		$data['sname'] = $_POST["sname"];
-		$data['about'] = $_POST["about"];
-		$data['email'] = $_POST["email"];
-		$data['address'] = $_POST["address"];
-		$data['facebook'] = $_POST["facebook"];
-		$data['twitter'] = $_POST["twitter"];
-		$data['googleplus'] = $_POST["googleplus"];
-		$data['github'] = $_POST["github"];
-		$this->member_model->edit_profile($data);	
-	}
-	public function upload(){
-		$data = $this->session->all_userdata();
-		if(!empty($_FILES['pic']['tmp_name']) && is_uploaded_file($_FILES['pic']['tmp_name'])){
-			$config =  array(
-				  'file_name'		=> md5(base64_encode($data['username'])),
-                  'upload_path'     => "./userPic/",
-                  'allowed_types'   => "gif|jpg|png|jpeg",
-                  'overwrite'       => TRUE,
-                  'max_size'        => "1000KB",
-                  'max_height'      => "768",
-                  'max_width'       => "1024"  
-                );
-			$this->load->library('upload', $config);
-			if($this->upload->do_upload())
-			{
-				echo "file upload success";
-			}
-			else
-			{
-			   echo "file upload failed";
-			}
-		}			
+		$data['name'] = $_get["name"];
+		$data['sname'] = $_get["sname"];
+		$data['about'] = $_get["about"];
+		$data['email'] = $_get["email"];
+		$data['address'] = $_get["address"];
+		$data['facebook'] = $_get["facebook"];
+		$data['twitter'] = $_get["twitter"];
+		$data['googleplus'] = $_get["googleplus"];
+		$data['github'] = $_get["github"];
+		$this->member_model->edit_profile($data);
+		$config =  array(
+			  'file_name'		=> md5(base64_encode($data['username'])),
+              'upload_path'     => "./userPic/",
+              'allowed_types'   => "gif|jpg|png|jpeg",
+              'overwrite'       => TRUE,
+              'max_size'        => "1000KB",
+              'max_height'      => "768",
+              'max_width'       => "1024"      );
+		$this->load->library('upload', $config);
+		if($this->upload->do_upload())
+			echo "file upload success";
+		else
+			echo "file upload failed";
+			
 	}
 }
 ?>
