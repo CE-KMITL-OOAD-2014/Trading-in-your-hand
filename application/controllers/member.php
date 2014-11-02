@@ -80,10 +80,28 @@ class member extends CI_Controller {
 		$data['twitter'] = $_POST["twitter"];
 		$data['googleplus'] = $_POST["googleplus"];
 		$data['github'] = $_POST["github"];
+		if(!empty($_FILES['pic']['tmp_name']) && is_uploaded_file($_FILES['pic']['tmp_name'])){
+			$config =  array(
+				  'file_name'		=> md5(base64_encode($data['username'])),
+                  'upload_path'     => "./userPic/",
+                  'allowed_types'   => "gif|jpg|png|jpeg",
+                  'overwrite'       => TRUE,
+                  'max_size'        => "1000KB",
+                  'max_height'      => "768",
+                  'max_width'       => "1024"  
+                );
+			$this->load->library('upload', $config);
+			if($this->upload->do_upload())
+			{
+				echo "file upload success";
+			}
+			else
+			{
+			   echo "file upload failed";
+			}
+		}
 		$this->member_model->edit_profile($data);
-		echo"<script language='javascript'>
-    window.location.href = '../../pages/member/".$data['username']."';
-</script>";
+		
 	}
 		
 
