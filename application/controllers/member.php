@@ -72,7 +72,7 @@ class member extends CI_Controller {
 		$data = $this->session->all_userdata();
 		
 		$config =  array(
-			  'file_name'		=> md5(base64_encode($data['username'])),
+			 // 'file_name'		=> md5(base64_encode($data['username'])),
               'upload_path'     => "./userPic/",
               'allowed_types'   => "gif|jpg|png|jpeg",
               'overwrite'       => TRUE,
