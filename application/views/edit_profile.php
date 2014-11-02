@@ -16,7 +16,9 @@
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="text-center">
         <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-thumbnail" alt="300x300">
-        <input type="file" class="text-center center-block well well-sm" form="profile" >
+        <form action="../../member/upload">
+        <input type="file" id="pic" name="pic" class="text-center center-block well well-sm" />
+      	<input type="submit" class="btn btn-primary" value="upload" />
       </div>
     </div>
     <!-- edit form column -->

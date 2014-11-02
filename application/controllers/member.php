@@ -80,6 +80,10 @@ class member extends CI_Controller {
 		$data['twitter'] = $_POST["twitter"];
 		$data['googleplus'] = $_POST["googleplus"];
 		$data['github'] = $_POST["github"];
+		$this->member_model->edit_profile($data);	
+	}
+	public function upload(){
+		$data = $this->session->all_userdata();
 		if(!empty($_FILES['pic']['tmp_name']) && is_uploaded_file($_FILES['pic']['tmp_name'])){
 			$config =  array(
 				  'file_name'		=> md5(base64_encode($data['username'])),
@@ -99,11 +103,7 @@ class member extends CI_Controller {
 			{
 			   echo "file upload failed";
 			}
-		}
-		$this->member_model->edit_profile($data);
-		
+		}			
 	}
-		
-
 }
 ?>
