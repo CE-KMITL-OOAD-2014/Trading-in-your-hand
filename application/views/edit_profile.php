@@ -31,7 +31,7 @@
         This is an <strong>.alert</strong>. Use this to show important messages to the user.
       </div>
       <h3>Personal info</h3>
-      <form class="form-horizontal" id="profile" role="form" action="../../member/edit" method="get">
+      <form class="form-horizontal" id="profile" role="form" action="../../member/edit" method="post">
         <div class="form-group">
           <label class="col-lg-3 control-label">First name:</label>
           <div class="col-lg-8">
