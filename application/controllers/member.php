@@ -70,10 +70,9 @@ class member extends CI_Controller {
 		}
 	public function edit(){
 		$data = $this->session->all_userdata();
-		
 		$config =  array(
-			 // 'file_name'		=> md5(base64_encode($data['username'])),
-              'upload_path'     => "./productPic/",
+			  'file_name'		=> md5(base64_encode($data['username'])),
+              'upload_path'     => "./userPic/",
               'allowed_types'   => "gif|jpg|png|jpeg",
               'overwrite'       => TRUE,
               'max_size'        => "1000KB",
