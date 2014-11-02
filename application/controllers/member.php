@@ -82,7 +82,7 @@ class member extends CI_Controller {
 		$data['github'] = $_POST["github"];
 		$this->member_model->edit_profile($data);
 		echo"<script language='javascript'>
-    window.location.href = '../../pages/member".$data['username']."';
+    window.location.href = '../../pages/member/".$data['username']."';
 </script>";	
 	}
 	public function uploaded(){
