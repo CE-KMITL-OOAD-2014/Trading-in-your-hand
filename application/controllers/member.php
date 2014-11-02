@@ -13,11 +13,14 @@ class member extends CI_Controller {
 			$this->load->model('member_model');	
 			$this->db->select_max('id');
 			$query = $this->db->get('member');
-			echo"success";
 			foreach($query->result_array() as $row)
 				$id = $row['id']+1;
 			$data = array('id'=>$id,'username'=>$username,'password'=>$password,'name'=>$name,'sname'=>$sname,'address'=>$address,'email'=>$email,'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://");
 			$this->member_model->register($data);
+			echo"<script language='javascript'>
+	alert('Success');
+    window.location.href = '../../pages/login';
+</script>";
 		}
 	public function login(){
 			$data['username'] = $_POST['username'];
