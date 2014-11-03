@@ -223,7 +223,7 @@ if($this->session->userdata('username')){
           </div>
         </div>
       </div>
-      <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i><a href="../../pages/addproduct"> Add product</a></button>
+      <button class="btn btn-sm btn-default"><a href="../../pages/addproduct"> Add product</a></button>
     </div>
     <div class="col-md-9">
       <div class="row carousel-row">
