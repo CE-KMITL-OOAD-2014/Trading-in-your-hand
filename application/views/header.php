@@ -10,7 +10,7 @@ if($page=="profile")
 else
 	echo"<title>".$page." - Trading in your hand</title>";
 ?>
-<link href="../../css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div style="background-color:#CCC">
