@@ -230,6 +230,7 @@ if($this->session->userdata('username')){
 	$num = 0;
     foreach($pdata->result_array() as $rows)
 		$num++;
+	echo $num;
 	?>
       <div class="row carousel-row">
         <div class="slide-row">
