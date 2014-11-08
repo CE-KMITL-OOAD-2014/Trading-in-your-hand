@@ -189,10 +189,6 @@ a.linkedin:hover {
  display: block;
 }
 </style>
-<?
-if($this->session->userdata('username')){
-			$id = $this->session->all_userdata();
-			$id = $id['username'];} ?>
 
 <html>
 <head>
@@ -309,7 +305,10 @@ if($this->session->userdata('username')){
       <?
 	  echo"
       <div class='text-center'><ul class='pagination pagination-large'>
-		<li><a href='#' rel='prev'>&laquo;</a></li>
+		<li><a href='";
+		if($numpage==1)echo"#";
+		else echo"../../../../../pages/member/".$id."/2";
+		echo"' rel='prev'>&laquo;</a></li>
         <li class='active'><span>1</span></li>
         <li><a href='#'>2</a></li>
         <li><a href='#'>3</a></li>
