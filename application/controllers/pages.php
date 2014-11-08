@@ -96,7 +96,7 @@ class pages extends CI_Controller {
 			$this->load->helper('body.php');
 			$this->load->view('header.php',$data);
 			$this->load->view('space.php');
-			$this->load->view('profile',$temp);
+			$this->load->view('profile',$detail);
 			$this->load->view('footer.php');
 		}
 	}

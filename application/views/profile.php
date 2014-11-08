@@ -204,19 +204,19 @@ if($this->session->userdata('username')){
       <div class="[ info-card ]"> <img style="width: 100%" src="../../userPic/<? echo"".md5(base64_encode($id)).".jpg"; ?>" />
         <div class="[ info-card-details ] animate">
           <div class="[ info-card-header ]">
-            <h1><? echo"".$detail['name']." ".$detail['sname']; ?></h1>
-            <h3><? echo"".$detail['username'].""; ?> </h3>
+            <h1><? echo"".$name." ".$sname; ?></h1>
+            <h3><? echo"".$username.""; ?> </h3>
           </div>
           <div class="[ info-card-detail ]"> 
             <!-- Description -->
-            <p><? echo"".$detail['about'].""; ?></p>
+            <p><? echo"".$about.""; ?></p>
             <div class="social"> 
-			<? if($detail['facebook']!="https://")echo"<a href=".$detail['facebook']." class='[ social-icon facebook ] animate'><span class='fa fa-facebook'></span></a>"; 
-			if($detail['twitter']!="https://")echo"<a href=".$detail['twitter']." class='[ social-icon twitter ] animate'><span class='fa fa-twitter'></span></a>"; 
-			if($detail['github']!="https://")echo"<a href=".$detail['github']." class='[ social-icon github ] animate'><span class='fa fa-github-alt'></span></a>";
-			if($detail['googleplus']!="https://")echo"<a href=".$detail['googleplus']." class='[ social-icon google-plus ] animate'><span class='fa fa-google-plus'></span></a>";       
+			<? if($facebook!="https://")echo"<a href=".$facebook." class='[ social-icon facebook ] animate'><span class='fa fa-facebook'></span></a>"; 
+			if($twitter!="https://")echo"<a href=".$twitter." class='[ social-icon twitter ] animate'><span class='fa fa-twitter'></span></a>"; 
+			if($github!="https://")echo"<a href=".$github." class='[ social-icon github ] animate'><span class='fa fa-github-alt'></span></a>";
+			if($googleplus!="https://")echo"<a href=".$googleplus." class='[ social-icon google-plus ] animate'><span class='fa fa-google-plus'></span></a>";       
             
-			if($id==$detail['username'])
+			if($id==$username)
   			echo"<a class='btn btn-default btn-sm' href='../../pages/editprofile'><i class='fa fa-cog' id='edit'></i>Edit</a>";
 			?>
             </div>
