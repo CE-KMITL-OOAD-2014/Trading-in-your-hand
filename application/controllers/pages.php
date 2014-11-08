@@ -91,7 +91,7 @@ class pages extends CI_Controller {
 			$detail = $this->member_model->memberDetail($data);
 			$pdata = $this->product_model->userProduct($data);
 			$data['page'] = "profile"; 
-			$temp['pdata'] = $pdata;
+			$temp['pdata'] = "test";
 			$this->load->helper('body.php');
 			$this->load->view('header.php',$data);
 			$this->load->view('space.php');
