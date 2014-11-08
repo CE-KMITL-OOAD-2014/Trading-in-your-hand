@@ -232,7 +232,7 @@ if($this->session->userdata('username')){
 		$data[$num] = $rows;
 		$num++;
 	}
-	$numpage = (($num/3)%1);
+	$numpage = ($num/3)-((($num/3)+1)%1);
 	
 	echo $numpage;
 	?>
