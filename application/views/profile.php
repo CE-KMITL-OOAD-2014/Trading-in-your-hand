@@ -323,13 +323,10 @@ a.linkedin:hover {
 		else echo"<li><a href='../../../../../pages/member/".$id."/". (($now*5)-1) ."'>". (($now*5)-1) ."</a></li>";
         if($ppage%5 == 5)echo"<li class='active'><span>".$ppage."</span></li>";
 		else echo"<li><a href='../../../../../pages/member/".$id."/". ($now*5) ."'>". ($now*5) ."</a></li>";
+		if($ppage != $numpage)
+		echo"<li><a href='../../../../../pages/member/".$id."/".($ppage+1)."' rel='next'>&raquo;</a></li>";
 		
-		echo"
-        <li class='disabled'><span>...</span></li>
-        <li><a href='#'>last</a></li>
-        <li><a href='#' rel='next'>&raquo;</a></li>	</ul>";
-		
-	echo"</div>";
+	echo"</ul></div>";
 	?>
     </div>
   </div>
