@@ -228,7 +228,7 @@ if($this->session->userdata('username')){
     <div class="col-md-9">
     <?
     $num = $pdata->count_all_results();
-	echo("<script>alert('".$num."');</script>");
+	echo $num;
 	?>
       <div class="row carousel-row">
         <div class="slide-row">
