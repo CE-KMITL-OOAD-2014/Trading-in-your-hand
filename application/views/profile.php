@@ -232,8 +232,11 @@ if($this->session->userdata('username')){
 		$data[$num] = $rows;
 		$num++;
 	}
-	$numpage = ($num/3)-((($num/3)+1)%1);
-	
+	$numpage = ($num/3) - round($num/3);
+	if($numpage > 0)
+		$numpage=round($num/3)+1;
+	else
+		$numpage=round($num/3);
 	echo $numpage;
 	?>
       <div class="row carousel-row">
