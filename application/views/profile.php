@@ -204,7 +204,7 @@ if($this->session->userdata('username')){
       <div class="[ info-card ]"> <img style="width: 100%" src="../../userPic/<? echo"".md5(base64_encode($id)).".jpg"; ?>" />
         <div class="[ info-card-details ] animate">
           <div class="[ info-card-header ]">
-            <h1><? echo"".$name." ".$sname; ?></h1>
+            <h1><? echo"".$detail['name']." ".$detail['sname']; ?></h1>
             <h3><? echo"".$username.""; ?> </h3>
           </div>
           <div class="[ info-card-detail ]"> 

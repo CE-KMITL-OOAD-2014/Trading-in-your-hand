@@ -91,11 +91,11 @@ class pages extends CI_Controller {
 			$detail = $this->member_model->memberDetail($data);
 			$pdata = $this->product_model->userProduct($data);
 			$data['page'] = "profile"; 
-			$temp['pdata'] = "test";
+			$temp = array( 'detail' => $detail, 'pdata' => $pdata ); 
 			$this->load->helper('body.php');
 			$this->load->view('header.php',$data);
 			$this->load->view('space.php');
-			$this->load->view('profile',$detail,$temp);
+			$this->load->view('profile',$temp);
 			$this->load->view('footer.php');
 		}
 	}
