@@ -311,20 +311,20 @@ a.linkedin:hover {
       <div class='text-center'><ul class='pagination pagination-large'>
 		<li><a href='";
 		if($ppage==1)echo"#";
-		else echo"../../../../../pages/member/".$id."/".$ppage-1;
+		else echo"../../../../pages/member/".$id."/".$ppage-1;
 		echo"' rel='prev'>&laquo;</a></li>";
 		if($ppage%5 == 1)echo"<li class='active'><span>".$ppage."</span></li>";
-		else echo"<li><a href='../../../../../pages/member/".$id."/". (($now*5)-4) ."'>". (($now*5)-4) ."</a></li>";
+		else echo"<li><a href='../../../../pages/member/".$id."/". (($now*5)-4) ."'>". (($now*5)-4) ."</a></li>";
 		if($ppage%5 == 2)echo"<li class='active'><span>".$ppage."</span></li>";
-		else echo"<li><a href='../../../../../pages/member/".$id."/". (($now*5)-3) ."'>". (($now*5)-3) ."</a></li>";
+		else echo"<li><a href='../../../../pages/member/".$id."/". (($now*5)-3) ."'>". (($now*5)-3) ."</a></li>";
         if($ppage%5 == 3)echo"<li class='active'><span>".$ppage."</span></li>";
-		else echo"<li><a href='../../../../../pages/member/".$id."/". (($now*5)-2) ."'>". (($now*5)-2) ."</a></li>";
+		else echo"<li><a href='../../../../pages/member/".$id."/". (($now*5)-2) ."'>". (($now*5)-2) ."</a></li>";
         if($ppage%5 == 4)echo"<li class='active'><span>".$ppage."</span></li>";
-		else echo"<li><a href='../../../../../pages/member/".$id."/". (($now*5)-1) ."'>". (($now*5)-1) ."</a></li>";
+		else echo"<li><a href='../../../../pages/member/".$id."/". (($now*5)-1) ."'>". (($now*5)-1) ."</a></li>";
         if($ppage%5 == 5)echo"<li class='active'><span>".$ppage."</span></li>";
-		else echo"<li><a href='../../../../../pages/member/".$id."/". ($now*5) ."'>". ($now*5) ."</a></li>";
-		if($ppage != $numpage)
-		echo"<li><a href='../../../../../pages/member/".$id."/".($ppage+1)."' rel='next'>&raquo;</a></li>";
+		else echo"<li><a href='../../../../pages/member/".$id."/". ($now*5) ."'>". ($now*5) ."</a></li>";
+		if($ppage != ($numpage*5))
+		echo"<li><a href='../../../../pages/member/".$id."/".($ppage+1)."' rel='next'>&raquo;</a></li>";
 		
 	echo"</ul></div>";
 	?>
