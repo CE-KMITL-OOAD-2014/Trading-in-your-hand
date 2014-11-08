@@ -302,32 +302,7 @@ a.linkedin:hover {
           ?> 
         <!--class row--> 
       </div>
-      <?
-	  $now = int($ppage/5);
-	  echo $now;
-	  echo"
-      <div class='text-center'><ul class='pagination pagination-large'>
-		<li><a href='";
-		if($ppage==1)echo"#";
-		else echo"../../../../../pages/member/".$id."/".$ppage-1;
-		echo"' rel='prev'>&laquo;</a></li>";
-		if($ppage%5 == 1)echo"<li class='active'><span>".$ppage."</span></li>";
-		else echo"<li><a href='../../../../../pages/member/".$id."/1'>".$ppage."</a></li>";
-		if($ppage%5 == 2)echo"<li class='active'><span>".$ppage."</span></li>";
-		else echo"<li><a href='../../../../../pages/member/".$id."/1'>".$ppage."</a></li>";
-        if($ppage%5 == 3)echo"<li class='active'><span>".$ppage."</span></li>";
-		else echo"<li><a href='../../../../../pages/member/".$id."/1'>".$ppage."</a></li>";
-        if($ppage%5 == 4)echo"<li class='active'><span>".$ppage."</span></li>";
-		else echo"<li><a href='../../../../../pages/member/".$id."/1'>".$ppage."</a></li>";
-        if($ppage%5 == 5)echo"<li class='active'><span>".$ppage."</span></li>";
-		else echo"<li><a href='../../../../../pages/member/".$id."/1'>".$ppage."</a></li>";
-		
-		echo"
-        <li class='disabled'><span>...</span></li>
-        <li><a href='#'>last</a></li>
-        <li><a href='#' rel='next'>&raquo;</a></li>	</ul>
-	</div>";
-	?>
+
     </div>
   </div>
 </div>
