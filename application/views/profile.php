@@ -197,7 +197,7 @@ a.linkedin:hover {
 <div class="back">
   <div class="container">
     <div class="col-md-3">
-      <div class="[ info-card ]"> <img style="width: 100%" src="../../userPic/<? echo"".md5(base64_encode($id)).".jpg"; ?>" />
+      <div class="[ info-card ]"> <img style="width: 100%" src="../../../userPic/<? echo"".md5(base64_encode($id)).".jpg"; ?>" />
         <div class="[ info-card-details ] animate">
           <div class="[ info-card-header ]">
             <h1><? echo"".$detail['name']." ".$detail['sname']; ?></h1>
@@ -213,7 +213,7 @@ a.linkedin:hover {
 			if($detail['googleplus']!="https://")echo"<a href=".$detail['googleplus']." class='[ social-icon google-plus ] animate'><span class='fa fa-google-plus'></span></a>";       
             
 			if($id==$username)
-  			echo"<a class='btn btn-default btn-sm' href='../../pages/editprofile'><i class='fa fa-cog' id='edit'></i>Edit</a>";
+  			echo"<a class='btn btn-default btn-sm' href='../../../pages/editprofile'><i class='fa fa-cog' id='edit'></i>Edit</a>";
 			?>
             </div>
           </div>
