@@ -226,6 +226,10 @@ if($this->session->userdata('username')){
       <a href="../../pages/addproduct"><button class="btn btn-sm btn-default"> Add product</button></a>
     </div>
     <div class="col-md-9">
+    <?
+    $num = $pdata->count_all_results();
+	echo("<script>alert('".$num."');</script>");
+	?>
       <div class="row carousel-row">
         <div class="slide-row">
           <div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel">             
