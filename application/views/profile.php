@@ -227,8 +227,9 @@ if($this->session->userdata('username')){
     </div>
     <div class="col-md-9">
     <?
-    $num = $pdata->count_all_results();
-	echo $num;
+	$num = 0;
+    foreach($pdata->result_array() as $rows)
+		$num++;
 	?>
       <div class="row carousel-row">
         <div class="slide-row">
