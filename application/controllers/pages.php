@@ -85,13 +85,17 @@ class pages extends CI_Controller {
 </script>";
 		}
 		else{
+			if ($this->uri->segment(4) === FALSE)
+				$ppage = 1;
+			else
+				$ppage = $this->uri->segment(4);
 			$data['username'] = $this->uri->segment(3);
 			$this->load->model('member_model');	
 			$this->load->model('product_model');	
 			$detail = $this->member_model->memberDetail($data);
 			$pdata = $this->product_model->userProduct($data);
 			$data['page'] = "profile"; 
-			$temp = array( 'detail' => $detail, 'pdata' => $pdata ); 
+			$temp = array( 'detail' => $detail, 'pdata' => $pdata, 'ppage' => $ppage ); 
 			$this->load->helper('body.php');
 			$this->load->view('header.php',$data);
 			$this->load->view('space.php');

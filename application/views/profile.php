@@ -232,7 +232,8 @@ if($this->session->userdata('username')){
 		$data[$num] = $rows;
 		$num++;
 	}
-	echo $num;
+	$numpage = $num/3;
+	echo $numpage;
 	?>
       <div class="row carousel-row">
         <?
@@ -256,8 +257,7 @@ if($this->session->userdata('username')){
 			else
 			echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
             echo"</span> </div></div>";
-          ?> 
-        <?
+         //////////////////////////////
 		echo"
         <div class='slide-row'>
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>             
@@ -278,9 +278,7 @@ if($this->session->userdata('username')){
 			else
 			echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
             echo"</span> </div></div>";
-          ?>  
-        
-       <?
+         //////////////////
 		echo"
         <div class='slide-row'>
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>             
@@ -304,17 +302,20 @@ if($this->session->userdata('username')){
           ?> 
         <!--class row--> 
       </div>
-      <div class="text-center"><ul class="pagination pagination-large">
-		<li><a href="#" rel="prev">&laquo;</a></li>
-        <li class="active"><span>1</span></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li class="disabled"><span>...</span></li>
-        <li><a href="#">last</a></li>
-        <li><a href="#" rel="next">&raquo;</a></li>	</ul>
-</div>
+      <?
+	  echo"
+      <div class='text-center'><ul class='pagination pagination-large'>
+		<li><a href='#' rel='prev'>&laquo;</a></li>
+        <li class='active'><span>1</span></li>
+        <li><a href='#'>2</a></li>
+        <li><a href='#'>3</a></li>
+        <li><a href='#'>4</a></li>
+        <li><a href='#'>5</a></li>
+        <li class='disabled'><span>...</span></li>
+        <li><a href='#'>last</a></li>
+        <li><a href='#' rel='next'>&raquo;</a></li>	</ul>
+	</div>";
+	?>
     </div>
   </div>
 </div>
