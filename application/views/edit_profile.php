@@ -14,6 +14,7 @@
     <br/>
   <div class="row">
     <!-- left column -->
+    <div class="col-md-3></div>
     <div class="col-md-3 col-sm-5 col-xs-12">
     <h3>Personal info</h3>
       <div class="text-center">
@@ -25,7 +26,7 @@
       </div>
     </div>
     <!-- edit form column -->
-    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+    <div class="col-md-7 col-sm-5 col-xs-12 personal-info">
       <div class="alert alert-info alert-dismissable">
         <a class="panel-close close" data-dismiss="alert">×</a> 
         <i class="fa fa-coffee"></i>
