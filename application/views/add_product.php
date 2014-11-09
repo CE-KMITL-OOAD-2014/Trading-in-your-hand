@@ -19,7 +19,7 @@
         <h3> Add Product</h3>
       </div>
       <div class="col-md-2"></div>
-      <div class="col-md-4"> <a class="thumbnail" > <img src="http://onlinestore.golfcarsetcva.com/images/products/detail/ExampleProductImage.jpg"></a> </div>
+      <div class="col-md-4"> <a class="thumbnail" > <img src="../../../productPic/ExampleProductImage.jpg"></a> </div>
       <div class="col-md-4">
       <form action="#" method="post" id="data" name="data">
         <label for="name" class="sr-only">name</label>
