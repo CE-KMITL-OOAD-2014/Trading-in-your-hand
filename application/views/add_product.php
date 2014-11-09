@@ -33,11 +33,10 @@
         </div>
         </form>
       </div>
-      <div class="row hidden-xs" >
+      <div class="row" >
         <div class="col-md-12">
           <div class="col-md-8"></div>
           <div class="col-md-2">
-          <br/>
           <button type="submit" class="btn btn-default btn-lg pull-right" form = "data">  Submit </button>
           </div>
         </div>
