@@ -265,7 +265,7 @@ a.linkedin:hover {
 				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
             echo"</span> </div></div>";
          //////////////////////////////
-		 if($num > (($ppage*3)-1)){
+		 if($num >= (($ppage*3)-1)){
 		echo"
         <div class='slide-row'>
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>             
@@ -290,7 +290,7 @@ a.linkedin:hover {
             echo"</span> </div></div>";
 			}
          //////////////////
-		 if($num > ($ppage*3)){
+		 if($num >= ($ppage*3)){
 		echo"
         <div class='slide-row'>
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>             
