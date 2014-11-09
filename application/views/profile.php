@@ -252,11 +252,10 @@ a.linkedin:hover {
 			if($num==0)echo" Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
               sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat ";
 			  else echo "".$data[(($ppage*3)-2)]['detail'];
-			echo"</p>
-          </div>
-          <div class='slide-footer'> 
-		  Price : 111111<div style=' text-indent: 5 em;'>Amount :</div>2222
-		  <span class='pull-right buttons'>
+			echo"</p></div><div class='slide-footer'>"; 
+		  if($num == 0) echo"Price : 9999999\tAmount : 0";
+		  else echo"Price : ".$data[(($ppage*3)-2)]['price']."\tAmount : ".$data[(($ppage*3)-2)]['amount'];
+		  echo"<span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
 			if($id==$sess['username'])
@@ -278,7 +277,9 @@ a.linkedin:hover {
             <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
               sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat </p>
           </div>
-          <div class='slide-footer'> <span class='pull-right buttons'>
+          <div class='slide-footer'>";
+		  echo"Price : ".$data[(($ppage*3)-1)]['price']."\tAmount : ".$data[(($ppage*3)-1)]['amount'];
+		  echo" <span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
 			if($id==$sess['username'])
@@ -301,7 +302,9 @@ a.linkedin:hover {
             <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
               sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat </p>
           </div>
-          <div class='slide-footer'> <span class='pull-right buttons'>
+          <div class='slide-footer'>"; 
+		  echo"Price : ".$data[($ppage*3)]['price']."\tAmount : ".$data[($ppage*3)]['amount'];
+		  echo"<span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
 			if($id==$sess['username'])
