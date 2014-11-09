@@ -241,7 +241,7 @@ a.linkedin:hover {
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>             
             <div class='carousel-inner'>";
 			if($num == 0)	echo"<div class='item active'> <img src='http://lorempixel.com/150/150?rand=1' alt='Image'> </div>";
-            else echo"<div class='item active'> <img src='". $data[(($ppage*3)-2)]['pic1'] .".jpg' alt='Image'> </div>";
+            else echo"<div class='item active'> <img src='../../../../../productPic/". $data[(($ppage*3)-2)]['pic1'] .".jpg' alt='Image'> </div>";
 			echo"</div>
           </div>
           <div class='slide-content'>
@@ -270,7 +270,7 @@ a.linkedin:hover {
         <div class='slide-row'>
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>             
             <div class='carousel-inner'>";
-              echo"<div class='item active'> <img src='". $data[(($ppage*3)-1)]['pic1'] .".jpg' alt='Image'> </div>";
+              echo"<div class='item active'> <img src='../../../../../productPic/". $data[(($ppage*3)-1)]['pic1'] .".jpg' alt='Image'> </div>";
             echo"</div>
           </div>
           <div class='slide-content'>
@@ -295,7 +295,7 @@ a.linkedin:hover {
         <div class='slide-row'>
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>             
             <div class='carousel-inner'>";
-              echo"<div class='item active'> <img src='". $data[($ppage*3)]['pic1'] .".jpg' alt='Image'> </div>";
+              echo"<div class='item active'> <img src='../../../../../productPic/". $data[($ppage*3)]['pic1'] .".jpg' alt='Image'> </div>";
             echo"</div>
           </div>
           <div class='slide-content'>
