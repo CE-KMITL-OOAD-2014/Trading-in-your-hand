@@ -272,8 +272,10 @@ a.linkedin:hover {
         <div class='slide-row'>
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>    
 		  	<div class='col-md-3'>         
-            <div class='carousel-inner'>
-			<div class='item active'> <img src='../../../../../productPic/". $data[(($ppage*3)-1)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'> </div></div></div>
+            <div class='carousel-inner'>";
+			echo"<div class='item active'> <img src='../../../../../productPic/". $data[(($ppage*3)-1)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'> </div>";
+			echo"
+			</div></div>
           </div>
           <div class='slide-content'>
 		  <div class='col-md-1'></div>
