@@ -230,12 +230,9 @@ a.linkedin:hover {
 		$data[$num] = $rows;
 	}
 	$numpage = ($num/3) - round($num/3);
-	if($numpage > 0)
-		$numpage=round($num/3)+1;
-	else
-		$numpage=round($num/3);
-		
-	echo $ppage."+".$numpage;
+	if($numpage > 0)	$numpage=round($num/3)+1;
+	else if($num == 0 )	$numpage = 1;
+	else				$numpage=round($num/3);
 	?>
       <div class="row carousel-row">
         <?
