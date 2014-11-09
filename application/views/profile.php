@@ -255,7 +255,7 @@ a.linkedin:hover {
 			echo"</p>
           </div>
           <div class='slide-footer'> 
-		  Price : 111111<p style=' text-indent: 5 em;'>Amount :</p>2222
+		  Price : 111111<div style=' text-indent: 5 em;'>Amount :</div>2222
 		  <span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
