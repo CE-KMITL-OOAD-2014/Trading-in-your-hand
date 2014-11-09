@@ -32,11 +32,11 @@
         <label for="name" class="sr-only">name</label>
         <input type="name" name="name" id="name" class="form-control" placeholder="NameProduct" required autofocus>
         <label for="cost" class="sr-only">cost</label>
-        <input type="cost" name="cost" id="cost" class="form-control" placeholder="Cost" required autofocus>
+        <input type="cost" name="price" id="price" class="form-control" placeholder="Cost" required autofocus>
         <label for="Amount" class="sr-only">Amount</label>
-        <input type="Amount" name="Amount" id="Amount" class="form-control" placeholder="Amount" required autofocus>
+        <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" required autofocus>
         <div class="form-group">
-          <textarea rows="8" class="form-control" placeholder="Detail" style="resize:none" required autofocus ></textarea>
+          <textarea rows="8" class="form-control" id="detail" name="detail" placeholder="Detail" style="resize:none" required autofocus ></textarea>
         </div>
         </form>
       </div>
