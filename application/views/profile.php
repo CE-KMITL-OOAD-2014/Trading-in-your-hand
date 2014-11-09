@@ -236,6 +236,7 @@ a.linkedin:hover {
 	?>
       <div class="row carousel-row">
         <?
+		$p1 = (($ppage*3)-2);
 		echo"
         <div class='slide-row'>
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>             
@@ -246,12 +247,12 @@ a.linkedin:hover {
           <div class='slide-content'>
             <h4>";
 			if($num==0)echo"Example product";
-			else echo"".$data[(($ppage*3)-2)]['name'];
+			else echo"".$data[$p1]['name'];
 			echo"</h4>
             <p>";
 			if($num==0)echo" Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
               sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat ";
-			  else echo "".$data[(($ppage*3)-2)]['detail'];
+			  else echo "".$data[$p1]['detail'];
 			echo"</p>
           </div>
           <div class='slide-footer'> <span class='pull-right buttons'>
