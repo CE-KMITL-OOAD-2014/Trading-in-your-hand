@@ -242,7 +242,7 @@ a.linkedin:hover {
 		  	<div class='col-md-3'>         
             <div class='carousel-inner'>";
 			if($num!=0)
-			echo"<div class='item active'> <img src='../../../../../productPic/". $data[(($ppage*3)-1)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'> </div>";
+			echo"<div class='item active'> <img src='../../../../../productPic/". $data[(($ppage*3)-2)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'> </div>";
 			else echo"<div class='item active'> <img src='http://lorempixel.com/150/150?rand=1' class='img-thumbnail' alt='150x150'> </div>";
 			echo"
 			</div></div>
@@ -250,11 +250,14 @@ a.linkedin:hover {
           <div class='slide-content'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'> 
-            <h4>".$data[(($ppage*3)-1)]['name']."</h4>
-            <p>".$data[(($ppage*3)-1)]['detail']."</p>
+            <h4>".$data[(($ppage*3)-2)]['name']."</h4>
+            <p>".$data[(($ppage*3)-2)]['detail']."</p>
 			</div>
           </div>
-          <div class='slide-footer'><b>Price :</b> ".$data[(($ppage*3)-1)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-1)]['amount'];
+          <div class='slide-footer'>
+		  <div class='col-md-1'></div>
+		  <div class='col-md-5'>
+		  <b>Price :</b> ".$data[(($ppage*3)-2)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-2)]['amount']."</div>";
 		  echo" <span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
@@ -279,7 +282,10 @@ a.linkedin:hover {
             <p>".$data[(($ppage*3)-1)]['detail']."</p>
 			</div>
           </div>
-          <div class='slide-footer'><b>Price :</b> ".$data[(($ppage*3)-1)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-1)]['amount'];
+          <div class='slide-footer'>
+		  <div class='col-md-1'></div>
+		  <div class='col-md-5'>
+		  <b>Price :</b> ".$data[(($ppage*3)-1)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-1)]['amount']."</div>";
 		  echo" <span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
@@ -304,7 +310,10 @@ a.linkedin:hover {
             <p>".$data[($ppage*3)]['detail']."</p>
 			</div>
           </div>
-          <div class='slide-footer'><b>Price :</b> ".$data[($ppage*3)]['price']."     <b>Amount :</b> ".$data[($ppage*3)]['amount'];
+          <div class='slide-footer'>
+		  <div class='col-md-1'></div>
+		  <div class='col-md-5'>
+		  <b>Price :</b> ".$data[($ppage*3)]['price']."     <b>Amount :</b> ".$data[($ppage*3)]['amount']."</div>";
 		  echo"<span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
