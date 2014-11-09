@@ -15,6 +15,7 @@
   <div class="row">
     <!-- left column -->
     <div class="col-md-3 col-sm-5 col-xs-12">
+    <h3>Personal info</h3>
       <div class="text-center">
         <img src="../../userPic/<? echo"".md5(base64_encode($id)).".jpg"; ?>" class="avatar img-thumbnail" alt="300x300">
         <form action="../../member/uploaded" method="POST" enctype="multipart/form-data" >
@@ -30,7 +31,7 @@
         <i class="fa fa-coffee"></i>
         This is an <strong>.alert</strong>. Use this to show important messages to the user.
       </div>
-      <h3>Personal info</h3>
+      
       <form class="form-horizontal" id="profile" role="form" action="../../member/edit" method="post">
         
           <label class="col-lg-3 control-label">First name:</label>
