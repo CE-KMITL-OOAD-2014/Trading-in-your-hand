@@ -28,7 +28,7 @@
           </form>
       </div>
       <div class="col-md-4">
-      <form action="#" method="post" id="data" name="data">
+      <form action="../../../../product/add" method="post" id="data" name="data">
         <label for="name" class="sr-only">name</label>
         <input type="name" name="name" id="name" class="form-control" placeholder="NameProduct" required autofocus>
         <label for="cost" class="sr-only">cost</label>
