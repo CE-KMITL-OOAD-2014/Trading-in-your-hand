@@ -268,10 +268,12 @@ a.linkedin:hover {
 		 if($num >= (($ppage*3)-1)){
 		echo"
         <div class='slide-row'>
-          ";
-              echo" <a href='#' class='thumbnail'><img src='../../../../../productPic/". $data[(($ppage*3)-1)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'></a> ";
-            echo"
-         
+          <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>    
+		  	<div class='col-md-9'>         
+            <div class='carousel-inner'>
+			<div class='item active'> <img src='../../../../../productPic/". $data[(($ppage*3)-1)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'> </div>";
+            echo"</div></div>
+          </div>
           <div class='slide-content'>
             <h4>".$data[(($ppage*3)-1)]['name']."</h4>
             <p>".$data[(($ppage*3)-1)]['detail']."</p>
