@@ -239,10 +239,10 @@ a.linkedin:hover {
 		echo"
         <div class='slide-row'>
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>             
-            <div class='carousel-inner'>";
+           ";
 			if($num == 0)	echo"<div class='item active'> <img src='http://lorempixel.com/150/150?rand=1' class='img-thumbnail' alt='150x150'> </div>";
             else echo" <img src='../../../../../productPic/". $data[(($ppage*3)-2)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'> ";
-			echo"</div>
+			echo"
           </div>
           <div class='slide-content'>
             <h4>";
