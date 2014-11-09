@@ -326,7 +326,7 @@ a.linkedin:hover {
 						else echo"<li><a href='../../../../pages/member/".$id."/". ($now*5) ."'>". ($now*5) ."</a></li>";
 					
 		}}}}
-	if($ppage != ($numpage*5))
+	if($ppage != $numpage)
 		echo"<li><a href='../../../../pages/member/".$id."/".($ppage+1)."' rel='next'>&raquo;</a></li>";
 	echo"</ul></div>";
 	?>
