@@ -244,9 +244,15 @@ a.linkedin:hover {
             </div>
           </div>
           <div class='slide-content'>
-            <h4>Example product</h4>
-            <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat </p>
+            <h4>";
+			if($num==0)echo"Example product";
+			else echo"".$data[(($ppage*3)-2)]['name'];
+			echo"</h4>
+            <p>";
+			if($num==0)echo" Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat ";
+			  else echo "".$data[(($ppage*3)-2)]['detail'];
+			echo"</p>
           </div>
           <div class='slide-footer'> <span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
