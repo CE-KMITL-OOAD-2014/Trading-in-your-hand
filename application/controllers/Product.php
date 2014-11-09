@@ -1,5 +1,5 @@
 <?php
-	class Product extends CI_Controller{
+	class product extends CI_Controller{
 		
 		private function check($chk){ //Check that call from pages class
 		

@@ -20,6 +20,10 @@
       </div>
       <div class="col-md-2"></div>
       <div class="col-md-4"> <a class="thumbnail" > <img src="../../../productPic/ExampleProductImage.jpg"></a> </div>
+      <form action="../../product/uploaded" method="POST" enctype="multipart/form-data" >
+            <input type="file" name="userfile" class="text-center center-block well well-sm"/>
+            <input type="submit" name="submit" value="Upload" class="btn btn-success" />
+          </form>
       <div class="col-md-4">
       <form action="#" method="post" id="data" name="data">
         <label for="name" class="sr-only">name</label>
