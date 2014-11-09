@@ -254,7 +254,9 @@ a.linkedin:hover {
 			  else echo "".$data[(($ppage*3)-2)]['detail'];
 			echo"</p>
           </div>
-          <div class='slide-footer'> <span class='pull-right buttons'>
+          <div class='slide-footer'> 
+		  <h4>Price : </h4>9999999<h4>Amount : </h4>11111111
+		  <span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
 			if($id==$sess['username'])
