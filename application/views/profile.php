@@ -252,11 +252,12 @@ a.linkedin:hover {
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
 			if($id==$username)
-            echo"<button class='btn btn-sm btn-danger'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
+           		echo"<button class='btn btn-sm btn-danger'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			else
-			echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
             echo"</span> </div></div>";
          //////////////////////////////
+		 if($num >= (($ppage*3)-1)){
 		echo"
         <div class='slide-row'>
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>             
@@ -273,11 +274,13 @@ a.linkedin:hover {
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
 			if($id==$username)
-            echo"<button class='btn btn-sm btn-danger'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
+            	echo"<button class='btn btn-sm btn-danger'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			else
-			echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
             echo"</span> </div></div>";
+			}
          //////////////////
+		 if($num >= ($ppage*3)){
 		echo"
         <div class='slide-row'>
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>             
@@ -294,10 +297,10 @@ a.linkedin:hover {
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
 			if($id==$username)
-            echo"<button class='btn btn-sm btn-danger'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
+            	echo"<button class='btn btn-sm btn-danger'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			else
-			echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
-            echo"</span> </div></div>";
+				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+            echo"</span> </div></div>";}
           ?> 
         <!--class row--> 
       </div>
