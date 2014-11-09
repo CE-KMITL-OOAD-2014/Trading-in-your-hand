@@ -85,14 +85,14 @@
             <input class="form-control" id="github" name="github" value="<? echo"".$github; ?>" type="text">
           </div>
         
-        
+        <div class="form-group">
           <label class="col-md-3 control-label"></label>
           <div class="col-md-8">
             <input class="btn btn-primary" value="Save Changes" type="submit">
             <span></span>
             <input class="btn btn-default" value="Cancel" type="button" onclick="location.href='<? 
 			echo"../../pages/member/".$id; ?>'">
-          
+          </div>
         </div>
       </form>
     </div>
