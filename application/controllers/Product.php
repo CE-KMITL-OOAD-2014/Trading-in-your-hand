@@ -31,7 +31,11 @@
 			echo"<a href='../Pages/displayproduct'>Back</a>";
 		}
 		function uploaded(){
+			$sess = $this->session->all_userdata();
+			$fname  =  md5($sess['name'].date("D M d, Y G:i"));
+			$this->session->set_userdata('productpic',$fname);
 			$config =  array(
+				  'file_name'		=> $famane,
                   'upload_path'     => "./productPic/",
                   'allowed_types'   => "gif|jpg|png|jpeg",
                   'overwrite'       => TRUE,
@@ -43,6 +47,7 @@
 			if($this->upload->do_upload())
 			{
 				echo "file upload success";
+				echo "fname";
 			}
 			else
 			{
