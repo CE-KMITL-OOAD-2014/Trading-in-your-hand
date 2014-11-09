@@ -242,11 +242,10 @@ a.linkedin:hover {
 		  <div class='col-md-3'>             
             <div class='carousel-inner'>";
 			if($num == 0)	echo"<div class='item active'> <img src='http://lorempixel.com/150/150?rand=1' class='img-thumbnail' alt='150x150'> </div>";
-            else echo"<div class='item active'> <<img src='../../../../../productPic/". $data[(($ppage*3)-2)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'>> </div>";
+            else echo"<div class='item active'> <img class='media-object img-rounded img-responsive' src='../../../../../productPic/". $data[(($ppage*3)-2)]['pic1'] .".jpg' alt='150x150'> </div>";
 			echo"</div></div>
           </div>
           <div class='slide-content'>
-		  <div class='col-md-1'> </div>
 		  	<div class='col-md-5'> 
             <h4>";
 			if($num==0)echo"Example product";
@@ -256,7 +255,7 @@ a.linkedin:hover {
 			if($num==0)echo" Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
               sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat ";
 			  else echo "".$data[(($ppage*3)-2)]['detail'];
-			echo"</p></div></div><div class='slide-footer'>"; 
+			echo"</p></div><div class='slide-footer'>"; 
 		  if($num == 0) echo"<b>Price :</b> 9999999     <b>Amount :</b> 0";
 		  else echo"<b>Price :</b> ".$data[(($ppage*3)-2)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-2)]['amount'];
 		  echo"<span class='pull-right buttons'>
@@ -277,7 +276,6 @@ a.linkedin:hover {
 			<div class='item active'> <img src='../../../../../productPic/". $data[(($ppage*3)-1)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'> </div></div></div>
           </div>
           <div class='slide-content'>
-		  <div class='col-md-1'> </div>
 		  <div class='col-md-5'> 
             <h4>".$data[(($ppage*3)-1)]['name']."</h4>
             <p>".$data[(($ppage*3)-1)]['detail']."</p>
@@ -302,7 +300,6 @@ a.linkedin:hover {
             <div class='carousel-inner'><div class='item active'> <img src='../../../../../productPic/". $data[($ppage*3)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'> </div></div>
           </div></div>
           <div class='slide-content'>
-		  <div class='col-md-1'> </div>
 		  <div class='col-md-5'> 
             <h4>".$data[($ppage*3)]['name']."</h4>
             <p>".$data[($ppage*3)]['detail']."</p>
