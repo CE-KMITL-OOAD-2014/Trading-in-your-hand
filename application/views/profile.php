@@ -249,10 +249,11 @@ a.linkedin:hover {
           </div>
           <div class='slide-content'>
 		  <div class='col-md-1'></div>
-		  <div class='col-md-5'> 
-            <h4>".$data[(($ppage*3)-2)]['name']."</h4>
-            <p>".$data[(($ppage*3)-2)]['detail']."</p>
-			</div>
+		  <div class='col-md-5'>"; 
+		  if($num!=0)
+		  echo"<h4>".$data[(($ppage*3)-2)]['name']."</h4><p>".$data[(($ppage*3)-2)]['detail']."</p>";
+		  else echo"<h4>Example product</h4><p>Detail of this product</p>";
+		  echo"</div>
           </div>
           <div class='slide-footer'>
 		  <div class='col-md-1'></div>
@@ -270,13 +271,10 @@ a.linkedin:hover {
 		 if($num >= (($ppage*3)-1)){
 		echo"
         <div class='slide-row'>
-          <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>    
-		  	<div class='col-md-3'>         
-            <div class='carousel-inner'>";
-			echo"<div class='item active'> <img src='../../../../../productPic/". $data[(($ppage*3)-1)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'> </div>";
-			echo"
-			</div></div>
-          </div>
+          <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>
+		  	<div class='col-md-3'>              
+            <div class='carousel-inner'><div class='item active'> <img src='../../../../../productPic/". $data[(($ppage*3)-1)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'> </div></div>
+          </div></div>
           <div class='slide-content'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'> 
@@ -288,7 +286,7 @@ a.linkedin:hover {
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>
 		  <b>Price :</b> ".$data[(($ppage*3)-1)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-1)]['amount']."</div>";
-		  echo" <span class='pull-right buttons'>
+		  echo"<span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
 			if($id==$sess['username'])
