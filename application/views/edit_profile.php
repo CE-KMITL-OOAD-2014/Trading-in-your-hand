@@ -86,11 +86,11 @@
           </div>
           
         <div class="form-group">
-          <label class="col-md-3 control-label"></label>
+          <div class="col-md-3"></div>
           <div class="col-md-8">
           <br/>
             <input class="btn btn-primary pull-right" value="Save Changes" type="submit">
-            <input class="btn btn-default" value="Cancel" type="button" onclick="location.href='<? 
+            <input class="btn btn-default pull-right" value="Cancel" type="button" onclick="location.href='<? 
 			echo"../../pages/member/".$id; ?>'">
           </div>
         </div>
