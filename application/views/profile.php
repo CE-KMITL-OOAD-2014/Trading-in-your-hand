@@ -269,7 +269,7 @@ a.linkedin:hover {
 		echo"
         <div class='slide-row'>
           ";
-              echo"<img src='../../../../../productPic/". $data[(($ppage*3)-1)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'> ";
+              echo" <a href='#' class='thumbnail'><img src='../../../../../productPic/". $data[(($ppage*3)-1)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'></a> ";
             echo"
          
           <div class='slide-content'>
