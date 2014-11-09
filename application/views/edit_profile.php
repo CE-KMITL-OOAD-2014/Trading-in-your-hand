@@ -27,11 +27,6 @@
     </div>
     <!-- edit form column -->
     <div class="col-md-7 col-sm-5 col-xs-12 personal-info">
-      <div class="alert alert-info alert-dismissable">
-        <a class="panel-close close" data-dismiss="alert">×</a> 
-        <i class="fa fa-coffee"></i>
-        This is an <strong>.alert</strong>. Use this to show important messages to the user.
-      </div>
       <br/><br/><br/>
       <form class="form-horizontal" id="profile" role="form" action="../../member/edit" method="post">
         
@@ -88,8 +83,8 @@
           </div>
           
         <div class="form-group">
-          <div class="col-md-3"></div>
-          <div class="col-md-8">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-8">
           <br/>
             <input class="btn btn-primary pull-right" value="Save Changes" type="submit">
             <input class="btn btn-default pull-right" value="Cancel" type="button" onclick="location.href='<? 
