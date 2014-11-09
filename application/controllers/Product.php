@@ -47,7 +47,7 @@
 			if($this->upload->do_upload())
 			{
 				echo "file upload success";
-				echo "fname";
+				echo $fname;
 			}
 			else
 			{
