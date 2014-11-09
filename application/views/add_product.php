@@ -23,7 +23,7 @@
       <form action="../../product/uploaded" method="POST" enctype="multipart/form-data" >
       		<div class="row" >
             <input type="file" name="userfile" class="text-center center-block well well-sm pull-left"/>
-            <input type="submit" name="submit" value="Upload" class="btn btn-success pull-right" />
+            <input type="submit" name="submit" value="Upload" class="btn btn-success" />
             </div>
           </form>
       </div>
