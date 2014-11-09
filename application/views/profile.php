@@ -223,6 +223,7 @@ a.linkedin:hover {
     </div>
     <div class="col-md-9">
     <?
+	$sess = $this->session->all_userdata();
 	$num = 0;
     foreach($pdata->result_array() as $rows){
 		$num++;
@@ -233,7 +234,6 @@ a.linkedin:hover {
 		$numpage=round($num/3)+1;
 	else
 		$numpage=round($num/3);
-		echo $num;
 	?>
       <div class="row carousel-row">
         <?
@@ -258,7 +258,7 @@ a.linkedin:hover {
           <div class='slide-footer'> <span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
-			if($id==$username)
+			if($id==$sess['username'])
            		echo"<button class='btn btn-sm btn-danger'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			else
 				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
@@ -280,7 +280,7 @@ a.linkedin:hover {
           <div class='slide-footer'> <span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
-			if($id==$username)
+			if($id==$sess['username'])
             	echo"<button class='btn btn-sm btn-danger'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			else
 				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
@@ -303,7 +303,7 @@ a.linkedin:hover {
           <div class='slide-footer'> <span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
-			if($id==$username)
+			if($id==$sess['username'])
             	echo"<button class='btn btn-sm btn-danger'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			else
 				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
