@@ -37,7 +37,7 @@
         <div class="col-md-12">
           <div class="col-md-8"></div>
           <div class="col-md-2">
-          <button type="submit" class="btn btn-default btn-lg pull-right" form = "data">  Submit </button>
+          <button type="submit" class="btn btn-primary btn-block btn-lg pull-right" form = "data">  Submit </button>
           </div>
         </div>
       </div>
