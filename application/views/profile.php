@@ -223,10 +223,10 @@ a.linkedin:hover {
     </div>
     <div class="col-md-9">
     <?
-	$num = 1;
+	$num = 0;
     foreach($pdata->result_array() as $rows){
-		$data[$num] = $rows;
 		$num++;
+		$data[$num] = $rows;
 	}
 	$numpage = ($num/3) - round($num/3);
 	if($numpage > 0)
