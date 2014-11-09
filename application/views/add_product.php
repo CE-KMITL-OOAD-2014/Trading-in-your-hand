@@ -35,11 +35,9 @@
       </div>
       <div class="row hidden-xs" >
         <div class="col-md-12">
-          <div class="col-md-2"></div>
-          <div class="col-md-2"> <a class="thumbnail" id="carousel-selector-1"><img src="http://placehold.it/170x100&text=one"></a> </div>
-          <div class="col-md-2"> <a class="thumbnail" id="carousel-selector-2"><img src="http://placehold.it/170x100&text=two"></a> </div>
-          <div class="col-md-2"></div>
+          <div class="col-md-8"></div>
           <div class="col-md-2">
+          <br/>
           <button type="submit" class="btn btn-default btn-lg pull-right" form = "data">  Submit </button>
           </div>
         </div>
