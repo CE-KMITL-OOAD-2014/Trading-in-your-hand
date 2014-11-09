@@ -274,9 +274,8 @@ a.linkedin:hover {
             echo"</div>
           </div>
           <div class='slide-content'>
-            <h4>Example product</h4>
-            <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat </p>
+            <h4>".$data[(($ppage*3)-1)]['name']."</h4>
+            <p>".$data[(($ppage*3)-1)]['detail']."</p>
           </div>
           <div class='slide-footer'>";
 		  echo"<b>Price :</b> ".$data[(($ppage*3)-1)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-1)]['amount'];
@@ -299,9 +298,8 @@ a.linkedin:hover {
             echo"</div>
           </div>
           <div class='slide-content'>
-            <h4>Example product</h4>
-            <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat </p>
+            <h4>".$data[($ppage*3)]['name']."</h4>
+            <p>".$data[($ppage*3)]['detail']."</p>
           </div>
           <div class='slide-footer'>"; 
 		  echo"<b>Price :</b> ".$data[($ppage*3)]['price']."     <b>Amount :</b> ".$data[($ppage*3)]['amount'];
