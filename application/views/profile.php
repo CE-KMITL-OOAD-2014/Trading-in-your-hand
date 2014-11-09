@@ -233,6 +233,7 @@ a.linkedin:hover {
 		$numpage=round($num/3)+1;
 	else
 		$numpage=round($num/3);
+		echo $num;
 	?>
       <div class="row carousel-row">
         <?
