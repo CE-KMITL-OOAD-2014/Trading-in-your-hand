@@ -32,67 +32,67 @@
       </div>
       <h3>Personal info</h3>
       <form class="form-horizontal" id="profile" role="form" action="../../member/edit" method="post">
-        <div class="form-group">
+        
           <label class="col-lg-3 control-label">First name:</label>
           <div class="col-lg-8">
             <input class="form-control" id="name" name="name" value="<? echo"".$name; ?>" type="text">
           </div>
-        </div>
-        <div class="form-group">
+      
+     
           <label class="col-lg-3 control-label">Last name:</label>
           <div class="col-lg-8">
             <input class="form-control" id="sname" name="sname" value="<? echo"".$sname; ?>" type="text">
           </div>
-        </div>
-        <div class="form-group">
+      
+    
           <label class="col-lg-3 control-label">About:</label>
           <div class="col-lg-8">
             <input class="form-control" id="about" name="about" value="<? echo"".$about; ?>" type="text">
           </div>
-        </div>
-        <div class="form-group">
+        
+ 
           <label class="col-lg-3 control-label">Email:</label>
           <div class="col-lg-8">
             <input class="form-control" id="email" name="email" value="<? echo"".$email; ?>" type="text">
           </div>
-        </div>
-        <div class="form-group">
+     
+      
           <label class="col-lg-3 control-label">Address:</label>
           <div class="col-lg-8">
             <input class="form-control" id="address" name="address" value="<? echo"".$address; ?>" type="text">
           </div>
-        </div>
-        <div class="form-group">
+        
+        
           <label class="col-lg-3 control-label">Facebook:</label>
           <div class="col-lg-8">
             <input class="form-control" id="facebook" name="facebook" value="<? echo"".$facebook; ?>" type="text">
           </div>
-        </div>
-        <div class="form-group">
+       
+        
           <label class="col-lg-3 control-label">Twitter:</label>
           <div class="col-lg-8">
             <input class="form-control" id="twitter" name="twitter" value="<? echo"".$twitter; ?>" type="text">
           </div>
-        </div>
-        <div class="form-group">
+        
+       
           <label class="col-lg-3 control-label">Google Plus:</label>
           <div class="col-lg-8">
             <input class="form-control" id="googleplus" name="googleplus" value="<? echo"".$googleplus; ?>" type="text">
           </div>
-        </div><div class="form-group">
+      
           <label class="col-lg-3 control-label">Github:</label>
           <div class="col-lg-8">
             <input class="form-control" id="github" name="github" value="<? echo"".$github; ?>" type="text">
           </div>
-        </div>
-        <div class="form-group">
+        
+        
           <label class="col-md-3 control-label"></label>
           <div class="col-md-8">
             <input class="btn btn-primary" value="Save Changes" type="submit">
             <span></span>
             <input class="btn btn-default" value="Cancel" type="button" onclick="location.href='<? 
 			echo"../../pages/member/".$id; ?>'">
-          </div>
+          
         </div>
       </form>
     </div>
