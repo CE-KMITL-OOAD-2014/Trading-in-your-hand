@@ -22,7 +22,7 @@
       <div class="col-md-4"> <a class="thumbnail" > <img src="../../../productPic/ExampleProductImage.jpg"></a> 
       <form action="../../product/uploaded" method="POST" enctype="multipart/form-data" >
       		<div class="row" >
-            <input type="file" name="userfile" class="text-center center-block well well-sm pull-left"/>
+            <input type="file" name="userfile" class="text-center center-block well well-sm "/>
             <input type="submit" name="submit" value="Upload" class="btn btn-success" />
             </div>
           </form>
