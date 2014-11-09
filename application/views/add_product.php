@@ -40,6 +40,7 @@
           <div class="col-md-2"> <a class="thumbnail" id="carousel-selector-2"><img src="http://placehold.it/170x100&text=two"></a> </div>
           <div class="col-md-2"></div>
           <button type="submit" class="btn btn-default btn-lg pull-right" form = "data">  Submit </button>
+          <div class="col-md-2"></div>
         </div>
       </div>
     </div>
