@@ -248,6 +248,7 @@ a.linkedin:hover {
 			</div></div>
           </div>
           <div class='slide-content'>
+		  <div class='col-md-1'></div>
 		  <div class='col-md-5'> 
             <h4>".$data[(($ppage*3)-1)]['name']."</h4>
             <p>".$data[(($ppage*3)-1)]['detail']."</p>
@@ -272,6 +273,7 @@ a.linkedin:hover {
 			<div class='item active'> <img src='../../../../../productPic/". $data[(($ppage*3)-1)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'> </div></div></div>
           </div>
           <div class='slide-content'>
+		  <div class='col-md-1'></div>
 		  <div class='col-md-5'> 
             <h4>".$data[(($ppage*3)-1)]['name']."</h4>
             <p>".$data[(($ppage*3)-1)]['detail']."</p>
@@ -296,6 +298,7 @@ a.linkedin:hover {
             <div class='carousel-inner'><div class='item active'> <img src='../../../../../productPic/". $data[($ppage*3)]['pic1'] .".jpg' class='img-thumbnail' alt='150x150'> </div></div>
           </div></div>
           <div class='slide-content'>
+		  <div class='col-md-1'></div>
 		  <div class='col-md-5'> 
             <h4>".$data[($ppage*3)]['name']."</h4>
             <p>".$data[($ppage*3)]['detail']."</p>
