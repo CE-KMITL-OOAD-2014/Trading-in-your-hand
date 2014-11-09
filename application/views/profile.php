@@ -253,8 +253,8 @@ a.linkedin:hover {
               sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat ";
 			  else echo "".$data[(($ppage*3)-2)]['detail'];
 			echo"</p></div><div class='slide-footer'>"; 
-		  if($num == 0) echo"Price : 9999999\tAmount : 0";
-		  else echo"Price : ".$data[(($ppage*3)-2)]['price']."\tAmount : ".$data[(($ppage*3)-2)]['amount'];
+		  if($num == 0) echo"<b>Price :</b> 9999999     <b>Amount :</b> 0";
+		  else echo"<b>Price :</b> ".$data[(($ppage*3)-2)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-2)]['amount'];
 		  echo"<span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
@@ -278,7 +278,7 @@ a.linkedin:hover {
               sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat </p>
           </div>
           <div class='slide-footer'>";
-		  echo"Price : ".$data[(($ppage*3)-1)]['price']."\tAmount : ".$data[(($ppage*3)-1)]['amount'];
+		  echo"<b>Price :</b> ".$data[(($ppage*3)-1)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-1)]['amount'];
 		  echo" <span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
@@ -303,7 +303,7 @@ a.linkedin:hover {
               sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat </p>
           </div>
           <div class='slide-footer'>"; 
-		  echo"Price : ".$data[($ppage*3)]['price']."\tAmount : ".$data[($ppage*3)]['amount'];
+		  echo"<b>Price :</b> ".$data[($ppage*3)]['price']."     <b>Amount :</b> ".$data[($ppage*3)]['amount'];
 		  echo"<span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
