@@ -14,38 +14,40 @@
   <div class = "container">
     <div col-md-12>
       <div>
-        <div class="col-md-2"></div>
         <h3> Edit Profile</h3>
       </div>
       <div class="col-md-4"> <a class="thumbnail" > <img src="../../userPic/<? echo"".md5(base64_encode($id)).".jpg"; ?>"></a> </div>
-      <div class="col-md-6">
+      <div class="col-md-8">
       <form id="profile" action="../../member/edit" method="post">
-		<label class="col-lg-2 control-label">First name:</label>
+		<label class="col-lg-3 control-label">First name:</label>
         <input class="form-control" id="name" name="name" value="<? echo"".$name; ?>" type="text">
-        <label class="col-lg-2 control-label">Last name:</label>
+        <label class="col-lg-3 control-label">Last name:</label>
         <input class="form-control" id="name" name="name" value="<? echo"".$sname; ?>" type="text">
-        <label class="col-lg-2 control-label">About:</label>
+        <label class="col-lg-3 control-label">About:</label>
         <input class="form-control" id="name" name="name" value="<? echo"".$about; ?>" type="text">
-        <label class="col-lg-2 control-label">Email:</label>
+        <label class="col-lg-3 control-label">Email:</label>
         <input class="form-control" id="name" name="name" value="<? echo"".$email; ?>" type="text">
-        <label class="col-lg-2 control-label">Address:</label>
+        <label class="col-lg-3 control-label">Address:</label>
         <input class="form-control" id="name" name="name" value="<? echo"".$address; ?>" type="text">
-        <label class="col-lg-2 control-label">Facebook:</label>
+        <label class="col-lg-3 control-label">Facebook:</label>
         <input class="form-control" id="name" name="name" value="<? echo"".$facebook; ?>" type="text">
-        <label class="col-lg-2 control-label">Twitter:</label>
+        <label class="col-lg-3 control-label">Twitter:</label>
         <input class="form-control" id="name" name="name" value="<? echo"".$twitter; ?>" type="text">
-        <label class="col-lg-2 control-label">Google Plus:</label>
+        <label class="col-lg-3 control-label">Google Plus:</label>
         <input class="form-control" id="name" name="name" value="<? echo"".$googleplus; ?>" type="text">
-        <label class="col-lg-2 control-label">Github:</label>
+        <label class="col-lg-3 control-label">Github:</label>
         <input class="form-control" id="name" name="name" value="<? echo"".$github; ?>" type="text">
       </form>
       </div>
       <div class="row" >
         <div class="col-md-12">
-          
+          <div class="col-md-8"></div>
+          <div class="col-md-2">
           <button class="btn btn-default pull-right" type="button" onclick="location.href='<? echo"../../pages/member/".$id; ?>'">Cancel</button>
+          </div>
+          <div class="col-md-2">
           <button type="submit" class="btn btn-primary btn-block btn-lg pull-right" form = "data">  Submit </button>
-         
+          </div>
         </div>
       </div>
     </div>
