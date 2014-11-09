@@ -32,10 +32,10 @@
 		}
 		function uploaded(){
 			$sess = $this->session->all_userdata();
-			$fname  =  md5($sess['name'].date("D M d, Y G:i"));
+			$fname  =  md5($sess['username'].date("D M d, Y G:i"));
 			$this->session->set_userdata('productpic',$fname);
 			$config =  array(
-				  'file_name'		=> $famane,
+				  'file_name'		=> $fname,
                   'upload_path'     => "./productPic/",
                   'allowed_types'   => "gif|jpg|png|jpeg",
                   'overwrite'       => TRUE,
