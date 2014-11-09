@@ -19,7 +19,7 @@
         <h3> Add Product</h3>
       </div>
       <div class="col-md-2"></div>
-      <div class="col-md-4"> <a class="thumbnail" > <img src="http://fc07.deviantart.net/fs70/i/2012/358/7/2/_rurouni_kenshin__art_of_sword_drawing__by_eyjaynizel-d5p0jtr.jpg"></a> </div>
+      <div class="col-md-4"> <a class="thumbnail" > <img src="http://onlinestore.golfcarsetcva.com/images/products/detail/ExampleProductImage.jpg"></a> </div>
       <div class="col-md-4">
       <form action="#" method="post" id="data" name="data">
         <label for="name" class="sr-only">name</label>
