@@ -15,7 +15,7 @@
 			$price = $_POST["price"];
 			$amount = $_POST["amount"];
 			$detail = $_POST["detail"];
-			$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'pic1'=>$sess['productpic']);
+			$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$sess['productpic']);
 			
 			if($this->Product_model->add_product($data)){
 				echo"<h1>Your product has added to database</h1><br />";
