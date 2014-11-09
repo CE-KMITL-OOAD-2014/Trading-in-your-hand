@@ -219,7 +219,7 @@ a.linkedin:hover {
           </div>
         </div>
       </div>
-      <a href="../../../pages/addproduct"><button class="btn btn-sm btn-default"> Add product</button></a>
+      <a href="../../../pages/addproduct"><button class="btn btn-success"> Add product</button></a>
     </div>
     <div class="col-md-9">
     <?
