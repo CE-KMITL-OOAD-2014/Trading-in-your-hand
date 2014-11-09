@@ -307,11 +307,9 @@ a.linkedin:hover {
 	  	$now = round($ppage/5)+1;
 	else
 		$now = round($ppage/5);
-	  echo"
-      <div class='text-center'><ul class='pagination pagination-large'>
-		<li><a href='";
+	  echo"<div class='text-center'><ul class='pagination pagination-large'>";	
 		if($ppage!=1)
-			echo"../../../../pages/member/".$id."/".($ppage-1)."' rel='prev'>&laquo;</a></li>";
+			echo"<li><a href='../../../../pages/member/".$id."/".($ppage-1)."' rel='prev'>&laquo;</a></li>";		
 		if($ppage%5 == 1)echo"<li class='active'><span>".$ppage."</span></li>";
 		else echo"<li><a href='../../../../pages/member/".$id."/". (($now*5)-4) ."'>". (($now*5)-4) ."</a></li>";
 		if($ppage%5 == 2)echo"<li class='active'><span>".$ppage."</span></li>";
