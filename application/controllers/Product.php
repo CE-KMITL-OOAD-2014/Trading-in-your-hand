@@ -4,28 +4,6 @@
 		private function check($chk){ //Check that call from pages class
 		
 		}
-		function add(){
-			$sess = $this->session->all_userdata();
-			$this->load->model('Product_model');	
-			$this->db->select_max('id');
-			$query = $this->db->get('product');
-			foreach($query->result_array() as $row)
-				$id = $row['id']+1;
-			$name = $_POST["name"];
-			$price = $_POST["price"];
-			$amount = $_POST["amount"];
-			$detail = $_POST["detail"];
-			$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$sess['productpic']);
-			
-			if($this->Product_model->add_product($data)){
-				echo"<h1>Your product has added to database</h1><br />";
-				echo"<a href='../Pages'>Back</a>";
-			}
-			else{
-				echo"<h1>Your have the same product name</h1><br />";
-				echo"<a href='../Pages'>Back</a>";
-			}
-		}
 		function delete(){
 			if ($this->uri->segment(3) === FALSE){ 
 			echo"<script language='javascript'>
@@ -64,7 +42,7 @@
 			echo"<h1>Updated</h1><br/>";
 			echo"<a href='../Pages/displayproduct'>Back</a>";
 		}
-		function uploaded(){
+		function add(){
 			$sess = $this->session->all_userdata();
 			$fname  =  md5($sess['username'].date("D M d, Y G:i"));
 			$this->session->set_userdata('productpic',$fname);
