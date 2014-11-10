@@ -58,8 +58,6 @@
 			$this->load->library('upload', $config);
 			if($this->upload->do_upload())
 			{
-				echo "file upload success";
-				echo $fname;
 				$this->load->model('Product_model');	
 				$this->db->select_max('id');
 				$query = $this->db->get('product');
