@@ -41,7 +41,7 @@ class member extends CI_Controller {
 			$data['password'] = $_POST['password'];
 			$this->load->model('member_model');	
 			$check = $this->member_model->verifylogin($data);
-			genlog();
+			$this->genlog();
 			if($check){
 				$newdata = array(
                    'username'  => $data['username'],
