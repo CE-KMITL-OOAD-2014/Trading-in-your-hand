@@ -191,12 +191,11 @@ a.linkedin:hover {
 </style>
 <script>
 function confirm(id){
-		alert("ok");
-		if (confirm('Confirm to delete')) { 
-			var locate = "../../../pages/delete/";
-			window.location.href = locate.concat(id);
-		}			
-	}
+	var locate = "../../../pages/delete/";
+	if (confirm("Confirm to delete")){ 	
+		window.location.href = locate.concat(id);
+	}			
+}
 </script>
 
 <html>
