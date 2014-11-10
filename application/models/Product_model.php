@@ -13,10 +13,19 @@
 			$username = "admin"; // get username from session
 			$this->db->where('username',$username)->where('name',$data['name'])->set('name',$data['name'])->set('price',$data['price'])->set('amount',$data['amount'])->update('product');
 		}
-		public function userProduct($pdata){
+		function userProduct($pdata){
 			$username = $pdata['username'];
 			$data = $this->db->where('username',$username)->get('product');
 			return $data;
+		}
+		function checkowner($id,$user){
+			$check = $this->db->where('id',$id)->where('username',$user)->count_all_results('product');	
+			if($check==1)
+				return true;
+			return false;
+		}
+		function delete($id){
+			$this->db->delete('product', array('id' => $id)); 	
 		}
 	}
 ?>

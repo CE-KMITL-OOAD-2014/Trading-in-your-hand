@@ -189,6 +189,14 @@ a.linkedin:hover {
  display: block;
 }
 </style>
+<script>
+function confirm(id){
+		if (confirm('Confirm to delete')) { 
+			var locate = "../../../pages/delete/";
+			window.location.href = locate.concat(id);
+		}			
+	}
+</script>
 
 <html>
 <head>
@@ -265,7 +273,7 @@ a.linkedin:hover {
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
             ";
 			if($id==$sess['username'])
-            	echo"<button class='btn btn-sm btn-danger'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
+            	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-2)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			else
 				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
             echo"</span> </div></div>";

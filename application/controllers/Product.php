@@ -26,6 +26,32 @@
 				echo"<a href='../Pages'>Back</a>";
 			}
 		}
+		function delete(){
+			if ($this->uri->segment(3) === FALSE){ 
+			echo"<script language='javascript'>
+    window.location.href = '../../../pages';
+</script>";
+			}
+			else{
+				if($this->session->userdata('username')){
+					$id = $this->uri->segment(3);
+					$sess = $this->session->all_userdata();
+					$this->load->model('Product_model');
+					if($this->Product_model->checkowner($id,$sess['username'])){
+						$this->Product_model->delete($id);
+					}
+					else
+						echo"<script language='javascript'>
+	alert('You can delete only your product');
+    window.location.href = '../../../pages/login';
+</script>";
+				}
+				else 
+					echo"<script language='javascript'>
+    window.location.href = '../../../pages/login';
+</script>";
+			}
+		}
 		function edit(){
 			$data['name'] = $_POST["name"];
 			$data['price'] = $_POST["price"];
