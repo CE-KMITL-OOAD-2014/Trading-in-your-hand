@@ -8,6 +8,11 @@
 <? 			$id = $this->session->all_userdata();
 			$id = $id['username']; ?>
 </head>
+<script>
+$('#sub').click(function(){
+    $('#form1 #data').submit();
+});
+</script>
 <body>
 <div class="back"> 
   <!-------------------------------show product--------------------------------------------------------------------------------------------------->
@@ -20,7 +25,7 @@
       </div>
       <div class="col-md-2"></div>
       <div class="col-md-4"> <a class="thumbnail" > <img src="../../../productPic/ExampleProductImage.jpg"></a> 
-      <form action="../../product/uploaded" method="POST" enctype="multipart/form-data" >
+      <form action="../../product/uploaded" id="form1" method="POST" enctype="multipart/form-data" >
       		<div class="row" >
             <input type="file" name="userfile" class="text-center center-block well well-sm pull-left"/>
             <input type="submit" name="submit" value="Upload" class="btn btn-success" />
@@ -44,7 +49,7 @@
         <div class="col-md-12">
           <div class="col-md-8"></div>
           <div class="col-md-2">
-          <button type="submit" class="btn btn-primary btn-block btn-lg pull-right" form = "data">  Submit </button>
+          <button type="submit" id="sub" class="btn btn-primary btn-block btn-lg pull-right" form = "data">  Submit </button>
           </div>
         </div>
       </div>
