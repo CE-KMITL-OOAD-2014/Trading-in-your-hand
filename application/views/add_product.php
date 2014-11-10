@@ -23,17 +23,15 @@ $('#sub').click(function(){
         <div class="col-md-2"></div>
         <h3> Add Product</h3>
       </div>
-      <div class="col-md-2"></div>
+      <div class="col-md-2"></div> 
+      <form action="../../../../product/add" method="post" id="data" name="data" enctype="multipart/form-data">
       <div class="col-md-4"> <a class="thumbnail" > <img src="../../../productPic/ExampleProductImage.jpg"></a> 
-      <form action="../../product/uploaded" id="form1" method="POST" enctype="multipart/form-data" >
       		<div class="row" >
-            <input type="file" name="userfile" class="text-center center-block well well-sm pull-left"/>
-            <input type="submit" name="submit" value="Upload" class="btn btn-success" />
+            	<input type="file" name="userfile" class="text-center center-block well well-sm pull-left"/>
+            	<input type="submit" name="submit" value="Upload" class="btn btn-success" />
             </div>
-          </form>
       </div>
       <div class="col-md-4">
-      <form action="../../../../product/add" method="post" id="data" name="data">
         <label for="name" class="sr-only">name</label>
         <input type="name" name="name" id="name" class="form-control" placeholder="NameProduct" required autofocus>
         <label for="cost" class="sr-only">cost</label>
@@ -43,8 +41,9 @@ $('#sub').click(function(){
         <div class="form-group">
           <textarea rows="8" class="form-control" id="detail" name="detail" placeholder="Detail" style="resize:none" required autofocus ></textarea>
         </div>
+        </div>
         </form>
-      </div>
+      
       <div class="row" >
         <div class="col-md-12">
           <div class="col-md-8"></div>
