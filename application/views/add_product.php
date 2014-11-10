@@ -26,7 +26,7 @@ $('#sub').click(function(){
       <div class="col-md-2"></div> 
       <form action="../../../../product/add" method="post" id="data" name="data" enctype="multipart/form-data">
       <div class="col-md-4"> <a class="thumbnail" > <img src="../../../productPic/ExampleProductImage.jpg"></a> 
-            	<input type="file" name="userfile" class="text-center center-block well well-sm pull-left"/>
+            	<input type="file" name="userfile" class="text-center center-block well well-sm"/>
       </div>
       <div class="col-md-4">
         <label for="name" class="sr-only">name</label>
