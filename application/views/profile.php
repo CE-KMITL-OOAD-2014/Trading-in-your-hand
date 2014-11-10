@@ -197,6 +197,7 @@ function confirm(id){
 </script>
 <?
 	$username = $this->session->all_userdata();
+	$username = $username['username'];
 ?>
 <html>
 <head>
