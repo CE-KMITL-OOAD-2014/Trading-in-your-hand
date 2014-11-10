@@ -39,6 +39,9 @@
 					$this->load->model('Product_model');
 					if($this->Product_model->checkowner($id,$sess['username'])){
 						$this->Product_model->delete($id);
+						echo"<script language='javascript'>
+    window.location.href = '../../../pages/member/".$sess['username']."';
+</script>";
 					}
 					else
 						echo"<script language='javascript'>
