@@ -15,7 +15,7 @@
 		}
 		function userProduct($pdata){
 			$username = $pdata['username'];
-			$data = $this->db->where('username',$username)->get('product');
+			$data = $this->db->where('username',$username)->order_by('id','desc')->get('product');
 			return $data;
 		}
 		function checkowner($id,$user){
