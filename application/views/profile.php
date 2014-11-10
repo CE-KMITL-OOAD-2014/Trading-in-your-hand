@@ -225,8 +225,11 @@ function confirm(id){
           </div>
         </div>
       </div>
-      <a href="../../../pages/addproduct"><button class="btn btn-success"> Add product</button></a>
-    </div>
+      <?
+      if($id==$username)
+      echo"<a href='../../../pages/addproduct'><button class='btn btn-success'> Add product</button></a>";
+    ?>
+	</div>
     <div class="col-md-9">
     <?
 	$sess = $this->session->all_userdata();
