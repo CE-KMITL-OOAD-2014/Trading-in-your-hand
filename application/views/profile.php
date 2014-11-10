@@ -195,7 +195,9 @@ function confirm(id){
 		window.location.href = locate.concat(id);		
 }
 </script>
-
+<?
+	$username = $this->session->all_userdata();
+?>
 <html>
 <head>
 </head>
