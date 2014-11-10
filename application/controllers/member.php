@@ -22,11 +22,26 @@ class member extends CI_Controller {
     window.location.href = '../../pages/login';
 </script>";
 		}
+	public function genlog(){
+		if (!empty($_SERVER['HTTP_CLIENT_IP'])) 			$ip = $_SERVER['HTTP_CLIENT_IP'];
+		elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) 	$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		else 												$ip = $_SERVER['REMOTE_ADDR'];
+		$this->db->select_max('id');
+		$query = $this->db->get('log');
+		foreach($query->result_array() as $row)
+			$id = $row['id']+1;
+		$browser = $_SERVER['HTTP_USER_AGENT'];
+		$dt = date("D M d, Y G:i");
+		$data = array('id' => $id,'browser' => $browser,'time' => $dt);
+		$this->load->model('member_model');
+		$this->member_model->genlog($data);
+	}
 	public function login(){
 			$data['username'] = $_POST['username'];
 			$data['password'] = $_POST['password'];
 			$this->load->model('member_model');	
 			$check = $this->member_model->verifylogin($data);
+			genlog();
 			if($check){
 				$newdata = array(
                    'username'  => $data['username'],
