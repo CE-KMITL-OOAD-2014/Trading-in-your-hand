@@ -32,7 +32,7 @@ class member extends CI_Controller {
 			$id = $row['id']+1;
 		$browser = $_SERVER['HTTP_USER_AGENT'];
 		$dt = date("D M d, Y G:i");
-		$data = array('id' => $id,'browser' => $browser,'time' => $dt);
+		$data = array('id' => $id,'browser' => $browser,'time' => $dt,'ip' => $ip);
 		$this->load->model('member_model');
 		$this->member_model->genlog($data);
 	}
