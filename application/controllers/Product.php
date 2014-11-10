@@ -71,17 +71,24 @@
 				$detail = $_POST["detail"];
 				$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$sess['productpic']);
 				if($this->Product_model->add_product($data)){
-					echo"<h1>Your product has added to database</h1><br />";
-					echo"<a href='../Pages'>Back</a>";
+					echo"<script language='javascript'>
+	alert('Upload done');
+    window.location.href = '../../../pages/member/".$sess['username']."';
+</script>";
 				}
 				else{
-					echo"<h1>Your have the same product name</h1><br />";
-					echo"<a href='../Pages'>Back</a>";
+					echo"<script language='javascript'>
+	alert('You are have the same product name');
+    window.location.href = '../../../pages/addproduct';
+</script>";
 				}
 			}
 			else
 			{
-			   echo "file upload failed";
+			   echo"<script language='javascript'>
+	alert('Please browse file only type JPG');
+    window.location.href = '../../../pages/addproduct';
+</script>";
 			}
 			
 		}
