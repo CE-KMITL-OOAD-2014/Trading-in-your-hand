@@ -1,10 +1,11 @@
 <?
 class member extends CI_Controller {
 	public function twowayauthen($number){
+		$sess = $this->session->all_userdata();
 		$this->load->library('twilio');
 		$from = '+16024836345';
-		$to = '+66874735633';
-		$message = 'Your confirmation code is '.$number;
+		$to = $sess['rtel'];
+		$message = 'Trading in your hand - Your confirmation code is '.$number;
 		$response = $this->twilio->sms($from, $to, $message);
 	}
 	public function register(){
@@ -22,15 +23,24 @@ class member extends CI_Controller {
     window.location.href = '../../pages/register';	
 </script>";
 			$number = rand(1111111,9999999);
-			$data = array('rusername'=>$username,'rpassword'=>$password,'rname'=>$name,'rsname'=>$sname,'raddress'=>$address,'remail'=>$email,'rtel' => $tel);
+			$data = array('rusername'=>$username,'rpassword'=>$password,'rname'=>$name,'rsname'=>$sname,'raddress'=>$address,'remail'=>$email,'rtel' => $tel,'code' => $number);
 			$this->session->set_userdata($data);
 			$this->twowayauthen($number);
+			echo"<script language='javascript'>
+    window.location.href = '../../pages/confirm';	
+</script>";
 		}
 	public function register2way(){
+			$code = $_POST['code'];
+			$sess = $this->session->all_userdata();
+			if($code!=$sess['code'])
+				echo"<script language='javascript'>
+	alert('Sorry , You are enter wrong code');
+    window.location.href = '../../pages/confirm';	
+</script>";
 			$this->load->model('member_model');
 			$this->db->select_max('id');
 			$query = $this->db->get('member');
-			$sess = $this->session->all_userdata();
 			foreach($query->result_array() as $row)
 				$id = $row['id']+1;
 			$data = array('id'=>$id,'username'=>$sess['rusername'],'password'=>$sess['rpassword'],'name'=>$sess['rname'],'sname'=>$sess['rsname'],'address'=>$sess['raddress'],'email'=>$sess['remail'],'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://",'iden'=>0,'tel' => $sess['rtel']);

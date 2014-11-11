@@ -18,6 +18,15 @@ class pages extends CI_Controller {
 		$this->load->view('register.php');
 		$this->load->view('footer.php');
 	}
+		public function confirm()
+	{
+		$data['page'] = "Register";
+		$this->load->helper('body.php');
+		$this->load->view('header.php',$data);
+		$this->load->view('space.php');
+		$this->load->view('confirm.php');
+		$this->load->view('footer.php');
+	}
 	public function login(){
 		$data['page'] = "Log in";
 		$this->load->helper('body.php');
