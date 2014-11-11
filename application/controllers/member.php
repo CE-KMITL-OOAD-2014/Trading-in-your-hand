@@ -44,7 +44,7 @@ class member extends CI_Controller {
 </script>";
 		else{
 			$this->load->model('member_model');	
-			if($this->member_moder->checkexist($this->uri->segment(3)))
+			if($this->member_model->checkexist($this->uri->segment(3)))
 				echo"<script language='javascript'>
     window.location.href = '../../login';
 	alert('Sorry , There are the exist username in system');
