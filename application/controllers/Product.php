@@ -45,7 +45,6 @@
 		function add(){
 			$sess = $this->session->all_userdata();
 			$fname  =  md5($sess['username'].date("D M d, Y G:i"));
-			$this->session->set_userdata('productpic',$fname);
 			$config =  array(
 				  'file_name'		=> $fname,
                   'upload_path'     => "./productPic/",
@@ -58,7 +57,6 @@
 			$this->load->library('upload', $config);
 			if($this->upload->do_upload())
 			{
-				sleep(2);
 				$this->load->model('Product_model');	
 				$this->db->select_max('id');
 				$query = $this->db->get('product');
@@ -68,7 +66,7 @@
 				$price = $_POST["price"];
 				$amount = $_POST["amount"];
 				$detail = $_POST["detail"];
-				$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$sess['productpic']);
+				$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$fname);
 				if($this->Product_model->add_product($data)){
 					echo"<script language='javascript'>
 	alert('Upload done');
