@@ -20,7 +20,7 @@ class member extends CI_Controller {
 			$query = $this->db->get('member');
 			foreach($query->result_array() as $row)
 				$id = $row['id']+1;
-			$data = array('id'=>$id,'username'=>$username,'password'=>$password,'name'=>$name,'sname'=>$sname,'address'=>$address,'email'=>$email,'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://");
+			$data = array('id'=>$id,'username'=>$username,'password'=>$password,'name'=>$name,'sname'=>$sname,'address'=>$address,'email'=>$email,'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://",'iden'=>0);
 			$this->member_model->register($data);
 			echo"<script language='javascript'>
 	alert('Success');
