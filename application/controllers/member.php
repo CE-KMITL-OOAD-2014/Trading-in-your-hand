@@ -24,7 +24,7 @@ class member extends CI_Controller {
     window.location.href = '../../pages/register';	
 </script>";
 			$number = rand(1111111,9999999);
-			$data = array('rusername'=>$username,'rpassword'=>$password,'rname'=>$name,'rsname'=>$sname,'raddress'=>$address,'remail'=>$email,'rtel' => $tel,'code' => $number);
+			$data = array('rusername'=>$username,'rpassword'=>$password,'rname'=>$name,'rsname'=>$sname,'raddress'=>$address,'remail'=>$email,'rtel' => $tel,'rcode' => $number);
 			$this->session->set_userdata($data);
 			$this->twowayauthen($number);
 			echo"<script language='javascript'>
@@ -34,7 +34,7 @@ class member extends CI_Controller {
 	public function register2way(){
 			$code = $_POST['code'];
 			$sess = $this->session->all_userdata();
-			if($code!=$sess['code'])
+			if($code!=$sess['rcode'])
 				echo"<script language='javascript'>
 	alert('Sorry , You are enter wrong code');
     window.location.href = '../../pages/confirm';	
