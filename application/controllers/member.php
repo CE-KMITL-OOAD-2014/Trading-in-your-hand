@@ -7,6 +7,11 @@ class member extends CI_Controller {
 		$to = $sess['rtel'];
 		$message = 'Trading in your hand - Your confirmation code is '.$number;
 		$response = $this->twilio->sms($from, $to, $message);
+		if($response->IsError)
+			echo 'Error: ' . $response->ErrorMessage;
+		else
+			echo 'Sent message to ' . $to;
+		sleep(2);
 	}
 	public function register(){
 			$username = $_POST['username'];
