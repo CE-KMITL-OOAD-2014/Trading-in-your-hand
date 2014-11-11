@@ -1,7 +1,7 @@
 <?
 class member extends CI_Controller {
 	public function twowayauthen(){
-		require_once(APPPATH.'../../../../twilio-php/Services/Twilio.php');
+		require_once(APPPATH.'twilio-php/Services/Twilio.php');
 		$sid = "AC1cebed1bef3754b8ea59007589b8799c"; 
 		$token = "328f00d3cf3f0ae160e75a214256d8b9"; 
 		$client = new Services_Twilio($sid, $token);
