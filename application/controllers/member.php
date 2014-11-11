@@ -23,7 +23,7 @@ class member extends CI_Controller {
 	alert('Sorry , There are the exist username in system');
     window.location.href = '../../pages/register';	
 </script>";
-			$number = "1111111";
+			$number = "1";
 			$newdata = array('rtel' => $tel,'username' => $number);
 			$this->session->set_userdata($newdata);
 			$sess = $this->session->all_userdata();
