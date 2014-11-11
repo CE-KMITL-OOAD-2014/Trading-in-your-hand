@@ -82,7 +82,7 @@ function checkuser(){
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
               <div class="form-group">
-                <a href="checkuser()" class="btn btn-success btn-block btn-lg">Check</a>
+                <a class="btn btn-success btn-block btn-lg" onClick="checkuser();">Check</a>
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
