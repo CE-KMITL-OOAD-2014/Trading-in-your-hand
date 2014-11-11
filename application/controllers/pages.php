@@ -27,6 +27,14 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 	}
 	public function addproduct(){
+		$this->load->model('member_model');
+		$sess = $this->session->all_userdata();
+		$checkiden = $this->member_model->memberDetail($sess);
+		if($checkiden['iden']==0)
+			echo"<script language='javascript'>
+	alert('You can delete only your product');
+    window.location.href = '../../../pages/member/".$sess['username']."';
+</script>";
 		$data['page'] = "addproduct";
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
