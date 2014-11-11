@@ -23,8 +23,8 @@ class member extends CI_Controller {
 	alert('Sorry , There are the exist username in system');
     window.location.href = '../../pages/register';	
 </script>";
-			$number = 1111111;
-			$newdata = array('rcode' => $number,'rtel' => $tel);
+			$number = "1111111";
+			$newdata = array('rusername'=>$username,'rpassword'=>$password,'rname'=>$name,'rsname'=>$sname,'raddress'=>$address,'remail'=>$email,'rtel' => $tel,'rcode' => $number);
 			$this->session->set_userdata($newdata);
 			$sess = $this->session->all_userdata();
 			echo"asdfsdf".$sess['rcode'];
@@ -32,7 +32,7 @@ class member extends CI_Controller {
 			
 		}
 	public function register2way(){
-			$code = $_POST['code'];
+			$code = $_POST['rcode'];
 			$sess = $this->session->all_userdata();
 			if($code!=$sess['rcode'])
 				echo"<script language='javascript'>
