@@ -2,16 +2,24 @@
 class member extends CI_Controller {
 	public function twowayauthen($number){
 		$sess = $this->session->all_userdata();
-		$this->load->library('twilio');
-		$from = '+16024836345';
-		$to = $sess['rtel'];
-		$message = 'Trading in your hand - Your confirmation code is '.$number;
-		$response = $this->twilio->sms($from, $to, $message);
-		if($response->IsError)
-			echo 'Error: ' . $response->ErrorMessage;
-		else
-			echo 'Sent message to ' . $to;
-		sleep(2);
+		$to = $sess['email'];
+		$message = 'Trading in your hand - Your confirmation code is '.$number;	
+		$config = Array(
+		  'protocol' => 'smtp',
+		  'smtp_host' => 'ssl://smtp.googlemail.com',
+		  'smtp_port' => 465,
+		  'smtp_user' => 'trading.in.your.hand@gmail.com', // change it to yours
+		  'smtp_pass' => 'pae123456', // change it to yours
+		  'mailtype' => 'html',
+		  'charset' => 'iso-8859-1',
+		  'wordwrap' => TRUE
+		);
+		$this->load->library('email', $config);
+		$this->email->from('trading.in.your.hand@gmail.com', "Admin Team");
+ 		$this->email->to($to);
+		$this->email->subject('Trading-in-your-hand-Confirmation code');
+      	$this->email->message($message);
+		$this->email->send();
 	}
 	public function register(){
 			$username = $_POST['username'];
@@ -20,7 +28,6 @@ class member extends CI_Controller {
 			$sname = $_POST['sname'];
 			$address = $_POST['address'];
 			$email = $_POST['email'];
-			$tel = $_POST['tel'];
 			$this->load->model('member_model');	
 			if($this->member_model->checkexist($username))
 				echo"<script language='javascript'>
@@ -28,7 +35,7 @@ class member extends CI_Controller {
     window.location.href = '../../pages/register';	
 </script>";
 			$number = rand(1111111,9999999);
-			$data = array('rusername'=>$username,'rpassword'=>$password,'rname'=>$name,'rsname'=>$sname,'raddress'=>$address,'remail'=>$email,'rtel' => $tel,'rcode' => $number);
+			$data = array('rusername'=>$username,'rpassword'=>$password,'rname'=>$name,'rsname'=>$sname,'raddress'=>$address,'remail'=>$email,'rcode' => $number);
 			$this->session->set_userdata($data);
 			$this->twowayauthen($number);
 			echo"<script language='javascript'>
@@ -48,7 +55,7 @@ class member extends CI_Controller {
 			$query = $this->db->get('member');
 			foreach($query->result_array() as $row)
 				$id = $row['id']+1;
-			$data = array('id'=>$id,'username'=>$sess['rusername'],'password'=>$sess['rpassword'],'name'=>$sess['rname'],'sname'=>$sess['rsname'],'address'=>$sess['raddress'],'email'=>$sess['remail'],'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://",'iden'=>0,'tel' => $sess['rtel']);
+			$data = array('id'=>$id,'username'=>$sess['rusername'],'password'=>$sess['rpassword'],'name'=>$sess['rname'],'sname'=>$sess['rsname'],'address'=>$sess['raddress'],'email'=>$sess['remail'],'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://",'iden'=>0);
 			$this->member_model->register($data);
 			$this->session->sess_destroy();
 			echo"<script language='javascript'>
