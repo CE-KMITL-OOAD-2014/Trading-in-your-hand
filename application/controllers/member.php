@@ -37,11 +37,11 @@ class member extends CI_Controller {
 		$this->member_model->genlog($data);
 	}
 	public function check(){
-		if ($this->uri->segment(3) === FALSE)
+		if ($this->uri->segment(3) === FALSE){
 			echo"<script language='javascript'>
     window.location.href = '../../login';
 	alert('Please enter username');
-</script>";
+</script>";}
 		
 	}
 	public function login(){
