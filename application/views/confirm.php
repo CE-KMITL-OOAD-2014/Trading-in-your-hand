@@ -17,13 +17,13 @@
         <div class="col-xs-8 col-md-6">
           <div class="form-wrap">
             <h1>Enter confirmation code </h1>
-            <form role="form" action="../../member/register2way" method="post" id="login-form" autocomplete="off">
+            <form action="../../member/register2way" method="post" autocomplete="off">
               <div class="form-group">
                 <label for="key" class="sr-only">code</label>
                 <input type="password" name="code" id="code" class="form-control" placeholder="Password" required autofocus>
               </div>
               <div class="form-group">	
-                <input type="submit" value="Confirm" id="confirmbutton" class="btn btn-primary btn-block btn-lg" tabindex="3">
+                <input type="submit" value="Confirm" class="btn btn-primary btn-block btn-lg">
               </div>
             </form>
             <hr>
