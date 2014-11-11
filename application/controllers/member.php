@@ -36,10 +36,25 @@ class member extends CI_Controller {
 		$this->load->model('member_model');
 		$this->member_model->genlog($data);
 	}
-	public function isExist(){
-		if ($this->uri->segment(3) === FALSE){
-			echo"Hello";}
-
+	public function isExist($chk){
+		if ($this->uri->segment(3) === FALSE)
+			echo"<script language='javascript'>
+    window.location.href = '../../login';
+	alert('Please enter username');
+</script>";
+		else{
+			$this->load->model('member_model');	
+			if($this->member_model->checkexist($this->uri->segment(3)))
+				echo"<script language='javascript'>
+    window.location.href = '../../login';
+	alert('Sorry , There are the exist username in system');
+</script>";
+			else
+				echo"<script language='javascript'>
+    window.location.href = '../../login';
+	alert('You can use this username');
+</script>";
+		}
 	}
 	public function login(){
 			$data['username'] = $_POST['username'];
