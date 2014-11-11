@@ -1,6 +1,7 @@
 <?
 class member extends CI_Controller {
 	public function twowayauthen($number){
+		$sess = $this->session->all_userdata();
 		$this->load->library('twilio');
 		$from = '+16024836345';
 		$to = $sess['rtel'];
