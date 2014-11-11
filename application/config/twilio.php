@@ -23,12 +23,12 @@
 	/**
 	 * Account SID
 	 **/
-	$config['account_sid']   = '';
+	$config['account_sid']   = 'AC1cebed1bef3754b8ea59007589b8799c';
 
 	/**
 	 * Auth Token
 	 **/
-	$config['auth_token']    = '';
+	$config['auth_token']    = '328f00d3cf3f0ae160e75a214256d8b9';
 
 	/**
 	 * API Version
@@ -38,7 +38,7 @@
 	/**
 	 * Twilio Phone Number
 	 **/
-	$config['number']        = '';
+	$config['number']        = '+16024836345';
 
 
 /* End of file twilio.php */

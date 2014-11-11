@@ -2,8 +2,8 @@
 class member extends CI_Controller {
 	public function twowayauthen(){
 		$this->load->library('twilio');
-		$from = 'AC1cebed1bef3754b8ea59007589b8799c';
-		$to = 'AC1cebed1bef3754b8ea59007589b8799c';
+		$from = '+16024836345';
+		$to = '+66874735633';
 		$message = 'This is a test...';
 		$response = $this->twilio->sms($from, $to, $message);
 		if($response->IsError)
