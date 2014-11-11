@@ -6,7 +6,8 @@
 			function memberDetail($data){
 				$data = $this->db->where('username',$data['username'])->get('member');
 				foreach($data->result_array() as $row){}
-				return $row;
+				if($row!=NULL)
+					return $row;
 			}
 			function verifylogin($data){
 				$check = $this->db->where('username',$data['username'])->where('password',md5($data['password']))->count_all_results('member');
