@@ -58,6 +58,7 @@
 			$this->load->library('upload', $config);
 			if($this->upload->do_upload())
 			{
+				sleep(2);
 				$this->load->model('Product_model');	
 				$this->db->select_max('id');
 				$query = $this->db->get('product');
