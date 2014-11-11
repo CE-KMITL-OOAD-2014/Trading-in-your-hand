@@ -52,7 +52,7 @@
   <div class="container" id="tourpackages-carousel">
     <div class="row">
       <div class="col-xs-18 col-sm-6 col-md-3">
-        <div class="thumbnail"> <img src="<? echo"".$data[1]['pic1']; ?>.jpg" alt="">
+        <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[1]['pic1']; ?>.jpg" alt="">
           <div class="caption">
             <h4><? echo"".$data[1]['name']; ?></h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
@@ -61,7 +61,7 @@
         </div>
       </div>
       <div class="col-xs-18 col-sm-6 col-md-3">
-        <div class="thumbnail"> <img src="<? echo"".$data[2]['pic1']; ?>.jpg" alt="">
+        <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[2]['pic1']; ?>.jpg" alt="">
           <div class="caption">
             <h4><? echo"".$data[1]['name']; ?></h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
@@ -70,7 +70,7 @@
         </div>
       </div>
       <div class="col-xs-18 col-sm-6 col-md-3">
-        <div class="thumbnail"> <img src="<? echo"".$data[3]['pic1']; ?>.jpg" alt="">
+        <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[3]['pic1']; ?>.jpg" alt="">
           <div class="caption">
             <h4><? echo"".$data[1]['name']; ?></h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="col-xs-18 col-sm-6 col-md-3">
-        <div class="thumbnail"> <img src="<? echo"".$data[4]['pic1']; ?>.jpg" alt="">
+        <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[4]['pic1']; ?>.jpg" alt="">
           <div class="caption">
             <h4><? echo"".$data[1]['name']; ?></h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
