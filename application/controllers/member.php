@@ -74,14 +74,14 @@ class member extends CI_Controller {
 				);
 				$this->session->set_userdata($newdata);
 				echo"<script language='javascript'>
-	alert('Log in success');
+	alert('Welcome , ".$data['username']."');
     window.location.href = '../../pages';
 </script>";
 			}
 			else
 				echo"<script language='javascript'>
-	alert('Log in failed');
-    window.location.href = '../../pages';
+	alert('Username or Password incorrect');
+    window.location.href = '../../pages/login';
 </script>";
 		}
 	public function logout(){
