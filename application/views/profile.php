@@ -234,7 +234,7 @@ if($this->session->userdata('username')){
     if($id==$username&&$detail['iden']!=0&&$this->session->userdata('username'))
       	echo"<a href='../../../pages/addproduct'><button class='btn btn-success'> Add product</button></a>";
 	else if($id==$username&&$detail['iden']==0&&$this->session->userdata('username'))
-		echo"<a href='../../../member/twowayauthen'><button class='btn btn-success'> Become a seller</button></a>";
+		echo"<a href='../../../pages/iden'><button class='btn btn-success'> Become a seller</button></a>";
     ?>
 	</div>
     <div class="col-md-9">
