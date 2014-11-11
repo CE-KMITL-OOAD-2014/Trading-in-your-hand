@@ -57,7 +57,6 @@ class member extends CI_Controller {
 				$id = $row['id']+1;
 			$data = array('id'=>$id,'username'=>$sess['rusername'],'password'=>$sess['rpassword'],'name'=>$sess['rname'],'sname'=>$sess['rsname'],'address'=>$sess['raddress'],'email'=>$sess['remail'],'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://",'iden'=>0);
 			$this->member_model->register($data);
-			$this->session->sess_destroy();
 			echo"<script language='javascript'>
 	alert('Success');
     window.location.href = '../../pages/login';
