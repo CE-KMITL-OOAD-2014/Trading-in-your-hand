@@ -29,9 +29,7 @@ class member extends CI_Controller {
 			$sess = $this->session->all_userdata();
 			echo"asdfsdf".$sess['rcode'];
 			$this->twowayauthen($number);
-			echo"<script language='javascript'>
-    window.location.href = '../../pages/confirm';	
-</script>";
+			
 		}
 	public function register2way(){
 			$code = $_POST['code'];
