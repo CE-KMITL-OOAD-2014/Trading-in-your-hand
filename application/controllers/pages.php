@@ -20,7 +20,7 @@ class pages extends CI_Controller {
 	}
 		public function confirm()
 	{
-		$data['page'] = "Register";
+		$data['page'] = "confirm";
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
 		$this->load->view('space.php');
