@@ -1,7 +1,16 @@
 <?
 class member extends CI_Controller {
-	private function check($chk){ //Check that call from pages class
-		
+	public function twowayauthen(){
+		require('../../../../twilio-php/Services/Twilio.php');
+		$sid = "AC1cebed1bef3754b8ea59007589b8799c"; 
+		$token = "328f00d3cf3f0ae160e75a214256d8b9"; 
+		$client = new Services_Twilio($sid, $token);
+		$message = $client->account->messages->sendMessage(
+		  '+16024836345', // From a valid Twilio number
+		  '+66874735633', // Text this number
+		  "Hello monkey!"
+		);	
+		print $message->sid;
 	}
 	public function register(){
 			$username = $_POST['username'];
