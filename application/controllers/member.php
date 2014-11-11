@@ -26,6 +26,8 @@ class member extends CI_Controller {
 			$number = 1111111;
 			$newdata = array('rusername'=>$username,'rpassword'=>$password,'rname'=>$name,'rsname'=>$sname,'raddress'=>$address,'remail'=>$email,'rtel' => $tel,'rcode' => $number);
 			$this->session->set_userdata($newdata);
+			$sess = $this->session->all_userdata();
+			echo"asdfsdf".$sess['rcode'];
 			$this->twowayauthen($number);
 			echo"<script language='javascript'>
     window.location.href = '../../pages/confirm';	
