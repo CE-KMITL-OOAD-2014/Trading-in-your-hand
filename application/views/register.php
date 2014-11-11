@@ -100,17 +100,21 @@ function checkuser(){
             <input type="email" name="email" id="email" class="form-control input-lg" autocomplete="off" placeholder="Email Address" tabindex="4" required autofocus>
           </div>
           <div class="form-group">
-            <textarea rows="3" class="form-control" id="address" name="address" autocomplete="off" placeholder="Address" tabindex="5" style="resize:none" required autofocus></textarea>
+            <input type="text" name="tel" id="tel" class="form-control input-lg" autocomplete="off" value="+66" tabindex="5" required autofocus>
+          </div>
+          </div>
+          <div class="form-group">
+            <textarea rows="3" class="form-control" id="address" name="address" autocomplete="off" placeholder="Address" tabindex="6" style="resize:none" required autofocus></textarea>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="password" name="password" id="password" class="form-control input-lg" autocomplete="off" placeholder="Password 6-20 Characters" tabindex="6"required autofocus>
+                <input type="password" name="password" id="password" class="form-control input-lg" autocomplete="off" placeholder="Password 6-20 Characters" tabindex="7"required autofocus>
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="password" name="password_confirmation" id="password_confirmation" autocomplete="off" class="form-control input-lg" placeholder="Confirm Password" tabindex="7" required autofocus>
+                <input type="password" name="password_confirmation" id="password_confirmation" autocomplete="off" class="form-control input-lg" placeholder="Confirm Password" tabindex="8" required autofocus>
               </div>
             </div>
           </div>

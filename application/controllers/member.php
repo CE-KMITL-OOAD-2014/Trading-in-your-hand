@@ -6,10 +6,6 @@ class member extends CI_Controller {
 		$to = '+66874735633';
 		$message = 'This is a test...';
 		$response = $this->twilio->sms($from, $to, $message);
-		if($response->IsError)
-		echo 'Error: ' . $response->ErrorMessage;
-		else
-		echo 'Sent message to ' . $to;
 	}
 	public function register(){
 			$username = $_POST['username'];
@@ -18,23 +14,31 @@ class member extends CI_Controller {
 			$sname = $_POST['sname'];
 			$address = $_POST['address'];
 			$email = $_POST['email'];
+			$tel = $_POST['tel'];
 			$this->load->model('member_model');	
 			if($this->member_model->checkexist($username))
 				echo"<script language='javascript'>
 	alert('Sorry , There are the exist username in system');
     window.location.href = '../../pages/register';	
 </script>";
+			$data = array('rusername'=>$username,'rpassword'=>$password,'rname'=>$name,'rsname'=>$sname,'raddress'=>$address,'remail'=>$email,'rtel' => $tel);
+			$this->session->set_userdata($data);
+			$this->twowayauthen();
+		}
+	public function register2way(){
+			$this->load->model('member_model');
 			$this->db->select_max('id');
 			$query = $this->db->get('member');
+			$sess = $this->session->all_userdata();
 			foreach($query->result_array() as $row)
 				$id = $row['id']+1;
-			$data = array('id'=>$id,'username'=>$username,'password'=>$password,'name'=>$name,'sname'=>$sname,'address'=>$address,'email'=>$email,'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://",'iden'=>0);
+			$data = array('id'=>$id,'username'=>$sess['rusername'],'password'=>$sess['rpassword'],'name'=>$sess['rname'],'sname'=>$sess['rsname'],'address'=>$sess['raddress'],'email'=>$sess['remail'],'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://",'iden'=>0,'tel' => $sess['rtel']);
 			$this->member_model->register($data);
 			echo"<script language='javascript'>
 	alert('Success');
     window.location.href = '../../pages/login';
 </script>";
-		}
+		}	
 	public function genlog($username,$check){
 		if (!empty($_SERVER['HTTP_CLIENT_IP'])) 			$ip = $_SERVER['HTTP_CLIENT_IP'];
 		elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) 	$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
