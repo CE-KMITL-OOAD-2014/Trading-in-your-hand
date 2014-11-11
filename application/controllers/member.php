@@ -2,7 +2,7 @@
 class member extends CI_Controller {
 	public function twowayauthen($number){
 		$sess = $this->session->all_userdata();
-		$to = $sess['email'];
+		$to = $sess['remail'];
 		$message = 'Trading in your hand - Your confirmation code is '.$number;	
 		$config = Array(
 		  'protocol' => 'smtp',
