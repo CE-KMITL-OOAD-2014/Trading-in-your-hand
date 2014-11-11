@@ -102,7 +102,6 @@ function checkuser(){
           <div class="form-group">
             <input type="text" name="tel" id="tel" class="form-control input-lg" autocomplete="off" value="+66" tabindex="5" required autofocus>
           </div>
-          </div>
           <div class="form-group">
             <textarea rows="3" class="form-control" id="address" name="address" autocomplete="off" placeholder="Address" tabindex="6" style="resize:none" required autofocus></textarea>
           </div>
