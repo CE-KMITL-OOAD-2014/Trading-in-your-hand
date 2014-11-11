@@ -231,9 +231,9 @@ if($this->session->userdata('username')){
         </div>
       </div>
     <?
-    if($id==$username&&$detail['iden']==1)
+    if($id==$username&&$detail['iden']==1&&$this->session->userdata('username'))
       	echo"<a href='../../../pages/addproduct'><button class='btn btn-success'> Add product</button></a>";
-	else if($id==$username&&$detail['iden']==0)
+	else if($id==$username&&$detail['iden']==0&&$this->session->userdata('username'))
 		echo"<a href='../../../pages/iden'><button class='btn btn-success'> Become a seller</button></a>";
     ?>
 	</div>
