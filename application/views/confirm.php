@@ -17,7 +17,6 @@
         <div class="col-xs-8 col-md-6">
           <div class="form-wrap">
             <h1>Enter confirmation code <? 
-			$this->load->library('session');
 			$sess = $this->session->all_userdata();
 			echo"sessss".$sess['rcode']; ?></h1>
             <form action="../../member/register2way" method="post" autocomplete="off">
