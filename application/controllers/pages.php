@@ -45,10 +45,12 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 	}
 	public function login(){
-		if($this->session->userdata('username'))
-		echo"<script language='javascript'>
+		if($this->session->userdata('username')){
+			$sess = $this->session->all_userdata();
+			echo"<script language='javascript'>
     window.location.href = '../../../pages/member/".$sess['username']."';
 </script>";
+		}
 		$data['page'] = "Log in";
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
