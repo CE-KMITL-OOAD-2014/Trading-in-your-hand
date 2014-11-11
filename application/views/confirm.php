@@ -23,7 +23,7 @@
                 <input type="password" name="code" id="code" class="form-control" placeholder="Password" required autofocus>
               </div>
               <div class="form-group">	
-                <input type="button" value="Confirm" id="confirmbutton" class="btn btn-primary btn-block btn-lg" tabindex="3">
+                <input type="submit" value="Confirm" id="confirmbutton" class="btn btn-primary btn-block btn-lg" tabindex="3">
               </div>
             </form>
             <hr>

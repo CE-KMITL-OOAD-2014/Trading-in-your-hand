@@ -9,6 +9,7 @@ class member extends CI_Controller {
 		$response = $this->twilio->sms($from, $to, $message);
 	}
 	public function register(){
+			$this->session->sess_destroy();
 			$username = $_POST['username'];
 			$password = md5($_POST['password']);
 			$name = $_POST['name'];
@@ -45,6 +46,7 @@ class member extends CI_Controller {
 				$id = $row['id']+1;
 			$data = array('id'=>$id,'username'=>$sess['rusername'],'password'=>$sess['rpassword'],'name'=>$sess['rname'],'sname'=>$sess['rsname'],'address'=>$sess['raddress'],'email'=>$sess['remail'],'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://",'iden'=>0,'tel' => $sess['rtel']);
 			$this->member_model->register($data);
+			$this->session->sess_destroy();
 			echo"<script language='javascript'>
 	alert('Success');
     window.location.href = '../../pages/login';
