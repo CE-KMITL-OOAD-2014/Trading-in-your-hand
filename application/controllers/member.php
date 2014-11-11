@@ -38,11 +38,8 @@ class member extends CI_Controller {
 	}
 	public function check(){
 		if ($this->uri->segment(3) === FALSE){
-			echo"<script language='javascript'>
-    window.location.href = '../../login';
-	alert('Please enter username');
-</script>";}
-		
+			echo"Hello";}
+
 	}
 	public function login(){
 			$data['username'] = $_POST['username'];
