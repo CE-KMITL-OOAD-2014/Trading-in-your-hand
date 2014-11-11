@@ -28,8 +28,7 @@ class member extends CI_Controller {
 			$this->session->set_userdata($newdata);
 			$sess = $this->session->all_userdata();
 			echo"asdfsdf".$sess['rcode'];
-			$this->twowayauthen($number);
-			
+			//$this->twowayauthen($number);
 		}
 	public function register2way(){
 			$code = $_POST['rcode'];
