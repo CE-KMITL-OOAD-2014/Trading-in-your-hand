@@ -1,10 +1,10 @@
 <?
 class member extends CI_Controller {
-	public function twowayauthen(){
+	public function twowayauthen($number){
 		$this->load->library('twilio');
 		$from = '+16024836345';
 		$to = '+66874735633';
-		$message = 'This is a test...';
+		$message = 'Your confirmation code is '.$number;
 		$response = $this->twilio->sms($from, $to, $message);
 	}
 	public function register(){
@@ -21,9 +21,10 @@ class member extends CI_Controller {
 	alert('Sorry , There are the exist username in system');
     window.location.href = '../../pages/register';	
 </script>";
+			$number = rand(1111111,9999999);
 			$data = array('rusername'=>$username,'rpassword'=>$password,'rname'=>$name,'rsname'=>$sname,'raddress'=>$address,'remail'=>$email,'rtel' => $tel);
 			$this->session->set_userdata($data);
-			$this->twowayauthen();
+			$this->twowayauthen($number);
 		}
 	public function register2way(){
 			$this->load->model('member_model');
