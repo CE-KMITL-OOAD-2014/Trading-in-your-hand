@@ -45,6 +45,7 @@
 		function add(){
 			$sess = $this->session->all_userdata();
 			$fname  =  md5($sess['username'].date("D M d, Y G:i"));
+			echo $fname;
 			$config =  array(
 				  'file_name'		=> $fname,
                   'upload_path'     => "./productPic/",
