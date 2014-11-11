@@ -77,7 +77,7 @@ function validateusername(){
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
               <div class="form-group">
-                <a href="../../member/check/<script> document.write(document.getElementById("username").value); </script>" class="btn btn-success btn-block btn-lg">Check</a>
+               <? echo"<a href='../../member/check/<script> document.write(document.getElementById('username').value); </script>' class='btn btn-success btn-block btn-lg'>Check</a>"; ?>
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
