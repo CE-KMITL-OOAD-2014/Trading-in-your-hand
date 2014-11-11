@@ -31,7 +31,7 @@ class member extends CI_Controller {
 </script>";
 		}
 	public function register2way(){
-			$code = $_POST['rcode'];
+			$code = $_POST['code'];
 			$sess = $this->session->all_userdata();
 			if($code!=$sess['rcode'])
 				echo"<script language='javascript'>
