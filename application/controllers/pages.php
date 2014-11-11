@@ -3,10 +3,18 @@
 class pages extends CI_Controller {
 	public function index()
 	{	$data['page'] = "Home";
+		$this->load->model('Product_model');	
+		$pdata = $this->Product_model->newProduct();
+		$num = 0;
+    	foreach($pdata->result_array() as $rows){
+			$num++;
+			$tdata[$num] = $rows;
+		}
+		$temp['data'] = $tdata;
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
 		$this->load->view('space.php');
-		$this->load->view('home.php');
+		$this->load->view('home.php',$temp);
 		$this->load->view('footer.php');
 	}
 	public function register()
@@ -18,13 +26,22 @@ class pages extends CI_Controller {
 		$this->load->view('register.php');
 		$this->load->view('footer.php');
 	}
-		public function confirm()
+	public function confirm()
 	{
 		$data['page'] = "confirm";
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
 		$this->load->view('space.php');
 		$this->load->view('confirm.php');
+		$this->load->view('footer.php');
+	}
+	public function iden()
+	{
+		$data['page'] = "identify";
+		$this->load->helper('body.php');
+		$this->load->view('header.php',$data);
+		$this->load->view('space.php');
+		$this->load->view('indentify.php');
 		$this->load->view('footer.php');
 	}
 	public function login(){

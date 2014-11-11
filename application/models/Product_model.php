@@ -18,6 +18,11 @@
 			$data = $this->db->where('username',$username)->order_by('id','desc')->get('product');
 			return $data;
 		}
+		function newProduct(){
+			$username = $pdata['username'];
+			$data = $this->db->order_by('id','desc')->get('product');
+			return $data;
+		}
 		function checkowner($id,$user){
 			$check = $this->db->where('id',$id)->where('username',$user)->count_all_results('product');	
 			if($check==1)
