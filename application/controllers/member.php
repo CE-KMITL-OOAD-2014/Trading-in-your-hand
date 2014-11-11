@@ -39,19 +39,19 @@ class member extends CI_Controller {
 	public function isExist($chk){
 		if ($this->uri->segment(3) === FALSE)
 			echo"<script language='javascript'>
-    window.location.href = '../../pages/login';
+    window.location.href = '../../pages/register';
 	alert('Please enter username');
 </script>";
 		else{
 			$this->load->model('member_model');	
 			if($this->member_model->checkexist($this->uri->segment(3)))
 				echo"<script language='javascript'>
-    window.location.href = '../../pages/login';
+    window.location.href = '../../pages/register';
 	alert('Sorry , There are the exist username in system');
 </script>";
 			else
 				echo"<script language='javascript'>
-    window.location.href = '../../pages/login';
+    window.location.href = '../../pages/register';
 	alert('You can use this username');
 </script>";
 		}
