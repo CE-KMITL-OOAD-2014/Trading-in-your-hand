@@ -55,7 +55,7 @@
         <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[1]['pic1']; ?>.jpg" alt="">
           <div class="caption">
             <h4><? echo"".$data[1]['name']; ?></h4>
-            <p><? echo"".$data[1]['name']; ?></p>
+            <p><? echo"".$data[1]['detail']; ?></p>
             <p><a href="../../pages/login" class="btn btn-info btn-xs" role="button">Buy</a> <a href="#" class="btn btn-default btn-xs" role="button">View</a></p>
           </div>
         </div>
@@ -64,7 +64,7 @@
         <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[2]['pic1']; ?>.jpg" alt="">
           <div class="caption">
             <h4><? echo"".$data[2]['name']; ?></h4>
-            <p><? echo"".$data[2]['name']; ?></p>
+            <p><? echo"".$data[2]['detail']; ?></p>
             <p><a href="../../pages/login" class="btn btn-info btn-xs" role="button">Buy</a> <a href="#" class="btn btn-default btn-xs" role="button">View</a></p>
           </div>
         </div>
@@ -73,7 +73,7 @@
         <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[3]['pic1']; ?>.jpg" alt="">
           <div class="caption">
             <h4><? echo"".$data[3]['name']; ?></h4>
-            <p><? echo"".$data[3]['name']; ?></p>
+            <p><? echo"".$data[3]['detail']; ?></p>
             <p><a href="../../pages/login" class="btn btn-info btn-xs" role="button">Buy</a> <a href="#" class="btn btn-default btn-xs" role="button">View</a></p>
           </div>
         </div>
@@ -82,7 +82,7 @@
         <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[4]['pic1']; ?>.jpg" alt="">
           <div class="caption">
             <h4><? echo"".$data[4]['name']; ?></h4>
-            <p><? echo"".$data[4]['name']; ?></p>
+            <p><? echo"".$data[4]['detail']; ?></p>
             <p><a href="../../pages/login" class="btn btn-info btn-xs" role="button">Buy</a> <a href="#" class="btn btn-default btn-xs" role="button">View</a></p>
           </div>
         </div>
