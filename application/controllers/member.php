@@ -11,6 +11,11 @@ class member extends CI_Controller {
 			$address = $_POST['address'];
 			$email = $_POST['email'];
 			$this->load->model('member_model');	
+			if($this->member_model->checkexist($username))
+				echo"<script language='javascript'>
+	alert('Sorry , There are the exist username in system');
+    window.location.href = '../../pages/register';	
+</script>";
 			$this->db->select_max('id');
 			$query = $this->db->get('member');
 			foreach($query->result_array() as $row)
@@ -37,13 +42,13 @@ class member extends CI_Controller {
 		$this->member_model->genlog($data);
 	}
 	public function isExist(){
+		$this->load->model('member_model');	
 		if ($this->uri->segment(3) === FALSE)
 			echo"<script language='javascript'>
 	alert('Please enter username');
 	window.location.href = '../../pages/register';
 </script>";
 		else{
-			$this->load->model('member_model');	
 			if($this->member_model->checkexist($this->uri->segment(3)))
 				echo"<script language='javascript'>
 	alert('Sorry , There are the exist username in system');
