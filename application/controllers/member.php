@@ -66,6 +66,7 @@ class member extends CI_Controller {
 			$data['password'] = $_POST['password'];
 			$this->load->model('member_model');	
 			$check = $this->member_model->verifylogin($data);
+			$name = $this->member_model->memberDetail($data['username']);
 			$this->genlog($data['username'],$check);
 			if($check){
 				$newdata = array(
@@ -74,7 +75,7 @@ class member extends CI_Controller {
 				);
 				$this->session->set_userdata($newdata);
 				echo"<script language='javascript'>
-	alert('Welcome , ".$data['username']."');
+	alert('Welcome , ".$name['name']."');
     window.location.href = '../../pages';
 </script>";
 			}
