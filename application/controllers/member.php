@@ -36,7 +36,7 @@ class member extends CI_Controller {
 		$this->load->model('member_model');
 		$this->member_model->genlog($data);
 	}
-	public function check(){
+	public function isExist(){
 		if ($this->uri->segment(3) === FALSE){
 			echo"Hello";}
 

@@ -61,7 +61,7 @@ function validateusername(){
 			}
 	}
 function checkuser(){
-	var locate = '../../member/check/';
+	var locate = '../../member/isExist/';
 	var username = document.getElementById("username").value;
 	window.location.href = locate.concat(username);
 }
