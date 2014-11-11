@@ -60,6 +60,11 @@ function validateusername(){
 				$("#regisbutton").prop("type", "button");
 			}
 	}
+function checkuser(){
+	var locate = '../../member/check/';
+	var username = document.getElementById("username").value;
+	window.location.href = locate.concat(username);
+}
    </script> 
   
   <!--------------------------Register---------------------------------------------------------------------------------->
@@ -77,7 +82,7 @@ function validateusername(){
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
               <div class="form-group">
-               <? echo"<a href='../../member/check/<script> document.write(document.getElementById('username').value); </script>' class='btn btn-success btn-block btn-lg'>Check</a>"; ?>
+                <a href="checkuser()" class="btn btn-success btn-block btn-lg">Check</a>
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
