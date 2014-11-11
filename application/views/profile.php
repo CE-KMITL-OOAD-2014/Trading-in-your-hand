@@ -223,7 +223,7 @@ if($this->session->userdata('username')){
 			if($detail['github']!="https://")echo"<a href=".$detail['github']." class='[ social-icon github ] animate'><span class='fa fa-github-alt'></span></a>";
 			if($detail['googleplus']!="https://")echo"<a href=".$detail['googleplus']." class='[ social-icon google-plus ] animate'><span class='fa fa-google-plus'></span></a>";       
             
-			if($id==$username)
+			if($id==$username&&$this->session->userdata('username'))
   			echo"<a class='btn btn-default btn-sm' href='../../../pages/editprofile'><i class='fa fa-cog' id='edit'></i>Edit</a>";
 			?>
             </div>
