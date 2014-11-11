@@ -3,24 +3,24 @@ class member extends CI_Controller {
 	public function twowayauthen(){
 		$number = 123456;
 		$sess = $this->session->all_userdata();
-		$to = $sess['remail'];
+		$to = "iam.pae0@gmail.com";
 		$message = 'Trading in your hand - Your confirmation code is '.$number;	
 		$config = Array(
-		  'protocol' => 'smtp',
-		  'smtp_host' => 'ssl://smtp.gmail.com',
-		  'smtp_port' => 465,
-		  'smtp_user' => 'trading.in.your.hand@gmail.com', // change it to yours
-		  'smtp_pass' => 'pae123456', // change it to yours
-		  'mailtype' => 'html',
-		  'charset' => 'iso-8859-1',
-		  'wordwrap' => TRUE
+    		'protocol' => 'smtp',
+   			'smtp_host' => 'ssl://smtp.googlemail.com',
+    		'smtp_port' => 465,
+    		'smtp_user' => 'trading.in.your.hand@gmail.com',
+    		'smtp_pass' => 'pae123456',
+    		'mailtype'  => 'html', 
+    		'charset'   => 'iso-8859-1'
 		);
 		$this->load->library('email', $config);
+		$this->email->set_newline("\r\n");
 		$this->email->from('trading.in.your.hand@gmail.com');
  		$this->email->to($to);
 		$this->email->subject('Trading-in-your-hand-Confirmation code');
       	$this->email->message($message);
-		$this->email->send();
+		$result = $this->email->send();	
 	}
 	public function register(){
 			$username = $_POST['username'];
