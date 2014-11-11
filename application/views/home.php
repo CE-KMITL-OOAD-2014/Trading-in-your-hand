@@ -55,35 +55,35 @@
         <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[1]['pic1']; ?>.jpg" alt="">
           <div class="caption">
             <h4><? echo"".$data[1]['name']; ?></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-            <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+            <p><? echo"".$data[1]['name']; ?></p>
+            <p><a href="../../pages/login" class="btn btn-info btn-xs" role="button">Buy</a> <a href="#" class="btn btn-default btn-xs" role="button">View</a></p>
           </div>
         </div>
       </div>
       <div class="col-xs-18 col-sm-6 col-md-3">
         <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[2]['pic1']; ?>.jpg" alt="">
           <div class="caption">
-            <h4><? echo"".$data[1]['name']; ?></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-            <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+            <h4><? echo"".$data[2]['name']; ?></h4>
+            <p><? echo"".$data[2]['name']; ?></p>
+            <p><a href="../../pages/login" class="btn btn-info btn-xs" role="button">Buy</a> <a href="#" class="btn btn-default btn-xs" role="button">View</a></p>
           </div>
         </div>
       </div>
       <div class="col-xs-18 col-sm-6 col-md-3">
         <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[3]['pic1']; ?>.jpg" alt="">
           <div class="caption">
-            <h4><? echo"".$data[1]['name']; ?></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-            <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+            <h4><? echo"".$data[3]['name']; ?></h4>
+            <p><? echo"".$data[3]['name']; ?></p>
+            <p><a href="../../pages/login" class="btn btn-info btn-xs" role="button">Buy</a> <a href="#" class="btn btn-default btn-xs" role="button">View</a></p>
           </div>
         </div>
       </div>
       <div class="col-xs-18 col-sm-6 col-md-3">
         <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[4]['pic1']; ?>.jpg" alt="">
           <div class="caption">
-            <h4><? echo"".$data[1]['name']; ?></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-            <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+            <h4><? echo"".$data[4]['name']; ?></h4>
+            <p><? echo"".$data[4]['name']; ?></p>
+            <p><a href="../../pages/login" class="btn btn-info btn-xs" role="button">Buy</a> <a href="#" class="btn btn-default btn-xs" role="button">View</a></p>
           </div>
         </div>
       </div>
