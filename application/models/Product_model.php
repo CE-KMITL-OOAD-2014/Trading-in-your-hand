@@ -19,7 +19,6 @@
 			return $data;
 		}
 		function newProduct(){
-			$username = $pdata['username'];
 			$data = $this->db->order_by('id','desc')->get('product');
 			return $data;
 		}
