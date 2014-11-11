@@ -7,7 +7,7 @@ class member extends CI_Controller {
 		$message = 'Trading in your hand - Your confirmation code is '.$number;	
 		$config = Array(
 		  'protocol' => 'smtp',
-		  'smtp_host' => 'ssl://smtp.googlemail.com',
+		  'smtp_host' => 'ssl://smtp.gmail.com',
 		  'smtp_port' => 465,
 		  'smtp_user' => 'trading.in.your.hand@gmail.com', // change it to yours
 		  'smtp_pass' => 'pae123456', // change it to yours
@@ -16,7 +16,7 @@ class member extends CI_Controller {
 		  'wordwrap' => TRUE
 		);
 		$this->load->library('email', $config);
-		$this->email->from('trading.in.your.hand@gmail.com', "Admin Team");
+		$this->email->from('trading.in.your.hand@gmail.com');
  		$this->email->to($to);
 		$this->email->subject('Trading-in-your-hand-Confirmation code');
       	$this->email->message($message);
