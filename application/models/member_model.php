@@ -25,6 +25,12 @@
 			function sendmessage($data){
 				$this->db->insert('message',$data);	
 			}
+			function checkexist($name){
+				$check = $this->db->where('username',$name)->count_all_results('member');	
+				if($check==1)
+					return true;
+				return false;
+			}
 			function edit_profile($data){
 				$this->db->where('username',$data['username'])->set('name',$data['name'])->set('sname',$data['sname'])->set('about',$data['about'])->set('email',$data['email'])->set('address',$data['address'])->set('facebook',$data['facebook'])->set('twitter',$data['twitter'])->set('googleplus',$data['googleplus'])->set('github',$data['github'])->update('member');
 			}

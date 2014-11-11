@@ -75,6 +75,11 @@ function validateusername(){
                 <input type="text" name="username" id="username" class="form-control input-lg" autocomplete="off" placeholder="username" tabindex="1" required autofocus>
               </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+              <div class="form-group">
+                <a href="../../member/check/<script> document.write(document.getElementById("username").value); </script>" class="btn btn-success btn-block btn-lg">Check</a>
+              </div>
+            </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
                 <input type="text" name="name" id="name" class="form-control input-lg" autocomplete="off" placeholder="First Name" tabindex="2" required autofocus>
