@@ -32,7 +32,7 @@ class pages extends CI_Controller {
 		$checkiden = $this->member_model->memberDetail($sess);
 		if($checkiden['iden']==0)
 			echo"<script language='javascript'>
-	alert('You can delete only your product');
+	alert('Please identify first');
     window.location.href = '../../../pages/member/".$sess['username']."';
 </script>";
 		$data['page'] = "addproduct";
