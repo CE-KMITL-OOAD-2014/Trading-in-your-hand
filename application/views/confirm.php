@@ -18,7 +18,7 @@
           <div class="form-wrap">
             <h1>Enter confirmation code <? 
 			$sess = $this->session->all_userdata();
-			echo"sessss".$sess['username']; ?></h1>
+			 echo"sessss".$sess['username']; ?></h1>
             <form action="../../member/register2way" method="post" autocomplete="off">
               <div class="form-group">
                 <label for="key" class="sr-only">code</label>
