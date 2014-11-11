@@ -36,7 +36,7 @@ class member extends CI_Controller {
 		$this->load->model('member_model');
 		$this->member_model->genlog($data);
 	}
-	public function check($chk){
+	public function check(){
 		if ($this->uri->segment(3) === FALSE)
 			echo"<script language='javascript'>
     window.location.href = '../../login';
