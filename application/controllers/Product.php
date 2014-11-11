@@ -43,8 +43,13 @@
 			echo"<a href='../Pages/displayproduct'>Back</a>";
 		}
 		function add(){
+			$this->load->model('Product_model');	
+			$this->db->select_max('id');
+			$query = $this->db->get('product');
+			foreach($query->result_array() as $row)
+				$id = $row['id']+1;
 			$sess = $this->session->all_userdata();
-			$fname  =  md5($sess['username'].date("D M d, Y G:i"));
+			$fname  =  md5($sess['username'].date("D M d, Y G:i").$id);
 			echo $fname;
 			$config =  array(
 				  'file_name'		=> $fname,
@@ -58,11 +63,6 @@
 			$this->load->library('upload', $config);
 			if($this->upload->do_upload())
 			{
-				$this->load->model('Product_model');	
-				$this->db->select_max('id');
-				$query = $this->db->get('product');
-				foreach($query->result_array() as $row)
-					$id = $row['id']+1;
 				$name = $_POST["name"];
 				$price = $_POST["price"];
 				$amount = $_POST["amount"];
