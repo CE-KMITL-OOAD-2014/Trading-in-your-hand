@@ -24,10 +24,10 @@ class member extends CI_Controller {
     window.location.href = '../../pages/register';	
 </script>";
 			$number = "1";
-			$newdata = array('rtel' => $tel,'username' => $number);
+			$newdata = array('username' => $number);
 			$this->session->set_userdata($newdata);
 			$sess = $this->session->all_userdata();
-			echo"asdfsdf".$sess['rcode'];
+			echo"asdfsdf".$sess['username'];
 			//$this->twowayauthen($number);
 		}
 	public function register2way(){
