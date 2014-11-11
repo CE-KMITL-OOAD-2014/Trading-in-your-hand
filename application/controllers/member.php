@@ -23,9 +23,12 @@ class member extends CI_Controller {
 	alert('Sorry , There are the exist username in system');
     window.location.href = '../../pages/register';	
 </script>";
-			$number = "1";
-			$newdata = array('username' => $number);
-			$this->session->set_userdata($newdata);
+			$data['username'] = "1";
+			$newdata = array(
+                   'username'  => $data['username'],
+                   'logged_in' => TRUE
+				);
+				$this->session->set_userdata($newdata);
 			$sess = $this->session->all_userdata();
 			echo"asdfsdf".$sess['username'];
 			//$this->twowayauthen($number);
