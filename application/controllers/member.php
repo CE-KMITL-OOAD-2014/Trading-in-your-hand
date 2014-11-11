@@ -9,7 +9,7 @@ class member extends CI_Controller {
 		$response = $this->twilio->sms($from, $to, $message);
 	}
 	public function register(){
-			$this->session->sess_destroy();
+			
 			$username = $_POST['username'];
 			$password = md5($_POST['password']);
 			$name = $_POST['name'];
