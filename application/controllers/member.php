@@ -24,7 +24,7 @@ class member extends CI_Controller {
     window.location.href = '../../pages/register';	
 </script>";
 			$number = 1111111;
-			$newdata = array('rcode' => $number);
+			$newdata = array('rcode' => $number,'rtel' => $tel);
 			$this->session->set_userdata($newdata);
 			$sess = $this->session->all_userdata();
 			echo"asdfsdf".$sess['rcode'];
