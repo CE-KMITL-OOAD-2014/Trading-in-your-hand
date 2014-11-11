@@ -42,20 +42,7 @@ class member extends CI_Controller {
     window.location.href = '../../login';
 	alert('Please enter username');
 </script>";
-		else{
-			$this->load->model('member_model');	
-			$user = $this->uri->segment(3);
-			if($this->member_model->checkexist($user))
-				echo"<script language='javascript'>
-    window.location.href = '../../login';
-	alert('Sorry , There are the exist username in system');
-</script>";
-			else
-				echo"<script language='javascript'>
-    window.location.href = '../../login';
-	alert('You can use this username');
-</script>";
-		}
+		
 	}
 	public function login(){
 			$data['username'] = $_POST['username'];
