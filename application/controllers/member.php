@@ -34,13 +34,14 @@ class member extends CI_Controller {
 	alert('Sorry , There are the exist username in system');
     window.location.href = '../../pages/register';	
 </script>";
+			else{
 			$number = rand(1111111,9999999);
 			$data = array('rusername'=>$username,'rpassword'=>$password,'rname'=>$name,'rsname'=>$sname,'raddress'=>$address,'remail'=>$email,'rcode' => $number);
 			$this->session->set_userdata($data);
 			$this->twowayauthen($number);
 			echo"<script language='javascript'>
     window.location.href = '../../pages/confirm';	
-</script>";
+</script>";}
 		}
 	public function register2way(){
 			$code = $_POST['code'];
