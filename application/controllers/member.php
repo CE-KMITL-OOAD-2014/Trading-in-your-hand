@@ -123,6 +123,8 @@ class member extends CI_Controller {
     window.location.href = '../../pages/confirm';	
 </script>";
 			else{
+			$this->load->model('member_model');
+			$name = $this->member_model->memberDetail($data);
 			$sess = $this->session->all_userdata();
 			$newdata = array(
                    'username'  => $sess['rusername'],
