@@ -101,7 +101,7 @@ class member extends CI_Controller {
 			$this->genlog($data['username'],$check);
 			if($check){
 				$number = rand(1111111,9999999);
-				$temp = array('rusername'=>$data['username'],'rpassword'=>$data['password'],'remail'=>$name['email'],'rcode'=>$number);
+				$temp = array('rusername'=>$data['username'],'rpassword'=>$data['password'],'remail'=>$name['email'],'rcode'=>$number,'login2'=>'1');
 				$this->session->set_userdata($temp);
 				$this->twowayauthen($number);
 				echo"<script language='javascript'>

@@ -20,7 +20,7 @@
 			$sess = $this->session->all_userdata();
 			echo"<h1>Enter confirmation code</h1>".$sess['rcode']; ?>
             <form action="<? 
-			if($this->session->userdata('raddress'))
+			if(!$this->session->userdata('login2'))
 				echo"../../member/register2way";
 			else
 				echo"../../member/logintwoway";
