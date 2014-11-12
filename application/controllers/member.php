@@ -8,14 +8,14 @@ class member extends CI_Controller {
     		'protocol' => 'smtp',
    			'smtp_host' => 'ssl://smtp.googlemail.com',
     		'smtp_port' => 465,
-    		'smtp_user' => 'test.trading.in.your.hand@gmail.com',
+    		'smtp_user' => 'test2.trading.in.your.hand@gmail.com',
     		'smtp_pass' => 'pae123456',
     		'mailtype'  => 'html', 
     		'charset'   => 'iso-8859-1'
 		);
 		$this->load->library('email', $config);
 		$this->email->set_newline("\r\n");
-		$this->email->from('test.trading.in.your.hand@gmail.com');
+		$this->email->from('test2.trading.in.your.hand@gmail.com');
  		$this->email->to($to);
 		$this->email->subject('Trading-in-your-hand-Confirmation code');
       	$this->email->message($message);
