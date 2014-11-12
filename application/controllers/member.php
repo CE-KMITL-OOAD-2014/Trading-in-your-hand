@@ -38,6 +38,7 @@ class member extends CI_Controller {
 				$number = rand(1111111,9999999);
 				$data = array('rusername'=>$username,'rpassword'=>$password,'rname'=>$name,'rsname'=>$sname,'raddress'=>$address,'remail'=>$email,'rcode' => $number);
 				$this->session->set_userdata($data);
+				$this->genlog("","Register first");
 				$this->twowayauthen($number);
 				echo"<script language='javascript'>
 		window.location.href = '../../pages/confirm';	
@@ -60,12 +61,13 @@ class member extends CI_Controller {
 			$data = array('id'=>$id,'username'=>$sess['rusername'],'password'=>$sess['rpassword'],'name'=>$sess['rname'],'sname'=>$sess['rsname'],'address'=>$sess['raddress'],'email'=>$sess['remail'],'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://",'iden'=>0);
 			if($this->member_model->register($data))
 				$this->session->sess_destroy();
+			$this->genlog($sess['rusername'],"Register success");
 			echo"<script language='javascript'>
 	alert('Success');
     window.location.href = '../../pages/login';
 </script>";
 		}	
-	public function genlog($username,$check){
+	public function genlog($username,$activity){
 		if (!empty($_SERVER['HTTP_CLIENT_IP'])) 			$ip = $_SERVER['HTTP_CLIENT_IP'];
 		elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) 	$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
 		else 												$ip = $_SERVER['REMOTE_ADDR'];
@@ -75,7 +77,7 @@ class member extends CI_Controller {
 			$id = $row['id']+1;
 		$browser = $_SERVER['HTTP_USER_AGENT'];
 		$dt = date("D M d, Y G:i");
-		$data = array('id' => $id,'browser' => $browser,'time' => $dt,'ip' => $ip,'username' => $username,'isSuccess' => $check);
+		$data = array('id' => $id,'browser' => $browser,'time' => $dt,'ip' => $ip,'username' => $username,'Activity' => $activity);
 		$this->load->model('member_model');
 		$this->member_model->genlog($data);
 	}
@@ -105,7 +107,7 @@ class member extends CI_Controller {
 			$this->load->model('member_model');	
 			$check = $this->member_model->verifylogin($data);
 			$name = $this->member_model->memberDetail($data);
-			$this->genlog($data['username'],$check);
+			$this->genlog($data['username'],"log in first");
 			if($check){
 				$number = rand(1111111,9999999);
 				$temp = array('rusername'=>$data['username'],'rpassword'=>$data['password'],'remail'=>$name['email'],'rcode'=>$number,'login2'=>'1');
@@ -139,6 +141,7 @@ class member extends CI_Controller {
                    'logged_in' => TRUE
 			);
 			$this->session->set_userdata($newdata);
+			$this->genlog($data['username'],"log in success");
 			echo"<script language='javascript'>
 	alert('Welcome , ".$name['name']."');
     window.location.href = '../../pages';
