@@ -187,8 +187,15 @@ class member extends CI_Controller {
 	}
 	public function uploaded(){
 		$data = $this->session->all_userdata();
+		if ($this->uri->segment(3) === FALSE){
+			$name = md5(base64_encode($data['username']));
+			
+		}
+		else{ // inden 
+			$name = base64_encode(md5($data['username']));
+		}
 		$config =  array(
-				'file_name'		  => md5(base64_encode($data['username'])),
+				'file_name'		  => $name,
                 'upload_path'     => "./userPic/",
                 'allowed_types'   => "gif|jpg|png|jpeg",
                 'overwrite'       => TRUE,
@@ -198,14 +205,28 @@ class member extends CI_Controller {
             );
 		$this->load->library('upload', $config);
 		if($this->upload->do_upload())
-			echo"<script language='javascript'>
-    window.location.href = '../../pages/editprofile';
-</script>";	
+			if ($this->uri->segment(3) === FALSE)
+				echo"<script language='javascript'>
+    			window.location.href = '../../pages/editprofile';
+				</script>";	
+			else{
+				echo"<script language='javascript'>
+    			window.location.href = '../../pages/iden';
+				</script>";
+				$this->load->model('member_model');
+				$this->member_model->queueiden($data['username']);
+				}
 		else
-			echo"<script language='javascript'>
-	alert('Please browse file');
-    window.location.href = '../../pages/editprofile';
-</script>";	
+			if ($this->uri->segment(3) === FALSE)
+				echo"<script language='javascript'>
+				alert('Please browse file');
+    			window.location.href = '../../pages/editprofile';
+				</script>";	
+			else
+				echo"<script language='javascript'>
+				alert('Please browse file');
+    			window.location.href = '../../pages/iden';
+				</script>";	
 	}	
 }
 ?>
