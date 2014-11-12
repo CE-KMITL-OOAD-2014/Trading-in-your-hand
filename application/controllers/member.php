@@ -8,7 +8,7 @@ class member extends CI_Controller {
     		'protocol' => 'smtp',
    			'smtp_host' => 'ssl://smtp.googlemail.com',
     		'smtp_port' => 465,
-    		'smtp_user' => 'trading.in.your.hand@gmail.com',
+    		'smtp_user' => 'test.trading.in.your.hand@gmail.com',
     		'smtp_pass' => 'pae123456',
     		'mailtype'  => 'html', 
     		'charset'   => 'iso-8859-1'
