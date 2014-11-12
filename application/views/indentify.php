@@ -21,7 +21,7 @@
           <img src="../../userPic/<? echo"".md5(base64_encode(md5($id))).".jpg"; ?>" class="avatar img-thumbnail" alt="300x300">
             <form action="../../member/uploaded/iden" method="POST" enctype="multipart/form-data" >
         <input type="file" name="userfile" class="text-center center-block well well-sm"/>
-        <input type="submit" name="submit" value="Upload" class="btn btn-success" />
+        <center><input type="submit" name="submit" value="Upload" class="btn btn-success" /></center>
         </form>
             <hr>
           </div>
