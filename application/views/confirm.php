@@ -18,7 +18,7 @@
           <div class="form-wrap">
             <? 
 			$sess = $this->session->all_userdata();
-			echo"<h1>Enter confirmation code</h1>".$sess['rcode']; ?>
+			echo"<h1>Enter confirmation code</h1>"; ?>
             <form action="<? 
 			if(!$this->session->userdata('login2'))
 				echo"../../member/register2way";

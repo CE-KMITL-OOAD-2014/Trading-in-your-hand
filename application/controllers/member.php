@@ -124,6 +124,7 @@ class member extends CI_Controller {
 </script>";
 			else{
 			$this->load->model('member_model');
+			$data['username'] = $sess['rusername'];
 			$name = $this->member_model->memberDetail($data);
 			$sess = $this->session->all_userdata();
 			$newdata = array(
