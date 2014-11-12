@@ -104,6 +104,13 @@ class member extends CI_Controller {
 			$name = $this->member_model->memberDetail($data);
 			$this->genlog($data['username'],$check);
 			if($check){
+				$number = rand(1000000,9999999);
+				$this->session->set_userdata('remail',$name['email']);
+				$this->twowayauthen($number);
+				echo"<script language='javascript'>
+    window.location.href = '../../pages/confirm';	
+</script>";
+				////////////////////////////////// 
 				$newdata = array(
                    'username'  => $data['username'],
                    'logged_in' => TRUE
