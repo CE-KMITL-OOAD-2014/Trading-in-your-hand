@@ -15,7 +15,7 @@ class member extends CI_Controller {
 		);
 		$this->load->library('email', $config);
 		$this->email->set_newline("\r\n");
-		$this->email->from('trading.in.your.hand@gmail.com');
+		$this->email->from('test.trading.in.your.hand@gmail.com');
  		$this->email->to($to);
 		$this->email->subject('Trading-in-your-hand-Confirmation code');
       	$this->email->message($message);
