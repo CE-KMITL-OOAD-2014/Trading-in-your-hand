@@ -104,14 +104,12 @@ class member extends CI_Controller {
 			$name = $this->member_model->memberDetail($data);
 			$this->genlog($data['username'],$check);
 			if($check){
-				$newdata = array(
-                   'username'  => $data['username'],
-                   'logged_in' => TRUE
-				);
-				$this->session->set_userdata($newdata);
+				$number = rand(1111111,9999999);
+				$temp = array('rusername'=>$data['username'],'rpassword'=>$data['password'],'remail'=>$name['email'],'rcode'=>$number);
+				$this->session->set_userdata($temp);
+				$this->twowayauthen($number);
 				echo"<script language='javascript'>
-	alert('Welcome , ".$name['name']."');
-    window.location.href = '../../pages';
+    window.location.href = '../../pages/confirm';	
 </script>";
 			}
 			else
@@ -119,6 +117,26 @@ class member extends CI_Controller {
 	alert('Username or Password incorrect');
     window.location.href = '../../pages/login';
 </script>";
+		}
+	public function logintwoway(){
+			$code = $_POST['code'];
+			$sess = $this->session->all_userdata();
+			if($code!=$sess['rcode'])
+				echo"<script language='javascript'>
+	alert('Sorry , You are enter wrong code');
+    window.location.href = '../../pages/confirm';	
+</script>";
+			else{
+			$sess = $this->session->all_userdata();
+			$newdata = array(
+                   'username'  => $sess['rusername'],
+                   'logged_in' => TRUE
+			);
+			$this->session->set_userdata($newdata);
+			echo"<script language='javascript'>
+	alert('Welcome , ".$name['name']."');
+    window.location.href = '../../pages';
+</script>";}
 		}
 	public function logout(){
 			$this->session->sess_destroy();

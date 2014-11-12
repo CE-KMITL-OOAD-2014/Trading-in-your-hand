@@ -19,7 +19,12 @@
             <? 
 			$sess = $this->session->all_userdata();
 			echo"<h1>Enter confirmation code</h1>".$sess['rcode']; ?>
-            <form action="../../member/register2way" method="post" autocomplete="off">
+            <form action="<? 
+			if($this->session->userdata('raddress'))
+				echo"../../member/register2way";
+			else
+				echo"../../member/logintwoway";
+			?>" method="post" autocomplete="off">
               <div class="form-group">
                 <label for="key" class="sr-only">code</label>
                 <input type="password" name="code" id="code" class="form-control" placeholder="Password" required autofocus>
