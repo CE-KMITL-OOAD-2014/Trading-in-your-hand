@@ -28,7 +28,7 @@
 			}
 			function checkexist($name){
 				$check = $this->db->where('username',$name)->count_all_results('member');	
-				if($check==1)
+				if($check>=1)
 					return true;
 				return false;
 			}
