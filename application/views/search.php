@@ -94,7 +94,6 @@ function confirm(id){
 	if($numpage > 0)	$numpage=round($num/3)+1;
 	else if($num == 0 )	$numpage = 1;
 	else				$numpage=round($num/3);
-	echo $ppage;
 	?>
       <div class="row carousel-row">
         <?
