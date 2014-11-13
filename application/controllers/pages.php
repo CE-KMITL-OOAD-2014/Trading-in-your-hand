@@ -155,7 +155,7 @@ class pages extends CI_Controller {
 		if($this->uri->segment(4) === FALSE)
 			$name = "Any";
 		else
-			$name = "/".$this->uri->segment(4);
+			$name = $this->uri->segment(4);
 		if ($this->uri->segment(5) === FALSE)
 			$ppage = 1;
 		else
