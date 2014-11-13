@@ -144,6 +144,30 @@ class pages extends CI_Controller {
 			$this->load->view('footer.php');
 		}
 	}
+	public function search(){
+		$sess = $this->session->all_userdata();
+		$id = $sess['username'];
+		$this->load->model('product_model');
+		if($this->uri->segment(3) === FALSE)
+			$type = "all";
+		else $type = $this->uri->segment(3);
+		if($this->uri->segment(4) === FALSE)
+			$name = "";
+		else
+			$name = $this->uri->segment(3);
+		if ($this->uri->segment(5) === FALSE)
+			$ppage = 1;
+		else
+			$ppage = $this->uri->segment(5);
+		$pdata = $this->product_model->viewProduct($name,$type);
+		$temp = array('pdata' => $pdata, 'ppage' => $ppage ,'id' => $id); 
+		$this->load->helper('body.php');
+		$this->load->view('header.php',$data);
+		$this->load->view('space.php');
+		$this->load->view('search',$temp);
+		$this->load->view('footer.php');
+		
+	}
 	public function editprofile(){
 		if($this->session->userdata('username')){
 			$this->load->model('member_model');

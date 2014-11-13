@@ -18,6 +18,17 @@
 			$data = $this->db->where('username',$username)->order_by('id','desc')->get('product');
 			return $data;
 		}
+		function viewProduct($name,$type){
+			if($name!=""&&$type=="all")
+				$data = $this->db->where('name',$name)->order_by('id','desc')->get('product');
+			else if($name==""&&$type=="all")
+				$data = $this->db->order_by('id','desc')->get('product');
+			else if($name!=""&&$type!="all")
+				$data = $this->db->where('name',$name)->where('type',$type)->order_by('id','desc')->get('product');
+			else if($name==""&&$type!="all")
+				$data = $this->where('type',$type)->order_by('id','desc')->get('product');
+			return $data;
+		}
 		function newProduct(){
 			$data = $this->db->order_by('id','desc')->get('product');
 			return $data;
