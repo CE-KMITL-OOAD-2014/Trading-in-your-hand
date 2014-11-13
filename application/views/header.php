@@ -24,18 +24,18 @@ else
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Product name">
+            <input type="text" class="form-control" placeholder="Product name" id="searchname" name="searchname">
           </div>
           <label style="color:#FFF">Search in</label>
         </form>
         <ul class="nav navbar-nav">
             <li class='dropdown active'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>catalogue<span class='caret'></span></a>
               <ul class='dropdown-menu' role='menu'>
-                <li><a href='#' style='color:#333;'>All</a></li>
+                <li><a onclick="window.location.href ='../../../../pages/product/all/'+document.getElementById('searchname').value;" style='color:#333;'>All</a></li>
                 <li class='divider'></li>
-                <li><a href='#' style='color:#333;'>Electronics</a></li>
-                <li><a href='#' style='color:#333;'>Cloths</a></li>
-                <li><a href='#' style='color:#333;'>Others</a></li>
+                <li><a onclick="window.location.href ='../../../../pages/product/electronics/'+document.getElementById('searchname').value;" style='color:#333;'>Electronics</a></li>
+                <li><a onclick="window.location.href ='../../../../pages/product/cloths/'+document.getElementById('searchname').value;" style='color:#333;'>Cloths</a></li>
+                <li><a onclick="window.location.href ='../../../../pages/product/others/'+document.getElementById('searchname').value;" style='color:#333;'>Others</a></li>
               </ul>
             </li>
           </ul>
