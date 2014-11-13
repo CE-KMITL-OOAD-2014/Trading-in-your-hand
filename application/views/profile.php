@@ -190,6 +190,120 @@ a.linkedin:hover {
 }
 </style>
 <script>
+
+var __slice = [].slice;
+
+(function($, window) {
+    var starrrrr;
+
+    starrrrr = (function() {
+        starrrrr.prototype.defaults = {
+            rating: void 0,
+            numStars: 5,
+            change: function(e, value) {}
+        };
+        function starrrrr($el, options) {
+            var i, _, _ref,
+                _this = this;
+
+            this.options = $.extend({}, this.defaults, options);
+            this.$el = $el;
+            _ref = this.defaults;
+            for (i in _ref) {
+                _ = _ref[i];
+                if (this.$el.data(i) != null) {
+                    this.options[i] = this.$el.data(i);
+                }
+            }
+            this.createStars();
+            this.syncRating();
+            this.$el.on('mouseover.starrrrr', 'i', function(e) {
+                return _this.syncRating(_this.$el.find('i').index(e.currentTarget) + 1);
+            });
+            this.$el.on('mouseout.starrrrr', function() {
+                return _this.syncRating();
+            });
+            this.$el.on('click.starrrrr', 'i', function(e) {
+                return _this.setRating(_this.$el.find('i').index(e.currentTarget) + 1);
+            });
+            this.$el.on('starrrrr:change', this.options.change);
+        }
+
+        starrrrr.prototype.createStars = function() {
+            var _i, _ref, _results;
+
+            _results = [];
+            for (_i = 1, _ref = this.options.numStars; 1 <= _ref ? _i <= _ref : _i >= _ref; 1 <= _ref ? _i++ : _i--) {
+                _results.push(this.$el.append("<i class='fa fa-star-o'></i>"));
+            }
+            return _results;
+        };
+
+        starrrrr.prototype.setRating = function(rating) {
+            if (this.options.rating === rating) {
+                rating = void 0;
+            }
+            this.options.rating = rating;
+            this.syncRating();
+            return this.$el.trigger('starrrrr:change', rating);
+        };
+
+        starrrrr.prototype.syncRating = function(rating) {
+            var i, _i, _j, _ref;
+
+            rating || (rating = this.options.rating);
+            if (rating) {
+                for (i = _i = 0, _ref = rating - 1; 0 <= _ref ? _i <= _ref : _i >= _ref; i = 0 <= _ref ? ++_i : --_i) {
+                    this.$el.find('i').eq(i).removeClass('fa-star-o').addClass('fa-star');
+                }
+            }
+            if (rating && rating < 5) {
+                for (i = _j = rating; rating <= 4 ? _j <= 4 : _j >= 4; i = rating <= 4 ? ++_j : --_j) {
+                    this.$el.find('i').eq(i).removeClass('fa-star').addClass('fa-star-o');
+                }
+            }
+            if (!rating) {
+                return this.$el.find('i').removeClass('fa-star').addClass('fa-star-o');
+            }
+        };
+
+        return starrrrr;
+
+    })();
+    return $.fn.extend({
+        starrrrr: function() {
+            var args, option;
+
+            option = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
+            return this.each(function() {
+                var data;
+
+                data = $(this).data('star-rating');
+                if (!data) {
+                    $(this).data('star-rating', (data = new starrrrr($(this), option)));
+                }
+                if (typeof option === 'string') {
+                    return data[option].apply(data, args);
+                }
+            });
+        }
+    });
+})(window.jQuery, window);
+
+$(function() {
+    return $(".starrrrr").starrrrr();
+});
+
+$( document ).ready(function() {
+      
+  $('#stars').on('starrrrr:change', function(e, value){
+    $('#count').html(value);
+  });
+  
+  $('#stars-existing').on('starrrrr:change', function(e, value){
+    $('#count-existing').html(value);
+  });
+});
 function confirm(id){
 	var locate = "../../../product/delete/";
 		window.location.href = locate.concat(id);		
@@ -228,7 +342,7 @@ if($this->session->userdata('username')){
 			?>
             </div>
           </div>
-        </div>
+          <div id="stars" class="starrrrr"></div>
       </div>
     <?
     if($id==$username&&$detail['iden']==1&&$this->session->userdata('username'))

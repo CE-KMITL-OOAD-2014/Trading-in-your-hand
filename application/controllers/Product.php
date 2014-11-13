@@ -1,9 +1,6 @@
 <?php
 	class product extends CI_Controller{
 		
-		private function check($chk){ //Check that call from pages class
-		
-		}
 		function delete(){
 			if ($this->uri->segment(3) === FALSE){ 
 			echo"<script language='javascript'>
