@@ -150,7 +150,6 @@ a.linkedin:hover {
 	height: auto;
 	position: relative;
 }
-
 .slide-content {
 	position: absolute;
 	top: 0;
@@ -190,120 +189,6 @@ a.linkedin:hover {
 }
 </style>
 <script>
-
-var __slice = [].slice;
-
-(function($, window) {
-    var Starrr;
-
-    Starrr = (function() {
-        Starrr.prototype.defaults = {
-            rating: void 0,
-            numStars: 5,
-            change: function(e, value) {}
-        };
-        function Starrr($el, options) {
-            var i, _, _ref,
-                _this = this;
-
-            this.options = $.extend({}, this.defaults, options);
-            this.$el = $el;
-            _ref = this.defaults;
-            for (i in _ref) {
-                _ = _ref[i];
-                if (this.$el.data(i) != null) {
-                    this.options[i] = this.$el.data(i);
-                }
-            }
-            this.createStars();
-            this.syncRating();
-            this.$el.on('mouseover.starrr', 'i', function(e) {
-                return _this.syncRating(_this.$el.find('i').index(e.currentTarget) + 1);
-            });
-            this.$el.on('mouseout.starrr', function() {
-                return _this.syncRating();
-            });
-            this.$el.on('click.starrr', 'i', function(e) {
-                return _this.setRating(_this.$el.find('i').index(e.currentTarget) + 1);
-            });
-            this.$el.on('starrr:change', this.options.change);
-        }
-
-        Starrr.prototype.createStars = function() {
-            var _i, _ref, _results;
-
-            _results = [];
-            for (_i = 1, _ref = this.options.numStars; 1 <= _ref ? _i <= _ref : _i >= _ref; 1 <= _ref ? _i++ : _i--) {
-                _results.push(this.$el.append("<i class='fa fa-star-o'></i>"));
-            }
-            return _results;
-        };
-
-        Starrr.prototype.setRating = function(rating) {
-            if (this.options.rating === rating) {
-                rating = void 0;
-            }
-            this.options.rating = rating;
-            this.syncRating();
-            return this.$el.trigger('starrr:change', rating);
-        };
-
-        Starrr.prototype.syncRating = function(rating) {
-            var i, _i, _j, _ref;
-
-            rating || (rating = this.options.rating);
-            if (rating) {
-                for (i = _i = 0, _ref = rating - 1; 0 <= _ref ? _i <= _ref : _i >= _ref; i = 0 <= _ref ? ++_i : --_i) {
-                    this.$el.find('i').eq(i).removeClass('fa-star-o').addClass('fa-star');
-                }
-            }
-            if (rating && rating < 5) {
-                for (i = _j = rating; rating <= 4 ? _j <= 4 : _j >= 4; i = rating <= 4 ? ++_j : --_j) {
-                    this.$el.find('i').eq(i).removeClass('fa-star').addClass('fa-star-o');
-                }
-            }
-            if (!rating) {
-                return this.$el.find('i').removeClass('fa-star').addClass('fa-star-o');
-            }
-        };
-
-        return Starrr;
-
-    })();
-    return $.fn.extend({
-        starrr: function() {
-            var args, option;
-
-            option = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-            return this.each(function() {
-                var data;
-
-                data = $(this).data('star-rating');
-                if (!data) {
-                    $(this).data('star-rating', (data = new Starrr($(this), option)));
-                }
-                if (typeof option === 'string') {
-                    return data[option].apply(data, args);
-                }
-            });
-        }
-    });
-})(window.jQuery, window);
-
-$(function() {
-    return $(".starrr").starrr();
-});
-
-$( document ).ready(function() {
-      
-  $('#stars').on('starrr:change', function(e, value){
-    $('#count').html(value);
-  });
-  
-  $('#stars-existing').on('starrr:change', function(e, value){
-    $('#count-existing').html(value);
-  });
-});
 function confirm(id){
 	var locate = "../../../product/delete/";
 		window.location.href = locate.concat(id);		
@@ -331,8 +216,8 @@ if($this->session->userdata('username')){
           <div class="[ info-card-detail ]"> 
             <!-- Description -->
             <p><? echo"".$detail['about'].""; ?></p>
-            <div class="social"> 
-			<? if($detail['facebook']!="https://")echo"<a href=".$detail['facebook']." class='[ social-icon facebook ] animate'><span class='fa fa-facebook'></span></a>"; 
+            <div class="social">
+              <? if($detail['facebook']!="https://")echo"<a href=".$detail['facebook']." class='[ social-icon facebook ] animate'><span class='fa fa-facebook'></span></a>"; 
 			if($detail['twitter']!="https://")echo"<a href=".$detail['twitter']." class='[ social-icon twitter ] animate'><span class='fa fa-twitter'></span></a>"; 
 			if($detail['github']!="https://")echo"<a href=".$detail['github']." class='[ social-icon github ] animate'><span class='fa fa-github-alt'></span></a>";
 			if($detail['googleplus']!="https://")echo"<a href=".$detail['googleplus']." class='[ social-icon google-plus ] animate'><span class='fa fa-google-plus'></span></a>";       
@@ -342,21 +227,25 @@ if($this->session->userdata('username')){
 			?>
             </div>
           </div>
-          <div class="row lead">
-        	<div id="stars" class="starrr"></div>
-        		You gave a rating of <span id="count">0</span> star(s)
-		  </div>
+        </div>
       </div>
-      </div>
-    <?
+    <div id="stars" class="starrr">
+    	<i class="fa fa-star"></i>
+    	<i class="fa fa-star"></i>
+    	<i class="fa fa-star"></i>
+    	<i class="fa fa-star"></i>
+    	<i class="fa fa-star-o"></i>
+        <i>Avg. score is</i>
+	</div>
+      <?
     if($id==$username&&$detail['iden']==1&&$this->session->userdata('username'))
       	echo"<a href='../../../pages/addproduct'><button class='btn btn-success'> Add product</button></a>";
 	else if($id==$username&&$detail['iden']!=1&&$this->session->userdata('username'))
 		echo"<a href='../../../pages/iden'><button class='btn btn-success'> Become a seller</button></a>";
     ?>
-	</div>
+    </div>
     <div class="col-md-9">
-    <?
+      <?
 	$sess = $this->session->all_userdata();
 	$num = 0;
     foreach($pdata->result_array() as $rows){
@@ -458,7 +347,7 @@ if($this->session->userdata('username')){
 			else
 				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
             echo"</span> </div></div>";}
-          ?> 
+          ?>
         <!--class row--> 
       </div>
       <?
