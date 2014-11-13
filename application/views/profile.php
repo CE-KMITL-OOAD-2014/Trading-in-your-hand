@@ -230,11 +230,16 @@ if($this->session->userdata('username')){
         </div>
       </div>
     <div id="stars" class="starrr">
-    	<i class="fa fa-star"></i>
-    	<i class="fa fa-star"></i>
-    	<i class="fa fa-star"></i>
-    	<i class="fa fa-star"></i>
-    	<i class="fa fa-star-o"></i>
+    	<i class="fa fa-star" style="background-color:#FC3"></i>
+    	<i class="fa fa-star" style="background-color:#FC3"></i>
+    	<i class="fa fa-star" style="background-color:#FC3"></i>
+    	<i class="fa fa-star" style="background-color:#FC3"></i>
+    	<i class="fa fa-star" style="background-color:#FC3"></i>
+        <i class="fa fa-star" style="background-color:#FC3"></i>
+        <i class="fa fa-star" style="background-color:#FC3"></i>
+        <i class="fa fa-star" style="background-color:#FC3"></i>
+        <i class="fa fa-star" style="background-color:#FC3"></i>
+        <i class="fa fa-star-o" style="background-color:#FC3"></i>
         <i>Avg. score is</i>
 	</div>
       <?
