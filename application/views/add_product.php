@@ -35,6 +35,11 @@ $('#sub').click(function(){
         <input type="cost" name="price" id="price" class="form-control" placeholder="Cost" required autofocus>
         <label for="Amount" class="sr-only">Amount</label>
         <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" required autofocus>
+        <select class="form-control" id ="type" name="type">
+            <option value="one">Electronics</option>
+            <option value="two">Cloths</option>
+            <option value="three" selected="selected">Others</option>
+		</select>
         <div class="form-group">
           <textarea rows="8" class="form-control" id="detail" name="detail" placeholder="Detail" style="resize:none" required autofocus ></textarea>
         </div>

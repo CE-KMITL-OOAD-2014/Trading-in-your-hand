@@ -63,8 +63,9 @@
 				$name = $_POST["name"];
 				$price = $_POST["price"];
 				$amount = $_POST["amount"];
+				$type = $_POST["type"];
 				$detail = $_POST["detail"];
-				$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$fname);
+				$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$fname,'type'=>$type);
 				if($this->Product_model->add_product($data)){
 					echo"<script language='javascript'>
 	alert('Upload done');
