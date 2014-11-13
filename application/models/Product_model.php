@@ -26,7 +26,7 @@
 			else if($name!="Any"&&$type!="all")
 				$data = $this->db->where('name',$name)->where('type',$type)->order_by('id','desc')->get('product');
 			else if($name=="Any"&&$type!="all")
-				$data = $this->where('type',$type)->order_by('id','desc')->get('product');
+				$data = $this->where('type',"cloths")->order_by('id','desc')->get('product');
 			return $data;
 		}
 		function newProduct(){
