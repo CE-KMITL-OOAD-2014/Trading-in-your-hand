@@ -27,8 +27,7 @@ else
             <input type="text" class="form-control" placeholder="Product name">
           </div>
           <label style="color:#FFF">Search in</label>
-        </form>
-        <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav">
           <li class='dropdown active'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>catalogue<span class='caret'></span></a>
             <ul class='dropdown-menu' role='menu'>
               <li><a href='#' style='color:#333;'>All</a></li>
@@ -39,6 +38,8 @@ else
             </ul>
           </li>
         </ul>
+        </form>
+        
         <ul class="nav navbar-nav navbar-right">
           <? if($page=="home")
           		echo"<li class='active'><a href='#'>Home</a></li>";
