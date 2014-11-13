@@ -194,15 +194,15 @@ a.linkedin:hover {
 var __slice = [].slice;
 
 (function($, window) {
-    var starrrrr;
+    var Starrr;
 
-    starrrrr = (function() {
-        starrrrr.prototype.defaults = {
+    Starrr = (function() {
+        Starrr.prototype.defaults = {
             rating: void 0,
             numStars: 5,
             change: function(e, value) {}
         };
-        function starrrrr($el, options) {
+        function Starrr($el, options) {
             var i, _, _ref,
                 _this = this;
 
@@ -217,19 +217,19 @@ var __slice = [].slice;
             }
             this.createStars();
             this.syncRating();
-            this.$el.on('mouseover.starrrrr', 'i', function(e) {
+            this.$el.on('mouseover.starrr', 'i', function(e) {
                 return _this.syncRating(_this.$el.find('i').index(e.currentTarget) + 1);
             });
-            this.$el.on('mouseout.starrrrr', function() {
+            this.$el.on('mouseout.starrr', function() {
                 return _this.syncRating();
             });
-            this.$el.on('click.starrrrr', 'i', function(e) {
+            this.$el.on('click.starrr', 'i', function(e) {
                 return _this.setRating(_this.$el.find('i').index(e.currentTarget) + 1);
             });
-            this.$el.on('starrrrr:change', this.options.change);
+            this.$el.on('starrr:change', this.options.change);
         }
 
-        starrrrr.prototype.createStars = function() {
+        Starrr.prototype.createStars = function() {
             var _i, _ref, _results;
 
             _results = [];
@@ -239,16 +239,16 @@ var __slice = [].slice;
             return _results;
         };
 
-        starrrrr.prototype.setRating = function(rating) {
+        Starrr.prototype.setRating = function(rating) {
             if (this.options.rating === rating) {
                 rating = void 0;
             }
             this.options.rating = rating;
             this.syncRating();
-            return this.$el.trigger('starrrrr:change', rating);
+            return this.$el.trigger('starrr:change', rating);
         };
 
-        starrrrr.prototype.syncRating = function(rating) {
+        Starrr.prototype.syncRating = function(rating) {
             var i, _i, _j, _ref;
 
             rating || (rating = this.options.rating);
@@ -267,11 +267,11 @@ var __slice = [].slice;
             }
         };
 
-        return starrrrr;
+        return Starrr;
 
     })();
     return $.fn.extend({
-        starrrrr: function() {
+        starrr: function() {
             var args, option;
 
             option = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
@@ -280,7 +280,7 @@ var __slice = [].slice;
 
                 data = $(this).data('star-rating');
                 if (!data) {
-                    $(this).data('star-rating', (data = new starrrrr($(this), option)));
+                    $(this).data('star-rating', (data = new Starrr($(this), option)));
                 }
                 if (typeof option === 'string') {
                     return data[option].apply(data, args);
@@ -291,16 +291,16 @@ var __slice = [].slice;
 })(window.jQuery, window);
 
 $(function() {
-    return $(".starrrrr").starrrrr();
+    return $(".starrr").starrr();
 });
 
 $( document ).ready(function() {
       
-  $('#stars').on('starrrrr:change', function(e, value){
+  $('#stars').on('starrr:change', function(e, value){
     $('#count').html(value);
   });
   
-  $('#stars-existing').on('starrrrr:change', function(e, value){
+  $('#stars-existing').on('starrr:change', function(e, value){
     $('#count-existing').html(value);
   });
 });
@@ -342,7 +342,11 @@ if($this->session->userdata('username')){
 			?>
             </div>
           </div>
-          <div id="stars" class="starrrrr"></div>
+          <div class="row lead">
+        	<div id="stars" class="starrr"></div>
+        		You gave a rating of <span id="count">0</span> star(s)
+		  </div>
+      </div>
       </div>
     <?
     if($id==$username&&$detail['iden']==1&&$this->session->userdata('username'))
