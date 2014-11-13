@@ -145,8 +145,9 @@ class pages extends CI_Controller {
 		}
 	}
 	public function search(){
-		$sess = $this->session->all_userdata();
-		$id = $sess['username'];
+		$data = $this->session->all_userdata();
+		$data['page'] = "Search";
+		$id = $data['username'];
 		$this->load->model('product_model');
 		if($this->uri->segment(3) === FALSE)
 			$type = "all";
