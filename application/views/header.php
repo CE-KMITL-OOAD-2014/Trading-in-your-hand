@@ -26,7 +26,7 @@ else
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Product name">
           </div>
-          <label for="key" class="sr-only" style="color:#FFF">Search in</label>
+          <label style="color:#FFF">Search in</label>
         </form>
         <ul class="nav navbar-nav">
           <li class='dropdown active'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>catalogue<span class='caret'></span></a>
