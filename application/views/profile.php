@@ -239,9 +239,10 @@ if($this->session->userdata('username')){
         <i class="fa fa-star" style="background-color:#FC3"></i>
         <i class="fa fa-star" style="background-color:#FC3"></i>
         <i class="fa fa-star" style="background-color:#FC3"></i>
-        <i class="fa fa-star-o" style="background-color:#FC3"></i>
+        <i class="fa fa-star-o"></i>
         <i>Avg. score is</i>
 	</div>
+    <hr/>
       <?
     if($id==$username&&$detail['iden']==1&&$this->session->userdata('username'))
       	echo"<a href='../../../pages/addproduct'><button class='btn btn-success'> Add product</button></a>";
