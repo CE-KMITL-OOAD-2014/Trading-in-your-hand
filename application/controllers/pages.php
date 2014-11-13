@@ -148,7 +148,7 @@ class pages extends CI_Controller {
 		if($this->session->userdata('username')){
 			$data = $this->session->all_userdata();
 			$id = $data['username'];}
-		$id == "";
+		$id = "";
 		$data['page'] = "Search";
 		$this->load->model('product_model');
 		if($this->uri->segment(3) === FALSE)
