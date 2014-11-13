@@ -230,17 +230,16 @@ if($this->session->userdata('username')){
         </div>
       </div>
     <div id="stars" class="starrr">
-    	<i class="fa fa-star" style="background-color:#FC3"></i>
-    	<i class="fa fa-star" style="background-color:#FC3"></i>
-    	<i class="fa fa-star" style="background-color:#FC3"></i>
-    	<i class="fa fa-star" style="background-color:#FC3"></i>
-    	<i class="fa fa-star" style="background-color:#FC3"></i>
-        <i class="fa fa-star" style="background-color:#FC3"></i>
-        <i class="fa fa-star" style="background-color:#FC3"></i>
-        <i class="fa fa-star" style="background-color:#FC3"></i>
-        <i class="fa fa-star" style="background-color:#FC3"></i>
-        <i class="fa fa-star-o"></i>
-        <i>Avg. score is</i>
+       	<? 
+		$star = round($detail['avg']);
+		for($i=0 ;$i<10;$i++)
+			if($i<$star)
+				echo"<i class='fa fa-star' style='background-color:#FC3'></i>";
+			else
+				echo" <i class='fa fa-star-o'></i>";
+		 
+        echo"<i>Avg. score is ".$detail['avg']." from ".$detail['amount']."</i>";
+		?>
 	</div>
     <hr/>
       <?
