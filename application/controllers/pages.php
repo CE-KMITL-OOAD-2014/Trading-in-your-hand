@@ -161,7 +161,7 @@ class pages extends CI_Controller {
 		else
 			$ppage = $this->uri->segment(5);
 		$pdata = $this->product_model->viewProduct($name,$type);
-		$temp = array('pdata' => $pdata, 'ppage' => $ppage ,'id' => $id); 
+		$temp = array('pdata' => $pdata, 'ppage' => $ppage ,'id' => $id,'$type' => $type,'$name' => $name); 
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
 		$this->load->view('space.php');

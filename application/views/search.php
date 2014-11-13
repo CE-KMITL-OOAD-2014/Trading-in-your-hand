@@ -196,25 +196,25 @@ function confirm(id){
 		$now = round($ppage/5);
 	  echo"<div class='text-center'><ul class='pagination pagination-large'>";	
 		if($ppage!=1)
-			echo"<li><a href='../../../../pages/member/".$id."/".($ppage-1)."' rel='prev'>&laquo;</a></li>";	
+			echo"<li><a href='../../../../pages/search/".$type."/".$name."/".($ppage-1)."' rel='prev'>&laquo;</a></li>";	
 		if($numpage>=2){	
 		if($ppage%5 == 1)echo"<li class='active'><span>".$ppage."</span></li>";
-		else echo"<li><a href='../../../../pages/member/".$id."/". (($now*5)-4) ."'>". (($now*5)-4) ."</a></li>";
+		else echo"<li><a href='../../../../pages/search/".$type."/".$name."/". (($now*5)-4) ."'>". (($now*5)-4) ."</a></li>";
 			if($ppage%5 == 2)echo"<li class='active'><span>".$ppage."</span></li>";
-			else echo"<li><a href='../../../../pages/member/".$id."/". (($now*5)-3) ."'>". (($now*5)-3) ."</a></li>";
+			else echo"<li><a href='../../../../pages/search/".$type."/".$name."/". (($now*5)-3) ."'>". (($now*5)-3) ."</a></li>";
 			if($numpage>=3){
 				if($ppage%5 == 3)echo"<li class='active'><span>".$ppage."</span></li>";
-				else echo"<li><a href='../../../../pages/member/".$id."/". (($now*5)-2) ."'>". (($now*5)-2) ."</a></li>";
+				else echo"<li><a href='../../../../pages/search/".$type."/".$name."/". (($now*5)-2) ."'>". (($now*5)-2) ."</a></li>";
 				if($numpage>=4){
 					if($ppage%5 == 4)echo"<li class='active'><span>".$ppage."</span></li>";
-					else echo"<li><a href='../../../../pages/member/".$id."/". (($now*5)-1) ."'>". (($now*5)-1) ."</a></li>";
+					else echo"<li><a href='../../../../pages/search/".$type."/".$name."/". (($now*5)-1) ."'>". (($now*5)-1) ."</a></li>";
 					if($numpage>=5){
 						if($ppage%5 == 5)echo"<li class='active'><span>".$ppage."</span></li>";
-						else echo"<li><a href='../../../../pages/member/".$id."/". ($now*5) ."'>". ($now*5) ."</a></li>";
+						else echo"<li><a href='../../../../pages/search/".$type."/".$name."/". ($now*5) ."'>". ($now*5) ."</a></li>";
 					
 		}}}}
 	if($ppage != $numpage)
-		echo"<li><a href='../../../../pages/member/".$id."/".($ppage+1)."' rel='next'>&raquo;</a></li>";
+		echo"<li><a href='../../../../pages/search/".$type."/".$name."/".($ppage+1)."' rel='next'>&raquo;</a></li>";
 	echo"</ul></div>";
 	?>
     </div>
