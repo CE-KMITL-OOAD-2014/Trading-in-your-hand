@@ -3,7 +3,7 @@ class member extends CI_Controller {
 	public function twowayauthen($number){
 		$sess = $this->session->all_userdata();
 		$to = $sess['remail'];
-		$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$sess['rusername'].",<br/><br/> Here's the Confirmation code you'll need to complete the process: <br/><h1><b>".$number."</b></h1><br/><br/>Thanks for using our website<br/><br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com";	
+		$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$sess['rusername'].",<br/><br/> Here's the Confirmation code you'll need to complete the process: <br/><h1><b>".$number."</b>If you haven't recently tried to login to Steam… from the device located at ".$_SERVER['REMOTE_ADDR'].", someone else may be trying to access your account.</h1><br/><br/>Thanks for using our website<br/><br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com";	
 		$config = Array(
     		'protocol' => 'smtp',
    			'smtp_host' => 'ssl://smtp.googlemail.com',
@@ -68,9 +68,7 @@ class member extends CI_Controller {
 </script>";
 		}	
 	public function genlog($username,$activity){
-		if (!empty($_SERVER['HTTP_CLIENT_IP'])) 			$ip = $_SERVER['HTTP_CLIENT_IP'];
-		elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) 	$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-		else 												$ip = $_SERVER['REMOTE_ADDR'];
+		$ip = $_SERVER['REMOTE_ADDR'];
 		$this->db->select_max('id');
 		$query = $this->db->get('log');
 		foreach($query->result_array() as $row)
