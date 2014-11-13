@@ -3,7 +3,7 @@ class member extends CI_Controller {
 	public function twowayauthen($number){
 		$sess = $this->session->all_userdata();
 		$to = $sess['remail'];
-		$message = "<img src='../../images/headmail.png'/><br/>Dear ".$sess['rusername'].",<br/> Here's the Confirmation code you'll need to complete the process: <br/><h1><b>".$number."</b></h1>";	
+		$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/>Dear ".$sess['rusername'].",<br/> Here's the Confirmation code you'll need to complete the process: <br/><h1><b>".$number."</b></h1>";	
 		$config = Array(
     		'protocol' => 'smtp',
    			'smtp_host' => 'ssl://smtp.googlemail.com',
