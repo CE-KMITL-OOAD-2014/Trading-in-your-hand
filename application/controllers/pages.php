@@ -149,9 +149,9 @@ class pages extends CI_Controller {
 		$data['page'] = "Search";
 		$id = $data['username'];
 		$this->load->model('product_model');
-
-			$type = "all";
-
+	
+			$type = "cloths";
+		
 		if($this->uri->segment(4) === FALSE)
 			$name = "Any";
 		else
