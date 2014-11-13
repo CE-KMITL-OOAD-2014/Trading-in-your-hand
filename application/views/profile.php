@@ -238,7 +238,7 @@ if($this->session->userdata('username')){
 			else
 				echo" <i class='fa fa-star-o'></i>";
 		 
-        echo"<i>Avg. score is ".$detail['avg']." from ".$detail['amount']."</i>";
+        echo"<br/><i>Avg. score is ".$detail['avg']." From ".$detail['amount']." users.</i>";
 		?>
 	</div>
     <hr/>
