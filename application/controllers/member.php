@@ -3,7 +3,7 @@ class member extends CI_Controller {
 	public function twowayauthen($number){
 		$sess = $this->session->all_userdata();
 		$to = $sess['remail'];
-		$message = 'Trading in your hand - Your confirmation code is '.$number;	
+		$message = "<img src='../../images/headmail.png'/><br/>Dear ".$sess['rusername'].",<br/> Here's the Confirmation code you'll need to complete the process: <br/><h1><b>".$number."</b></h1>";	
 		$config = Array(
     		'protocol' => 'smtp',
    			'smtp_host' => 'ssl://smtp.googlemail.com',

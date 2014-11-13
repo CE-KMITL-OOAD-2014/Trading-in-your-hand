@@ -28,18 +28,17 @@ else
           </div>
           <label style="color:#FFF">Search in</label>
           <ul class="nav navbar-nav">
-          <li class='dropdown active'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>catalogue<span class='caret'></span></a>
-            <ul class='dropdown-menu' role='menu'>
-              <li><a href='#' style='color:#333;'>All</a></li>
-              <li class='divider'></li>
-              <li><a href='#' style='color:#333;'>Electronics</a></li>
-              <li><a href='#' style='color:#333;'>Cloths</a></li>
-              <li><a href='#' style='color:#333;'>Others</a></li>
-            </ul>
-          </li>
-        </ul>
+            <li class='dropdown active'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>catalogue<span class='caret'></span></a>
+              <ul class='dropdown-menu' role='menu'>
+                <li><a href='#' style='color:#333;'>All</a></li>
+                <li class='divider'></li>
+                <li><a href='#' style='color:#333;'>Electronics</a></li>
+                <li><a href='#' style='color:#333;'>Cloths</a></li>
+                <li><a href='#' style='color:#333;'>Others</a></li>
+              </ul>
+            </li>
+          </ul>
         </form>
-        
         <ul class="nav navbar-nav navbar-right">
           <? if($page=="home")
           		echo"<li class='active'><a href='#'>Home</a></li>";
