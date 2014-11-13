@@ -29,7 +29,7 @@ else
           <button type="submit" class="btn btn-default">Search</button>
         </form>
         <ul class="nav navbar-nav">
-          <li class='dropdown'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>catalogue<span class='caret'></span></a>
+          <li class='dropdown active'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>catalogue<span class='caret'></span></a>
             <ul class='dropdown-menu' role='menu'>
               <li><a href='#' style='color:#333;'>All</a></li>
               <li class='divider'></li>
