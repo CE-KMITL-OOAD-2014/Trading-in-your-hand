@@ -5,6 +5,61 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../css/bootstrap.min.css" rel="stylesheet">
+<style>
+
+/* FONT AWESOME & not necessary for functions */
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+/*REQUIRED*/
+.carousel-row {
+	margin-bottom: 10px;
+}
+.slide-row {
+	padding: 0;
+	background-color: #ffffff;
+	min-height: 150px;
+	border: 1px solid #e7e7e7;
+	overflow: hidden;
+	height: auto;
+	position: relative;
+}
+.slide-content {
+	position: absolute;
+	top: 0;
+	left: 20%;
+	display: block;
+	float: left;
+	width: 80%;
+	max-height: 76%;
+	padding: 1.5% 2% 2% 2%;
+	overflow-y: auto;
+}
+.slide-content h4 {
+	margin-bottom: 3px;
+	margin-top: 0;
+}
+.slide-footer {
+	position: absolute;
+	bottom: 0;
+	left: 20%;
+	width: 78%;
+	height: 20%;
+	margin: 1%;
+}
+
+/* Scrollbars */
+.slide-content::-webkit-scrollbar {
+ width: 5px;
+}
+ .slide-content::-webkit-scrollbar-thumb:vertical {
+ margin: 5px;
+ background-color: #999;
+ -webkit-border-radius: 5px;
+}
+ .slide-content::-webkit-scrollbar-button:start:decrement, .slide-content::-webkit-scrollbar-button:end:increment {
+ height: 5px;
+ display: block;
+}
+</style>
  <?
 	$sess = $this->session->all_userdata();
 	$num = 0;
