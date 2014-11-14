@@ -75,23 +75,8 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 	}
 	public function editproduct(){
-		$pdata = "";
-		if($this->session->userdata('username')){
-			$data = $this->session->all_userdata();
-			$id = $data['username'];		
-			if ($this->uri->segment(3) === FALSE)
-				echo"<script language='javascript'>
-		window.location.href = '../../../pages/member/".$data['username']."';
-	</script>";
-			else{
-				$this->load->model('Product_model');
+		$this->load->model('Product_model');
 				$pdata = $this->Product_model->getproductdetail($this->uri->segment(3));
-			}
-		}
-		else
-			echo"<script language='javascript'>
-		window.location.href = '../../../pages';
-	</script>";
 		$head['page'] = "Edit product";	
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$head);
