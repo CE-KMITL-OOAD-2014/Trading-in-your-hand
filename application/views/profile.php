@@ -291,12 +291,15 @@ if($this->session->userdata('username')){
 		  else echo"<b>Price :</b>      <b>Amount :</b> </div>";
 		  echo"<span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username']){
-				if($num!=0)
+				if($num!=0){
 					echo"<a class='btn btn-default btn-sm' href='../../../../pages/editproduct/".$data[(($ppage*3)-2)]['id']."'><i class='fa fa-cog'></i>Edit</a>";
-            	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-2)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
+					echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-2)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
+				}
 			}else{
-				echo"<button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>";
-				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+				if($num!=0){
+					echo"<button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>";
+					echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+				}
 			}echo"</span> </div></div>";
          //////////////////////////////
 		 if($num >= (($ppage*3)-1)){
