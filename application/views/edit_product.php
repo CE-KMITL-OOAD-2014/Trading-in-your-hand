@@ -50,9 +50,8 @@ $('#sub').click(function(){
         	echo"<option value='others' selected='selected'>Others</option>";
 		?>
 		</select>
-        <div class="form-group">
-          <textarea rows="8" class="form-control" id="detail" name="detail" placeholder="Detail" style="resize:none" value="<? echo $detail; ?>" required autofocus ></textarea>
-        </div>
+        <label for="Detail" class="sr-only">Detail</label>
+        <input tupe="detail" id="detail" name="detail" class="form-control" placeholder="Detail" value="<? echo $detail; ?>" required autofocus >
         </div>
         </form>
       
