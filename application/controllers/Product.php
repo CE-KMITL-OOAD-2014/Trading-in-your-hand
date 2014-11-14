@@ -41,10 +41,10 @@
 		}
 		function send_mail($data,$bdata,$pdetail,$amount){
 			$to = $data['email'];
-			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><b>".$pdetail['name']."</b> :&nbsp;".$pdetail['price']."<br/>
+			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><br/><b>".$pdetail['name']."</b> :&nbsp;".$pdetail['price']."<br/>
 			<b>Amount</b> :&nbsp;".$amount."<br/><hr/>
 			<b>Total</b> :&nbsp;".$amount*$pdetail['price']."<br/>
-			<br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com";	
+			<br/><br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com";	
 			$config = Array(
 				'protocol' => 'smtp',
 				'smtp_host' => 'ssl://smtp.googlemail.com',
