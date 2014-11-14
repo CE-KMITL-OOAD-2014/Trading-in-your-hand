@@ -79,12 +79,12 @@ class pages extends CI_Controller {
 		if($this->session->userdata('username')){
 			$data = $this->session->all_userdata();
 			$id = $data['username'];		
-			if ($this->uri->segment(3) === FALSE){
+			if ($this->uri->segment(3) === FALSE)
 				echo"<script language='javascript'>
 		window.location.href = '../../../pages/member/".$data['username']."';
 	</script>";
-			$this->load->model('Product_model');}
 			else{
+				$this->load->model('Product_model');
 				$pdata = $this->Product_model->getproductdetail($this->uri->segment(3));
 			}
 		}
