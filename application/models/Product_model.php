@@ -10,8 +10,7 @@
 				return 0;
 		}	
 		function edit_product($data){
-			$username = "admin"; // get username from session
-			$this->db->where('username',$username)->where('name',$data['name'])->set('name',$data['name'])->set('price',$data['price'])->set('amount',$data['amount'])->update('product');
+			$this->db->where('username',$username)->where('name',$data['name'])->set('name',$data['name'])->set('price',$data['price'])->set('amount',$data['amount'])->set('type',$data['type'])->set('detail',$data['detail'])->update('product');
 		}
 		function userProduct($pdata){
 			$username = $pdata['username'];
