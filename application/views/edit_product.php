@@ -6,11 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../../css/bootstrap.min.css" rel="stylesheet">
 </head>
-<script>
-$('#sub').click(function(){
-    $('#form1 #data').submit();
-});
-</script>
 <body>
 <div class="back"> 
   <!-------------------------------show product--------------------------------------------------------------------------------------------------->
