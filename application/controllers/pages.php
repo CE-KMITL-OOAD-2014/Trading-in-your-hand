@@ -75,16 +75,20 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 	}
 	public function editproduct(){
-		//$this->load->model('Product_model');	
-	
-				//$pdata = $this->Product_model->getproductdetail($this->uri->segment(3));
-				$data['page'] = "Edit product";
-				$this->load->helper('body.php');
-				$this->load->view('header.php',$data);
-				$this->load->view('space.php');
-				$this->load->view('edit_product.php');
-				$this->load->view('footer.php');
-	
+		$this->load->model('member_model');
+		$sess = $this->session->all_userdata();
+		$checkiden = $this->member_model->memberDetail($sess);
+		if($checkiden['iden']==0)
+			echo"<script language='javascript'>
+	alert('Please identify first');
+    window.location.href = '../../../pages/member/".$sess['username']."';
+</script>";
+		$data['page'] = "addproduct";
+		$this->load->helper('body.php');
+		$this->load->view('header.php',$data);
+		$this->load->view('space.php');
+		$this->load->view('add_product.php');	
+		$this->load->view('footer.php');
 	}
 	public function displayproduct(){
 		$this->load->model('Product_model');	
