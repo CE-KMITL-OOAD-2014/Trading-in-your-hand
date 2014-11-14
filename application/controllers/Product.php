@@ -2,10 +2,11 @@
 	class product extends CI_Controller{
 		
 		function delete(){
-			if ($this->uri->segment(3) === FALSE) 
-				echo"<script language='javascript'>
-				window.location.href = '../../../pages';
-				</script>";
+			if ($this->uri->segment(3) === FALSE){ 
+			echo"<script language='javascript'>
+    window.location.href = '../../../pages';
+</script>";
+			}
 			else{
 				if($this->session->userdata('username')){
 					$id = $this->uri->segment(3);
@@ -14,19 +15,19 @@
 					if($this->Product_model->checkowner($id,$sess['username'])){
 						$this->Product_model->delete($id);
 						echo"<script language='javascript'>
-   						window.location.href = '../../../pages/member/".$sess['username']."';
-						</script>";
+    window.location.href = '../../../pages/member/".$sess['username']."';
+</script>";
 					}
 					else
 						echo"<script language='javascript'>
-						alert('You can delete only your product');
-    					window.location.href = '../../../pages/login';
-						</script>";
+	alert('You can delete only your product');
+    window.location.href = '../../../pages/login';
+</script>";
 				}
 				else 
 					echo"<script language='javascript'>
-    				window.location.href = '../../../pages/login';
-					</script>";
+    window.location.href = '../../../pages/login';
+</script>";
 			}
 		}
 		function edit(){
@@ -61,7 +62,7 @@
 					$this->Product_model->edit_product($data);			
 				}
 			}
-		}		
+		}
 		function send_mail($data,$bdata,$pdetail,$amount){
 			$to = $data['email'];
 			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><br/><table cellspacing='4' width='420'>
