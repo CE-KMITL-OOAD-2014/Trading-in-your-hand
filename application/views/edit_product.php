@@ -49,11 +49,11 @@
 		?>
             </select>
         
-          
+          <div class="form-group">
             <label class="control-label">Detail</label>
             <label for="Detail" class="sr-only">Amount</label>
             <input type="Detail" name="detail" id="detail" class="form-control" placeholder="detail" value="<? echo $amount; ?>" required autofocus>
-         
+          </div>
           <div class="form-group">
           <button type="submit" id="sub" class="btn btn-primary btn-block btn-lg pull-right" form = "data"> Submit </button>
         </div>
