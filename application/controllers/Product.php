@@ -65,7 +65,7 @@
     window.location.href = '../../../pages/addproduct';
 </script>";
 			else{
-				$data = $this->session->userdata('username');
+				$data = $this->session->all_userdata();
 				$this->load->model('Product_model');
 				$chk = $this->Product_model->buyproduct($this->uri->segment(3),$this->uri->segment(4),$data['username']);
 				if($chk){
