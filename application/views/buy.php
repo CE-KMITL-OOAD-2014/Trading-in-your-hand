@@ -18,25 +18,25 @@
                     <table class="pull-left col-md-8 ">
                          <tbody>
                              <tr>
-                                 <td class="h5"><strong>ID</strong></td>
+                                 <td class="h6"><strong>ID</strong></td>
                                  <td> </td>
-                                 <td class="h4"><? echo $id; ?></td>
+                                 <td class="h5"><? echo $id; ?></td>
                              </tr>
                              
                               
                              
                              <tr>
-                                 <td class="h5"><strong>Name</strong></td>
+                                 <td class="h6"><strong>Name</strong></td>
                                  <td> </td>
-                                 <td class="h4"><? echo $name; ?></td>
+                                 <td class="h5"><? echo $name; ?></td>
                              </tr>
                              
                               
                              
                              <tr>
-                                 <td class="h5"><strong>Owner</strong></td>
+                                 <td class="h6"><strong>Owner</strong></td>
                                  <td> </td>
-                                 <td class="h4"><? echo $username; ?></td>
+                                 <td class="h5"><? echo $username; ?></td>
                              </tr>
                              
                              <tr>
