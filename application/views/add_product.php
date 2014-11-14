@@ -5,8 +5,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../../css/bootstrap.min.css" rel="stylesheet">
-<? 			$id = $this->session->all_userdata();
-			$id = $id['username']; ?>
 </head>
 <body>
 <div class="back"> 
