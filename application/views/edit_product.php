@@ -17,22 +17,22 @@
       </div>
       <div class="col-md-4">
       	<div class="form-group">
-        <label class="col-lg-3 control-label">Name :</label>
+        <label class="col-md-2 control-label">Name</label>
         <label for="name" class="sr-only">name</label>
         <input type="name" name="name" id="name" class="form-control" placeholder="NameProduct" value="<? echo $name; ?>" required autofocus>
         </div>
         <div class="form-group">
-        <label class="col-lg-3 control-label">Cost :</label>
+        <label class="col-ms-2 control-label">Cost</label>
         <label for="cost" class="sr-only">cost</label>
         <input type="cost" name="price" id="price" class="form-control" placeholder="Cost" value="<? echo $price; ?>" required autofocus>
         </div>
         <div class="form-group">
-        <label class="col-lg-3 control-label">Amount :</label>
+        <label class="col-md-2 control-label">Amount</label>
         <label for="Amount" class="sr-only">Amount</label>
         <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" value="<? echo $amount; ?>" required autofocus>
         </div>
         <div class="form-group">
-        <label class="col-lg-3 control-label">Type :</label>
+        <label class="col-md-2 control-label">Type</label>
         <select class="form-control" id ="type" name="type">
         <?
 		if($type!="electronics")
@@ -51,19 +51,18 @@
 		</select>
         </div>
         <div class="form-group">
-        <label class="col-lg-3 control-label">Amount :</label>
+        <label class="col-md-2 control-label">Detail</label>
         <label for="Detail" class="sr-only">Amount</label>
         <input type="Detail" name="detail" id="detail" class="form-control" placeholder="detail" value="<? echo $amount; ?>" required autofocus>
         </div>
-        <div class="form-group">
-        <center><button type="submit" id="sub" class="btn btn-primary btn-block btn-lg pull-right" form = "data">  Submit </button></center>
         </div>
-        </div>
-        </form>
-      
-      
+        </form> 
     </div>
-
+		<div col-md-6>
+			<div class="form-group">
+       		<center><button type="submit" id="sub" class="btn btn-primary btn-block btn-lg pull-right" form = "data">  Submit </button></center>
+        	</div>
+        </div>
 </div>
 
 </body>
