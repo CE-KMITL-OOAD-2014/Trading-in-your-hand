@@ -187,6 +187,14 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 		
 	}
+	public function buy(){
+		$data['page'] = "Buy product";
+		$this->load->helper('body.php');
+		$this->load->view('header.php',$data);
+		$this->load->view('space.php');
+		$this->load->view('buy');
+		$this->load->view('footer.php');
+	}
 	public function editprofile(){
 		if($this->session->userdata('username')){
 			$this->load->model('member_model');
