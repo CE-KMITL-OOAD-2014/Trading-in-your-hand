@@ -289,14 +289,14 @@ if($this->session->userdata('username')){
 		  if($num!=0)
 		  echo"<b>Price :</b> ".$data[(($ppage*3)-2)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-2)]['amount']."</div>";
 		  else echo"<b>Price :</b>      <b>Amount :</b> </div>";
-		  echo" <span class='pull-right buttons'>
-            <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
-            ";
-			if($this->session->userdata('username')&&$id==$sess['username']&&$num!=0)
+		  echo"<span class='pull-right buttons'>";
+			if($this->session->userdata('username')&&$id==$sess['username']){
+				echo"<button class='btn btn-sm btn-default' onClick='window.location.href = '../../../../pages/editproduct/".$data[(($ppage*3)-2)]['id']."';'><i class='fa fa-fw fa-eye'></i> Edit</button>";
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-2)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
-			else if($num!=0)
+			}else{
+				echo"<button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>";
 				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
-            echo"</span> </div></div>";
+			}echo"</span> </div></div>";
          //////////////////////////////
 		 if($num >= (($ppage*3)-1)){
 		echo"
@@ -316,14 +316,14 @@ if($this->session->userdata('username')){
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>
 		  <b>Price :</b> ".$data[(($ppage*3)-1)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-1)]['amount']."</div>";
-		  echo"<span class='pull-right buttons'>
-            <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
-            ";
-			if($this->session->userdata('username')&&$id==$sess['username'])
+		  echo"<span class='pull-right buttons'>";
+			if($this->session->userdata('username')&&$id==$sess['username']){
+				echo"<button class='btn btn-sm btn-default' onClick='window.location.href = '../../../../pages/editproduct/".$data[(($ppage*3)-1)]['id']."';'><i class='fa fa-fw fa-eye'></i> Edit</button>";
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-1)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
-			else
+			}else{
+				echo"<button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>";
 				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
-            echo"</span> </div></div>";
+			}echo"</span> </div></div>";
 			}
          //////////////////
 		 if($num >= ($ppage*3)){
@@ -344,14 +344,15 @@ if($this->session->userdata('username')){
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>
 		  <b>Price :</b> ".$data[($ppage*3)]['price']."     <b>Amount :</b> ".$data[($ppage*3)]['amount']."</div>";
-		  echo"<span class='pull-right buttons'>
-            <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
-            ";
-			if($this->session->userdata('username')&&$id==$sess['username'])
-            	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[($ppage*3)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
-			else
+		  echo"<span class='pull-right buttons'>";
+			if($this->session->userdata('username')&&$id==$sess['username']){
+				echo"<button class='btn btn-sm btn-default' onClick='window.location.href = '../../../../pages/editproduct/".$data[(($ppage*3))]['id']."';'><i class='fa fa-fw fa-eye'></i> Edit</button>";
+            	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3))]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
+			}else{
+				echo"<button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>";
 				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
-            echo"</span> </div></div>";}
+			}echo"</span> </div></div>";
+			}
           ?>
         <!--class row--> 
       </div>

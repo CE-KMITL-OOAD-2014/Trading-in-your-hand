@@ -28,7 +28,7 @@
 			$check = $this->db->where('id',$id)->get('product');
 			foreach($check->result_array() as $row){}
 			if($row['amount']==$amount&&$check['username']!=$username)
-				$this->db->where('id',$id)->delete('product');
+				$this->db->delete('product', array('id' => $id)); 	
 			else if($row['amount'] < $amount||$row['username']==$username)
 				return false;
 			else

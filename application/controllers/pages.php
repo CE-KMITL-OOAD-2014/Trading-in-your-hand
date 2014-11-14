@@ -75,21 +75,35 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 	}
 	public function editproduct(){
-		$this->load->helper('body.php');
-		$this->load->view('header.php');
-		$this->load->view('space.php');
-		$this->load->view('edit_product.php');
-		$this->load->view('footer.php');	
+		if($this->session->userdata('username')){
+			$data = $this->session->all_userdata();
+			$id = $data['username'];		
+			if ($this->uri->segment(3) === FALSE)
+				echo"<script language='javascript'>
+		window.location.href = '../../../pages/member/".$data['username']."';
+	</script>";
+			else{
+				$this->load->model('Product_model');	
+				$pdata = $this->Product_model->getproductdetail($this->uri->segment(3));
+				$this->load->helper('body.php');
+				$this->load->view('header.php');
+				$this->load->view('space.php');
+				$this->load->view('edit_product.php',$pdata);
+				$this->load->view('footer.php');
+			}
+		}
+		else
+			echo"<script language='javascript'>
+		window.location.href = '../../../pages';
+	</script>";
 	}
 	public function displayproduct(){
-		$username = "admin"; // Get username from session
 		$this->load->model('Product_model');	
-		$data = $this->Product_model->display_product();
-		$data_send['data'] = $data;
+		$data = $this->Product_model->getproductdetail();
 		$this->load->helper('body.php');
 		$this->load->view('header.php');
 		$this->load->view('space.php');
-		$this->load->view('display_product.php',$data_send);
+		$this->load->view('display_product.php',$data);
 		$this->load->view('footer.php');
 	}
 	public function message(){
