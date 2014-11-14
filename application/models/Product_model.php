@@ -10,7 +10,7 @@
 				return 0;
 		}	
 		function edit_product($data){
-			$this->db->where('username',$username)->where('name',$data['name'])->set('name',$data['name'])->set('price',$data['price'])->set('amount',$data['amount'])->set('type',$data['type'])->set('detail',$data['detail'])->update('product');
+			$this->db->where('username',$data['username'])->where('name',$data['name'])->set('name',$data['name'])->set('price',$data['price'])->set('amount',$data['amount'])->set('type',$data['type'])->set('detail',$data['detail'])->update('product');
 		}
 		function userProduct($pdata){
 			$username = $pdata['username'];
