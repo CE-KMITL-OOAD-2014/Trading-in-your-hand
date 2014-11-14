@@ -83,11 +83,11 @@ class pages extends CI_Controller {
 		window.location.href = '../../../pages/member/".$data['username']."';
 	</script>";
 			else{
-				$head['page'] = "Edit product";
-				$this->load->model('Product_model');	
 				$pdata = $this->Product_model->getproductdetail($this->uri->segment(3));
+				$data['page'] = "Edit product";
+				$this->load->model('Product_model');	
 				$this->load->helper('body.php');
-				$this->load->view('header.php',$head);
+				$this->load->view('header.php',$data);
 				$this->load->view('space.php');
 				$this->load->view('edit_product.php',$pdata);
 				$this->load->view('footer.php');
