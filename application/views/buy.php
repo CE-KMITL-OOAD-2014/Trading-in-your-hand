@@ -24,10 +24,22 @@
                              </tr>
                              
                              <tr>
+                                 <td class="h6"><strong></strong></td>
+                                 <td> </td>
+                                 <td class="h5"></td>
+                             </tr>  
+                             
+                             <tr>
                                  <td class="h5"><strong>Name</strong></td>
                                  <td> </td>
                                  <td class="h4"><? echo $name; ?></td>
                              </tr>
+                             
+                             <tr>
+                                 <td class="h6"><strong></strong></td>
+                                 <td> </td>
+                                 <td class="h5"></td>
+                             </tr> 
                              
                              <tr>
                                  <td class="h5"><strong>Owner</strong></td>
