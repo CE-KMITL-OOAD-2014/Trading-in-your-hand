@@ -70,7 +70,16 @@
                                  <td class="h5">R$ 35,00</td>
                              </tr> 
                             
-                       </tbody>
+                             <tr>
+                                 <td class="btn-mais-info text-primary">
+                                     <i class="open_info fa fa-plus-square-o"></i>
+                                     <i class="open_info hide fa fa-minus-square-o"></i> informações
+                                 </td>
+                                 <td> </td>
+                                 <td class="h5"></td>
+                             </tr> 
+
+                         </tbody>
                     </table>
                              
                          
