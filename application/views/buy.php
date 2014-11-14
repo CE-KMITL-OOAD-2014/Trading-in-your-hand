@@ -70,16 +70,7 @@
                                  <td class="h5">R$ 35,00</td>
                              </tr> 
                             
-                             <tr>
-                                 <td class="btn-mais-info text-primary">
-                                     <i class="open_info fa fa-plus-square-o"></i>
-                                     <i class="open_info hide fa fa-minus-square-o"></i> informações
-                                 </td>
-                                 <td> </td>
-                                 <td class="h5"></td>
-                             </tr> 
-
-                         </tbody>
+                       </tbody>
                     </table>
                              
                          
@@ -87,9 +78,6 @@
                         <img src="http://lorempixel.com/150/150/technics/" alt="teste" class="img-thumbnail">  
                     </div>
                     
-                    <div class="clearfix"></div>
-                   <p class="open_info hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                  </div>
                     
                   <div class="modal-footer">       
                       
