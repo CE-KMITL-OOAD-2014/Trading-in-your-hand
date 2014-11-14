@@ -2,11 +2,10 @@
 	class product extends CI_Controller{
 		
 		function delete(){
-			if ($this->uri->segment(3) === FALSE){ 
-			echo"<script language='javascript'>
-    window.location.href = '../../../pages';
-</script>";
-			}
+			if ($this->uri->segment(3) === FALSE) 
+				echo"<script language='javascript'>
+				window.location.href = '../../../pages';
+				</script>";
 			else{
 				if($this->session->userdata('username')){
 					$id = $this->uri->segment(3);
@@ -15,19 +14,19 @@
 					if($this->Product_model->checkowner($id,$sess['username'])){
 						$this->Product_model->delete($id);
 						echo"<script language='javascript'>
-    window.location.href = '../../../pages/member/".$sess['username']."';
-</script>";
+   						window.location.href = '../../../pages/member/".$sess['username']."';
+						</script>";
 					}
 					else
 						echo"<script language='javascript'>
-	alert('You can delete only your product');
-    window.location.href = '../../../pages/login';
-</script>";
+						alert('You can delete only your product');
+    					window.location.href = '../../../pages/login';
+						</script>";
 				}
 				else 
 					echo"<script language='javascript'>
-    window.location.href = '../../../pages/login';
-</script>";
+    				window.location.href = '../../../pages/login';
+					</script>";
 			}
 		}
 		function edit(){
@@ -38,30 +37,30 @@
 					echo"<script language='javascript'>
 					window.location.href = '../../../pages/member/".$data['username']."';
 					</script>";
-			else{
-				$this->load->model('Product_model');	
-				$fname = $this->Product_model->getproductdetail($this->uri->segment(3));
-				$fname = $fname['pic1'];
-				$config =  array(
-					  'file_name'		=> $fname,
-					  'upload_path'     => "./productPic/",
-					  'allowed_types'   => "gif|jpg|png|jpeg",
-					  'overwrite'       => TRUE,
-					  'max_size'        => "1000KB",
-					  'max_height'      => "768",
-					  'max_width'       => "1024"  
-					);
-				$this->load->library('upload', $config);
-				$this->upload->do_upload();
-				$name = $_POST["name"];
-				$price = $_POST["price"];
-				$amount = $_POST["amount"];
-				$type = $_POST["type"];
-				$detail = $_POST["detail"];
-				$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$fname,'type'=>$type);
-				$this->Product_model->edit_product($data);			
+				else{
+					$this->load->model('Product_model');	
+					$fname = $this->Product_model->getproductdetail($this->uri->segment(3));
+					$fname = $fname['pic1'];
+					$config =  array(
+						  'file_name'		=> $fname,
+						  'upload_path'     => "./productPic/",
+						  'allowed_types'   => "gif|jpg|png|jpeg",
+						  'overwrite'       => TRUE,
+						  'max_size'        => "1000KB",
+						  'max_height'      => "768",
+						  'max_width'       => "1024"  
+						);
+					$this->load->library('upload', $config);
+					$this->upload->do_upload();
+					$name = $_POST["name"];
+					$price = $_POST["price"];
+					$amount = $_POST["amount"];
+					$type = $_POST["type"];
+					$detail = $_POST["detail"];
+					$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$fname,'type'=>$type);
+					$this->Product_model->edit_product($data);			
+				}
 			}
-		}
 		}		
 		function send_mail($data,$bdata,$pdetail,$amount){
 			$to = $data['email'];
