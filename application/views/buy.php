@@ -11,28 +11,28 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     
-                    <h4 class="modal-title" id="myModalLabel"><i class="text-muted fa fa-shopping-cart"></i> <strong><? echo $id; ?></strong> - <? echo $name; ?> </h4>
+                    <h3 class="modal-title" id="myModalLabel"><i class="text-muted fa fa-shopping-cart"></i> <strong><? echo $id; ?></strong> - <? echo $name; ?> </h3>
                   </div>
                   <div class="modal-body">
                   
                     <table class="pull-left col-md-8 ">
                          <tbody>
                              <tr>
-                                 <td class="h6"><strong>ID</strong></td>
+                                 <td class="h5"><strong>ID</strong></td>
                                  <td> </td>
-                                 <td class="h5"><? echo $id; ?></td>
+                                 <td class="h4"><? echo $id; ?></td>
                              </tr>
                              
                              <tr>
-                                 <td class="h6"><strong>Name</strong></td>
+                                 <td class="h5"><strong>Name</strong></td>
                                  <td> </td>
-                                 <td class="h5"><? echo $name; ?></td>
+                                 <td class="h4"><? echo $name; ?></td>
                              </tr>
                              
                              <tr>
-                                 <td class="h6"><strong>Owner</strong></td>
+                                 <td class="h5"><strong>Owner</strong></td>
                                  <td> </td>
-                                 <td class="h5"><? echo $username; ?></td>
+                                 <td class="h4"><? echo $username; ?></td>
                              </tr>
                              
                              <tr>
@@ -80,7 +80,7 @@
                              
                          
                     <div class="col-md-4"> 
-                        <img src="http://lorempixel.com/150/150/technics/" alt="teste" class="img-thumbnail">  
+                        <img src="../../../../productPic/<? echo pic1; ?>.jpg" alt="teste" class="img-thumbnail">  
                     </div>
                     
                     <div class="clearfix"></div>
