@@ -77,7 +77,7 @@ class pages extends CI_Controller {
 	public function editproduct(){
 		$this->load->model('Product_model');	
 	
-				$pdata = $this->Product_model->getproductdetail($this->uri->segment(3));
+				//$pdata = $this->Product_model->getproductdetail($this->uri->segment(3));
 				$data['page'] = "Edit product";
 				$this->load->helper('body.php');
 				$this->load->view('header.php',$data);
