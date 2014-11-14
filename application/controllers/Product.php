@@ -73,14 +73,14 @@
 					$owner = $this->Product_model->getproductowner($this->uri->segment(3));
 					$this->load->model('member_model');	
 					$to = $this->member_model->memberDetail($owner);
-					echo"test";
-					/*$this->send_mail($to,$data);
+					$this->send_mail($to,$data);
 					echo"<script language='javascript'>
     window.location.href = '../../../pages/member/".$data['username']."';
-</script>";*/
+</script>";
 					echo"sucsess";
 				}
-				echo"fail";
+				else
+					echo"fail";
 			}
 		}
 		function add(){
