@@ -72,6 +72,9 @@
 					$this->load->model('member_model');	
 					$to = $this->member_model->memberDetail($owner);
 					$this->send_mail($to,$data);
+					echo"<script language='javascript'>
+    window.location.href = '../../../pages/member/".$data['username']."';
+</script>";
 				}
 			}
 		}
