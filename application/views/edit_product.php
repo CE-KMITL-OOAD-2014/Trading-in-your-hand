@@ -57,12 +57,13 @@
         </div>
         </div>
         </form> 
-    </div>
-		<div col-md-6>
+        <div col-md-6>
 			<div class="form-group">
        		<center><button type="submit" id="sub" class="btn btn-primary btn-block btn-lg pull-right" form = "data">  Submit </button></center>
         	</div>
         </div>
+    </div>
+		
 </div>
 
 </body>
