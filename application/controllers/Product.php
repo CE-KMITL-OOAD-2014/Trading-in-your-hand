@@ -36,9 +36,8 @@
 				$id = $data['username'];		
 				if ($this->uri->segment(3) === FALSE)
 					echo"<script language='javascript'>
-			window.location.href = '../../../pages/member/".$data['username']."';
-		</script>";
-			}
+					window.location.href = '../../../pages/member/".$data['username']."';
+					</script>";
 			else{
 				$this->load->model('Product_model');	
 				$fname = $this->Product_model->getproductdetail($this->uri->segment(3));
@@ -64,15 +63,14 @@
 					$this->Product_model->edit_product($data);
 				}
 				else
-				{
 				   echo"<script language='javascript'>
-		alert('Please browse file only type JPG');
-		window.location.href = '../../../pages/addproduct';
-	</script>";
-				}
+					alert('Please browse file only type JPG');
+					window.location.href = '../../../pages/addproduct';
+					</script>";
+				
 			}
 		}
-		
+		}		
 		function send_mail($data,$bdata,$pdetail,$amount){
 			$to = $data['email'];
 			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><br/><table cellspacing='4' width='420'>
