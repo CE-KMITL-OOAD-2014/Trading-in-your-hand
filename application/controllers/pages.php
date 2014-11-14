@@ -82,7 +82,7 @@ class pages extends CI_Controller {
 				$this->load->helper('body.php');
 				$this->load->view('header.php',$data);
 				$this->load->view('space.php');
-				$this->load->view('edit_product.php',$pdata);
+				$this->load->view('edit_product.php');
 				$this->load->view('footer.php');
 	
 	}
