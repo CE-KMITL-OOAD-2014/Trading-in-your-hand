@@ -58,7 +58,10 @@
 					$type = $_POST["type"];
 					$detail = $_POST["detail"];
 					$data = array('id'=>$temp['id'],'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$fname,'type'=>$type);
-					$this->Product_model->edit_product($data);			
+					$this->Product_model->edit_product($data);
+					echo"<script language='javascript'>
+					window.location.href = '../../../pages/member/".$sess['username']."';
+					</script>";			
 				}
 			}
 		}
