@@ -52,22 +52,14 @@
 					  'max_width'       => "1024"  
 					);
 				$this->load->library('upload', $config);
-				if($this->upload->do_upload())
-				{
-					$name = $_POST["name"];
-					$price = $_POST["price"];
-					$amount = $_POST["amount"];
-					$type = $_POST["type"];
-					$detail = $_POST["detail"];
-					$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$fname,'type'=>$type);
-					$this->Product_model->edit_product($data);
-				}
-				else
-				   echo"<script language='javascript'>
-					alert('Please browse file only type JPG');
-					window.location.href = '../../../pages/addproduct';
-					</script>";
-				
+				$this->upload->do_upload();
+				$name = $_POST["name"];
+				$price = $_POST["price"];
+				$amount = $_POST["amount"];
+				$type = $_POST["type"];
+				$detail = $_POST["detail"];
+				$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$fname,'type'=>$type);
+				$this->Product_model->edit_product($data);			
 			}
 		}
 		}		
