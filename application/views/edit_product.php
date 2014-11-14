@@ -14,22 +14,22 @@
         <div class="col-md-4"> <a class="thumbnail" > <img src="../../../productPic/<? echo $pic1; ?>.jpg"></a>
           <input type="file" name="userfile" class="text-center center-block well well-sm"/>
         </div>
-      
-          <div class="form-group">
+        <div class="col-md-4">
+       
             <label class="control-label">Name</label>
             <label for="name" class="sr-only">name</label>
             <input type="name" name="name" id="name" class="form-control" placeholder="NameProduct" value="<? echo $name; ?>" required autofocus>
-          
-        
+ 
+       
             <label class="control-label">Cost</label>
             <label for="cost" class="sr-only">cost</label>
             <input type="cost" name="price" id="price" class="form-control" placeholder="Cost" value="<? echo $price; ?>" required autofocus>
-      
          
+       
             <label class="control-label">Amount</label>
             <label for="Amount" class="sr-only">Amount</label>
             <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" value="<? echo $amount; ?>" required autofocus>
-         
+       
          
             <label class="control-label">Type</label>
             <select class="form-control" id ="type" name="type">
@@ -48,7 +48,7 @@
         	echo"<option value='others' selected='selected'>Others</option>";
 		?>
             </select>
-         
+        
           
             <label class="control-label">Detail</label>
             <label for="Detail" class="sr-only">Amount</label>
