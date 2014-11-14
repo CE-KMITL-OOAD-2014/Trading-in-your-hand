@@ -18,7 +18,7 @@
 			$data = $this->db->where('username',$username)->order_by('id','desc')->get('product');
 			return $data;
 		}
-		function getproductowner($id){
+		function getproductdetail($id){
 			$data = $this->db->where('id',$id)->get('product');
 			foreach($data->result_array() as $row){}
 				if(isset($row))

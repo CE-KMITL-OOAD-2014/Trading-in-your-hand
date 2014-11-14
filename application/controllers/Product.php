@@ -39,9 +39,12 @@
 			echo"<h1>Updated</h1><br/>";
 			echo"<a href='../Pages/displayproduct'>Back</a>";
 		}
-		function send_mail($data,$bdaat){
+		function send_mail($data,$bdata,$pdetail,$amount){
 			$to = $data['email'];
-			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in the Community Market has been sold to Nyx Guides Me.".$bdata['username']."<br/><h2><b>".$number."</b></h2>If you haven't recently tried to login to Trading in your hand from the device located at ".$_SERVER['REMOTE_ADDR'].", someone else may be trying to access your account.<br/><br/>Thanks for using our website<br/><br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com";	
+			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in the Trading in your hand has been sold to ".$bdata['username'].".<br/><h2><b>".$pdetail['name']."</b></h2> :   ".$pdetail['price']."<br/>
+			<h2><b>Amount</b></h2> :   ".$amount."<br/><hr/>
+			<h2><b>Total</b></h2> :   ".$amount*$pdetail['price']."<br/>
+			<br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com";	
 			$config = Array(
 				'protocol' => 'smtp',
 				'smtp_host' => 'ssl://smtp.googlemail.com',
@@ -70,10 +73,10 @@
 				$id = $this->uri->segment(3);
 				$amount = $this->uri->segment(4);
 				if($this->Product_model->buyproduct($id,$amount,$data['username'])){
-					$owner = $this->Product_model->getproductowner($this->uri->segment(3));
+					$detail = $this->Product_model->getproductdetail($this->uri->segment(3));
 					$this->load->model('member_model');	
-					$to = $this->member_model->memberDetail($owner);
-					$this->send_mail($to,$data);
+					$to = $this->member_model->memberDetail($detail);
+					$this->send_mail($to,$data,$detail,$amount);
 					echo"<script language='javascript'>
     window.location.href = '../../../pages/member/".$data['username']."';
 </script>";
