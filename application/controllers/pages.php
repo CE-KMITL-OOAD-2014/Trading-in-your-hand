@@ -75,6 +75,7 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 	}
 	public function editproduct(){
+		$this->load->model('Product_model');	
 		if($this->session->userdata('username')){
 			$data = $this->session->all_userdata();
 			$id = $data['username'];		
@@ -85,7 +86,6 @@ class pages extends CI_Controller {
 			else{
 				$pdata = $this->Product_model->getproductdetail($this->uri->segment(3));
 				$data['page'] = "Edit product";
-				$this->load->model('Product_model');	
 				$this->load->helper('body.php');
 				$this->load->view('header.php',$data);
 				$this->load->view('space.php');
