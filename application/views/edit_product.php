@@ -11,7 +11,6 @@
         <h3> Edit Product</h3>
       </div>
       <div class="col-md-2"></div> 
-      <div class="form-wrap">
       <form action="../../../../product/edit/<? echo $id; ?>" method="post" id="data" name="data" enctype="multipart/form-data">
       <div class="col-md-4"> <a class="thumbnail" > <img src="../../../productPic/<? echo $pic1; ?>.jpg"></a> 
             	<input type="file" name="userfile" class="text-center center-block well well-sm"/>
@@ -56,7 +55,7 @@
         </div>
         </div>
         </form>
-      </div>
+      
       
     </div>
 
