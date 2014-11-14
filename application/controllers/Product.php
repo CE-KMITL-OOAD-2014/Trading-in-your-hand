@@ -60,7 +60,7 @@
 			$result = $this->email->send();	
 		}
 		function buy(){
-			if(($this->uri->segment(3) === FALSE&&$this->uri->segment(4) === FALSE)&&$this->session->userdata('username'))
+			if($this->uri->segment(3) === FALSE||$this->uri->segment(4) === FALSE||$this->session->userdata('username'))
 				echo"<script language='javascript'>
     window.location.href = '../../../pages/addproduct';
 </script>";
