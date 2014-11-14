@@ -41,9 +41,9 @@
 		}
 		function send_mail($data,$bdata,$pdetail,$amount){
 			$to = $data['email'];
-			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in the Trading in your hand has been sold to ".$bdata['username'].".<br/><h2><b>".$pdetail['name']."</b></h2> :   ".$pdetail['price']."<br/>
-			<h2><b>Amount</b></h2> :   ".$amount."<br/><hr/>
-			<h2><b>Total</b></h2> :   ".$amount*$pdetail['price']."<br/>
+			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in the Trading in your hand has been sold to ".$bdata['username'].".<br/><b>".$pdetail['name']."</b> :   ".$pdetail['price']."<br/>
+			<b>Amount</b> :   ".$amount."<br/><hr/>
+			<b>Total</b> :   ".$amount*$pdetail['price']."<br/>
 			<br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com";	
 			$config = Array(
 				'protocol' => 'smtp',
@@ -58,7 +58,7 @@
 			$this->email->set_newline("\r\n");
 			$this->email->from('test2.trading.in.your.hand@gmail.com');
 			$this->email->to($to);
-			$this->email->subject('Trading-in-your-hand-Confirmation code');
+			$this->email->subject('You have sold an item on Trading in your hand');
 			$this->email->message($message);
 			$result = $this->email->send();	
 		}
