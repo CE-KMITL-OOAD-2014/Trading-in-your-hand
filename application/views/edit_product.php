@@ -38,17 +38,16 @@
         	echo"<option value='others' selected='selected'>Others</option>";
 		?>
 		</select>
-        <div class="form-group">
-          <textarea rows="8" class="form-control" id="detail" name="detail" placeholder="Detail" style="resize:none" value="<? echo $detail; ?>" required autofocus ></textarea>
-        </div>
+        <label for="Detail" class="sr-only">Amount</label>
+        <input type="Detail" name="detail" id="detail" class="form-control" placeholder="detail" value="<? echo $amount; ?>" required autofocus>
         </div>
         </form>
       
       <div class="row" >
         <div class="col-md-12">
-          <div class="col-md-8"></div>
-          <div class="col-md-2">
-          <button type="submit" id="sub" class="btn btn-primary btn-block btn-lg pull-right" form = "data">  Submit </button>
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+          <center><button type="submit" id="sub" class="btn btn-primary btn-block btn-lg pull-right" form = "data">  Submit </button></center>>
           </div>
         </div>
       </div>
