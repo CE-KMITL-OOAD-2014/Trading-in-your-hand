@@ -188,12 +188,28 @@ class pages extends CI_Controller {
 		
 	}
 	public function buy(){
-		$data['page'] = "Buy product";
-		$this->load->helper('body.php');
-		$this->load->view('header.php',$data);
-		$this->load->view('space.php');
-		$this->load->view('buy');
-		$this->load->view('footer.php');
+		if($this->session->userdata('username')){
+			$data = $this->session->all_userdata();
+			$id = $data['username'];		
+			if ($this->uri->segment(3) === FALSE)
+				echo"<script language='javascript'>
+		window.location.href = '../../../pages/member/".$data['username']."';
+	</script>";
+			else{
+				$this->load->model('Product_model');
+				$pdata = $this->Product_model->getproductdetail($this->uri->segment(3));
+				$head['page'] = "Buy product";	
+				$this->load->helper('body.php');
+				$this->load->view('header.php',$head);
+				$this->load->view('space.php');
+				$this->load->view('buy.php',$pdata);
+				$this->load->view('footer.php');
+			}
+		}
+		else
+			echo"<script language='javascript'>
+		window.location.href = '../../../pages';
+	</script>";
 	}
 	public function editprofile(){
 		if($this->session->userdata('username')){

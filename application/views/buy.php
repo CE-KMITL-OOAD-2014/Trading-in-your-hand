@@ -11,28 +11,28 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     
-                    <h4 class="modal-title" id="myModalLabel"><i class="text-muted fa fa-shopping-cart"></i> <strong>02051</strong> - Nome do Produto </h4>
+                    <h4 class="modal-title" id="myModalLabel"><i class="text-muted fa fa-shopping-cart"></i> <strong><? echo $id; ?></strong> - <? echo $name; ?> </h4>
                   </div>
                   <div class="modal-body">
                   
                     <table class="pull-left col-md-8 ">
                          <tbody>
                              <tr>
-                                 <td class="h6"><strong>Código</strong></td>
+                                 <td class="h6"><strong>ID</strong></td>
                                  <td> </td>
-                                 <td class="h5">02051</td>
+                                 <td class="h5"><? echo $id; ?></td>
                              </tr>
                              
                              <tr>
-                                 <td class="h6"><strong>Descrição</strong></td>
+                                 <td class="h6"><strong>Name</strong></td>
                                  <td> </td>
-                                 <td class="h5">descrição do produto</td>
+                                 <td class="h5"><? echo $name; ?></td>
                              </tr>
                              
                              <tr>
-                                 <td class="h6"><strong>Marca/Fornecedor</strong></td>
+                                 <td class="h6"><strong>Owner</strong></td>
                                  <td> </td>
-                                 <td class="h5">Marca do produto</td>
+                                 <td class="h5"><? echo $username; ?></td>
                              </tr>
                              
                              <tr>
