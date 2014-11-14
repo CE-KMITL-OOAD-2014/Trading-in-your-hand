@@ -68,9 +68,9 @@
 				$data = $this->session->all_userdata();
 				$this->load->model('Product_model');
 				if($this->Product_model->buyproduct($this->uri->segment(3),$this->uri->segment(4),$data['username'])){
-					$owner = $this->Product_model->getproductowner($this->uri->segment(3));
-					$this->load->model('member_model');	
-					$to = $this->member_model->memberDetail($owner);
+					//$owner = $this->Product_model->getproductowner($this->uri->segment(3));
+					//$this->load->model('member_model');	
+					//$to = $this->member_model->memberDetail($owner);
 					echo"test";
 					/*$this->send_mail($to,$data);
 					echo"<script language='javascript'>
