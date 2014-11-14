@@ -291,7 +291,7 @@ if($this->session->userdata('username')){
 		  else echo"<b>Price :</b>      <b>Amount :</b> </div>";
 		  echo"<span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username']){
-				echo"<button class='btn btn-sm btn-default' onClick='window.location.href = '../../../../pages/editproduct/".$data[(($ppage*3)-2)]['id']."';'><i class='fa fa-fw fa-eye'></i> Edit</button>";
+				echo"<button class=glyphicon glyphicon-cog' onClick='window.location.href = '../../../../pages/editproduct/".$data[(($ppage*3)-2)]['id']."';'><i class='fa fa-fw fa-eye'></i> Edit</button>";
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-2)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			}else{
 				echo"<button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>";
@@ -318,7 +318,7 @@ if($this->session->userdata('username')){
 		  <b>Price :</b> ".$data[(($ppage*3)-1)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-1)]['amount']."</div>";
 		  echo"<span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username']){
-				echo"<button class='btn btn-sm btn-default' onClick='window.location.href = '../../../../pages/editproduct/".$data[(($ppage*3)-1)]['id']."';'><i class='fa fa-fw fa-eye'></i> Edit</button>";
+				echo"<button class='glyphicon glyphicon-cog' onClick='window.location.href = '../../../../pages/editproduct/".$data[(($ppage*3)-1)]['id']."';'><i class='fa fa-fw fa-eye'></i> Edit</button>";
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-1)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			}else{
 				echo"<button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>";
@@ -346,7 +346,7 @@ if($this->session->userdata('username')){
 		  <b>Price :</b> ".$data[($ppage*3)]['price']."     <b>Amount :</b> ".$data[($ppage*3)]['amount']."</div>";
 		  echo"<span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username']){
-				echo"<button class='btn btn-sm btn-default' onClick='window.location.href = '../../../../pages/editproduct/".$data[(($ppage*3))]['id']."';'><i class='fa fa-fw fa-eye'></i> Edit</button>";
+				echo"<button class='glyphicon glyphicon-cog' onClick='window.location.href = '../../../../pages/editproduct/".$data[(($ppage*3))]['id']."';'><i class='fa fa-fw fa-eye'></i> Edit</button>";
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3))]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			}else{
 				echo"<button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>";
