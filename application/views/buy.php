@@ -6,7 +6,6 @@
 <body>
 <div class = "back">
 
-<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -107,7 +106,7 @@
                 </div>
               </div>
             </div>
-            </div>
+       
 </div>
 </body>
 </html>
