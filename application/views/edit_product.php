@@ -40,17 +40,11 @@
 		</select>
         <label for="Detail" class="sr-only">Amount</label>
         <input type="Detail" name="detail" id="detail" class="form-control" placeholder="detail" value="<? echo $amount; ?>" required autofocus>
+        <center><button type="submit" id="sub" class="btn btn-primary btn-block btn-lg pull-right" form = "data">  Submit </button></center>>
         </div>
         </form>
       
-      <div class="row" >
-        <div class="col-md-12">
-          <div class="col-md-4"></div>
-          <div class="col-md-4">
-          <center><button type="submit" id="sub" class="btn btn-primary btn-block btn-lg pull-right" form = "data">  Submit </button></center>>
-          </div>
-        </div>
-      </div>
+      
     </div>
 
 </div>
