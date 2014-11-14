@@ -18,6 +18,22 @@
 			$data = $this->db->where('username',$username)->order_by('id','desc')->get('product');
 			return $data;
 		}
+		function getproductowner($id){
+			$data = $this->db->where('id',$id)->get('product');
+			foreach($data->result_array() as $row){}
+				if(isset($row))
+					return $row;
+		}
+		function buyproduct($id,$amount,$username){
+			$check = $this->db->where('id',$id)->get('product');
+			if($check['amount']==$amount&&$check['username']!=$username)
+				$this->db->where('id',$id)->delete('product');
+			else if($check['amount'] < $amount||$check['username']==$username)
+				return false;
+			else
+				$this->db->where('id',$id)->set('amount',($check['amount']-$amount))->update('product');	
+			return true;
+		}
 		function viewProduct($name,$type){
 			if($name!="Any"&&$type=="all")
 				$data = $this->db->where('name',$name)->order_by('id','desc')->get('product');

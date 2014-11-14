@@ -39,6 +39,42 @@
 			echo"<h1>Updated</h1><br/>";
 			echo"<a href='../Pages/displayproduct'>Back</a>";
 		}
+		function send_mail($data,$bdaat){
+			$to = $data['email'];
+			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in the Community Market has been sold to Nyx Guides Me.".$bdata['username']."<br/><h2><b>".$number."</b></h2>If you haven't recently tried to login to Trading in your hand from the device located at ".$_SERVER['REMOTE_ADDR'].", someone else may be trying to access your account.<br/><br/>Thanks for using our website<br/><br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com";	
+			$config = Array(
+				'protocol' => 'smtp',
+				'smtp_host' => 'ssl://smtp.googlemail.com',
+				'smtp_port' => 465,
+				'smtp_user' => 'test2.trading.in.your.hand@gmail.com',
+				'smtp_pass' => 'pae123456',
+				'mailtype'  => 'html', 
+				'charset'   => 'iso-8859-1'
+			);
+			$this->load->library('email', $config);
+			$this->email->set_newline("\r\n");
+			$this->email->from('test2.trading.in.your.hand@gmail.com');
+			$this->email->to($to);
+			$this->email->subject('Trading-in-your-hand-Confirmation code');
+			$this->email->message($message);
+			$result = $this->email->send();	
+		}
+		function buy(){
+			if(($this->uri->segment(3) === FALSE&&$this->uri->segment(4) === FALSE)&&$this->session->userdata('username'))
+				echo"<script language='javascript'>
+    window.location.href = '../../../pages/addproduct';
+</script>";
+			else{
+				$data = $this->session->userdata('username');
+				$this->load->model('Product_model');
+				if($this->Product_model->buyproduct($this->uri->segment(3),$this->uri->segment(4),$data['username'])){
+					$owner = $this->Product_model->getproductowner($this->uri->segment(3));
+					$this->load->model('member_model');	
+					$to = $this->member_model->memberDetail($owner);
+					$this->send_mail($to,$data);
+				}
+			}
+		}
 		function add(){
 			$this->load->model('Product_model');	
 			$this->db->select_max('id');
