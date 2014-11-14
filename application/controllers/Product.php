@@ -69,7 +69,7 @@
 				$this->load->model('Product_model');
 				$id = $this->uri->segment(3);
 				$amount = $this->uri->segment(4);
-				//if($this->Product_model->buyproduct($id,$amount,$data['username'])){
+				if($this->Product_model->buyproduct($id,$amount,$data['username'])){
 					$owner = $this->Product_model->getproductowner($this->uri->segment(3));
 					$this->load->model('member_model');	
 					$to = $this->member_model->memberDetail($owner);
@@ -79,7 +79,7 @@
     window.location.href = '../../../pages/member/".$data['username']."';
 </script>";*/
 					echo"sucsess";
-			//	}
+				}
 				echo"fail";
 			}
 		}

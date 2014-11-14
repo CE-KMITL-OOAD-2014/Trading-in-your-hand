@@ -26,12 +26,13 @@
 		}
 		function buyproduct($id,$amount,$username){
 			$check = $this->db->where('id',$id)->get('product');
-			if($check['amount']==$amount&&$check['username']!=$username)
+			foreach($check->result_array() as $row){}
+			if($row['amount']==$amount&&$check['username']!=$username)
 				$this->db->where('id',$id)->delete('product');
-			else if($check['amount'] < $amount||$check['username']==$username)
+			else if($row['amount'] < $amount||$row['username']==$username)
 				return false;
 			else
-				$this->db->where('id',$id)->set('amount',($check['amount']-$amount))->update('product');	
+				$this->db->where('id',$id)->set('amount',($row['amount']-$amount))->update('product');	
 			return true;
 		}
 		function viewProduct($name,$type){
