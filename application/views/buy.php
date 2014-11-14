@@ -20,7 +20,7 @@
                              <tr>
                                  <td class="h5"><strong>ID</strong></td>
                                  <td> </td>
-                                 <td class="h4"><? echo $id; ?><br/></td>
+                                 <td class="h4"><? echo $id; ?></td>
                              </tr>
                              
                               
@@ -28,7 +28,7 @@
                              <tr>
                                  <td class="h5"><strong>Name</strong></td>
                                  <td> </td>
-                                 <td class="h4"><? echo $name; ?><br/></td>
+                                 <td class="h4"><? echo $name; ?></td>
                              </tr>
                              
                               
@@ -36,7 +36,7 @@
                              <tr>
                                  <td class="h5"><strong>Owner</strong></td>
                                  <td> </td>
-                                 <td class="h4"><? echo $username; ?><br/></td>
+                                 <td class="h4"><? echo $username; ?></td>
                              </tr>
                              
                              <tr>
