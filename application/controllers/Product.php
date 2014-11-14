@@ -32,16 +32,15 @@
 		}
 		function edit(){
 			if($this->session->userdata('username')){
-				$sess = $this->session->all_userdata();
-				$id = $data['username'];		
+				$sess = $this->session->all_userdata();		
 				if ($this->uri->segment(3) === FALSE)
 					echo"<script language='javascript'>
 					window.location.href = '../../../pages/member/".$sess['username']."';
 					</script>";
 				else{
 					$this->load->model('Product_model');	
-					$fname = $this->Product_model->getproductdetail($this->uri->segment(3));
-					$fname = $fname['pic1'];
+					$temp = $this->Product_model->getproductdetail($this->uri->segment(3));
+					$fname = $temp['pic1'];
 					$config =  array(
 						  'file_name'		=> $fname,
 						  'upload_path'     => "./productPic/",
@@ -58,7 +57,7 @@
 					$amount = $_POST["amount"];
 					$type = $_POST["type"];
 					$detail = $_POST["detail"];
-					$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$fname,'type'=>$type);
+					$data = array('id'=>$temp['id'],'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$fname,'type'=>$type);
 					$this->Product_model->edit_product($data);			
 				}
 			}
