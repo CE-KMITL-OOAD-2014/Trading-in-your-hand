@@ -41,9 +41,9 @@
 		}
 		function send_mail($data,$bdata,$pdetail,$amount){
 			$to = $data['email'];
-			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><br/><b>".$pdetail['name']."</b> :&nbsp;:&nbsp;:&nbsp;:&nbsp;:&nbsp;".$pdetail['price'].":&nbsp;THB<br/>
-			<b>Amount</b> :&nbsp;:&nbsp;:&nbsp;:&nbsp;:&nbsp;".$amount."&nbsp;Units<br/><hr/>
-			<b>Total</b> :&nbsp;:&nbsp;:&nbsp;:&nbsp;:&nbsp;".$amount*$pdetail['price'].":&nbsp;THB<br/>
+			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><br/><b>".$pdetail['name']."</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$pdetail['price']."&nbsp;THB<br/>
+			<b>Amount</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$amount."&nbsp;Units<br/><hr/>
+			<b>Total</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$amount*$pdetail['price']."&nbsp;THB<br/>
 			<br/><br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com";	
 			$config = Array(
 				'protocol' => 'smtp',
