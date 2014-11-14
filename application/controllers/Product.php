@@ -41,9 +41,26 @@
 		}
 		function send_mail($data,$bdata,$pdetail,$amount){
 			$to = $data['email'];
-			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><br/><b>".$pdetail['name']."</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$pdetail['price']."&nbsp;THB<br/>
-			<b>Amount</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$amount."&nbsp;Units<br/><hr/>
-			<b>Total</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$amount*$pdetail['price']."&nbsp;THB<br/>
+			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><table cellspacing='4' width='420'>
+    <tbody>
+    <tr>
+      <td width='200'><div align='right'><b>".$pdetail['name']."&nbsp;&nbsp;</b></div></td>
+      <td width='202'>".$pdetail['price']."&nbsp;THB</td>
+    </tr>
+    <tr>
+      <td width='200'><div align='right'><b>Amount&nbsp;&nbsp;</b></div></td>
+      <td width='202'>".$amount."&nbsp;</td>
+    </tr>
+    <tr>
+      <td width='200'><div align='right'><b>&nbsp;</b></div></td>
+      <td width='202'><hr align='left' color='#cccccc' noshade='' size='1' width='180'></td>
+    </tr>
+    <tr>
+      <td width='200'><div style='font-size:18px' align='right'><b>Total&nbsp;&nbsp;</b></div></td>
+      <td width='202'><span style='font-size:18px'>".$pdetail['price']*$amount."&nbsp;THB</span></td>
+    </tr>   
+  </tbody>
+</table>
 			<br/><br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com";	
 			$config = Array(
 				'protocol' => 'smtp',
