@@ -32,11 +32,11 @@
 		}
 		function edit(){
 			if($this->session->userdata('username')){
-				$data = $this->session->all_userdata();
+				$sess = $this->session->all_userdata();
 				$id = $data['username'];		
 				if ($this->uri->segment(3) === FALSE)
 					echo"<script language='javascript'>
-					window.location.href = '../../../pages/member/".$data['username']."';
+					window.location.href = '../../../pages/member/".$sess['username']."';
 					</script>";
 				else{
 					$this->load->model('Product_model');	
