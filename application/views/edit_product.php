@@ -5,7 +5,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../../css/bootstrap.min.css" rel="stylesheet">
-
 </head>
 <script>
 $('#sub').click(function(){
@@ -50,8 +49,9 @@ $('#sub').click(function(){
         	echo"<option value='others' selected='selected'>Others</option>";
 		?>
 		</select>
-        <label for="Detail" class="sr-only">Detail</label>
-        <input tupe="detail" id="detail" name="detail" class="form-control" placeholder="Detail" value="<? echo $detail; ?>" required autofocus >
+        <div class="form-group">
+          <textarea rows="8" class="form-control" id="detail" name="detail" placeholder="Detail" style="resize:none" value="<? echo $detail; ?>" required autofocus ></textarea>
+        </div>
         </div>
         </form>
       
