@@ -38,6 +38,7 @@
 					echo"<script language='javascript'>
 			window.location.href = '../../../pages/member/".$data['username']."';
 		</script>";
+			}
 			else{
 				$this->load->model('Product_model');	
 				$fname = $this->Product_model->getproductdetail($this->uri->segment(3));
