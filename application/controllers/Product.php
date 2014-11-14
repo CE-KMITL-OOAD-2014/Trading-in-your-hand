@@ -61,7 +61,7 @@
     </tr>   
   </tbody>
 </table>
-			<br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com";	
+			<br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com<br/>Assistant Admin : nvb_kukuku@hotmail.com";	
 			$config = Array(
 				'protocol' => 'smtp',
 				'smtp_host' => 'ssl://smtp.googlemail.com',
