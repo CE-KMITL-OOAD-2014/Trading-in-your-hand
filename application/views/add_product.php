@@ -8,11 +8,6 @@
 <? 			$id = $this->session->all_userdata();
 			$id = $id['username']; ?>
 </head>
-<script>
-$('#sub').click(function(){
-    $('#form1 #data').submit();
-});
-</script>
 <body>
 <div class="back"> 
   <!-------------------------------show product--------------------------------------------------------------------------------------------------->
