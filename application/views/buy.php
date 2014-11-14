@@ -80,7 +80,7 @@
                              
                          
                     <div class="col-md-4"> 
-                        <img src="../../../../productPic/<? echo pic1; ?>.jpg" alt="teste" class="img-thumbnail">  
+                        <img src="../../../../productPic/<? echo $pic1; ?>.jpg" alt="teste" class="img-thumbnail">  
                     </div>
                     
                     <div class="clearfix"></div>
