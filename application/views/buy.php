@@ -18,7 +18,7 @@
                     <table class="pull-left col-md-8 ">
                          <tbody>
                              <tr>
-                                 <td class="h5"><strong>ID</strong><br/></td>
+                                 <td class="h5"><strong>ID</strong></td>
                                  <td> </td>
                                  <td class="h4"><? echo $id; ?><br/></td>
                              </tr>
@@ -26,7 +26,7 @@
                               
                              
                              <tr>
-                                 <td class="h5"><strong>Name</strong><br/></td>
+                                 <td class="h5"><strong>Name</strong></td>
                                  <td> </td>
                                  <td class="h4"><? echo $name; ?><br/></td>
                              </tr>
@@ -34,7 +34,7 @@
                               
                              
                              <tr>
-                                 <td class="h5"><strong>Owner</strong><br/></td>
+                                 <td class="h5"><strong>Owner</strong></td>
                                  <td> </td>
                                  <td class="h4"><? echo $username; ?><br/></td>
                              </tr>
