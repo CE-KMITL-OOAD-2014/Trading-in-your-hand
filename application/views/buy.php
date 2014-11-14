@@ -24,9 +24,9 @@
                              </tr>
                              
                              <tr>
-                                 <td><strong>&nbsp;</strong></td>
+                                 <td class="h2"><strong>&nbsp;</strong></td>
                                  <td> </td>
-                                 <td>&nbsp;</td>
+                                 <td class="h2">&nbsp;</td>
                              </tr>  
                              
                              <tr>
@@ -36,9 +36,9 @@
                              </tr>
                              
                              <tr>
-                                 <td><strong>&nbsp;</strong></td>
+                                 <td class="h2"><strong>&nbsp;</strong></td>
                                  <td> </td>
-                                 <td>&nbsp;</td>
+                                 <td class="h5">&nbsp;</td>
                              </tr> 
                              
                              <tr>
