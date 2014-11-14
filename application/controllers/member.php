@@ -192,7 +192,7 @@ class member extends CI_Controller {
 			$name = md5(base64_encode($data['username']));
 			
 		}
-		else{ // inden 
+		else{ // iden 
 			$name = md5(base64_encode(md5($data['username'])));
 		}
 		$config =  array(

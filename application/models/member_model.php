@@ -33,7 +33,7 @@
 				return false;
 			}
 			function queueiden($name){
-				$this->db->where('username',$name)->set('iden',base64_encode(md5($name)))->update('member');
+				$this->db->where('username',$name)->set('iden',"1")->update('member');
 			}
 			function edit_profile($data){
 				$this->db->where('username',$data['username'])->set('name',$data['name'])->set('sname',$data['sname'])->set('about',$data['about'])->set('email',$data['email'])->set('address',$data['address'])->set('facebook',$data['facebook'])->set('twitter',$data['twitter'])->set('googleplus',$data['googleplus'])->set('github',$data['github'])->update('member');
