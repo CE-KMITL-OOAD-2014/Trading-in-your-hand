@@ -41,7 +41,7 @@
 		}
 		function send_mail($data,$bdata,$pdetail,$amount){
 			$to = $data['email'];
-			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><table cellspacing='4' width='420'>
+			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><br/><table cellspacing='4' width='420'>
     <tbody>
     <tr>
       <td width='200'><div align='right'><b>".$pdetail['name']."&nbsp;&nbsp;</b></div></td>
@@ -49,7 +49,7 @@
     </tr>
     <tr>
       <td width='200'><div align='right'><b>Amount&nbsp;&nbsp;</b></div></td>
-      <td width='202'>".$amount."&nbsp;</td>
+      <td width='202'>".$amount."&nbsp;Units</td>
     </tr>
     <tr>
       <td width='200'><div align='right'><b>&nbsp;</b></div></td>
@@ -61,7 +61,7 @@
     </tr>   
   </tbody>
 </table>
-			<br/><br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com";	
+			<br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com";	
 			$config = Array(
 				'protocol' => 'smtp',
 				'smtp_host' => 'ssl://smtp.googlemail.com',
