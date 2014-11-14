@@ -67,7 +67,8 @@
 			else{
 				$data = $this->session->userdata('username');
 				$this->load->model('Product_model');
-				if($this->Product_model->buyproduct($this->uri->segment(3),$this->uri->segment(4),$data['username'])){
+				$chk = $this->Product_model->buyproduct($this->uri->segment(3),$this->uri->segment(4),$data['username']);
+				if($chk){
 					$owner = $this->Product_model->getproductowner($this->uri->segment(3));
 					$this->load->model('member_model');	
 					$to = $this->member_model->memberDetail($owner);
