@@ -25,7 +25,7 @@ $('#sub').click(function(){
       </div>
       <div class="col-md-2"></div> 
       <form action="../../../../product/edit/<? echo $id; ?>" method="post" id="data" name="data" enctype="multipart/form-data">
-      <div class="col-md-4"> <a class="thumbnail" > <img src="../../../productPic/".pic1.".jpg"></a> 
+      <div class="col-md-4"> <a class="thumbnail" > <img src="../../../productPic/<? echo $pic1; ?>.jpg"></a> 
             	<input type="file" name="userfile" class="text-center center-block well well-sm"/>
       </div>
       <div class="col-md-4">
