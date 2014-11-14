@@ -3,8 +3,8 @@
 <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="back"> 
 
+<div class="back"> 
   <div class = "container">
     <div col-md-12>
       <div>
@@ -59,5 +59,6 @@
   <!-- Include all compiled plugins (below), or include individual files as needed --> 
   <script src="../../../../js/bootstrap.min.js"></script> 
 </div>
+
 </body>
 </html>
