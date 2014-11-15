@@ -62,6 +62,10 @@
                              </tr>
                              
                              <tr>
+                                 <td >&nbsp;</td>
+                             </tr> 
+                             
+                             <tr>
                                  <td class="h5"><strong>Detail</strong></td>
                                  <td> </td>
                                  <td><? echo $detail; ?></td>
