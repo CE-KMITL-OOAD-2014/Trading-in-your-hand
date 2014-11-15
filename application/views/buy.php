@@ -10,7 +10,7 @@
 });
 	function cal(){
 		
-		$('.back .modal-dialog .modal-content .modal-footer .text-right .sum span').html("This is what you want to change it to");
+		$('#sum span').html("This is what you want to change it to");
 	}
 
 </script>
@@ -80,7 +80,7 @@
           <input type="button" value="Buy" id="buy" class="btn btn-primary btn-block btn-lg" />
         </div>
         <div class="text-right pull-right col-md-3"> Summary: <br/>
-          <span class="availability sum">0 THB</span></div>
+          <span class="availability sum" id="sum">0 THB</span></div>
       </div>
     </div>
   </div>
