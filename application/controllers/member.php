@@ -7,7 +7,7 @@ class member extends CI_Controller {
 		$config = Array(
     		'protocol' => 'smtp',
    			'smtp_host' => 'ssl://smtp.outlook.com',
-    		'smtp_port' => 465,
+    		'smtp_port' => 587,
     		'smtp_user' => 'test2.trading.in.your.hand@outlook.com',
     		'smtp_pass' => 'pae123456',
     		'mailtype'  => 'html', 
