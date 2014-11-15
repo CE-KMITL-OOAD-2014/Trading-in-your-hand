@@ -119,6 +119,7 @@ function confirm(id){
           <div class='slide-footer'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>";
+		  echo"Owner :&nbsp;".$data[(($ppage*3)-2)]['username']."<br/>";
 		  if($num!=0)
 		  echo"<b>Price :</b> ".$data[(($ppage*3)-2)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-2)]['amount']."</div>";
 		  else echo"<b>Price :</b>      <b>Amount :</b> </div>";
@@ -148,6 +149,7 @@ function confirm(id){
           <div class='slide-footer'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>
+		  ".$data[(($ppage*3)-1)]['username']."<br/>
 		  <b>Price :</b> ".$data[(($ppage*3)-1)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-1)]['amount']."</div>";
 		  echo"<span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
@@ -176,6 +178,7 @@ function confirm(id){
           <div class='slide-footer'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>
+		  ".$data[(($ppage*3))]['username']."<br/>
 		  <b>Price :</b> ".$data[($ppage*3)]['price']."     <b>Amount :</b> ".$data[($ppage*3)]['amount']."</div>";
 		  echo"<span class='pull-right buttons'>
             <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>

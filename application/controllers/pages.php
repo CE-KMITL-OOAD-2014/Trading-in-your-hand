@@ -98,15 +98,7 @@ class pages extends CI_Controller {
 		window.location.href = '../../../pages';
 	</script>";
 	}
-	public function displayproduct(){
-		$this->load->model('Product_model');	
-		$data = $this->Product_model->getproductdetail();
-		$this->load->helper('body.php');
-		$this->load->view('header.php');
-		$this->load->view('space.php');
-		$this->load->view('display_product.php',$data);
-		$this->load->view('footer.php');
-	}
+
 	public function message(){
 		$data['page'] = "Message"; 
 		$this->load->helper('body.php');
