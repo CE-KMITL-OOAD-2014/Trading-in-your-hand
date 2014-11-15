@@ -56,7 +56,7 @@
           <div class="caption">
             <h4><? echo"".$data[1]['name']; ?></h4>
             <p><? echo"".$data[1]['detail']; ?></p>
-            <p><a href="../../pages/login" class="btn btn-info btn-xs" role="button">Buy</a> <a href="#" class="btn btn-default btn-xs" role="button">View</a></p>
+            <p><? echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[1]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>"; ?></p>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
           <div class="caption">
             <h4><? echo"".$data[2]['name']; ?></h4>
             <p><? echo"".$data[2]['detail']; ?></p>
-            <p><a href="../../pages/login" class="btn btn-info btn-xs" role="button">Buy</a> <a href="#" class="btn btn-default btn-xs" role="button">View</a></p>
+            <p><? echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[2]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>"; ?></p>
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@
           <div class="caption">
             <h4><? echo"".$data[3]['name']; ?></h4>
             <p><? echo"".$data[3]['detail']; ?></p>
-            <p><a href="../../pages/login" class="btn btn-info btn-xs" role="button">Buy</a> <a href="#" class="btn btn-default btn-xs" role="button">View</a></p>
+            <p><? echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[3]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>"; ?></p>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@
           <div class="caption">
             <h4><? echo"".$data[4]['name']; ?></h4>
             <p><? echo"".$data[4]['detail']; ?></p>
-            <p><a href="../../pages/login" class="btn btn-info btn-xs" role="button">Buy</a> <a href="#" class="btn btn-default btn-xs" role="button">View</a></p>
+            <p><? echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[4]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>"; ?></p>
           </div>
         </div>
       </div>
