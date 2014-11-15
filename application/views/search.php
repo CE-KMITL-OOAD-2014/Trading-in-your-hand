@@ -140,8 +140,7 @@ function confirm(id){
           <div class='slide-content'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'> 
-		  <b>Type :</b>&nbsp;".$data[(($ppage*3))-1]['type']."<br/>
-            <h4>".$data[(($ppage*3)-1)]['name']."</h4>
+		    <h4>".$data[(($ppage*3)-1)]['name']."</h4>
             <p>".$data[(($ppage*3)-1)]['detail']."</p>
 			<b>Type :</b>&nbsp;".$data[(($ppage*3)-1)]['type']."<br/>
 			</div>
@@ -169,7 +168,6 @@ function confirm(id){
           <div class='slide-content'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'> 
-		   <b>Type :</b>&nbsp;".$data[(($ppage*3))]['type']."<br/>
             <h4>".$data[($ppage*3)]['name']."</h4>
             <p>".$data[($ppage*3)]['detail']."</p>
 			<b>Type :</b>&nbsp;".$data[(($ppage*3))]['type']."<br/>
