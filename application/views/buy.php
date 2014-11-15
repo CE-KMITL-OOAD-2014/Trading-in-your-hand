@@ -3,6 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
+
+<script>
+  $(document).ready(function () {
+   $("#amount").keyup(cal);
+});
+	function cal(){
+		
+	}
+
+</script>
 <body>
 <div class = "back">
 
@@ -61,6 +71,13 @@
                                  <td ><? echo $detail; ?></td>
                              </tr>                            
                             
+                            <tr>
+                                 <td class="h5"><strong>Amount</strong></td>
+                                 <td> </td>
+                                 <td class="h4"><label for="Amount" class="sr-only">Amount</label>
+            <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" required autofocus></td>
+                             </tr> 
+                            
                              <tr>
                                  <td class="h5"></td>
                              </tr> 
@@ -80,13 +97,12 @@
                   <div class="modal-footer">       
                       
                     <div class="text-right pull-right col-md-3">
-                        Varejo: <br/> 
+                        Summary: <br/> 
                         <span class="h3 text-muted"><strong> R$50,00 </strong></span></span> 
                     </div> 
                       
                     <div class="text-right pull-right col-md-3">
-                        Atacado: <br/> 
-                        <span class="h3 text-muted"><strong>R$35,00</strong></span>
+                        <input type="button" value="Buy" id="buy" class="btn btn-primary btn-block btn-lg">
                     </div>
                      
                 </div>
