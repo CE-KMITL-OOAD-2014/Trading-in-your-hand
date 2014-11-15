@@ -5,11 +5,12 @@
 </head>
 <body>
 	<div class="back">
+    <div class="container">
     <h2>About us</h2>
     <p>Trading in your hand</p><br/>
     <p><b>Admin :</b>iam.pae0@gmail.com</p>
     <p><b>Co-Admin :</b>nvb_kukuku@hotmail.com</p>
     <p></p>
-    </div>
+    </div></div>
 </body>
 </html>
