@@ -42,7 +42,7 @@
 					$temp = $this->Product_model->getproductdetail($this->uri->segment(3));
 					$fname = $temp['pic1'];
 					$config =  array(
-						  'file_name'		=> $fname.".jpg",
+						  'file_name'		=> $fname,
 						  'upload_path'     => "./productPic/",
 						  'allowed_types'   => "gif|jpg|png|jpeg",
 						  'overwrite'       => TRUE,
@@ -121,6 +121,7 @@
 					$this->load->model('member_model');	
 					$to = $this->member_model->memberDetail($detail);
 					$this->send_mail($to,$data,$detail,$amount);
+					$logtran
 					echo"<script language='javascript'>
     window.location.href = '../../../pages/member/".$data['username']."';
 </script>";
