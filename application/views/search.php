@@ -208,7 +208,6 @@ function confirm(id){
 	  echo"<div class='text-center'><ul class='pagination pagination-large'>";	
 		if($ppage!=1)
 			echo"<li><a href='../../../../pages/search/".$type."/".$name."/".($ppage-1)."' rel='prev'>&laquo;</a></li>";	
-			
 		if($numpage>=(5*$x)+2){	
 		if($ppage%5 == 1)echo"<li class='active'><span>".$ppage."</span></li>";
 		else echo"<li><a href='../../../../pages/search/".$type."/".$name."/". (($now*5)-4) ."'>". (($now*5)-4) ."</a></li>";
