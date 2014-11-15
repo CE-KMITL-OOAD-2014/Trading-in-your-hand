@@ -59,7 +59,8 @@
 			$this->db->delete('product', array('id' => $id)); 
 			$data = $this->getproductdetail($id);
 			$path_to_file = "../../../../../productPic/".$data['pic1'].".jpg";
-			unlink($path_to_file);
+			$this->load->helper("file");
+			delete_files($path_to_file);
 		}
 	}
 ?>
