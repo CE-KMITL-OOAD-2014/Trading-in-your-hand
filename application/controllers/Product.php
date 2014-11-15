@@ -121,7 +121,7 @@
 					$this->load->model('member_model');	
 					$to = $this->member_model->memberDetail($detail);
 					$this->send_mail($to,$data,$detail,$amount);
-					$logtran
+					//
 					echo"<script language='javascript'>
     window.location.href = '../../../pages/member/".$data['username']."';
 </script>";
