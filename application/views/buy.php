@@ -17,6 +17,13 @@
 		str = str.concat(" THB");
 		$('#sum').text(str);
 	}
+	function buy(){
+		var amount = $("#amount").val();
+		var id = <? echo $id; ?>;
+		var direct = "../../../../product/";
+		direct = direct.concat(id.concat(amount));
+		window.location.href = direct;
+	}
 
 </script>
 <body>
@@ -82,10 +89,10 @@
       </div>
       <div class="modal-footer">
         <div class="text-right pull-right col-md-3">
-          <input type="button" value="Buy" id="buy" class="btn btn-primary btn-block btn-lg" />
+          <input type="button" value="Buy" id="buy" class="btn btn-primary btn-block btn-lg" onclick="buy()" /></a>
         </div>
         <div class="text-right pull-right col-md-3"> Summary: <br/>
-          <span class="availability sum" id="sum">0 THB</span></div>
+          <strong><span class="availability sum" id="sum">0 THB</span></strong></div>
       </div>
     </div>
   </div>
