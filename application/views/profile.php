@@ -250,14 +250,14 @@ if($this->session->userdata('username')){
     if($isScore&&$this->session->userdata('username'))
 		if($score != "0"){
 			echo"<form action='../../../../member/givestar/'".$this->uri->segment(3)." method='post'><select class='form-control' id='score' name='score'>
-            <option selected='true' style='display:none;'>Rate me</option>
+            <div class='row'><option selected='true' style='display:none;'>Rate me</option>
     		<option>1</option>
     		<option>2</option>
 			<option>3</option>
 			<option>4</option>
 			<option>5</option>
 		</select>
-		<input type='submit' value='Submit'/>
+		<input type='submit' value='Submit'/></div>
 		</form>";
 		}
 	?>
