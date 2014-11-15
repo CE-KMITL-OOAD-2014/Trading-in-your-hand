@@ -11,7 +11,11 @@
 	function cal(){
 		var amount = $("#amount").val();
 		var price = <? echo $price; ?>
-		$('#sum').html("<strong>".amount*price." THB</strong>");
+		sum = amount*price;
+		str = "";
+		str = str.concat(sum);
+		str = str.concat(" THB");
+		$('#sum').text(str);
 	}
 
 </script>
