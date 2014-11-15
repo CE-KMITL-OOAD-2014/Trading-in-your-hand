@@ -208,7 +208,7 @@ function confirm(id){
 					if($ppage%5 == 4)echo"<li class='active'><span>".$ppage."</span></li>";
 					else echo"<li><a href='../../../../pages/search/".$type."/".$name."/". (($now*5)-1) ."'>". (($now*5)-1) ."</a></li>";
 					if($numpage>=5){
-						if($ppage%5 == 5)echo"<li class='active'><span>".$ppage."</span></li>";
+						if($ppage%5 == 0)echo"<li class='active'><span>".$ppage."</span></li>";
 						else echo"<li><a href='../../../../pages/search/".$type."/".$name."/". ($now*5) ."'>". ($now*5) ."</a></li>";
 					
 		}}}}
