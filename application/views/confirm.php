@@ -20,7 +20,7 @@
 			$sess = $this->session->all_userdata();
 			echo"<h1>Enter confirmation code</h1>"; ?>
             <p>it's just been a while...</p>
-As an added account security measure, you'll need to grant access to this browser by entering the special code we've just sent to your email address.
+As an added account security measure, you'll need to grant access to this browser by entering the special code we've just sent to your email address.<br/>
             <form action="<? 
 			if(!$this->session->userdata('login2'))
 				echo"../../member/register2way";
