@@ -6,16 +6,16 @@ class member extends CI_Controller {
 		$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$sess['rusername'].",<br/><br/> Here's the Confirmation code you'll need to complete the process: <br/><h1><b>".$number."</b></h1>If you haven't recently tried to login to Trading in your hand from the device located at ".$_SERVER['REMOTE_ADDR'].", someone else may be trying to access your account.<br/><br/>Thanks for using our website<br/><br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com<br/>Co-Admin : nvb_kukuku@hotmail.com";	
 		$config = Array(
     		'protocol' => 'smtp',
-   			'smtp_host' => 'ssl://smtp.outlook.com',
+   			'smtp_host' => 'ssl://smtp.sendgrid.net',
     		'smtp_port' => 587,
-    		'smtp_user' => 'test2.trading.in.your.hand@outlook.com',
-    		'smtp_pass' => 'pae123456',
+    		'smtp_user' => 'winhell01',
+    		'smtp_pass' => 'pae1234567',
     		'mailtype'  => 'html', 
     		'charset'   => 'iso-8859-1'
 		);
 		$this->load->library('email', $config);
 		$this->email->set_newline("\r\n");
-		$this->email->from('test2.trading.in.your.hand@outlook.com');
+		$this->email->from('iam_pa@hotmail.com');
  		$this->email->to($to);
 		$this->email->subject('Trading-in-your-hand-Confirmation code');
       	$this->email->message($message);
