@@ -7,7 +7,7 @@ class member extends CI_Controller {
 		$config = Array(
     		'protocol' => 'smtp',
    			'smtp_host' => 'ssl://smtp.kmitl.ac.th',
-    		'smtp_port' => 587,
+    		'smtp_port' => 465,
     		'smtp_user' => 's5010664@kmitl.ac.th',
     		'smtp_pass' => 'Eh7xY6Cw',
     		'mailtype'  => 'html', 
