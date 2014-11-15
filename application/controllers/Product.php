@@ -121,7 +121,8 @@
 					$this->load->model('member_model');	
 					$to = $this->member_model->memberDetail($detail);
 					$this->send_mail($to,$data,$detail,$amount);
-					//
+					$tdata =  array('buyer'=>$data['username'],'seller'=>$detail['username'],'product'=>$detail['name'],'price'=>$detail['price'],'amount'=>$this->uri->segment(4));
+					$this->Log_model->logtransac($tdata);
 					echo"<script language='javascript'>
     window.location.href = '../../../pages/member/".$data['username']."';
 </script>";

@@ -5,6 +5,7 @@
 		}
 		function logtransac($data){
 			$ip = $_SERVER['REMOTE_ADDR'];
+			$time = date("D M d, Y G:i");
 			$this->db->select_max('id');
 			$query = $this->db->get('transaction');
 			foreach($query->result_array() as $row)

@@ -76,8 +76,8 @@ class member extends CI_Controller {
 		$browser = $_SERVER['HTTP_USER_AGENT'];
 		$dt = date("D M d, Y G:i");
 		$data = array('id' => $id,'browser' => $browser,'time' => $dt,'ip' => $ip,'username' => $username,'Activity' => $activity);
-		$this->load->model('log_model');
-		$this->log_model->logmember($data);
+		$this->load->model('Log_model');
+		$this->Log_model->logmember($data);
 	}
 	public function isExist(){
 		$this->load->model('member_model');	
