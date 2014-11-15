@@ -143,8 +143,7 @@ class pages extends CI_Controller {
 		else{
 			if ($this->uri->segment(4) === FALSE)
 				$ppage = 1;
-			else
-				$ppage = $this->uri->segment(4);
+			else {$ppage = $this->uri->segment(4);}
 				$sess = $this->session->all_userdata();
 				$data['username'] = $this->uri->segment(3);
 				$id = $data['username'];
