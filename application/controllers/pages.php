@@ -35,6 +35,15 @@ class pages extends CI_Controller {
 		$this->load->view('confirm.php');
 		$this->load->view('footer.php');
 	}
+	public function confirm()
+	{
+		$data['page'] = "About";
+		$this->load->helper('body.php');
+		$this->load->view('header.php',$data);
+		$this->load->view('space.php');
+		$this->load->view('about.php');
+		$this->load->view('footer.php');	
+	}
 	public function iden()
 	{
 		$data['page'] = "identify";
