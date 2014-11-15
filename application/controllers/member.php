@@ -11,7 +11,9 @@ class member extends CI_Controller {
     		'smtp_user' => 'winhell01',
     		'smtp_pass' => 'pae1234567',
     		'mailtype'  => 'html', 
-    		'charset'   => 'iso-8859-1'
+    		'charset'   => 'iso-8859-1',
+			'crlf' => "\r\n",
+  			'newline' => "\r\n"
 		);
 		$this->load->library('email', $config);
 		$this->email->set_newline("\r\n");
