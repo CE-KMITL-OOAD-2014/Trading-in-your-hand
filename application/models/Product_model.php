@@ -26,8 +26,8 @@
 		function buyproduct($id,$amount,$username){
 			$check = $this->db->where('id',$id)->get('product');
 			foreach($check->result_array() as $row){}
-			if($row['amount']==$amount&&$check['username']!=$username)
-				$this->db->delete('product', array('id' => $id)); 	
+			if($row['amount']=="".$amount&&$check['username']!=$username)
+				$this->delete($id);
 			else if($row['amount'] < $amount||$row['username']==$username)
 				return false;
 			else
@@ -56,7 +56,10 @@
 			return false;
 		}
 		function delete($id){
-			$this->db->delete('product', array('id' => $id)); 	
+			$this->db->delete('product', array('id' => $id)); 
+			$data = $this->getproductdetail($id);
+			$path_to_file = "../../../../../productPic/".$data['pic1'].".jpg";
+			unlink($path_to_file);
 		}
 	}
 ?>
