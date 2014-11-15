@@ -18,8 +18,9 @@
 		$('#sum').text(str);
 	}
 	function buy(){
-		
-		window.location.href = "../";
+		var amount = $("#amount").val();
+		var id = <? echo $id; ?>;
+		window.location.href = "../../../../product/".concat(id);
 	}
 
 </script>
