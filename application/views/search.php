@@ -188,7 +188,10 @@ function confirm(id){
         <!--class row--> 
       </div>
       <?
-	  $x = floor($ppage);
+	if((round($ppage/5)-$ppage/5)<0.5)
+	 	$x = round($ppage/5)-1;
+	else
+		$x = round($ppage/5)-1;
 	  $now = $ppage/5 - round($ppage/5);
 	  if($now>0)
 	  	$now = round($ppage/5)+1;
