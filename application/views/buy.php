@@ -10,7 +10,7 @@
 });
 	function cal(){
 		
-		$('#sum span').html("This is what you want to change it to");
+		$('#sum').html("This is what you want to change it to");
 	}
 
 </script>
