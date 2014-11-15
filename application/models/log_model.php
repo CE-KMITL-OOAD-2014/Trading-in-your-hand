@@ -1,10 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
-
-<body>
-</body>
-</html>
+<?php
+	class Log_model extends CI_Model{	
+		function logmember($data){
+				$this->db->insert('log',$data);
+		}
+		function logtransac($data){
+			$ip = $_SERVER['REMOTE_ADDR'];
+			$this->db->select_max('id');
+			$query = $this->db->get('transaction');
+			foreach($query->result_array() as $row)
+				$id = $row['id']+1;
+			$data = array('id'=>$id,'buyer'=>$data['buyer'],'seller'=>$data['seller'],'product'=>$data['product'],'price'=>$data['price'],'amount'=>$data['amount'],'time'=>$time,'ip'=>$ip,'isScore'=>"0");
+			$this->db->insert('transaction',$data);
+		}
+	}
+?>

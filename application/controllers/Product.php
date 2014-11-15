@@ -42,7 +42,7 @@
 					$temp = $this->Product_model->getproductdetail($this->uri->segment(3));
 					$fname = $temp['pic1'];
 					$config =  array(
-						  'file_name'		=> $fname,
+						  'file_name'		=> $fname.".jpg",
 						  'upload_path'     => "./productPic/",
 						  'allowed_types'   => "gif|jpg|png|jpeg",
 						  'overwrite'       => TRUE,
@@ -113,6 +113,7 @@
 			else{
 				$data = $this->session->all_userdata();
 				$this->load->model('Product_model');
+				$this->load->model('Log_model');
 				$id = $this->uri->segment(3);
 				$amount = $this->uri->segment(4);
 				if($this->Product_model->buyproduct($id,$amount,$data['username'])){
@@ -123,10 +124,12 @@
 					echo"<script language='javascript'>
     window.location.href = '../../../pages/member/".$data['username']."';
 </script>";
-					echo"sucsess";
 				}
 				else
-					echo"fail";
+					echo"<script language='javascript'>
+					alert('Buy failed');
+    				window.location.href = '../../../pages/';
+					</script>";
 			}
 		}
 		function add(){
@@ -139,7 +142,7 @@
 			$fname  =  md5($sess['username'].date("D M d, Y G:i").$id);
 			echo $fname;
 			$config =  array(
-				  'file_name'		=> $fname,
+				  'file_name'		=> $fname."jpg",
                   'upload_path'     => "./productPic/",
                   'allowed_types'   => "gif|jpg|png|jpeg",
                   'overwrite'       => TRUE,

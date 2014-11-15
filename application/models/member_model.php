@@ -15,9 +15,6 @@
 					return true;
 				return false;
 			}
-			function genlog($data){
-				$this->db->insert('log',$data);
-			}
 			function getmessage(){
 				$data = $this->session->all_userdata();
 				$mdata = $this->db->where('receiver',$data['username'])->get('message');
