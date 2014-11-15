@@ -123,9 +123,7 @@ function confirm(id){
 		  if($num!=0)
 		  echo"<b>Price :</b> ".$data[(($ppage*3)-2)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-2)]['amount']."</div>";
 		  else echo"<b>Price :</b>      <b>Amount :</b> </div>";
-		  echo" <span class='pull-right buttons'>
-            <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
-            ";
+		  echo" <span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username']&&$num!=0)
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-2)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			else if($num!=0)
@@ -151,9 +149,7 @@ function confirm(id){
 		  <div class='col-md-5'>
 		  <b>Owner :</b>&nbsp;".$data[(($ppage*3)-1)]['username']."<br/>
 		  <b>Price :</b> ".$data[(($ppage*3)-1)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-1)]['amount']."</div>";
-		  echo"<span class='pull-right buttons'>
-            <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
-            ";
+		  echo"<span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username'])
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-1)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			else
@@ -180,9 +176,7 @@ function confirm(id){
 		  <div class='col-md-5'>
 		  <b>Owner :</b>&nbsp;".$data[(($ppage*3))]['username']."<br/>
 		  <b>Price :</b> ".$data[($ppage*3)]['price']."     <b>Amount :</b> ".$data[($ppage*3)]['amount']."</div>";
-		  echo"<span class='pull-right buttons'>
-            <button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>
-            ";
+		  echo"<span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username'])
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[($ppage*3)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			else
