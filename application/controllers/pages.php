@@ -184,7 +184,7 @@ class pages extends CI_Controller {
 			$data = $this->session->all_userdata();
 			$id = $data['username'];		
 			if ($this->uri->segment(3) === FALSE)
-				echo"<script language='javascript'>
+				echo"<script language='javascript'
 		window.location.href = '../../../pages/member/".$data['username']."';
 	</script>";
 			else{
@@ -200,6 +200,7 @@ class pages extends CI_Controller {
 		}
 		else
 			echo"<script language='javascript'>
+			alert('Please Log in before');
 		window.location.href = '../../../pages';
 	</script>";
 	}
