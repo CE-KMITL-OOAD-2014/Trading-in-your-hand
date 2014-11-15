@@ -189,16 +189,16 @@ function confirm(id){
       </div>
       <?
 	if($ppage%5==1)
-		$x = $ppage-1;
+		$c = $ppage+4;
 	if($ppage%5==2)
-		$x = $ppage-2;
+		$c = $ppage+3;
 	if($ppage%5==3)
-		$x = $ppage-3;
+		$c = $ppage+2;
 	if($ppage%5==4)
-		$x = $ppage-4;
+		$c = $ppage+1;
 	if($ppage%5==0)
-		$x = $ppage-0;
-		
+		$c = $ppage;
+	$x = ($c/5)-1;
 		
 	  $now = $ppage/5 - round($ppage/5);
 	  if($now>0)
