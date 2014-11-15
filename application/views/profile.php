@@ -280,7 +280,7 @@ if($this->session->userdata('username')){
 		  <div class='col-md-5'>"; 
 		  if($num!=0)
 		  echo"<h4>".$data[(($ppage*3)-2)]['name']."</h4><p>".$data[(($ppage*3)-2)]['detail']."</p><b>Type :</b>&nbsp;".$data[(($ppage*3)-2)]['type']."<br/>";
-		  else echo"<h4>Example product</h4><p>Detail of this product</p>";
+		  else echo"<h4>I don't have any product.</h4><p></p>";
 		  echo"</div>
           </div>
           <div class='slide-footer'>

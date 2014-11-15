@@ -113,16 +113,16 @@ function confirm(id){
 		  <div class='col-md-5'>"; 
 		  if($num!=0)
 		  echo"<h4>".$data[(($ppage*3)-2)]['name']."</h4><p>".$data[(($ppage*3)-2)]['detail']."</p><b>Type :</b>&nbsp;".$data[(($ppage*3)-2)]['type']."<br/>";
-		  else echo"<h4>Example product</h4><p>Detail of this product</p>";
+		  else echo"<h4>Product not found.</h4><p>Sorry , We don't found any product.</p>";
 		  echo"</div>
           </div>
           <div class='slide-footer'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>";
+		  if($num!=0){
 		  echo"<b>Owner :</b>&nbsp;".$data[(($ppage*3)-2)]['username']."<br/>";
-		  if($num!=0)
 		  echo"<b>Price :</b> ".$data[(($ppage*3)-2)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-2)]['amount']."</div>";
-		  else echo"<b>Price :</b>      <b>Amount :</b> </div>";
+		  }else echo"<b>Price :</b>      <b>Amount :</b> </div>";
 		  echo" <span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username']&&$num!=0)
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-2)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
