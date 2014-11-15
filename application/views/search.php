@@ -129,7 +129,7 @@ function confirm(id){
 			if($this->session->userdata('username')&&$id==$sess['username']&&$num!=0)
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-2)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			else if($num!=0)
-				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+				echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[(($ppage*3)-2)]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>";
             echo"</span> </div></div>";
          //////////////////////////////
 		 if($num >= (($ppage*3)-1)){
@@ -157,7 +157,7 @@ function confirm(id){
 			if($this->session->userdata('username')&&$id==$sess['username'])
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-1)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			else
-				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+				echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[(($ppage*3)-1)]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>";
             echo"</span> </div></div>";
 			}
          //////////////////
@@ -186,7 +186,7 @@ function confirm(id){
 			if($this->session->userdata('username')&&$id==$sess['username'])
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[($ppage*3)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			else
-				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+				echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[(($ppage*3))]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>";
             echo"</span> </div></div>";}
           ?>
         <!--class row--> 
