@@ -36,8 +36,7 @@
 				$this->db->where('username',$data['username'])->set('name',$data['name'])->set('sname',$data['sname'])->set('about',$data['about'])->set('email',$data['email'])->set('address',$data['address'])->set('facebook',$data['facebook'])->set('twitter',$data['twitter'])->set('googleplus',$data['googleplus'])->set('github',$data['github'])->update('member');
 			}
 			function getstatusscore($name){
-				$sess = $this->session->all_userdata();
-				$tScore = $this->db->where('isScore !=',0)->where('buyer',$sess['username'])->where('seller',$name)->count_all_results('transac');
+				$tScore = $this->db->where('isScore !=',0)->where('buyer',$name['buy'])->where('seller',$name['sell'])->count_all_results('transac');
 				return $tScore;
 			}
 		}

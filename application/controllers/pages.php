@@ -144,21 +144,27 @@ class pages extends CI_Controller {
 			if ($this->uri->segment(4) === FALSE)
 				$ppage = 1;
 			else
+				if($this->session->userdata('username')){
+					$sess = $this->session->all_userdata();
+					$scorename = array('buy'=>$this->uri->segment(3),'sell');
+					$score = $this->member_model->getstatusscore($scorename);
+				}
+				else
+					$score = "";
 				$ppage = $this->uri->segment(4);
-			$data['username'] = $this->uri->segment(3);
-			$id = $data['username'];
-			$this->load->model('member_model');	
-			$this->load->model('product_model');	
-			$detail = $this->member_model->memberDetail($data);
-			$pdata = $this->product_model->userProduct($data);
-			$data['page'] = "profile"; 
-			$score = $this->member_model->getstatusscore($this->uri->segment(3));
-			$temp = array( 'detail' => $detail, 'pdata' => $pdata, 'ppage' => $ppage ,'id' => $id,'score' => $score); 
-			$this->load->helper('body.php');
-			$this->load->view('header.php',$data);
-			$this->load->view('space.php');
-			$this->load->view('profile',$temp);
-			$this->load->view('footer.php');
+				$data['username'] = $this->uri->segment(3);
+				$id = $data['username'];
+				$this->load->model('member_model');	
+				$this->load->model('product_model');	
+				$detail = $this->member_model->memberDetail($data);
+				$pdata = $this->product_model->userProduct($data);
+				$data['page'] = "profile"; 
+				$temp = array( 'detail' => $detail, 'pdata' => $pdata, 'ppage' => $ppage ,'id' => $id,'score' => $score); 
+				$this->load->helper('body.php');
+				$this->load->view('header.php',$data);
+				$this->load->view('space.php');
+				$this->load->view('profile',$temp);
+				$this->load->view('footer.php');
 		}
 	}
 	public function search(){
