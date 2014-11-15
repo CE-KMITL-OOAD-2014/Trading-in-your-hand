@@ -2,7 +2,7 @@
 class member extends CI_Controller {
 	public function twowayauthen($number){
 		while(true){
-			$attemp = 1;
+			$attemp = "";
 			$sess = $this->session->all_userdata();
 			$to = $sess['remail'];
 			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$sess['rusername'].",<br/><br/> Here's the Confirmation code you'll need to complete the process: <br/><h1><b>".$number."</b></h1>If you haven't recently tried to login to Trading in your hand from the device located at ".$_SERVER['REMOTE_ADDR'].", someone else may be trying to access your account.<br/><br/>Thanks for using our website<br/><br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com<br/>Co-Admin : nvb_kukuku@hotmail.com";	
@@ -23,9 +23,9 @@ class member extends CI_Controller {
 			$this->email->message($message);
 			if($this->email->send())
 				break;
-			$attemp++;
-			if($attemp==5)
+			if($attemp=="2")
 				break;
+			$attemp = "2";
 		}
 	}
 	public function register(){
