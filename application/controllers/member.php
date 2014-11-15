@@ -23,6 +23,9 @@ class member extends CI_Controller {
 			$this->email->message($message);
 			if($this->email->send())
 				break;
+			$attemp++;
+			if($attemp==5)
+				break;
 		}
 	}
 	public function register(){
