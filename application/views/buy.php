@@ -46,19 +46,19 @@
                              </tr>
                              
                              <tr>
-                                 <td class="h6"><strong>Available</strong></td>
+                                 <td class="h5"><strong>Available</strong></td>
                                  <td> </td>
-                                 <td class="h5"><? echo $amount; ?></td>
+                                 <td class="h4"><? echo $amount; ?></td>
                              </tr>
                              
                              <tr>
-                                 <td class="h6"><strong>Detail</strong></td>
+                                 <td class="h5"><strong>Detail</strong></td>
                                  <td> </td>
-                                 <td class="h5"></td>
+                                 <td class="h4"></td>
                              </tr>  
 
                              <tr>
-                                 <td class="h5"><strong><? echo $detail; ?></strong></td>
+                                 <td class="h4"><? echo $detail; ?></td>
                              </tr>                            
                             
                              <tr>
