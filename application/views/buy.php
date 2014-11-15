@@ -58,7 +58,7 @@
                              </tr>  
 
                              <tr>
-                                 <td class="h4"><? echo $detail; ?></td>
+                                 <td ><? echo $detail; ?></td>
                              </tr>                            
                             
                              <tr>
