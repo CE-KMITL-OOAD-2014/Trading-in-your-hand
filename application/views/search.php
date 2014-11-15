@@ -120,7 +120,7 @@ function confirm(id){
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>";
 		  if($num!=0){
-		  echo"<b>Owner :</b>&nbsp;<a href='pages/member/".$data[(($ppage*3)-2)]['username']."'>".$data[(($ppage*3)-2)]['username']."</a>";
+		  echo"<b>Owner :</b>&nbsp;<a href='../../../../../pages/member/".$data[(($ppage*3)-2)]['username']."'>".$data[(($ppage*3)-2)]['username']."</a><br/>";
 		  echo"<b>Price :</b> ".$data[(($ppage*3)-2)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-2)]['amount']."</div>";
 		  }
 		  echo" <span class='pull-right buttons'>";
@@ -148,7 +148,7 @@ function confirm(id){
           <div class='slide-footer'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>
-		  <b>Owner :</b>&nbsp;<a hef='../../../../pages/member/".$data[(($ppage*3)-1)]['username']."'>".$data[(($ppage*3)-1)]['username']."</a><br/>
+		  <b>Owner :</b>&nbsp;<a href='../../../../../pages/member/".$data[(($ppage*3)-1)]['username']."'>".$data[(($ppage*3)-1)]['username']."</a><br/>
 		  <b>Price :</b> ".$data[(($ppage*3)-1)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-1)]['amount']."</div>";
 		  echo"<span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username'])
@@ -176,7 +176,7 @@ function confirm(id){
           <div class='slide-footer'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>
-		  <b>Owner :</b>&nbsp;<a hef='../../../../pages/member/".$data[(($ppage*3))]['username']."'>".$data[(($ppage*3))]['username']."</a><br/>
+		  <b>Owner :</b>&nbsp;<a href='../../../../../pages/member/".$data[(($ppage*3))]['username']."'>".$data[(($ppage*3))]['username']."</a><br/>
 		  <b>Price :</b> ".$data[($ppage*3)]['price']."     <b>Amount :</b> ".$data[($ppage*3)]['amount']."</div>";
 		  echo"<span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username'])
