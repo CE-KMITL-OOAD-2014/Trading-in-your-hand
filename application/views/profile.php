@@ -249,14 +249,16 @@ if($this->session->userdata('username')){
 		echo"<a href='../../../pages/iden'><button class='btn btn-success'> Become a seller</button></a>";
     if($isScore&&$this->session->userdata('username'))
 		if($score != "0"){
-			echo"<select class='form-control' id='score' name='score'>
+			echo"<form action='../../../../member/givestar/'".$this->uri->segment(3)." method='post'><select class='form-control' id='score' name='score'>
             <option selected='true' style='display:none;'>Rate me</option>
     		<option>1</option>
     		<option>2</option>
 			<option>3</option>
 			<option>4</option>
 			<option>5</option>
-		</select>";
+		</select>
+		<input type='submit' value='Submit'/>
+		</form>";
 		}
 	?>
     </div>
