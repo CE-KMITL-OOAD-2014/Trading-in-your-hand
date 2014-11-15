@@ -18,62 +18,48 @@
                     <table class="pull-left col-md-8 ">
                          <tbody>
                              <tr>
-                                 <td class="h6"><strong>ID</strong></td>
+                                 <td class="h5"><strong>ID</strong></td>
                                  <td> </td>
-                                 <td class="h5"><? echo $id; ?></td>
+                                 <td class="h4"><? echo $id; ?></td>
                              </tr>
                              
                               
                              
                              <tr>
-                                 <td class="h6"><strong>Name</strong></td>
+                                 <td class="h5"><strong>Name</strong></td>
                                  <td> </td>
-                                 <td class="h5"><? echo $name; ?></td>
+                                 <td class="h4"><? echo $name; ?></td>
                              </tr>
                              
                               
                              
                              <tr>
-                                 <td class="h6"><strong>Owner</strong></td>
+                                 <td class="h5"><strong>Owner</strong></td>
                                  <td> </td>
-                                 <td class="h5"><? echo $username; ?></td>
+                                 <td class="h4"><? echo $username; ?></td>
                              </tr>
                              
                              <tr>
-                                 <td class="h6"><strong>Número Original</strong></td>
+                                 <td class="h5"><strong>Price</strong></td>
                                  <td> </td>
-                                 <td class="h5">0230316</td>
+                                 <td class="h4"><? echo $price; ?></td>
                              </tr>
                              
                              <tr>
-                                 <td class="h6"><strong>Código N.C.M</strong></td>
+                                 <td class="h6"><strong>Available</strong></td>
                                  <td> </td>
-                                 <td class="h5">032165</td>
+                                 <td class="h5"><? echo $amount; ?></td>
                              </tr>
                              
                              <tr>
-                                 <td class="h6"><strong>Código de Barras</strong></td>
+                                 <td class="h6"><strong>Detail</strong></td>
                                  <td> </td>
-                                 <td class="h5">0321649843</td>
+                                 <td class="h5"></td>
                              </tr>  
 
                              <tr>
-                                 <td class="h6"><strong>Unid. por Embalagem</strong></td>
-                                 <td> </td>
-                                 <td class="h5">50</td>
+                                 <td class="h5"><strong>fhdfhggdfhfhgfhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhdg</strong></td>
                              </tr>                            
-
-                             <tr>
-                                 <td class="h6"><strong>Quantidade Mínima</strong></td>
-                                 <td> </td>
-                                 <td class="h5">50</td>
-                             </tr>
-
-                             <tr>
-                                 <td class="h6"><strong>Preço Atacado</strong></td>
-                                 <td> </td>
-                                 <td class="h5">R$ 35,00</td>
-                             </tr> 
                             
                              <tr>
                                  <td class="h5"></td>
