@@ -122,7 +122,7 @@ function confirm(id){
 		  if($num!=0){
 		  echo"<b>Owner :</b>&nbsp;".$data[(($ppage*3)-2)]['username']."<br/>";
 		  echo"<b>Price :</b> ".$data[(($ppage*3)-2)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-2)]['amount']."</div>";
-		  }else echo"<b>Price :</b>      <b>Amount :</b> </div>";
+		  }
 		  echo" <span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username']&&$num!=0)
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-2)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";

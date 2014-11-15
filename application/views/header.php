@@ -24,7 +24,7 @@ else
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <form class="navbar-form navbar-left" role="search" onKeyPress="return event.keyCode != 13;">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search for product, member" id="searchname" name="searchname">
+            <input type="text" class="form-control" placeholder="Search product, member" id="searchname" name="searchname">
           </div>
           <label style="color:#FFF">Search in</label>
         </form>

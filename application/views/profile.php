@@ -288,7 +288,6 @@ if($this->session->userdata('username')){
 		  <div class='col-md-5'>";
 		  if($num!=0)
 		  echo"<b>Price :</b> ".$data[(($ppage*3)-2)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-2)]['amount']."</div>";
-		  else echo"<b>Price :</b>      <b>Amount :</b> </div>";
 		  echo"<span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username']){
 				if($num!=0){
