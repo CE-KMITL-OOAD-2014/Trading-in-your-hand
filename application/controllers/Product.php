@@ -116,8 +116,8 @@
 				$this->load->model('Log_model');
 				$id = $this->uri->segment(3);
 				$amount = $this->uri->segment(4);
+				$detail = $this->Product_model->getproductdetail($this->uri->segment(3));
 				if($this->Product_model->buyproduct($id,$amount,$data['username'])){
-					$detail = $this->Product_model->getproductdetail($this->uri->segment(3));
 					$this->load->model('member_model');	
 					$to = $this->member_model->memberDetail($detail);
 					$this->send_mail($to,$data,$detail,$amount);
