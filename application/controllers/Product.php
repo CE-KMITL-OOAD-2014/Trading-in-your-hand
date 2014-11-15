@@ -42,7 +42,7 @@
 					$temp = $this->Product_model->getproductdetail($this->uri->segment(3));
 					$fname = $temp['pic1'];
 					$config =  array(
-						  'file_name'		=> $fname,
+						  'file_name'		=> $fname.".jpg",
 						  'upload_path'     => "./productPic/",
 						  'allowed_types'   => "gif|jpg|png|jpeg",
 						  'overwrite'       => TRUE,
@@ -143,7 +143,7 @@
 			$fname  =  md5($sess['username'].date("D M d, Y G:i").$id);
 			echo $fname;
 			$config =  array(
-				  'file_name'		=> $fname."jpg",
+				  'file_name'		=> $fname.".jpg",
                   'upload_path'     => "./productPic/",
                   'allowed_types'   => "gif|jpg|png|jpeg",
                   'overwrite'       => TRUE,
