@@ -152,7 +152,8 @@ class pages extends CI_Controller {
 			$detail = $this->member_model->memberDetail($data);
 			$pdata = $this->product_model->userProduct($data);
 			$data['page'] = "profile"; 
-			$temp = array( 'detail' => $detail, 'pdata' => $pdata, 'ppage' => $ppage ,'id' => $id); 
+			$score = $this->member_model->getstatusscore($this->uri->segment(3));
+			$temp = array( 'detail' => $detail, 'pdata' => $pdata, 'ppage' => $ppage ,'id' => $id,'score' => $score); 
 			$this->load->helper('body.php');
 			$this->load->view('header.php',$data);
 			$this->load->view('space.php');

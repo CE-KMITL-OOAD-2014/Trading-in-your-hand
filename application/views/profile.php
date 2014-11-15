@@ -247,7 +247,8 @@ if($this->session->userdata('username')){
       	echo"<a href='../../../pages/addproduct'><button class='btn btn-success'> Add product</button></a>";
 	else if($id==$username&&$detail['iden']!=1&&$this->session->userdata('username'))
 		echo"<a href='../../../pages/iden'><button class='btn btn-success'> Become a seller</button></a>";
-    ?>
+    echo $score;
+	?>
     </div>
     <div class="col-md-9">
       <?
