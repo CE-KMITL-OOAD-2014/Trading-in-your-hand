@@ -35,8 +35,8 @@
 			function edit_profile($data){
 				$this->db->where('username',$data['username'])->set('name',$data['name'])->set('sname',$data['sname'])->set('about',$data['about'])->set('email',$data['email'])->set('address',$data['address'])->set('facebook',$data['facebook'])->set('twitter',$data['twitter'])->set('googleplus',$data['googleplus'])->set('github',$data['github'])->update('member');
 			}
-			function getstatusscore($name){
-				$tScore = $this->db->where('isScore !=',0)->where('buyer',$name['buy'])->where('seller',$name['sell'])->count_all_results('transac');
+			function getstatusscore($name,$sell){
+				$tScore = $this->db->where('isScore !=',0)->where('buyer',$name)->where('seller',$sell)->count_all_results('transac');
 				return $tScore;
 			}
 		}
