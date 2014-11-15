@@ -297,8 +297,7 @@ if($this->session->userdata('username')){
 				}
 			}else{
 				if($num!=0){
-					echo"<button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>";
-					echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+					echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[(($ppage*3)-2)]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>";
 				}
 			}echo"</span> </div></div>";
          //////////////////////////////
@@ -325,8 +324,7 @@ if($this->session->userdata('username')){
 				echo"<a class='btn btn-default btn-sm' href='../../../../pages/editproduct/".$data[(($ppage*3)-1)]['id']."'><i class='fa fa-cog'></i>Edit</a>";
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3)-1)]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			}else{
-				echo"<button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>";
-				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+				echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[(($ppage*3)-1)]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>";
 			}echo"</span> </div></div>";
 			}
          //////////////////
@@ -353,8 +351,7 @@ if($this->session->userdata('username')){
 				echo"<a class='btn btn-default btn-sm' href='../../../../pages/editproduct/".$data[(($ppage*3))]['id']."'><i class='fa fa-cog'></i>Edit</a>";
             	echo"<button class='btn btn-sm btn-danger' onClick='confirm(".$data[(($ppage*3))]['id'].")'><i class='fa fa-trash-o fa-lg'></i>Delete</button>";
 			}else{
-				echo"<button class='btn btn-sm btn-default'><i class='fa fa-fw fa-eye'></i> Show</button>";
-				echo"<button class='btn btn-sm btn-primary'><i class='fa fa-fw fa-shopping-cart'></i> Buy</button>";
+				echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[(($ppage*3))]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>";
 			}echo"</span> </div></div>";
 			}
           ?>
