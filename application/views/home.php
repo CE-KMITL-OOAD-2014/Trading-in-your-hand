@@ -56,6 +56,9 @@
           <div class="caption">
             <h4><? echo"".$data[1]['name']; ?></h4>
             <p><? echo"".$data[1]['detail']; ?></p>
+            <p><? echo"<b>Owner :</b>&nbsp;".$data[1]['username']; ?></p>
+            <p><? echo"<b>Price :</b>&nbsp;".$data[1]['price']; ?></p>
+            <p><? echo"<b>Amount :</b>&nbsp;".$data[1]['amount']; ?></p>
             <p><? echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[1]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>"; ?></p>
           </div>
         </div>
@@ -65,6 +68,9 @@
           <div class="caption">
             <h4><? echo"".$data[2]['name']; ?></h4>
             <p><? echo"".$data[2]['detail']; ?></p>
+            <p><? echo"<b>Owner :</b>&nbsp;".$data[2]['username']; ?></p>
+            <p><? echo"<b>Price :</b>&nbsp;".$data[2]['price']; ?></p>
+            <p><? echo"<b>Amount :</b>&nbsp;".$data[2]['amount']; ?></p>
             <p><? echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[2]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>"; ?></p>
           </div>
         </div>
@@ -74,6 +80,9 @@
           <div class="caption">
             <h4><? echo"".$data[3]['name']; ?></h4>
             <p><? echo"".$data[3]['detail']; ?></p>
+            <p><? echo"<b>Owner :</b>&nbsp;".$data[3]['username']; ?></p>
+            <p><? echo"<b>Price :</b>&nbsp;".$data[3]['price']; ?></p>
+            <p><? echo"<b>Amount :</b>&nbsp;".$data[3]['amount']; ?></p>
             <p><? echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[3]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>"; ?></p>
           </div>
         </div>
@@ -83,6 +92,9 @@
           <div class="caption">
             <h4><? echo"".$data[4]['name']; ?></h4>
             <p><? echo"".$data[4]['detail']; ?></p>
+            <p><? echo"<b>Owner :</b>&nbsp;".$data[4]['username']; ?></p>
+            <p><? echo"<b>Price :</b>&nbsp;".$data[4]['price']; ?></p>
+            <p><? echo"<b>Amount :</b>&nbsp;".$data[4]['amount']; ?></p>
             <p><? echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[4]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>"; ?></p>
           </div>
         </div>
