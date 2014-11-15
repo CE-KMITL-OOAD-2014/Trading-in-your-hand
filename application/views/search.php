@@ -120,7 +120,7 @@ function confirm(id){
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>";
 		  if($num!=0){
-		  echo"<b>Owner :</b>&nbsp;<a hef='../../../../pages/member/".$data[(($ppage*3)-2)]['username']."'>".$data[(($ppage*3)-2)]['username']."</a><br/>";
+		  echo"<b>Owner :</b>&nbsp;<a href='pages/member/".$data[(($ppage*3)-2)]['username']."'>".$data[(($ppage*3)-2)]['username']."</a>";
 		  echo"<b>Price :</b> ".$data[(($ppage*3)-2)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-2)]['amount']."</div>";
 		  }
 		  echo" <span class='pull-right buttons'>";
