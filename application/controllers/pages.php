@@ -35,7 +35,7 @@ class pages extends CI_Controller {
 		$this->load->view('confirm.php');
 		$this->load->view('footer.php');
 	}
-	public function confirm()
+	public function about()
 	{
 		$data['page'] = "About";
 		$this->load->helper('body.php');
