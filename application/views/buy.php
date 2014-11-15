@@ -9,8 +9,7 @@
    $("#amount").keyup(cal);
 });
 	function cal(){
-		var price = <? echo $price; ?>;
-		var amount = $("#amount").val();
+		
 		$('.sum span').html("This is what you want to change it to");
 	}
 
