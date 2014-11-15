@@ -286,7 +286,6 @@ if($this->session->userdata('username')){
           <div class='slide-footer'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>";
-		  echo"<b>Type :</b>&nbsp;".$data[(($ppage*3)-2)]['type']."<br/>";
 		  if($num!=0)
 		  echo"<b>Price :</b> ".$data[(($ppage*3)-2)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-2)]['amount']."</div>";
 		  else echo"<b>Price :</b>      <b>Amount :</b> </div>";
@@ -319,7 +318,6 @@ if($this->session->userdata('username')){
           <div class='slide-footer'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>
-		  <b>Type :</b>&nbsp;".$data[(($ppage*3))-1]['type']."<br/>
 		  <b>Price :</b> ".$data[(($ppage*3)-1)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-1)]['amount']."</div>";
 		  echo"<span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username']){
@@ -347,7 +345,6 @@ if($this->session->userdata('username')){
           <div class='slide-footer'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>
-		  <b>Type :</b>&nbsp;".$data[(($ppage*3))]['type']."<br/>
 		  <b>Price :</b> ".$data[($ppage*3)]['price']."     <b>Amount :</b> ".$data[($ppage*3)]['amount']."</div>";
 		  echo"<span class='pull-right buttons'>";
 			if($this->session->userdata('username')&&$id==$sess['username']){

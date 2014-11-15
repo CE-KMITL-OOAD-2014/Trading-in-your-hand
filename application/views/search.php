@@ -111,9 +111,8 @@ function confirm(id){
           <div class='slide-content'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>"; 
-		  echo"<b>Type :</b>&nbsp;".$data[(($ppage*3)-2)]['type']."<br/>";
 		  if($num!=0)
-		  echo"<h4>".$data[(($ppage*3)-2)]['name']."</h4><p>".$data[(($ppage*3)-2)]['detail']."</p>";
+		  echo"<h4>".$data[(($ppage*3)-2)]['name']."</h4><p>".$data[(($ppage*3)-2)]['detail']."</p><b>Type :</b>&nbsp;".$data[(($ppage*3)-2)]['type']."<br/>";
 		  else echo"<h4>Example product</h4><p>Detail of this product</p>";
 		  echo"</div>
           </div>
@@ -144,6 +143,7 @@ function confirm(id){
 		  <b>Type :</b>&nbsp;".$data[(($ppage*3))-1]['type']."<br/>
             <h4>".$data[(($ppage*3)-1)]['name']."</h4>
             <p>".$data[(($ppage*3)-1)]['detail']."</p>
+			<b>Type :</b>&nbsp;".$data[(($ppage*3)-2)]['type']."<br/>;
 			</div>
           </div>
           <div class='slide-footer'>
@@ -172,6 +172,7 @@ function confirm(id){
 		   <b>Type :</b>&nbsp;".$data[(($ppage*3))]['type']."<br/>
             <h4>".$data[($ppage*3)]['name']."</h4>
             <p>".$data[($ppage*3)]['detail']."</p>
+			<b>Type :</b>&nbsp;".$data[(($ppage*3)-2)]['type']."<br/>;
 			</div>
           </div>
           <div class='slide-footer'>
