@@ -9,8 +9,9 @@
    $("#amount").keyup(cal);
 });
 	function cal(){
-		
-		$('#sum').html("This is what you want to change it to");
+		var amount = $("#amount").val();
+		var price = <? echo $price; ?>
+		$('#sum').html("<strong>".amount*price." THB</strong>");
 	}
 
 </script>
