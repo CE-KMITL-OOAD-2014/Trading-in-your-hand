@@ -20,7 +20,7 @@
                              <tr>
                                  <td class="h5"><strong>ID</strong></td>
                                  <td> </td>
-                                 <td class="h4"><? echo $id; ?></td>
+                                 <td><? echo $id; ?></td>
                              </tr>
                              
                               
@@ -28,7 +28,7 @@
                              <tr>
                                  <td class="h5"><strong>Name</strong></td>
                                  <td> </td>
-                                 <td class="h4"><? echo $name; ?></td>
+                                 <td><? echo $name; ?></td>
                              </tr>
                              
                               
@@ -36,19 +36,19 @@
                              <tr>
                                  <td class="h5"><strong>Owner</strong></td>
                                  <td> </td>
-                                 <td class="h4"><? echo $username; ?></td>
+                                 <td><? echo $username; ?></td>
                              </tr>
                              
                              <tr>
                                  <td class="h5"><strong>Price</strong></td>
                                  <td> </td>
-                                 <td class="h4"><? echo $price; ?></td>
+                                 <td><? echo $price; ?></td>
                              </tr>
                              
                              <tr>
                                  <td class="h5"><strong>Available</strong></td>
                                  <td> </td>
-                                 <td class="h4"><? echo $amount; ?></td>
+                                 <td><? echo $amount; ?></td>
                              </tr>
                              
                              <tr>
