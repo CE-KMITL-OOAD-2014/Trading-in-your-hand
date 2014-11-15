@@ -17,7 +17,7 @@
         <div class="col-md-4">
        
             <label for="name" class="sr-only">name</label>
-            <input type="name" name="name" id="name" class="form-control" placeholder="NameProduct" value="<? echo $name; ?>" required autofocus>
+            <input type="name" name="name" id="name" class="form-control" placeholder="NameProduct" value="<? echo $name; ?>" readonly="readonly">
             <label for="cost" class="sr-only">cost</label>
             <input type="cost" name="price" id="price" class="form-control" placeholder="Cost" value="<? echo $price; ?>" required autofocus>
             <label for="Amount" class="sr-only">Amount</label>
