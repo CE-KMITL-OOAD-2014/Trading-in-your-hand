@@ -22,6 +22,7 @@
             <input type="cost" name="price" id="price" class="form-control" placeholder="Cost" value="<? echo $price; ?>" required autofocus>
             <label for="Amount" class="sr-only">Amount</label>
             <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" value="<? echo $amount; ?>" required autofocus>
+             <select class="form-control" id ="type" name="type">
               <?
 		if($type!="electronics")
 			echo"<option value='electronics'>Electronics</option>";
