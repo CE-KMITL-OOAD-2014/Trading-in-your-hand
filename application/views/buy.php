@@ -89,7 +89,7 @@
       </div>
       <div class="modal-footer">
         <div class="text-right pull-right col-md-3">
-          <input type="button" value="Buy" id="buy" class="btn btn-primary btn-block btn-lg" onclick="buy()" /></a>
+          <input type="button" value="Buy" id="buy" class="btn btn-primary btn-block btn-lg" onclick="buy();" /></a>
         </div>
         <div class="text-right pull-right col-md-3"> Summary: <br/>
           <strong><span class="availability sum" id="sum">0 THB</span></strong></div>
