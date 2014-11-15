@@ -191,7 +191,8 @@ function confirm(id){
 	if((round($ppage/5)-$ppage/5)<0.5)
 	 	$x = round($ppage/5)-1;
 	else
-		$x = round($ppage/5)-1;
+		$x = round($ppage/5);
+		
 	  $now = $ppage/5 - round($ppage/5);
 	  if($now>0)
 	  	$now = round($ppage/5)+1;
@@ -201,18 +202,18 @@ function confirm(id){
 		if($ppage!=1)
 			echo"<li><a href='../../../../pages/search/".$type."/".$name."/".($ppage-1)."' rel='prev'>&laquo;</a></li>";	
 			
-		if($numpage>=(5*1)+2){	
+		if($numpage>=(5*$x)+2){	
 		if($ppage%5 == 1)echo"<li class='active'><span>".$ppage."</span></li>";
 		else echo"<li><a href='../../../../pages/search/".$type."/".$name."/". (($now*5)-4) ."'>". (($now*5)-4) ."</a></li>";
 			if($ppage%5 == 2)echo"<li class='active'><span>".$ppage."</span></li>";
 			else echo"<li><a href='../../../../pages/search/".$type."/".$name."/". (($now*5)-3) ."'>". (($now*5)-3) ."</a></li>";
-			if($numpage>=(5*1)+3){
+			if($numpage>=(5*$x)+3){
 				if($ppage%5 == 3)echo"<li class='active'><span>".$ppage."</span></li>";
 				else echo"<li><a href='../../../../pages/search/".$type."/".$name."/". (($now*5)-2) ."'>". (($now*5)-2) ."</a></li>";
-				if($numpage>=(5*1)+4){
+				if($numpage>=(5*$x)+4){
 					if($ppage%5 == 4)echo"<li class='active'><span>".$ppage."</span></li>";
 					else echo"<li><a href='../../../../pages/search/".$type."/".$name."/". (($now*5)-1) ."'>". (($now*5)-1) ."</a></li>";
-					if($numpage>=(5*1)+5){
+					if($numpage>=(5*$x)+5){
 						if($ppage%5 == 0)echo"<li class='active'><span>".$ppage."</span></li>";
 						else echo"<li><a href='../../../../pages/search/".$type."/".$name."/". ($now*5) ."'>". ($now*5) ."</a></li>";
 					
