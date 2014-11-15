@@ -97,12 +97,13 @@
                   <div class="modal-footer">       
                       
                     <div class="text-right pull-right col-md-3">
-                        Summary: <br/> 
-                        <span class="h3 text-muted"><strong> R$50,00 </strong></span></span> 
+                    <input type="button" value="Buy" id="buy" class="btn btn-primary btn-block btn-lg">
+                       
                     </div> 
                       
                     <div class="text-right pull-right col-md-3">
-                        <input type="button" value="Buy" id="buy" class="btn btn-primary btn-block btn-lg">
+                        Summary: <br/> 
+                        <span class="h3 text-muted"><strong> R$50,00 </strong></span></span> 
                     </div>
                      
                 </div>
