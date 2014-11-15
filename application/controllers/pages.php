@@ -148,16 +148,19 @@ class pages extends CI_Controller {
 				if($this->session->userdata('username')){
 					$sess = $this->session->all_userdata();
 					$score = $this->member_model->getstatusscore($sess['username'],$this->uri->segment(3));
+					$isScore = true;
 				}
-				else
+				else{
 					$score = "";
+					$isScore = false;
+				}
 				$data['username'] = $this->uri->segment(3);
 				$id = $data['username'];
 				$this->load->model('product_model');	
 				$detail = $this->member_model->memberDetail($data);
 				$pdata = $this->product_model->userProduct($data);
 				$data['page'] = "profile"; 
-				$temp = array( 'detail' => $detail, 'pdata' => $pdata, 'ppage' => $ppage ,'id' => $id,'score' => $score); 
+				$temp = array( 'detail' => $detail, 'pdata' => $pdata, 'ppage' => $ppage ,'id' => $id,'score' => $score,'isScore' => $isScore); 
 				$this->load->helper('body.php');
 				$this->load->view('header.php',$data);
 				$this->load->view('space.php');
