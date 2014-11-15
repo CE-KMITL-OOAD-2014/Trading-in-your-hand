@@ -20,9 +20,8 @@
 	function buy(){
 		var amount = $("#amount").val();
 		var id = <? echo $id; ?>;
-		amount = "/".concat(amount);
-		id = id.concat(amount);
-		window.location.href = "../../../../product/buy/".concat(id);
+		direct = id.concat(amount);
+		window.location.href = "../../../../product/buy/".concat(direct);
 	}
 
 </script>
