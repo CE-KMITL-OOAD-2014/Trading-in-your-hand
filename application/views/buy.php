@@ -28,7 +28,7 @@
                     <table class="pull-left col-md-8 ">
                          <tbody>
                              <tr>
-                                 <td class="h5"><strong>ID</strong></td>
+                                 <td class="h4"><strong>ID</strong></td>
                                  <td> </td>
                                  <td><? echo $id; ?></td>
                              </tr>
@@ -36,7 +36,7 @@
                               
                              
                              <tr>
-                                 <td class="h5"><strong>Name</strong></td>
+                                 <td class="h4"><strong>Name</strong></td>
                                  <td> </td>
                                  <td><? echo $name; ?></td>
                              </tr>
@@ -44,25 +44,25 @@
                               
                              
                              <tr>
-                                 <td class="h5"><strong>Owner</strong></td>
+                                 <td class="h4"><strong>Owner</strong></td>
                                  <td> </td>
                                  <td><? echo $username; ?></td>
                              </tr>
                              
                              <tr>
-                                 <td class="h5"><strong>Price</strong></td>
+                                 <td class="h4"><strong>Price</strong></td>
                                  <td> </td>
                                  <td><? echo $price; ?></td>
                              </tr>
                              
                              <tr>
-                                 <td class="h5"><strong>Available</strong></td>
+                                 <td class="h4"><strong>Available</strong></td>
                                  <td> </td>
                                  <td><? echo $amount; ?></td>
                              </tr>
                              
                              <tr>
-                                 <td class="h5"><strong>Detail</strong></td>
+                                 <td class="h4"><strong>Detail</strong></td>
                                  <td> </td>
                                  <td class="h4"></td>
                              </tr>  
@@ -72,9 +72,9 @@
                              </tr>                            
                             
                             <tr>
-                                 <td class="h5"><strong>Amount</strong></td>
+                                 <td class="h4"><strong>Amount</strong></td>
                                  <td> </td>
-                                 <td class="h4"><label for="Amount" class="sr-only">Amount</label>
+                                 <td><label for="Amount" class="sr-only">Amount</label>
             <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" required autofocus></td>
                              </tr> 
                             
