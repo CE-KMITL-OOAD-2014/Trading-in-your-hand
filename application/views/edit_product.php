@@ -16,23 +16,12 @@
         </div>
         <div class="col-md-4">
        
-            <label class="control-label">Name</label>
             <label for="name" class="sr-only">name</label>
             <input type="name" name="name" id="name" class="form-control" placeholder="NameProduct" value="<? echo $name; ?>" required autofocus>
- 
-       
-            <label class="control-label">Cost</label>
             <label for="cost" class="sr-only">cost</label>
             <input type="cost" name="price" id="price" class="form-control" placeholder="Cost" value="<? echo $price; ?>" required autofocus>
-         
-       
-            <label class="control-label">Amount</label>
             <label for="Amount" class="sr-only">Amount</label>
             <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" value="<? echo $amount; ?>" required autofocus>
-       
-         
-            <label class="control-label">Type</label>
-            <select class="form-control" id ="type" name="type">
               <?
 		if($type!="electronics")
 			echo"<option value='electronics'>Electronics</option>";
@@ -50,10 +39,8 @@
             </select>
         
           <div class="form-group">
-            <label class="control-label">Detail</label>
-            <label for="Detail" class="sr-only">Amount</label>
-            <input type="Detail" name="detail" id="detail" class="form-control" placeholder="detail" value="<? echo $amount; ?>" required autofocus>
-          </div>
+          <textarea rows="8" class="form-control" id="detail" name="detail" placeholder="Detail" style="resize:none" required autofocus ><? echo $detail; ?></textarea>
+        </div>
           <div class="form-group">
           <button type="submit" id="sub" class="btn btn-primary btn-block btn-lg pull-right" form = "data"> Submit </button>
         </div>
