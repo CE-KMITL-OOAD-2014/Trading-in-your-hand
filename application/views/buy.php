@@ -58,7 +58,7 @@
                              </tr>  
 
                              <tr>
-                                 <td class="h5"><strong>fhdfhggdfhfhgfhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhdg</strong></td>
+                                 <td class="h5"><strong><? echo $detail; ?></strong></td>
                              </tr>                            
                             
                              <tr>
