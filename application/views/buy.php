@@ -10,7 +10,7 @@
 });
 	function cal(){
 		var amount = $("#amount").val();
-		var price = <? echo $price; ?>
+		var price = <? echo $price; ?>;
 		sum = amount*price;
 		str = "";
 		str = str.concat(sum);
