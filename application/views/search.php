@@ -111,6 +111,7 @@ function confirm(id){
           <div class='slide-content'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>"; 
+		  echo"<b>Type :</b>&nbsp;".$data[(($ppage*3)-2)]['type']."<br/>";
 		  if($num!=0)
 		  echo"<h4>".$data[(($ppage*3)-2)]['name']."</h4><p>".$data[(($ppage*3)-2)]['detail']."</p>";
 		  else echo"<h4>Example product</h4><p>Detail of this product</p>";
@@ -119,7 +120,6 @@ function confirm(id){
           <div class='slide-footer'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>";
-		  echo"<b>Type :</b>&nbsp;".$data[(($ppage*3)-2)]['type']."<br/>";
 		  echo"<b>Owner :</b>&nbsp;".$data[(($ppage*3)-2)]['username']."<br/>";
 		  if($num!=0)
 		  echo"<b>Price :</b> ".$data[(($ppage*3)-2)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-2)]['amount']."</div>";
@@ -141,6 +141,7 @@ function confirm(id){
           <div class='slide-content'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'> 
+		  <b>Type :</b>&nbsp;".$data[(($ppage*3))-1]['type']."<br/>
             <h4>".$data[(($ppage*3)-1)]['name']."</h4>
             <p>".$data[(($ppage*3)-1)]['detail']."</p>
 			</div>
@@ -148,7 +149,6 @@ function confirm(id){
           <div class='slide-footer'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>
-		  <b>Type :</b>&nbsp;".$data[(($ppage*3))-1]['type']."<br/>
 		  <b>Owner :</b>&nbsp;".$data[(($ppage*3)-1)]['username']."<br/>
 		  <b>Price :</b> ".$data[(($ppage*3)-1)]['price']."     <b>Amount :</b> ".$data[(($ppage*3)-1)]['amount']."</div>";
 		  echo"<span class='pull-right buttons'>";
@@ -169,6 +169,7 @@ function confirm(id){
           <div class='slide-content'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'> 
+		   <b>Type :</b>&nbsp;".$data[(($ppage*3))]['type']."<br/>
             <h4>".$data[($ppage*3)]['name']."</h4>
             <p>".$data[($ppage*3)]['detail']."</p>
 			</div>
@@ -176,7 +177,6 @@ function confirm(id){
           <div class='slide-footer'>
 		  <div class='col-md-1'></div>
 		  <div class='col-md-5'>
-		  <b>Type :</b>&nbsp;".$data[(($ppage*3))]['type']."<br/>
 		  <b>Owner :</b>&nbsp;".$data[(($ppage*3))]['username']."<br/>
 		  <b>Price :</b> ".$data[($ppage*3)]['price']."     <b>Amount :</b> ".$data[($ppage*3)]['amount']."</div>";
 		  echo"<span class='pull-right buttons'>";
