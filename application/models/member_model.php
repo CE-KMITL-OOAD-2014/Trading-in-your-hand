@@ -41,7 +41,7 @@
 			}
 			function setnewscore($data){
 				$score = round($data['score'], 1); 
-				$this->db->where('name',$data['name'])->set('avg',$score)->set('amount',$data['amount'])->update('member');
+				$this->db->where('username',$data['name'])->set('avg',$score)->set('amount',$data['amount'])->update('member');
 			}
 		}
 	
