@@ -27,7 +27,7 @@
           <tbody>
             <?
     	foreach($data->result_array() as $row)
-			echo"<tr><td></td><td>".$row['sender']."</td><td>".$row['time']."</td><td>".$row['message']."</td><td><a class='btn btn-sm btn-danger' href='../../../../member/delmessage/".$row['id']."'><i class='fa fa-trash-o fa-lg'></i>Delete</a></td></tr>";
+			echo"<tr><td></td><td>".$row['sender']."</td><td>".$row['time']."</td><td>".$row['message']."</td><td><a class='btn btn-sm btn-danger' href='../../../../member/delmessage/".$row['ID']."'><i class='fa fa-trash-o fa-lg'></i>Delete</a></td></tr>";
 		?>
           </tbody>
         </table>
