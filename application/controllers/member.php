@@ -39,7 +39,7 @@ class member extends CI_Controller {
 			$this->load->model('member_model');	
 			$data = $this->member_model->memberdetail($name);
 			$newscore = ((($data['avg']*$data['amount'])+$score)/($data['amount']+1));
-			$setdata = array('name'=>$name['username'],'score'=>$newscore);
+			$setdata = array('name'=>$name['username'],'score'=>$newscore,'amount'=>$data['amount']+1);
 			$this->member_model->setnewscore($setdata);
 			echo"<script language='javascript'>
     window.location.href = '../../pages/member/".$name['username']."';
