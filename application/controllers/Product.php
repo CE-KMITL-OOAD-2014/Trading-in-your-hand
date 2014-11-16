@@ -1,5 +1,5 @@
 <?php
-	class product extends CI_Controller{
+	class product extends member{
 		
 		function delete(){
 			if ($this->uri->segment(3) === FALSE){ 
@@ -30,7 +30,7 @@
 </script>";
 			}
 		}
-		function edit(){
+		function editp(){
 			if($this->session->userdata('username')){
 				$sess = $this->session->all_userdata();		
 				if ($this->uri->segment(3) === FALSE)
