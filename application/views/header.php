@@ -22,9 +22,9 @@ else
         <a class="navbar-brand" href="../../../../../pages" onMouseOver="logo.src='../../../../images/logo2.png';" onMouseOut="logo.src='../../../../images/logo.png';"><img src="../../../../images/logo.png" width="25px" height="25px" id="logo"/>Trading in your hand</a> </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" onsubmit="window.location.href ='../../../../pages/search/all/'+document.getElementById('searchname').value;">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search product, member" id="searchname" name="searchname" onsubmit="window.location.href ='../../../../pages/search/all/'+document.getElementById('searchname').value;">
+            <input type="text" class="form-control" placeholder="Search product, member" id="searchname" name="searchname" >
           </div>
           <label style="color:#FFF">Search in</label>
         </form>
