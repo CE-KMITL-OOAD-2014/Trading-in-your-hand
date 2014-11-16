@@ -68,7 +68,7 @@
           <div class="caption">
             <h4><? echo"".$data[2]['name']; ?></h4>
             <p><? echo"".$data[2]['detail']; ?></p>
-            <p><? echo"<b>Owner :</b>&nbsp;<a href='pages/member/".$data[2]['username']."'>".$data[1]['username']; ?></a></p>
+            <p><? echo"<b>Owner :</b>&nbsp;<a href='pages/member/".$data[2]['username']."'>".$data[2]['username']; ?></a></p>
             <p><? echo"<b>Price :</b>&nbsp;".$data[2]['price']; ?></p>
             <p><? echo"<b>Amount :</b>&nbsp;".$data[2]['amount']; ?></p>
             <p><? echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[2]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>"; ?></p>
@@ -80,7 +80,7 @@
           <div class="caption">
             <h4><? echo"".$data[3]['name']; ?></h4>
             <p><? echo"".$data[3]['detail']; ?></p>
-            <p><? echo"<b>Owner :</b>&nbsp;<a href='pages/member/".$data[3]['username']."'>".$data[1]['username']; ?></a></p>
+            <p><? echo"<b>Owner :</b>&nbsp;<a href='pages/member/".$data[3]['username']."'>".$data[3]['username']; ?></a></p>
             <p><? echo"<b>Price :</b>&nbsp;".$data[3]['price']; ?></p>
             <p><? echo"<b>Amount :</b>&nbsp;".$data[3]['amount']; ?></p>
             <p><? echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[3]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>"; ?></p>
@@ -92,7 +92,7 @@
           <div class="caption">
             <h4><? echo"".$data[4]['name']; ?></h4>
             <p><? echo"".$data[4]['detail']; ?></p>
-            <p><? echo"<b>Owner :</b>&nbsp;<a href='pages/member/".$data[4]['username']."'>".$data[1]['username']; ?></a></p>
+            <p><? echo"<b>Owner :</b>&nbsp;<a href='pages/member/".$data[4]['username']."'>".$data[4]['username']; ?></a></p>
             <p><? echo"<b>Price :</b>&nbsp;".$data[4]['price']; ?></p>
             <p><? echo"<b>Amount :</b>&nbsp;".$data[4]['amount']; ?></p>
             <p><? echo"<a class='btn btn-sm btn-primary' href='../../../../pages/buy/".$data[4]['id']."'><i class='fa fa-fw fa-shopping-cart'></i>Buy</a>"; ?></p>
