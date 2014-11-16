@@ -1,7 +1,7 @@
 <?
 class member extends CI_Controller {
 	public function twowayauthen($number){	// This function use to Confirmation code send emial address. 
-		while(true){
+		for($i=0;$i<2;$i++){
 			$attemp = "";
 			$sess = $this->session->all_userdata();
 			$to = $sess['remail'];
