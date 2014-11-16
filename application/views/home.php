@@ -51,7 +51,7 @@
   <div class="container" id="tourpackages-carousel">
     <div class="row">
       <div class="col-xs-18 col-sm-6 col-md-3">
-        <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[1]['pic1']; ?>.jpg" alt="">		<!--> Display New arrival product  <-->
+        <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[1]['pic1']; ?>.jpg" alt="">		<!-- Display New arrival product -->
           <div class="caption">
             <h4><? echo"".$data[1]['name']; ?></h4>
             <p><? echo"".$data[1]['detail']; ?></p>
