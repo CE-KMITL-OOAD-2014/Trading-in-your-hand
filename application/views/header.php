@@ -22,7 +22,7 @@ else
         <a class="navbar-brand" href="../../../../../pages" onMouseOver="logo.src='../../../../images/logo2.png';" onMouseOut="logo.src='../../../../images/logo.png';"><img src="../../../../images/logo.png" width="25px" height="25px" id="logo"/>Trading in your hand</a> </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <form class="navbar-form navbar-left" role="search" onKeyPress="return event.keyCode != 13;">
+        <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search product, member" id="searchname" name="searchname">
           </div>
@@ -31,7 +31,7 @@ else
         <ul class="nav navbar-nav">
             <li class='dropdown active'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>catalogue<span class='caret'></span></a>
               <ul class='dropdown-menu' role='menu'>
-                <li><a onClick="window.location.href ='../../../../pages/search/all/'+document.getElementById('searchname').value;" style='color:#333;'>All</a></li>
+                <li><a href="" onClick="window.location.href ='../../../../pages/search/all/'+document.getElementById('searchname').value;" style='color:#333;'>All</a></li>
                 <li class='divider'></li>
                 <li><a onClick="window.location.href ='../../../../pages/search/electronics/'+document.getElementById('searchname').value;" style='color:#333;'>Electronics</a></li>
                 <li><a onClick="window.location.href ='../../../../pages/search/cloths/'+document.getElementById('searchname').value;" style='color:#333;'>Cloths</a></li>
