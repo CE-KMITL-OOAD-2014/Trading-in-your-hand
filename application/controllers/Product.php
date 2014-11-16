@@ -94,14 +94,14 @@
 					'protocol' => 'smtp',
 					'smtp_host' => 'ssl://smtp.googlemail.com',
 					'smtp_port' => 465,
-					'smtp_user' => 'test2.trading.in.your.hand@gmail.com',
+					'smtp_user' => 'test'.$attemp.'.trading.in.your.hand@gmail.com',
 					'smtp_pass' => 'pae123456',
 					'mailtype'  => 'html', 
 					'charset'   => 'iso-8859-1'
 				);
 				$this->load->library('email', $config);
 				$this->email->set_newline("\r\n");
-				$this->email->from('test2.trading.in.your.hand@gmail.com');
+				$this->email->from('test'.$attemp.'.trading.in.your.hand@gmail.com');
 				$this->email->to($to);
 				$this->email->subject('You have sold an item on Trading in your hand');
 				$this->email->message($message);
