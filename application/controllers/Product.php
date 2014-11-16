@@ -30,7 +30,7 @@
 </script>";
 			}
 		}
-		function editp(){
+		function edit(){
 			if($this->session->userdata('username')){
 				$sess = $this->session->all_userdata();		
 				if ($this->uri->segment(3) === FALSE)
@@ -105,7 +105,6 @@
 				$this->email->to($to);
 				$this->email->subject('You have sold an item on Trading in your hand');
 				$this->email->message($message);
-				$this->sendmessage($data['username'],$message);
 				if($this->email->send())
 					break;
 				if($attemp=="2")
@@ -145,6 +144,7 @@
 					$to = $this->member_model->memberDetail($detail);
 					$this->send_mail($to,$data,$detail,$amount);
 					$tdata =  array('buyer'=>$data['username'],'seller'=>$detail['username'],'product'=>$detail['name'],'price'=>$detail['price'],'amount'=>$this->uri->segment(4));
+					$this->sendmessage($to['username'],"You has been sold ".$tdata['product']."<br/>Price&nbsp;".$tdata['price']."<br/>Amount&nbsp;".$tdata['amount']."<br/>Total&nbsp;".$tdata['price']*$tdata['amount']);
 					$this->Log_model->logtransac($tdata);
 					echo"<script language='javascript'>
     window.location.href = '../../../pages/member/".$data['username']."';
