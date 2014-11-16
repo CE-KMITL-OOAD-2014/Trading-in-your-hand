@@ -1,14 +1,14 @@
 <?php
 
 class pages extends CI_Controller {
-	public function index()
+	public function index()	// Home page
 	{	$data['page'] = "Home";
 		$this->load->model('Product_model');	
-		$pdata = $this->Product_model->newProduct();
+		$pdata = $this->Product_model->newProduct();	// Get product sort by new arrival
 		$num = 0;
     	foreach($pdata->result_array() as $rows){
 			$num++;
-			$tdata[$num] = $rows;
+			$tdata[$num] = $rows;	// Store product detail in array
 		}
 		$temp['data'] = $tdata;
 		$this->load->helper('body.php');
