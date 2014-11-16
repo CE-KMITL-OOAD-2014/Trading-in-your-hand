@@ -122,10 +122,6 @@
 			$data = array('id'=>$id,'sender'=>$temp['username'],'time'=>$dt,'receiver'=>$receiver,'message'=>$message);
 			$this->load->model('member_model');	
 			$this->member_model->sendmessage($data);
-			echo"<script language='javascript'>
-	alert('success');
-    window.location.href = '../../pages/message';
-</script>";	
 		}
 		function buy(){
 			if($this->uri->segment(3) === FALSE||$this->uri->segment(4) === FALSE||!$this->session->userdata('username'))
@@ -144,8 +140,8 @@
 					$to = $this->member_model->memberDetail($detail);
 					$this->send_mail($to,$data,$detail,$amount);
 					$tdata =  array('buyer'=>$data['username'],'seller'=>$detail['username'],'product'=>$detail['name'],'price'=>$detail['price'],'amount'=>$this->uri->segment(4));
-					$this->sendmessage($to['username'],"You has been sold ".$tdata['product']."<br/>Price&nbsp;".$tdata['price']."<br/>Amount&nbsp;".$tdata['amount']."<br/>Total&nbsp;".$tdata['price']*$tdata['amount']);
 					$this->Log_model->logtransac($tdata);
+					$this->sendmessage($to['username'],"You has been sold<br/>".$tdata['product']."<br/>Price&nbsp;".$tdata['price']."<br/>Amount&nbsp;".$tdata['amount']."<br/>Total&nbsp;".$tdata['price']*$tdata['amount']);
 					echo"<script language='javascript'>
     window.location.href = '../../../pages/member/".$data['username']."';
 </script>";
