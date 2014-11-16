@@ -17,6 +17,11 @@
 			$data = $this->db->where('username',$username)->order_by('id','desc')->get('product');
 			return $data;
 		}
+		function gettransac($pdata){
+			$buyer = $pdata['username'];
+			$data = $this->db->where('buyer',$buyer)->order_by('id','desc')->get('transac');
+			return $data;
+		}
 		function getproductdetail($id){
 			$data = $this->db->where('id',$id)->get('product');
 			foreach($data->result_array() as $row){}

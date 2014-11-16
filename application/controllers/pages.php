@@ -238,5 +238,16 @@ class pages extends CI_Controller {
     window.location.href = '../../pages/login';
 </script>";
 	}
+	public function phistory(){
+		$sess = $this->session->all_userdata();
+		$this->load->model('product_model');
+		$pdata = $this->product_detail->gettransac($sess);
+		$data['page'] = "Purchase history"; 
+		$this->load->helper('body.php');
+		$this->load->view('header.php',$data);
+		$this->load->view('space.php');
+		$this->load->view('phistory.php',$pdata);
+		$this->load->view('footer.php');		
+	}
 }
 ?>
