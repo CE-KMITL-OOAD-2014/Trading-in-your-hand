@@ -241,7 +241,7 @@ class pages extends CI_Controller {
 	public function phistory(){
 		$sess = $this->session->all_userdata();
 		$this->load->model('product_model');
-		$pdata = $this->product_model->gettransac($sess);
+		$pdata['data'] = $this->product_model->gettransac($sess);
 		$data['page'] = "Purchase history"; 
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
