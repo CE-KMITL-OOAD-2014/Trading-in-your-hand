@@ -10,6 +10,7 @@
 <?
 $username = $this->session->all_userdata();
 ?>
+<br/>
 <div class="back">
   <div class="container">
     <div class="col-md-3"></div>
@@ -32,6 +33,7 @@ $username = $this->session->all_userdata();
           </tbody>
         </table>
       </div>
+      <div class="form-group"> <a class='btn btn-default' href='../../../pages/message'><i class='fa fa-cog' id='edit'></i>Send Message</a></div>
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
       <!-- Include all compiled plugins (below), or include individual files as needed --> 
