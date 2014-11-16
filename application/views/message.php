@@ -7,14 +7,11 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<?
-$data = $this->session->all_userdata();
-echo"".$data['username'];
-?>
 <div class="back">
   <div class="container">
     <div class="col-md-3"></div>
     <div class="col-md-6">
+    <h2>Send Message</h2>
       <form action="../member/sendmessage" method="post">
         <div class="form-group">
           <label for="Receiver" class="sr-only">Receiver</label>
@@ -27,7 +24,6 @@ echo"".$data['username'];
           <button type="submit" class="btn btn-primary btn-block btn-lg pull-right"> Submit </button>
         </div>
       </form>
-      <a href="../pages/viewmessage">View message</a> 
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
       <!-- Include all compiled plugins (below), or include individual files as needed --> 

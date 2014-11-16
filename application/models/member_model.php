@@ -17,7 +17,7 @@
 			}
 			function getmessage(){
 				$data = $this->session->all_userdata();
-				$mdata = $this->db->where('receiver',$data['username'])->get('message');
+				$mdata = $this->db->where('receiver',$data['username'])->order_by('id','desc')->get('message');
 				return $mdata;
 			}
 			function sendmessage($data){

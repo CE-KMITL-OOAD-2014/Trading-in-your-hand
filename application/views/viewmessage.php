@@ -11,16 +11,35 @@
 $username = $this->session->all_userdata();
 echo"".$username['username'];
 ?>
-<div class="back"> 
-	<?
+<div class="back">
+  <div class="container">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>From</th>
+              <th>Time</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <?
     	foreach($data->result_array() as $row)
-			echo"".$row['sender']."     ".$row['time']."     ".$row['message']."<br/>";
-		echo"<a href='../pages'>back</a>";
-	?>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-  <!-- Include all compiled plugins (below), or include individual files as needed --> 
-  <script src="../../js/bootstrap.min.js"></script> 
+			echo"<td>".$row['sender']."<td/><td>".$row['time']."<td/><td>".$row['message']."<td/>";
+		?>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+      <!-- Include all compiled plugins (below), or include individual files as needed --> 
+      <script src="../../js/bootstrap.min.js"></script> 
+    </div>
+  </div>
 </div>
 </body>
 </html>

@@ -68,7 +68,7 @@ else
 				echo"<li><li class='dropdown'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Account<span class='caret'></span></a>
             <ul class='dropdown-menu' role='menu'>
               <li><a href='../../../../pages/member/".$username."' style='color:#333;'>Profile</a></li>
-              	<li><a href='../../../../pages/message' style='color:#333;'>Message</a></li>
+              	<li><a href='../../../../pages/viewmessage' style='color:#333;'>Message</a></li>
               <li class='divider'></li>
               <li><a href='../../../../member/logout' style='color:#333;'>Log out</a></li>
             </ul>
