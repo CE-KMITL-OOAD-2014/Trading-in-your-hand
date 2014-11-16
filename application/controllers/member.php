@@ -194,6 +194,23 @@ class member extends CI_Controller {
     window.location.href = '../../pages/message';
 </script>";	
 		}
+	public function delmessage(){
+		if ($this->uri->segment(3) === FALSE)
+			echo"<script language='javascript'>
+    window.location.href = '../../pages';
+</script>";
+		else{
+			$this->load->model('member_model');
+			$message = $this->member_model->messageDetail($this->uri->segment(3));
+			$sess = $this->session->all_userdata();
+			if($sess['username']==$message['receiver']){
+				$this->member_model->delmessage($this->uri->segment(3));
+			}
+				echo"<script language='javascript'>
+		window.location.href = '../../../pages/viewmessage';
+	</script>";
+		}	
+	}
 	public function edit(){
 		$data = $this->session->all_userdata();
 		$this->load->model('member_model');

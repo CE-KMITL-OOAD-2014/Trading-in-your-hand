@@ -9,6 +9,12 @@
 				if(isset($row))
 					return $row;
 			}
+			function messageDetail($id){
+				$data = $this->db->where('ID',$id)->get('member');
+				foreach($data->result_array() as $row){}
+				if(isset($row))
+					return $row;
+			}
 			function verifylogin($data){
 				$check = $this->db->where('username',$data['username'])->where('password',md5($data['password']))->count_all_results('member');
 				if($check==1)
@@ -22,6 +28,9 @@
 			}
 			function sendmessage($data){
 				$this->db->insert('message',$data);	
+			}
+			function delmessage($data){
+				$this->db->delete('message', array('ID' => $data)); 
 			}
 			function checkexist($name){
 				$check = $this->db->where('username',$name)->count_all_results('member');	
