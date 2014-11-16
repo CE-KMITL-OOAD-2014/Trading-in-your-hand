@@ -10,7 +10,7 @@
 					return $row;
 			}
 			function messageDetail($id){
-				$data = $this->db->where('ID',$id)->get('member');
+				$data = $this->db->where('ID',$id)->get('message');
 				foreach($data->result_array() as $row){}
 				if(isset($row))
 					return $row;
