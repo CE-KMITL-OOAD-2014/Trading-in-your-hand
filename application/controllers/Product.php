@@ -105,12 +105,28 @@
 				$this->email->to($to);
 				$this->email->subject('You have sold an item on Trading in your hand');
 				$this->email->message($message);
+				$this->sendmessage($data['username'],$message);
 				if($this->email->send())
 					break;
 				if($attemp=="2")
 					break;
 				$attemp = "2";
 			}
+		}
+		public function sendmessage($receiver,$message){
+			$temp = $this->session->all_userdata();
+			$dt = date("D M d, Y G:i");
+			$this->db->select_max('id');
+			$query = $this->db->get('message');
+			foreach($query->result_array() as $row)
+				$id = $row['id']+1;
+			$data = array('id'=>$id,'sender'=>$temp['username'],'time'=>$dt,'receiver'=>$receiver,'message'=>$message);
+			$this->load->model('member_model');	
+			$this->member_model->sendmessage($data);
+			echo"<script language='javascript'>
+	alert('success');
+    window.location.href = '../../pages/message';
+</script>";	
 		}
 		function buy(){
 			if($this->uri->segment(3) === FALSE||$this->uri->segment(4) === FALSE||!$this->session->userdata('username'))
