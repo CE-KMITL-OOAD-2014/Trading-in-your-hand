@@ -30,7 +30,7 @@ else
         <a class="navbar-brand" href="../../../../../pages" onMouseOver="logo.src='../../../../images/logo2.png';" onMouseOut="logo.src='../../../../images/logo.png';"><img src="../../../../images/logo.png" width="25px" height="25px" id="logo"/>Trading in your hand</a> </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" onKeyPress="return event.keyCode != 13;">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search product, member" id="searchname" name="searchname" onkeypress="handle(event);">
           </div>
