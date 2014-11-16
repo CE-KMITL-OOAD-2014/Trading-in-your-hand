@@ -38,9 +38,10 @@ class member extends CI_Controller {
 			$name['username'] = $this->uri->segment(3);
 			$this->load->model('member_model');	
 			$data = $this->member_model->memberdetail($name);
+			$newscore = ((($data['avg']*$data['amount'])+$score)/($data['amount']+1));
 			
 			echo"<script language='javascript'>
-    window.location.href = '../../pages/member/".$name['username']."';
+    window.location.href = '../../pages/member/".$name['username']."".$newscore."';
 </script>";	
 		}
 	}
