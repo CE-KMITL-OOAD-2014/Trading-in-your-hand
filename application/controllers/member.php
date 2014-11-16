@@ -28,6 +28,24 @@ class member extends CI_Controller {
 			$attemp = "2";
 		}
 	}
+	public function givestar(){
+		if ($this->uri->segment(3) === FALSE)
+			echo"<script language='javascript'>
+    window.location.href = '../../pages';
+</script>";
+		else{
+			$score = $_POST['score'];
+			$name['username'] = $this->uri->segment(3);
+			$this->load->model('member_model');	
+			$data = $this->member_model->memberdetail($name);
+			$newscore = ((($data['avg']*$data['amount'])+$score)/($data['amount']+1));
+			$setdata = array('name'=>$name['username'],'score'=>$newscore);
+			$this->member_model->setnewscore($setdata);
+			echo"<script language='javascript'>
+    window.location.href = '../../pages/member/".$name['username']."';
+</script>";	
+		}
+	}
 	public function register(){
 			$username = $_POST['username'];
 			$password = md5($_POST['password']);

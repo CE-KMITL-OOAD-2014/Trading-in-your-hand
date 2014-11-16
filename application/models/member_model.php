@@ -39,6 +39,10 @@
 				$tScore = $this->db->where('buyer',$name)->where('isScore',"0")->where('seller',$sell)->count_all_results('transac');
 				return $tScore;
 			}
+			function setnewscore($data){
+				$score = round($data['score'], 1); 
+				$this->db->where('name',$data['name'])->set('avg',$score)->updata('member');
+			}
 		}
 	
 ?>
