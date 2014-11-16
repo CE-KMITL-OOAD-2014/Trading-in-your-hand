@@ -35,12 +35,7 @@ class member extends CI_Controller {
 </script>";
 		else{
 			$score = $_POST['score'];
-			$name['username'] = $this->uri->segment(3);
-			$this->load->model('member_model');	
-			$data = $this->member_model->memberdetail($name);
-			$newscore = 5;
-			$setdata = array('name'=>$name['username'],'score'=>$newscore);
-			$this->member_model->setnewscore($setdata);
+			
 			echo"<script language='javascript'>
     window.location.href = '../../pages/member/".$name['username']."';
 </script>";	
