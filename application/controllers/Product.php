@@ -1,19 +1,19 @@
 <?php
 	class product extends CI_Controller{
 		
-		function delete(){
-			if ($this->uri->segment(3) === FALSE){ 
+		function delete(){	// Delete product function
+			if ($this->uri->segment(3) === FALSE){ // Check if dont have segment 3 , redirect
 			echo"<script language='javascript'>
     window.location.href = '../../../pages';
 </script>";
 			}
 			else{
-				if($this->session->userdata('username')){
+				if($this->session->userdata('username')){	// Check if dont login, redirect
 					$id = $this->uri->segment(3);
 					$sess = $this->session->all_userdata();
 					$this->load->model('Product_model');
-					if($this->Product_model->checkowner($id,$sess['username'])){
-						$this->Product_model->delete($id);
+					if($this->Product_model->checkowner($id,$sess['username'])){	// Check if dont owner of this product
+						$this->Product_model->delete($id);	// Delete product by id
 						echo"<script language='javascript'>
     window.location.href = '../../../pages/member/".$sess['username']."';
 </script>";
@@ -30,18 +30,18 @@
 </script>";
 			}
 		}
-		function edit(){
-			if($this->session->userdata('username')){
+		function edit(){	// Edit product function
+			if($this->session->userdata('username')){// Check if dont login, redirect
 				$sess = $this->session->all_userdata();		
-				if ($this->uri->segment(3) === FALSE)
+				if ($this->uri->segment(3) === FALSE)	// Check if dont have segment 3 , redirect
 					echo"<script language='javascript'>
 					window.location.href = '../../../pages/member/".$sess['username']."';
 					</script>";
 				else{
 					$this->load->model('Product_model');	
-					$temp = $this->Product_model->getproductdetail($this->uri->segment(3));
+					$temp = $this->Product_model->getproductdetail($this->uri->segment(3));	// Get product detail by id
 					$fname = $temp['pic1'];
-					$config =  array(
+					$config =  array(	// Config value for upload
 						  'file_name'		=> $fname.".jpg",
 						  'upload_path'     => "./productPic/",
 						  'allowed_types'   => "gif|jpg|png|jpeg",
@@ -50,23 +50,23 @@
 						  'max_height'      => "768",
 						  'max_width'       => "1024"  
 						);
-					$this->load->library('upload', $config);
-					$this->upload->do_upload();
+					$this->load->library('upload', $config);	// Load library upload
+					$this->upload->do_upload();	// Upload picture
 					$name = $_POST["name"];
 					$price = $_POST["price"];
 					$amount = $_POST["amount"];
 					$type = $_POST["type"];
 					$detail = $_POST["detail"];
 					$data = array('id'=>$temp['id'],'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$fname,'type'=>$type);
-					$this->Product_model->edit_product($data);
+					$this->Product_model->edit_product($data);	// Call model to update value to database
 					echo"<script language='javascript'>
 					window.location.href = '../../../pages/member/".$sess['username']."';
 					</script>";			
 				}
 			}
 		}
-		function send_mail($data,$bdata,$pdetail,$amount){
-			while(true){
+		function send_mail($data,$bdata,$pdetail,$amount){	// Send transaction email to seller
+			while(true){	// Use while to load balance when one of email down
 				$attemp = "";
 				$to = $data['email'];
 				$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><br/><table cellspacing='4' width='420'>
@@ -89,8 +89,8 @@
 		</tr>   
 	  </tbody>
 	</table>
-				<br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com<br/>Co-Admin : nvb_kukuku@hotmail.com";	
-				$config = Array(
+				<br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com<br/>Co-Admin : nvb_kukuku@hotmail.com";	// Set message to send
+				$config = Array(	// Config value to send email
 					'protocol' => 'smtp',
 					'smtp_host' => 'ssl://smtp.googlemail.com',
 					'smtp_port' => 465,
@@ -105,26 +105,26 @@
 				$this->email->to($to);
 				$this->email->subject('You have sold an item on Trading in your hand');
 				$this->email->message($message);
-				if($this->email->send())
-					break;
+				if($this->email->send())	// Send email
+					break;	// if done, break
 				if($attemp=="2")
 					break;
 				$attemp = "2";
 			}
 		}
-		public function sendmessage($receiver,$message){
+		public function sendmessage($receiver,$message){	// Send message to message box of seller
 			$temp = $this->session->all_userdata();
 			$dt = date("D M d, Y G:i");
 			$this->db->select_max('id');
 			$query = $this->db->get('message');
-			foreach($query->result_array() as $row)
+			foreach($query->result_array() as $row)	// define id in database for this message
 				$id = $row['id']+1;
-			$data = array('id'=>$id,'sender'=>$temp['username'],'time'=>$dt,'receiver'=>$receiver,'message'=>$message);
+			$data = array('id'=>$id,'sender'=>$temp['username'],'time'=>$dt,'receiver'=>$receiver,'message'=>$message);	
 			$this->load->model('member_model');	
-			$this->member_model->sendmessage($data);
+			$this->member_model->sendmessage($data);	// Send message
 		}
 		function buy(){
-			if($this->uri->segment(3) === FALSE||$this->uri->segment(4) === FALSE||!$this->session->userdata('username'))
+			if($this->uri->segment(3) === FALSE||$this->uri->segment(4) === FALSE||!$this->session->userdata('username'))	// Check 
 				echo"<script language='javascript'>
     window.location.href = '../../../pages/addproduct';
 </script>";
