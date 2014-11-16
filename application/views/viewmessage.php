@@ -7,9 +7,6 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<?
-$username = $this->session->all_userdata();
-?>
 <br/>
 <div class="back">
   <div class="container">
@@ -23,12 +20,13 @@ $username = $this->session->all_userdata();
               <th>From</th>
               <th>Time</th>
               <th>Message</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
             <?
     	foreach($data->result_array() as $row)
-			echo"<tr><td></td><td>".$row['sender']."</td><td>".$row['time']."</td><td>".$row['message']."</td></tr>";
+			echo"<tr><td></td><td>".$row['sender']."</td><td>".$row['time']."</td><td>".$row['message']."</td><td><a class='btn btn-sm btn-danger' href='#'><i class='fa fa-trash-o fa-lg'></i>Delete</a></td></tr>";
 		?>
           </tbody>
         </table>
