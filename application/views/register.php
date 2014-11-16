@@ -48,7 +48,7 @@ function validatepass(){
 }
    
 function validateusername(){
-		var regex = /^[a-zA-Z0-9]{4,12}$/;
+		var regex = /^[a-zA-Z0-9]{4,12}$/;	// use regular expression to filter input
 		var text = $("#username").val();
 			if(regex.test(text)){
 				$("#username").css( "background-color", "#9FF781" );
@@ -81,9 +81,7 @@ function checkuser(){
               </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
-              <div class="form-group">
-                <a class="btn btn-success btn-block btn-lg" onClick="checkuser();">Check</a>
-              </div>
+              <div class="form-group"> <a class="btn btn-success btn-block btn-lg" onClick="checkuser();">Check</a> </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="form-group">
@@ -125,8 +123,10 @@ function checkuser(){
             <div class="col-xs-12 col-md-6"><a href="../pages/login" class="btn btn-success btn-block btn-lg">Sign In</a></div>
           </div>
         </form>
-      </div> <!--col md -->
-    </div> <!-- row -->
+      </div>
+      <!--col md --> 
+    </div>
+    <!-- row --> 
     <!-- Modal -->
     <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -144,7 +144,8 @@ function checkuser(){
       <!-- /.modal-dialog --> 
     </div>
     <!-- /.modal --> 
-  </div> <!-- container -->
+  </div>
+  <!-- container --> 
   
   <!-----------------------------------End_register--------------------------------------------------------------------------> 
   

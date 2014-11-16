@@ -5,7 +5,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../css/bootstrap.min.css" rel="stylesheet">
-
 </head>
 <body>
 <div class="back"> 
@@ -13,7 +12,7 @@
   $(document).ready(function () {
    $("#username").keyup(validateusername);
 });
-	function validateusername(){
+	function validateusername(){		// Use regular expression to check input
 		var regex = /^[a-zA-Z0-9]{4,12}$/;
 		var text = $("#username").val();
 			if(regex.test(text)){
@@ -25,12 +24,11 @@
 				$("#loginbutton").prop("type", "button");
 			}
 	}
-  </script>
+  </script> 
   <!--------------------------Login------------------------------------------------------------------------------------------------------------>
   <section id="login">
     <div class="container">
       <div class="row">
-        
         <div class="col-xs-2 col-md-3"></div>
         <div class="col-xs-8 col-md-6">
           <div class="form-wrap">
@@ -44,7 +42,7 @@
                 <label for="key" class="sr-only">Password</label>
                 <input type="password" name="password" id="password" class="form-control" placeholder="Password" required autofocus>
               </div>
-              <div class="form-group">	
+              <div class="form-group">
                 <input type="button" value="Log in" id="loginbutton" class="btn btn-primary btn-block btn-lg" tabindex="3">
               </div>
             </form>

@@ -33,7 +33,7 @@
         <h3 class="modal-title" id="myModalLabel"><i class="text-muted fa fa-shopping-cart"></i> <strong><? echo $id; ?></strong> - <? echo $name; ?> </h3>
       </div>
       <div class="modal-body">
-        <table class="pull-left col-md-8 ">
+        <table class="pull-left col-md-8 ">					<!--> Show purchase history <-->
           <tbody>
             <tr>
               <td class="h5"><strong>ID</strong></td>

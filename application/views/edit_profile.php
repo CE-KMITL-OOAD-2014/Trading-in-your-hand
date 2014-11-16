@@ -9,93 +9,73 @@
 			$id = $id['username']; ?>
 </head>
 <body>
-<div class="back"> 
-	<div class="container">
-    <br/>
-  <div class="row">
-    <!-- left column -->
-    <div class="col-md-2"></div>
-    <div class="col-md-3 col-sm-5 col-xs-12">
-    <h3>Personal info</h3>
-      <div class="text-center">
-        <img src="../../userPic/<? echo"".md5(base64_encode($id)).".jpg"; ?>" class="avatar img-thumbnail" alt="300x300">
-        <form action="../../member/uploaded" method="POST" enctype="multipart/form-data" >
-        <input type="file" name="userfile" class="text-center center-block well well-sm"/>
-        <input type="submit" name="submit" value="Upload" class="btn btn-success" />
-        </form>
+<div class="back">
+  <div class="container"> <br/>
+    <div class="row"> 
+      <!-- left column -->
+      <div class="col-md-2"></div>
+      <div class="col-md-3 col-sm-5 col-xs-12">
+        <h3>Personal info</h3>
+        <div class="text-center"> <img src="../../userPic/<? echo"".md5(base64_encode($id)).".jpg"; ?>" class="avatar img-thumbnail" alt="300x300">
+          <form action="../../member/uploaded" method="POST" enctype="multipart/form-data" >
+            <input type="file" name="userfile" class="text-center center-block well well-sm"/>
+            <input type="submit" name="submit" value="Upload" class="btn btn-success" />
+          </form>
+        </div>
       </div>
-    </div>
-    <!-- edit form column -->
-    <div class="col-md-7 col-sm-5 col-xs-12 personal-info">
-      <br/><br/><br/>
-      <form class="form-horizontal" id="profile" role="form" action="../../member/edit" method="post">
-        
+      <!-- edit form column -->
+      <div class="col-md-7 col-sm-5 col-xs-12 personal-info"> <br/>
+        <br/>
+        <br/>
+        <form class="form-horizontal" id="profile" role="form" action="../../member/edit" method="post">
           <label class="col-lg-3 control-label">First name:</label>
           <div class="col-lg-8">
             <input class="form-control" id="name" name="name" value="<? echo"".$name; ?>" type="text">
           </div>
-      
-     
           <label class="col-lg-3 control-label">Last name:</label>
           <div class="col-lg-8">
             <input class="form-control" id="sname" name="sname" value="<? echo"".$sname; ?>" type="text">
           </div>
-      
-    
           <label class="col-lg-3 control-label">About:</label>
           <div class="col-lg-8">
             <input class="form-control" id="about" name="about" value="<? echo"".$about; ?>" type="text">
           </div>
-        
- 
           <label class="col-lg-3 control-label">Email:</label>
           <div class="col-lg-8">
             <input class="form-control" id="email" name="email" value="<? echo"".$email; ?>" type="text">
           </div>
-     
-      
           <label class="col-lg-3 control-label">Address:</label>
           <div class="col-lg-8">
             <input class="form-control" id="address" name="address" value="<? echo"".$address; ?>" type="text">
           </div>
-        
-        
           <label class="col-lg-3 control-label">Facebook:</label>
           <div class="col-lg-8">
             <input class="form-control" id="facebook" name="facebook" value="<? echo"".$facebook; ?>" type="text">
           </div>
-       
-        
           <label class="col-lg-3 control-label">Twitter:</label>
           <div class="col-lg-8">
             <input class="form-control" id="twitter" name="twitter" value="<? echo"".$twitter; ?>" type="text">
           </div>
-        
-       
           <label class="col-lg-3 control-label">Google Plus:</label>
           <div class="col-lg-8">
             <input class="form-control" id="googleplus" name="googleplus" value="<? echo"".$googleplus; ?>" type="text">
           </div>
-      
           <label class="col-lg-3 control-label">Github:</label>
           <div class="col-lg-8">
             <input class="form-control" id="github" name="github" value="<? echo"".$github; ?>" type="text">
           </div>
-          
-        <div class="form-group">
-          <div class="col-lg-3"></div>
-          <div class="col-lg-8">
-          <br/>
-            <input class="btn btn-primary pull-right" value="Save Changes" type="submit">
-            <input class="btn btn-default pull-right" value="Cancel" type="button" onclick="location.href='<? 
+          <div class="form-group">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-8"> <br/>
+              <input class="btn btn-primary pull-right" value="Save Changes" type="submit">
+              <input class="btn btn-default pull-right" value="Cancel" type="button" onclick="location.href='<? 
 			echo"../../pages/member/".$id; ?>'">
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
-</div>
-  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
   <!-- Include all compiled plugins (below), or include individual files as needed --> 
   <script src="../../js/bootstrap.min.js"></script> 

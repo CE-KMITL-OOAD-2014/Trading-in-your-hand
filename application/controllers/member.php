@@ -37,16 +37,16 @@ class member extends CI_Controller {
 			$score = $_POST['score'];
 			$name['username'] = $this->uri->segment(3);
 			$this->load->model('member_model');	
-			$data = $this->member_model->memberdetail($name);
-			$newscore = ((($data['avg']*$data['amount'])+$score)/($data['amount']+1));
+			$data = $this->member_model->memberdetail($name);	// get old score
+			$newscore = ((($data['avg']*$data['amount'])+$score)/($data['amount']+1));	//Calulate new score
 			$setdata = array('name'=>$name['username'],'score'=>$newscore,'amount'=>$data['amount']+1);
-			$this->member_model->setnewscore($setdata);
+			$this->member_model->setnewscore($setdata);	// set new score
 			echo"<script language='javascript'>
     window.location.href = '../../pages/member/".$name['username']."';
 </script>";	
 		}
 	}
-	public function register(){
+	public function register(){ // This fuction use to register
 			$username = $_POST['username'];
 			$password = md5($_POST['password']);
 			$name = $_POST['name'];
@@ -54,24 +54,24 @@ class member extends CI_Controller {
 			$address = $_POST['address'];
 			$email = $_POST['email'];
 			$this->load->model('member_model');	
-			if($this->member_model->checkexist($username)){
+			if($this->member_model->checkexist($username)){	// Check if username exist
 				echo"<script language='javascript'>
 	alert('Sorry , There are the exist username in system');
     window.location.href = '../../pages/register';	
 </script>";}
 			else{
-				$number = rand(1111111,9999999);
+				$number = rand(1111111,9999999);	// random number ( Confirmation code  )
 				$data = array('rusername'=>$username,'rpassword'=>$password,'rname'=>$name,'rsname'=>$sname,'raddress'=>$address,'remail'=>$email,'rcode' => $number);
 				$this->session->set_userdata($data);
-				$this->genlog("","Register first");
-				$this->twowayauthen($number);
+				$this->genlog("","Register first");	// generate log to db
+				$this->twowayauthen($number);	// call step two
 				echo"<script language='javascript'>
 		window.location.href = '../../pages/confirm';	
 	</script>";
 			}
 		}
-	public function register2way(){
-			$code = $_POST['code'];
+	public function register2way(){ // Register function ( step2 ) after confirmation step
+ 			$code = $_POST['code'];
 			$sess = $this->session->all_userdata();
 			if($code!=$sess['rcode'])
 				echo"<script language='javascript'>
@@ -82,29 +82,29 @@ class member extends CI_Controller {
 			$this->db->select_max('id');
 			$query = $this->db->get('member');
 			foreach($query->result_array() as $row)
-				$id = $row['id']+1;
+				$id = $row['id']+1;	// get max id from db to find this id
 			$data = array('id'=>$id,'username'=>$sess['rusername'],'password'=>$sess['rpassword'],'name'=>$sess['rname'],'sname'=>$sess['rsname'],'address'=>$sess['raddress'],'email'=>$sess['remail'],'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://",'iden'=>0);
-			if($this->member_model->register($data))
-				$this->session->sess_destroy();
+			if($this->member_model->register($data))	//  if put data to db success
+				$this->session->sess_destroy();// detroy session that include confirmation code
 			$this->genlog($sess['rusername'],"Register success");
 			echo"<script language='javascript'>
 	alert('Success');
     window.location.href = '../../pages/login';
 </script>";
 		}	
-	public function genlog($username,$activity){
-		$ip = $_SERVER['REMOTE_ADDR'];
+	public function genlog($username,$activity){	// Generate log function
+		$ip = $_SERVER['REMOTE_ADDR'];// get client ip address
 		$this->db->select_max('id');
 		$query = $this->db->get('log');
 		foreach($query->result_array() as $row)
-			$id = $row['id']+1;
-		$browser = $_SERVER['HTTP_USER_AGENT'];
-		$dt = date("D M d, Y G:i");
+			$id = $row['id']+1;	
+		$browser = $_SERVER['HTTP_USER_AGENT'];	// get client web browser
+		$dt = date("D M d, Y G:i");	// get date
 		$data = array('id' => $id,'browser' => $browser,'time' => $dt,'ip' => $ip,'username' => $username,'Activity' => $activity);
 		$this->load->model('Log_model');
-		$this->Log_model->logmember($data);
+		$this->Log_model->logmember($data);	// Put data to log db
 	}
-	public function isExist(){
+	public function isExist(){	// This function use to check username exist in system
 		$this->load->model('member_model');	
 		if ($this->uri->segment(3) === FALSE)
 			echo"<script language='javascript'>
@@ -124,18 +124,18 @@ class member extends CI_Controller {
 </script>";
 		}
 	}
-	public function login(){
-			$data['username'] = $_POST['username'];
-			$data['password'] = $_POST['password'];
+	public function login(){	// Log in process function
+			$data['username'] = $_POST['username'];		//
+			$data['password'] = $_POST['password'];		// Get data from user
 			$this->load->model('member_model');	
-			$check = $this->member_model->verifylogin($data);
-			$name = $this->member_model->memberDetail($data);
-			$this->genlog($data['username'],"log in first");
+			$check = $this->member_model->verifylogin($data);	// Verify that username exist in system
+			$name = $this->member_model->memberDetail($data);	// get member detail to use to sent email
+			$this->genlog($data['username'],"log in first");	// Generate log
 			if($check){
-				$number = rand(1111111,9999999);
+				$number = rand(1111111,9999999);	// Generate confirmation code
 				$temp = array('rusername'=>$data['username'],'rpassword'=>$data['password'],'remail'=>$name['email'],'rcode'=>$number,'login2'=>'1');
-				$this->session->set_userdata($temp);
-				$this->twowayauthen($number);
+				$this->session->set_userdata($temp);	// Set session to use for 2 way authen
+				$this->twowayauthen($number);	// Call function that send confirmation code to your email
 				echo"<script language='javascript'>
     window.location.href = '../../pages/confirm';	
 </script>";
@@ -146,73 +146,73 @@ class member extends CI_Controller {
     window.location.href = '../../pages/login';
 </script>";
 		}
-	public function logintwoway(){
+	public function logintwoway(){ // The second step that call after put confirmation code
 			$code = $_POST['code'];
 			$sess = $this->session->all_userdata();
-			if($code!=$sess['rcode'])
+			if($code!=$sess['rcode'])	// Check confirmation code
 				echo"<script language='javascript'>
 	alert('Sorry , You are enter wrong code');
     window.location.href = '../../pages/confirm';	
 </script>";
-			else{
+			else{	// If put correct confirmation code
 			$this->load->model('member_model');
 			$data['username'] = $sess['rusername'];
-			$name = $this->member_model->memberDetail($data);
+			$name = $this->member_model->memberDetail($data);	// get user data
 			$sess = $this->session->all_userdata();
 			$newdata = array(
                    'username'  => $sess['rusername'],
                    'logged_in' => TRUE
 			);
-			$this->session->set_userdata($newdata);
-			$this->genlog($data['username'],"log in success");
+			$this->session->set_userdata($newdata);	// Create new account
+			$this->genlog($data['username'],"log in success");	// Generate log file
 			echo"<script language='javascript'>
 	alert('Welcome , ".$name['name']."');
     window.location.href = '../../pages';
 </script>";}
 		}
-	public function logout(){
-			$this->session->sess_destroy();
+	public function logout(){	// Log out function
+			$this->session->sess_destroy();	// Detroy all session
 			echo"<script language='javascript'>
     window.location.href = '../../pages';
 </script>";
 		}
 
-	public function sendmessage(){
+	public function sendmessage(){	// This function use to send message to other user
 			$receiver = $_POST['receiver'];
 			$message = $_POST['message'];
 			$temp = $this->session->all_userdata();
-			$dt = date("D M d, Y G:i");
+			$dt = date("D M d, Y G:i");	// get date time
 			$this->db->select_max('id');
 			$query = $this->db->get('message');
 			foreach($query->result_array() as $row)
 				$id = $row['id']+1;
-			$data = array('id'=>$id,'sender'=>$temp['username'],'time'=>$dt,'receiver'=>$receiver,'message'=>$message);
+			$data = array('id'=>$id,'sender'=>$temp['username'],'time'=>$dt,'receiver'=>$receiver,'message'=>$message); // put data to array
 			$this->load->model('member_model');	
-			$this->member_model->sendmessage($data);
+			$this->member_model->sendmessage($data); // Send message
 			echo"<script language='javascript'>
 	alert('success');
     window.location.href = '../../pages/message';
 </script>";	
 		}
-	public function delmessage(){
+	public function delmessage(){	// Use for delete message in inbox
 		if ($this->uri->segment(3) === FALSE)
 			echo"<script language='javascript'>
     window.location.href = '../../pages';
 </script>";
 		else{
 			$this->load->model('member_model');
-			$message = $this->member_model->messageDetail($this->uri->segment(3));
+			$message = $this->member_model->messageDetail($this->uri->segment(3));	// get message data
 			$sess = $this->session->all_userdata();
-			if($sess['username']==$message['receiver']){
-				$this->member_model->delmessage($this->uri->segment(3));
+			if($sess['username']==$message['receiver']){	// Chech that you're the true owner of this message
+				$this->member_model->delmessage($this->uri->segment(3));	// Delete message
 			}
 				echo"<script language='javascript'>
 		window.location.href = '../../../pages/viewmessage';
 	</script>";
 		}	
 	}
-	public function edit(){
-		$data = $this->session->all_userdata();
+	public function edit(){	// Use to edit profile
+		$data = $this->session->all_userdata();	//get session data
 		$this->load->model('member_model');
 		$data['name'] = $_POST["name"];
 		$data['sname'] = $_POST["sname"];
@@ -223,18 +223,18 @@ class member extends CI_Controller {
 		$data['twitter'] = $_POST["twitter"];
 		$data['googleplus'] = $_POST["googleplus"];
 		$data['github'] = $_POST["github"];
-		$this->member_model->edit_profile($data);
+		$this->member_model->edit_profile($data);	// Update data to db
 		echo"<script language='javascript'>
     window.location.href = '../../pages/member/".$data['username']."';
 </script>";	
 	}
-	public function uploaded(){
+	public function uploaded(){	// This function use to upload identify picture 
 		$data = $this->session->all_userdata();
 		if ($this->uri->segment(3) === FALSE){
 			$name = md5(base64_encode($data['username']));
 			
 		}
-		else{ // iden 
+		else{ // identify picture name 
 			$name = md5(base64_encode(md5($data['username'])));
 		}
 		$config =  array(
@@ -247,7 +247,7 @@ class member extends CI_Controller {
                 'max_width'       => "1024"  
             );
 		$this->load->library('upload', $config);
-		if($this->upload->do_upload())
+		if($this->upload->do_upload())	// if upload done
 			if ($this->uri->segment(3) === FALSE)
 				echo"<script language='javascript'>
     			window.location.href = '../../pages/editprofile';
@@ -257,7 +257,7 @@ class member extends CI_Controller {
     			window.location.href = '../../pages/iden';
 				</script>";
 				$this->load->model('member_model');
-				$this->member_model->queueiden($data['username']);
+				$this->member_model->queueiden($data['username']);	// Set this user to seller
 				}
 		else
 			if ($this->uri->segment(3) === FALSE)

@@ -1,9 +1,9 @@
 <?php
 	class Log_model extends CI_Model{	
-		function logmember($data){
+		function logmember($data){ // Generate member log
 				$this->db->insert('log',$data);
 		}
-		function logtransac($data){
+		function logtransac($data){	// Generate transaction log
 			$ip = $_SERVER['REMOTE_ADDR'];
 			$time = date("D M d, Y G:i");
 			$this->db->select_max('id');

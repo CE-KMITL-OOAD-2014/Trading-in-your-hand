@@ -11,7 +11,7 @@
   <div class="container">
     <div class="col-md-3"></div>
     <div class="col-md-6">
-    <h2>Send Message</h2>
+      <h2>Send Message</h2>
       <form action="../member/sendmessage" method="post">
         <div class="form-group">
           <label for="Receiver" class="sr-only">Receiver</label>

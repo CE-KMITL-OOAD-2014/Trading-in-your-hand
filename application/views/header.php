@@ -37,25 +37,23 @@ else
           <label style="color:#FFF">Search in</label>
         </form>
         <ul class="nav navbar-nav">
-            <li class='dropdown active'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>catalogue<span class='caret'></span></a>
-              <ul class='dropdown-menu' role='menu'>
-                <li><a onClick="window.location.href ='../../../../pages/search/all/'+document.getElementById('searchname').value;" style='color:#333;'>All</a></li>
-                <li class='divider'></li>
-                <li><a onClick="window.location.href ='../../../../pages/search/electronics/'+document.getElementById('searchname').value;" style='color:#333;'>Electronics</a></li>
-                <li><a onClick="window.location.href ='../../../../pages/search/cloths/'+document.getElementById('searchname').value;" style='color:#333;'>Cloths</a></li>
-                <li><a onClick="window.location.href ='../../../../pages/search/others/'+document.getElementById('searchname').value;" style='color:#333;'>Others</a></li>
-              </ul>
-            </li>
-          </ul>
+          <li class='dropdown active'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>catalogue<span class='caret'></span></a>
+            <ul class='dropdown-menu' role='menu'>
+              <li><a onClick="window.location.href ='../../../../pages/search/all/'+document.getElementById('searchname').value;" style='color:#333;'>All</a></li>
+              <li class='divider'></li>
+              <li><a onClick="window.location.href ='../../../../pages/search/electronics/'+document.getElementById('searchname').value;" style='color:#333;'>Electronics</a></li>
+              <li><a onClick="window.location.href ='../../../../pages/search/cloths/'+document.getElementById('searchname').value;" style='color:#333;'>Cloths</a></li>
+              <li><a onClick="window.location.href ='../../../../pages/search/others/'+document.getElementById('searchname').value;" style='color:#333;'>Others</a></li>
+            </ul>
+          </li>
+        </ul>
         <ul class="nav navbar-nav navbar-right">
-          <? if($page=="home")
+          <? if($page=="home")	// Show correct page title
           		echo"<li class='active'><a href='#'>Home</a></li>";
           	else
 				echo"<li><a href='../../../../pages'>Home</a></li>";
 			if($page=="promotion")
-          		echo"<li class='active'><a href='#'>Promotion</a></li>";
-          	else
-				echo"<li><a href='../../../../pages/promotion'>Promotion</a></li>";
+          		echo"<li class='active'><a href='#'>Promotion</a></li>"; 	
 			if(!$this->session->userdata('username'))
 			if($page=="register")
           		echo"<li class='active'><a href='#'>Register</a></li>";
@@ -70,7 +68,7 @@ else
           		echo"<li class='active'><a href='#'>About</a></li>";
           	else
 				echo"<li><a href='../../../../pages/about'>About</a></li>";
-			if($this->session->userdata('username')){
+			if($this->session->userdata('username')){	// Show menu loged in
 			$username = $this->session->all_userdata();
 			$username = $username['username'];
 				echo"<li><li class='dropdown'> <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Account<span class='caret'></span></a>

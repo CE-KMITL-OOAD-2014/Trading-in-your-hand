@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <style>
-
 /* FONT AWESOME & not necessary for functions */
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
 /*REQUIRED*/
@@ -60,7 +59,7 @@
  display: block;
 }
 </style>
- <?
+<?
 	$sess = $this->session->all_userdata();
 	$num = 0;
     foreach($pdata->result_array() as $rows){
@@ -80,9 +79,9 @@ function confirm(id){
 </script>
 </head>
 <body>
-<div class="back"> 
-	<div class="container">
-     <div class="col-md-12">
+<div class="back">
+  <div class="container">
+    <div class="col-md-12">
       <?
 	$sess = $this->session->all_userdata();
 	$num = 0;
@@ -96,7 +95,7 @@ function confirm(id){
 	else				$numpage=round($num/3);
 	?>
       <div class="row carousel-row">
-        <?
+        <?	// Display search product
 		echo"
         <div class='slide-row'>
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>    
@@ -230,7 +229,7 @@ function confirm(id){
 	echo"</ul></div>";
 	?>
     </div>
- 	</div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
   <!-- Include all compiled plugins (below), or include individual files as needed --> 
   <script src="../js/bootstrap.min.js"></script> 

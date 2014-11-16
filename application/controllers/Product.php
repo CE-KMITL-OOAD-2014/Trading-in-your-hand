@@ -124,7 +124,7 @@
 			$this->member_model->sendmessage($data);	// Send message
 		}
 		function buy(){
-			if($this->uri->segment(3) === FALSE||$this->uri->segment(4) === FALSE||!$this->session->userdata('username'))	// Check 
+			if($this->uri->segment(3) === FALSE||$this->uri->segment(4) === FALSE||!$this->session->userdata('username'))	// Check condition
 				echo"<script language='javascript'>
     window.location.href = '../../../pages/addproduct';
 </script>";
@@ -134,14 +134,14 @@
 				$this->load->model('Log_model');
 				$id = $this->uri->segment(3);
 				$amount = $this->uri->segment(4);
-				$detail = $this->Product_model->getproductdetail($this->uri->segment(3));
-				if($this->Product_model->buyproduct($id,$amount,$data['username'])){
+				$detail = $this->Product_model->getproductdetail($this->uri->segment(3));	//	get product detail
+				if($this->Product_model->buyproduct($id,$amount,$data['username'])){	// Check if buy done
 					$this->load->model('member_model');	
-					$to = $this->member_model->memberDetail($detail);
-					$this->send_mail($to,$data,$detail,$amount);
+					$to = $this->member_model->memberDetail($detail);	// get member detail
+					$this->send_mail($to,$data,$detail,$amount);	
 					$tdata =  array('buyer'=>$data['username'],'seller'=>$detail['username'],'product'=>$detail['name'],'price'=>$detail['price'],'amount'=>$this->uri->segment(4));
 					$this->Log_model->logtransac($tdata);
-					$this->sendmessage($to['username'],"You has been sold<br/>".$tdata['product']."<br/>Price&nbsp;".$tdata['price']."<br/>Amount&nbsp;".$tdata['amount']."<br/>Total&nbsp;".$tdata['price']*$tdata['amount']);
+					$this->sendmessage($to['username'],"You has been sold<br/>".$tdata['product']."<br/>Price&nbsp;".$tdata['price']."<br/>Amount&nbsp;".$tdata['amount']."<br/>Total&nbsp;".$tdata['price']*$tdata['amount']);			// send message to seller
 					echo"<script language='javascript'>
     window.location.href = '../../../pages/member/".$data['username']."';
 </script>";
@@ -153,12 +153,12 @@
 					</script>";
 			}
 		}
-		function add(){
+		function add(){	 //add product function
 			$this->load->model('Product_model');	
-			$this->db->select_max('id');
+			$this->db->select_max('id');	
 			$query = $this->db->get('product');
 			foreach($query->result_array() as $row)
-				$id = $row['id']+1;
+				$id = $row['id']+1;				// find max id+1 in db to use to this product
 			$sess = $this->session->all_userdata();
 			$fname  =  md5($sess['username'].date("D M d, Y G:i").$id);
 			echo $fname;
@@ -172,7 +172,7 @@
                   'max_width'       => "1024"  
                 );
 			$this->load->library('upload', $config);
-			if($this->upload->do_upload())
+			if($this->upload->do_upload())	// if upload done
 			{
 				$name = $_POST["name"];
 				$price = $_POST["price"];
@@ -180,7 +180,7 @@
 				$type = $_POST["type"];
 				$detail = $_POST["detail"];
 				$data = array('id'=>$id,'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$fname,'type'=>$type);
-				if($this->Product_model->add_product($data)){
+				if($this->Product_model->add_product($data)){	// Add product
 					echo"<script language='javascript'>
 	alert('Upload done');
     window.location.href = '../../../pages/member/".$sess['username']."';

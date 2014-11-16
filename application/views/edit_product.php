@@ -15,15 +15,14 @@
           <input type="file" name="userfile" class="text-center center-block well well-sm"/>
         </div>
         <div class="col-md-4">
-       
-            <label for="name" class="sr-only">name</label>
-            <input type="name" name="name" id="name" class="form-control" placeholder="NameProduct" value="<? echo $name; ?>" readonly="readonly">
-            <label for="cost" class="sr-only">cost</label>
-            <input type="cost" name="price" id="price" class="form-control" placeholder="Cost" value="<? echo $price; ?>" required autofocus>
-            <label for="Amount" class="sr-only">Amount</label>
-            <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" value="<? echo $amount; ?>" required autofocus>
-             <select class="form-control" id ="type" name="type">
-              <?
+          <label for="name" class="sr-only">name</label>
+          <input type="name" name="name" id="name" class="form-control" placeholder="NameProduct" value="<? echo $name; ?>" readonly="readonly">
+          <label for="cost" class="sr-only">cost</label>
+          <input type="cost" name="price" id="price" class="form-control" placeholder="Cost" value="<? echo $price; ?>" required autofocus>
+          <label for="Amount" class="sr-only">Amount</label>
+          <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" value="<? echo $amount; ?>" required autofocus>
+          <select class="form-control" id ="type" name="type">
+            <?		// Show old type of this product
 		if($type!="electronics")
 			echo"<option value='electronics'>Electronics</option>";
 		else
@@ -37,14 +36,13 @@
 		else
         	echo"<option value='others' selected='selected'>Others</option>";
 		?>
-            </select>
-        
+          </select>
           <div class="form-group">
-          <textarea rows="8" class="form-control" id="detail" name="detail" placeholder="Detail" style="resize:none" required autofocus ><? echo $detail; ?></textarea>
-        </div>
+            <textarea rows="8" class="form-control" id="detail" name="detail" placeholder="Detail" style="resize:none" required autofocus ><? echo $detail; ?></textarea>
+          </div>
           <div class="form-group">
-          <button type="submit" id="sub" class="btn btn-primary btn-block btn-lg pull-right" form = "data"> Submit </button>
-        </div>
+            <button type="submit" id="sub" class="btn btn-primary btn-block btn-lg pull-right" form = "data"> Submit </button>
+          </div>
         </div>
       </form>
     </div>

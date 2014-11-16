@@ -3,7 +3,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -11,11 +10,9 @@
   <br/>
   <section class="section-white">
     <div class="container">
-
       <div class="col-md-12 col-xs-12">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> 
-          <!-- Indicators -->
-          
+          <!-- Indicators --> 
           
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
@@ -39,12 +36,14 @@
           <!-- Controls --> 
           <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a> <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a> </div>
       </div>
-   <!-->   <div class="col-md-2"></div><!-->
+      <!-->   <div class="col-md-2"></div><!--> 
     </div>
   </section>
   <br/>
   <br/>
-   <div class="container"><h2>New arrival.</h2></div>
+  <div class="container">
+    <h2>New arrival.</h2>
+  </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
   <!-- Include all compiled plugins (below), or include individual files as needed --> 
@@ -52,7 +51,7 @@
   <div class="container" id="tourpackages-carousel">
     <div class="row">
       <div class="col-xs-18 col-sm-6 col-md-3">
-        <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[1]['pic1']; ?>.jpg" alt="">
+        <div class="thumbnail"> <img src="../../productPic/<? echo"".$data[1]['pic1']; ?>.jpg" alt="">		<!--> Display New arrival product  <-->
           <div class="caption">
             <h4><? echo"".$data[1]['name']; ?></h4>
             <p><? echo"".$data[1]['detail']; ?></p>

@@ -17,7 +17,7 @@ class pages extends CI_Controller {
 		$this->load->view('home.php',$temp);
 		$this->load->view('footer.php');
 	}
-	public function register()
+	public function register()	// Register page
 	{
 		$data['page'] = "Register";
 		$this->load->helper('body.php');
@@ -26,7 +26,7 @@ class pages extends CI_Controller {
 		$this->load->view('register.php');
 		$this->load->view('footer.php');
 	}
-	public function confirm()
+	public function confirm()	// confirm page
 	{
 		$data['page'] = "confirm";
 		$this->load->helper('body.php');
@@ -35,7 +35,7 @@ class pages extends CI_Controller {
 		$this->load->view('confirm.php');
 		$this->load->view('footer.php');
 	}
-	public function about()
+	public function about()	// About page
 	{
 		$data['page'] = "About";
 		$this->load->helper('body.php');
@@ -44,7 +44,7 @@ class pages extends CI_Controller {
 		$this->load->view('about.php');
 		$this->load->view('footer.php');	
 	}
-	public function iden()
+	public function iden()	// identify page
 	{
 		$data['page'] = "identify";
 		$this->load->helper('body.php');
@@ -53,8 +53,8 @@ class pages extends CI_Controller {
 		$this->load->view('indentify.php');
 		$this->load->view('footer.php');
 	}
-	public function login(){
-		if($this->session->userdata('username')){
+	public function login(){	// ;ogin page
+		if($this->session->userdata('username')){	// check login
 			$sess = $this->session->all_userdata();
 			echo"<script language='javascript'>
     window.location.href = '../../../pages/member/".$sess['username']."';
@@ -67,7 +67,7 @@ class pages extends CI_Controller {
 		$this->load->view('login.php');	
 		$this->load->view('footer.php');
 	}
-	public function addproduct(){
+	public function addproduct(){	// add product page
 		$this->load->model('member_model');
 		$sess = $this->session->all_userdata();
 		$checkiden = $this->member_model->memberDetail($sess);
@@ -83,7 +83,7 @@ class pages extends CI_Controller {
 		$this->load->view('add_product.php');	
 		$this->load->view('footer.php');
 	}
-	public function editproduct(){
+	public function editproduct(){// edit product page
 		if($this->session->userdata('username')){
 			$data = $this->session->all_userdata();
 			$id = $data['username'];		
@@ -93,7 +93,7 @@ class pages extends CI_Controller {
 	</script>";
 			else{
 				$this->load->model('Product_model');
-				$pdata = $this->Product_model->getproductdetail($this->uri->segment(3));
+				$pdata = $this->Product_model->getproductdetail($this->uri->segment(3)); // get product detail
 				$head['page'] = "Edit product";	
 				$this->load->helper('body.php');
 				$this->load->view('header.php',$head);
@@ -107,8 +107,8 @@ class pages extends CI_Controller {
 		window.location.href = '../../../pages';
 	</script>";
 	}
-
-	public function message(){
+	
+	public function message(){		// Send message page
 		$data['page'] = "Message"; 
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
@@ -116,7 +116,7 @@ class pages extends CI_Controller {
 		$this->load->view('message.php');
 		$this->load->view('footer.php');
 	}
-	public function viewmessage(){
+	public function viewmessage(){	// view message page
 		$data['page'] = "Message"; 
 		$this->load->model('member_model');	
 		$mdata['data'] = $this->member_model->getmessage();
@@ -126,15 +126,7 @@ class pages extends CI_Controller {
 		$this->load->view('viewmessage.php',$mdata);
 		$this->load->view('footer.php');		
 	}
-	public function upload(){
-		$data['page'] = "upload"; 
-		$this->load->helper('body.php');
-		$this->load->view('header.php',$data);
-		$this->load->view('space.php');
-		$this->load->view('upload.php');
-		$this->load->view('footer.php');
-	}
-	public function member(){
+	public function member(){ // member profile page
 		if ($this->uri->segment(3) === FALSE){ 
 			echo"<script language='javascript'>
     window.location.href = '../../pages';
@@ -145,7 +137,7 @@ class pages extends CI_Controller {
 				$ppage = 1;
 			else {$ppage = $this->uri->segment(4);}
 				$this->load->model('member_model');	
-				if($this->session->userdata('username')){
+				if($this->session->userdata('username')){	// Check login status
 					$sess = $this->session->all_userdata();
 					$score = $this->member_model->getstatusscore($sess['username'],$this->uri->segment(3));
 					$isScore = true;
@@ -157,8 +149,8 @@ class pages extends CI_Controller {
 				$data['username'] = $this->uri->segment(3);
 				$id = $data['username'];
 				$this->load->model('product_model');	
-				$detail = $this->member_model->memberDetail($data);
-				$pdata = $this->product_model->userProduct($data);
+				$detail = $this->member_model->memberDetail($data);	// get profile detail
+				$pdata = $this->product_model->userProduct($data);	// get product og this user
 				$data['page'] = "profile"; 
 				$temp = array( 'detail' => $detail, 'pdata' => $pdata, 'ppage' => $ppage ,'id' => $id,'score' => $score,'isScore' => $isScore); 
 				$this->load->helper('body.php');
@@ -168,7 +160,7 @@ class pages extends CI_Controller {
 				$this->load->view('footer.php');
 		}
 	}
-	public function search(){
+	public function search(){	// Search page
 		if($this->session->userdata('username')){
 			$data = $this->session->all_userdata();
 			$id = $data['username'];}
@@ -187,7 +179,7 @@ class pages extends CI_Controller {
 			$ppage = 1;
 		else
 			$ppage = $this->uri->segment(5);
-		$pdata = $this->product_model->viewProduct($name,$type);
+		$pdata = $this->product_model->viewProduct($name,$type);	// get product detail
 		$temp = array('pdata' => $pdata, 'ppage' => $ppage ,'id' => $id,'type' => $type,'name' => $name); 
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
@@ -196,7 +188,7 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 		
 	}
-	public function buy(){
+	public function buy(){	// buy page
 		if($this->session->userdata('username')){
 			$data = $this->session->all_userdata();
 			$id = $data['username'];		
@@ -206,7 +198,7 @@ class pages extends CI_Controller {
 	</script>";
 			else{
 				$this->load->model('Product_model');
-				$pdata = $this->Product_model->getproductdetail($this->uri->segment(3));
+				$pdata = $this->Product_model->getproductdetail($this->uri->segment(3));	// get product detail
 				$head['page'] = "Buy product";	
 				$this->load->helper('body.php');
 				$this->load->view('header.php',$head);
@@ -221,12 +213,12 @@ class pages extends CI_Controller {
 		window.location.href = '../../../pages';
 	</script>";
 	}
-	public function editprofile(){
+	public function editprofile(){	// edit profile page
 		if($this->session->userdata('username')){
 			$this->load->model('member_model');
 			$data['page'] = "Edit profile"; 
 			$sess = $this->session->all_userdata();
-			$detail = $this->member_model->memberDetail($sess);
+			$detail = $this->member_model->memberDetail($sess);	// get member detail from db
 			$this->load->helper('body.php');
 			$this->load->view('header.php',$data);
 			$this->load->view('space.php');
@@ -238,10 +230,10 @@ class pages extends CI_Controller {
     window.location.href = '../../pages/login';
 </script>";
 	}
-	public function phistory(){
+	public function phistory(){	// purchase history page
 		$sess = $this->session->all_userdata();
 		$this->load->model('product_model');
-		$pdata['data'] = $this->product_model->gettransac($sess);
+		$pdata['data'] = $this->product_model->gettransac($sess); // get transaction history form db
 		$data['page'] = "Purchase history"; 
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);

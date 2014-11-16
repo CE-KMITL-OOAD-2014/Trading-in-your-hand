@@ -217,7 +217,7 @@ if($this->session->userdata('username')){
             <!-- Description -->
             <p><? echo"".$detail['about'].""; ?></p>
             <div class="social">
-              <? if($detail['facebook']!="https://")echo"<a href=".$detail['facebook']." class='[ social-icon facebook ] animate'><span class='fa fa-facebook'></span></a>"; 
+              <? if($detail['facebook']!="https://")echo"<a href=".$detail['facebook']." class='[ social-icon facebook ] animate'><span class='fa fa-facebook'></span></a>"; // social icon
 			if($detail['twitter']!="https://")echo"<a href=".$detail['twitter']." class='[ social-icon twitter ] animate'><span class='fa fa-twitter'></span></a>"; 
 			if($detail['github']!="https://")echo"<a href=".$detail['github']." class='[ social-icon github ] animate'><span class='fa fa-github-alt'></span></a>";
 			if($detail['googleplus']!="https://")echo"<a href=".$detail['googleplus']." class='[ social-icon google-plus ] animate'><span class='fa fa-google-plus'></span></a>";       
@@ -229,8 +229,8 @@ if($this->session->userdata('username')){
           </div>
         </div>
       </div>
-    <div id="stars" class="starrr">
-       	<? 
+      <div id="stars" class="starrr">
+        <? 
 		$star = round($detail['avg']);
 		for($i=0 ;$i<10;$i++)
 			if($i<$star)
@@ -240,15 +240,15 @@ if($this->session->userdata('username')){
 		 
         echo"<br/><i>Avg. score is ".$detail['avg']." From ".$detail['amount']." users.</i>";
 		?>
-	</div>
-    <hr/>
+      </div>
+      <hr/>
       <?
-    if($id==$username&&$detail['iden']==1&&$this->session->userdata('username'))
+    if($id==$username&&$detail['iden']==1&&$this->session->userdata('username'))	// Button part
       	echo"<a href='../../../pages/addproduct'><button class='btn btn-success'> Add product</button></a>";
 	else if($id==$username&&$detail['iden']!=1&&$this->session->userdata('username'))
 		echo"<a href='../../../pages/iden'><button class='btn btn-success'> Become a seller</button></a>";
     if($isScore&&$this->session->userdata('username'))
-		if($score != "0"){
+		if($score != "0"){	// Rate score user
 			echo"<form action='../../../../member/givestar/".$id."' method='post'><select class='form-control' id='score' name='score'>
             <option selected='true' style='display:none;'>Rate me</option>
     		<option>1</option>
@@ -281,7 +281,7 @@ if($this->session->userdata('username')){
 	else				$numpage=round($num/3);
 	?>
       <div class="row carousel-row">
-        <?
+        <?	// Show product of this user
 		echo"
         <div class='slide-row'>
           <div id='carousel-1' class='carousel slide slide-carousel' data-ride='carousel'>    
@@ -394,7 +394,7 @@ if($this->session->userdata('username')){
 	  	$now = round($ppage/5)+1;
 	else
 		$now = round($ppage/5);
-	  echo"<div class='text-center'><ul class='pagination pagination-large'>";	
+	  echo"<div class='text-center'><ul class='pagination pagination-large'>";		// page button
 		if($ppage!=1)
 			echo"<li><a href='../../../../pages/member/".$id."/".($ppage-1)."' rel='prev'>&laquo;</a></li>";	
 		if($numpage>=(5*$x)+1){	
