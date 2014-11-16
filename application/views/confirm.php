@@ -17,8 +17,9 @@
 			$sess = $this->session->all_userdata();
 			echo"<h1>Enter confirmation code</h1>"; ?>
           <div class="form-group">
-            <p>it's just been a while...<? echo $sess['rcode']; ?></p>
+            <p>it's just been a while...
             As an added account security measure, you'll need to grant access to this browser by entering the special code we've just sent to your email address.<br/>
+            (for test only : this is your confirmation code : <? echo $sess['rcode']; ?></p>)
           </div>
           <form action="<? 
 			if(!$this->session->userdata('login2'))
