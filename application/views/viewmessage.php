@@ -9,7 +9,6 @@
 <body>
 <?
 $username = $this->session->all_userdata();
-echo"".$username['username'];
 ?>
 <div class="back">
   <div class="container">
@@ -19,18 +18,17 @@ echo"".$username['username'];
         <table class="table">
           <thead>
             <tr>
+              <th></th>
               <th>From</th>
               <th>Time</th>
               <th>Message</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <?
+            <?
     	foreach($data->result_array() as $row)
-			echo"<td>".$row['sender']."<td/><td>".$row['time']."<td/><td>".$row['message']."<td/>";
+			echo"<tr><td></td><td>".$row['sender']."</td><td>".$row['time']."</td><td>".$row['message']."</td></tr>";
 		?>
-            </tr>
           </tbody>
         </table>
       </div>
