@@ -66,7 +66,7 @@
 			}
 		}
 		function send_mail($data,$bdata,$pdetail,$amount){	// Send transaction email to seller
-			while(true){	// Use while to load balance when one of email down
+			for($i=0;$i<2;$i++){	// Use while to load balance when one of email down
 				$attemp = "";
 				$to = $data['email'];
 				$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><br/><table cellspacing='4' width='420'>
