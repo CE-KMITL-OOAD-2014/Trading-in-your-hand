@@ -40,8 +40,10 @@
 				return $tScore;
 			}
 			function setnewscore($data){
+				$sess = $this->session->all_userdata();
 				$score = round($data['score'], 1); 
 				$this->db->where('username',$data['name'])->set('avg',$score)->set('amount',$data['amount'])->update('member');
+				$this->db->where('seller',$data['name'])->where('buyer',$sess['username'])->where('isScore',"0")->set('isScore',"1");
 			}
 		}
 	
