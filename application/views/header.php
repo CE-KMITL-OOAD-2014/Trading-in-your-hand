@@ -12,7 +12,8 @@ else
 ?>
 <script>
     function handle(e){
-		if(e.keyCode === 13)
+		var key=e.keyCode || e.which;
+		if(key==13)
         	window.location.href ='../../../../pages/search/all/'+document.getElementById('searchname').value;
         return false; //Otherwise the form will be submitted
     }
@@ -29,9 +30,9 @@ else
         <a class="navbar-brand" href="../../../../../pages" onMouseOver="logo.src='../../../../images/logo2.png';" onMouseOut="logo.src='../../../../images/logo.png';"><img src="../../../../images/logo.png" width="25px" height="25px" id="logo"/>Trading in your hand</a> </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <form class="navbar-form navbar-left" role="search" action="#">
+        <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search product, member" id="searchname" name="searchname" onkeypress="handle">
+            <input type="text" class="form-control" placeholder="Search product, member" id="searchname" name="searchname" onkeypress="handle(event);">
           </div>
           <label style="color:#FFF">Search in</label>
         </form>
