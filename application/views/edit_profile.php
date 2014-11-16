@@ -28,7 +28,7 @@
     <!-- edit form column -->
     <div class="col-md-7 col-sm-5 col-xs-12 personal-info">
       <br/><br/><br/>
-      <form class="form-horizontal" id="profile" role="form" action="../../member/editp" method="post">
+      <form class="form-horizontal" id="profile" role="form" action="../../member/edit" method="post">
         
           <label class="col-lg-3 control-label">First name:</label>
           <div class="col-lg-8">

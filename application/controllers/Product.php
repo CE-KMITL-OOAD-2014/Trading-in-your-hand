@@ -1,5 +1,5 @@
 <?php
-	class product extends member{
+	class product extends CI_Controller{
 		
 		function delete(){
 			if ($this->uri->segment(3) === FALSE){ 
