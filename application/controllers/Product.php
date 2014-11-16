@@ -66,44 +66,51 @@
 			}
 		}
 		function send_mail($data,$bdata,$pdetail,$amount){
-			$to = $data['email'];
-			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><br/><table cellspacing='4' width='420'>
-    <tbody>
-    <tr>
-      <td width='200'><div align='right'><b>".$pdetail['name']."&nbsp;&nbsp;</b></div></td>
-      <td width='202'>".$pdetail['price']."&nbsp;THB</td>
-    </tr>
-    <tr>
-      <td width='200'><div align='right'><b>Amount&nbsp;&nbsp;</b></div></td>
-      <td width='202'>".$amount."&nbsp;Units</td>
-    </tr>
-    <tr>
-      <td width='200'><div align='right'><b>&nbsp;</b></div></td>
-      <td width='202'><hr align='left' color='#cccccc' noshade='' size='1' width='180'></td>
-    </tr>
-    <tr>
-      <td width='200'><div style='font-size:18px' align='right'><b>Total&nbsp;&nbsp;</b></div></td>
-      <td width='202'><span style='font-size:18px'>".$pdetail['price']*$amount."&nbsp;THB</span></td>
-    </tr>   
-  </tbody>
-</table>
-			<br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com<br/>Co-Admin : nvb_kukuku@hotmail.com";	
-			$config = Array(
-				'protocol' => 'smtp',
-				'smtp_host' => 'ssl://smtp.googlemail.com',
-				'smtp_port' => 465,
-				'smtp_user' => 'test2.trading.in.your.hand@gmail.com',
-				'smtp_pass' => 'pae123456',
-				'mailtype'  => 'html', 
-				'charset'   => 'iso-8859-1'
-			);
-			$this->load->library('email', $config);
-			$this->email->set_newline("\r\n");
-			$this->email->from('test2.trading.in.your.hand@gmail.com');
-			$this->email->to($to);
-			$this->email->subject('You have sold an item on Trading in your hand');
-			$this->email->message($message);
-			$result = $this->email->send();	
+			while(true){
+				$attemp = "";
+				$to = $data['email'];
+				$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><br/><table cellspacing='4' width='420'>
+		<tbody>
+		<tr>
+		  <td width='200'><div align='right'><b>".$pdetail['name']."&nbsp;&nbsp;</b></div></td>
+		  <td width='202'>".$pdetail['price']."&nbsp;THB</td>
+		</tr>
+		<tr>
+		  <td width='200'><div align='right'><b>Amount&nbsp;&nbsp;</b></div></td>
+		  <td width='202'>".$amount."&nbsp;Units</td>
+		</tr>
+		<tr>
+		  <td width='200'><div align='right'><b>&nbsp;</b></div></td>
+		  <td width='202'><hr align='left' color='#cccccc' noshade='' size='1' width='180'></td>
+		</tr>
+		<tr>
+		  <td width='200'><div style='font-size:18px' align='right'><b>Total&nbsp;&nbsp;</b></div></td>
+		  <td width='202'><span style='font-size:18px'>".$pdetail['price']*$amount."&nbsp;THB</span></td>
+		</tr>   
+	  </tbody>
+	</table>
+				<br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com<br/>Co-Admin : nvb_kukuku@hotmail.com";	
+				$config = Array(
+					'protocol' => 'smtp',
+					'smtp_host' => 'ssl://smtp.googlemail.com',
+					'smtp_port' => 465,
+					'smtp_user' => 'test2.trading.in.your.hand@gmail.com',
+					'smtp_pass' => 'pae123456',
+					'mailtype'  => 'html', 
+					'charset'   => 'iso-8859-1'
+				);
+				$this->load->library('email', $config);
+				$this->email->set_newline("\r\n");
+				$this->email->from('test2.trading.in.your.hand@gmail.com');
+				$this->email->to($to);
+				$this->email->subject('You have sold an item on Trading in your hand');
+				$this->email->message($message);
+				if($this->email->send())
+					break;
+				if($attemp=="2")
+					break;
+				$attemp = "2";
+			}
 		}
 		function buy(){
 			if($this->uri->segment(3) === FALSE||$this->uri->segment(4) === FALSE||!$this->session->userdata('username'))
