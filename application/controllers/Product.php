@@ -144,7 +144,7 @@
 					$to = $this->member_model->memberDetail($detail);
 					$this->send_mail($to,$data,$detail,$amount);
 					$tdata =  array('buyer'=>$data['username'],'seller'=>$detail['username'],'product'=>$detail['name'],'price'=>$detail['price'],'amount'=>$this->uri->segment(4));
-					$this->sendmessage($to['username'],"You has been sold ".$tdata['product']."Price&nbsp;".$tdata['price']."Amount&nbsp;".$tdata['amount']."Total&nbsp;".$tdata['price']*$tdata['amount']);
+					$this->sendmessage($to['username'],"You has been sold ".$tdata['product']."<br/>Price&nbsp;".$tdata['price']."<br/>Amount&nbsp;".$tdata['amount']."<br/>Total&nbsp;".$tdata['price']*$tdata['amount']);
 					$this->Log_model->logtransac($tdata);
 					echo"<script language='javascript'>
     window.location.href = '../../../pages/member/".$data['username']."';
