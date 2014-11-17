@@ -136,7 +136,7 @@
 					$this->Log_model->logtransac($tdata);
 					$this->sendmessage($to['username'],"You has been sold<br/>".$tdata['product']."<br/>Price&nbsp;".$tdata['price']."<br/>Amount&nbsp;".$tdata['amount']."<br/>Total&nbsp;".$tdata['price']*$tdata['amount']);			// send message to seller
 					echo"<script language='javascript'>
-    window.location.href = '../../../pages/';
+    window.location.href = '../../pages/';
 </script>";
 				}
 				else
