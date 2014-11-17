@@ -24,9 +24,7 @@ class member extends CI_Controller {
 	}
 	public function givestar(){	// This function use to give star to seller that you have bought.
 		if ($this->uri->segment(3) === FALSE)
-			echo"<script language='javascript'>
-    window.location.href = '../../pages';
-</script>";
+			header('Location: '."../../../../pages");
 		else{
 			$score = $_POST['score'];
 			$name['username'] = $this->uri->segment(3);
@@ -35,9 +33,7 @@ class member extends CI_Controller {
 			$newscore = ((($data['avg']*$data['amount'])+$score)/($data['amount']+1));	//Calulate new score
 			$setdata = array('name'=>$name['username'],'score'=>$newscore,'amount'=>$data['amount']+1);
 			$this->member_model->setnewscore($setdata);	// set new score
-			echo"<script language='javascript'>
-    window.location.href = '../../pages/member/".$name['username']."';
-</script>";	
+			header('Location: '."../../../../pages/member/".$name['username']);
 		}
 	}
 	public function register(){ // This fuction use to register
@@ -59,9 +55,7 @@ class member extends CI_Controller {
 				$this->session->set_userdata($data);
 				$this->genlog("","Register first");	// generate log to db
 				$this->twowayauthen($number);	// call step two
-				echo"<script language='javascript'>
-		window.location.href = '../../pages/confirm';	
-	</script>";
+				header('Location: '."../../../../pages/confirm");
 			}
 		}
 	public function register2way(){ // Register function ( step2 ) after confirmation step
@@ -130,9 +124,7 @@ class member extends CI_Controller {
 				$temp = array('rusername'=>$data['username'],'rpassword'=>$data['password'],'remail'=>$name['email'],'rcode'=>$number,'login2'=>'1');
 				$this->session->set_userdata($temp);	// Set session to use for 2 way authen
 				$this->twowayauthen($number);	// Call function that send confirmation code to your email
-				echo"<script language='javascript'>
-    window.location.href = '../../pages/confirm';	
-</script>";
+				header('Location: '."../../../../pages/confirm");
 			}
 			else
 				echo"<script language='javascript'>
@@ -166,9 +158,7 @@ class member extends CI_Controller {
 		}
 	public function logout(){	// Log out function
 			$this->session->sess_destroy();	// Detroy all session
-			echo"<script language='javascript'>
-    window.location.href = '../../pages';
-</script>";
+			header('Location: '."../../../../pages");
 		}
 
 	public function sendmessage(){	// This function use to send message to other user
@@ -190,9 +180,7 @@ class member extends CI_Controller {
 		}
 	public function delmessage(){	// Use for delete message in inbox
 		if ($this->uri->segment(3) === FALSE)
-			echo"<script language='javascript'>
-    window.location.href = '../../pages';
-</script>";
+			header('Location: '."../../../../pages");
 		else{
 			$this->load->model('member_model');
 			$message = $this->member_model->messageDetail($this->uri->segment(3));	// get message data
@@ -200,9 +188,7 @@ class member extends CI_Controller {
 			if($sess['username']==$message['receiver']){	// Chech that you're the true owner of this message
 				$this->member_model->delmessage($this->uri->segment(3));	// Delete message
 			}
-				echo"<script language='javascript'>
-		window.location.href = '../../../pages/viewmessage';
-	</script>";
+			header('Location: '."../../../../pages/viewmessage");
 		}	
 	}
 	public function edit(){	// Use to edit profile
@@ -218,9 +204,7 @@ class member extends CI_Controller {
 		$data['googleplus'] = $_POST["googleplus"];
 		$data['github'] = $_POST["github"];
 		$this->member_model->edit_profile($data);	// Update data to db
-		echo"<script language='javascript'>
-    window.location.href = '../../pages/member/".$data['username']."';
-</script>";	
+		header('Location: '."../../../../pages/member/".$data['username']);
 	}
 	public function uploaded(){	// This function use to upload identify picture 
 		$data = $this->session->all_userdata();
@@ -243,13 +227,9 @@ class member extends CI_Controller {
 		$this->load->library('upload', $config);
 		if($this->upload->do_upload())	// if upload done
 			if ($this->uri->segment(3) === FALSE)
-				echo"<script language='javascript'>
-    			window.location.href = '../../pages/editprofile';
-				</script>";	
+				header('Location: '."../../../../pages/editprofile");	
 			else{
-				echo"<script language='javascript'>
-    			window.location.href = '../../pages/iden';
-				</script>";
+				header('Location: '."../../../../pages/iden");
 				$this->load->model('member_model');
 				$this->member_model->queueiden($data['username']);	// Set this user to seller
 				}
