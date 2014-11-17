@@ -154,7 +154,6 @@
 				$id = $row['id']+1;				// find max id+1 in db to use to this product
 			$sess = $this->session->all_userdata();
 			$fname  =  md5($sess['username'].date("D M d, Y G:i").$id);
-			echo $fname;
 			$config =  array(
 				  'file_name'		=> $fname.".jpg",
                   'upload_path'     => "./productPic/",
