@@ -37,7 +37,7 @@ class member extends CI_Controller {
 		}
 	}
 	public function register(){ // This fuction use to register
-			$username = $_POST['username'];
+			$username = strtolower($_POST['username']);
 			$password = md5($_POST['password']);
 			$name = $_POST['name'];
 			$sname = $_POST['sname'];
@@ -113,7 +113,7 @@ class member extends CI_Controller {
 		}
 	}
 	public function login(){	// Log in process function
-			$data['username'] = $_POST['username'];		//
+			$data['username'] = strtolower($_POST['username']);		//
 			$data['password'] = $_POST['password'];		// Get data from user
 			$this->load->model('member_model');	
 			$check = $this->member_model->verifylogin($data);	// Verify that username exist in system
@@ -162,7 +162,7 @@ class member extends CI_Controller {
 		}
 
 	public function sendmessage(){	// This function use to send message to other user
-			$receiver = $_POST['receiver'];
+			$receiver = strtolower($_POST['receiver']);
 			$message = $_POST['message'];
 			$temp = $this->session->all_userdata();
 			$dt = date("D M d, Y G:i");	// get date time
