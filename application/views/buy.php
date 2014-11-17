@@ -82,12 +82,12 @@
         <p class="open_info hide"></p>
       </div>
       <div class="modal-footer">
-        <h5><strong>Amount</strong></h5>
+      <h5><strong>Amount</strong></h5>
+        <div class="form-group">
+          <label for="Amount" class="sr-only">Amount</label>
+          <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" required="required" autofocus="autofocus" />
+        </div>
         <div class="text-right pull-right col-md-3">
-          <div class="form-group">
-            <label for="Amount" class="sr-only">Amount</label>
-            <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" required="required" autofocus="autofocus" />
-          </div>
           <input type="button" value="Buy" id="buy" class="btn btn-primary btn-block btn-lg" onclick="buy();" />
         </div>
         <div class="text-right pull-right col-md-3"> Summary: <br/>
