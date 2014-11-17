@@ -33,7 +33,8 @@
         <h3 class="modal-title" id="myModalLabel"><i class="text-muted fa fa-shopping-cart"></i> <strong><? echo $id; ?></strong> - <? echo $name; ?> </h3>
       </div>
       <div class="modal-body">
-        <table class="pull-left col-md-8 ">					<!-- Show purchase history -->
+        <table class="pull-left col-md-8 ">
+          <!-- Show purchase history -->
           <tbody>
             <tr>
               <td class="h5"><strong>ID</strong></td>
@@ -74,8 +75,10 @@
             <tr>
               <td class="h5"><strong>Amount</strong></td>
               <td></td>
-              <td><label for="Amount" class="sr-only">Amount</label>
-                <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" required="required" autofocus="autofocus" /></td>
+              <td><div class="form-group">
+                  <label for="Amount" class="sr-only">Amount</label>
+                  <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" required="required" autofocus="autofocus" />
+                </div></td>
             </tr>
             <tr>
               <td class="h5"></td>

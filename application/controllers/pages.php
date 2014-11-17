@@ -210,7 +210,7 @@ class pages extends CI_Controller {
 		else
 			echo"<script language='javascript'>
 			alert('Please Log in before');
-		window.location.href = '../../../pages';
+		window.location.href = '../../../pages/login';
 	</script>";
 	}
 	public function editprofile(){	// edit profile page
