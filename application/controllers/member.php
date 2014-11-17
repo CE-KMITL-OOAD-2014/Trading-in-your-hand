@@ -216,7 +216,7 @@ class member extends CI_Controller {
 			$name = md5(base64_encode(md5($data['username'])));
 		}
 		$config =  array(
-				'file_name'		  => $name,
+				'file_name'		  => $name.".jpg",
                 'upload_path'     => "./userPic/",
                 'allowed_types'   => "gif|jpg|png|jpeg",
                 'overwrite'       => TRUE,
@@ -241,7 +241,7 @@ class member extends CI_Controller {
 				</script>";	
 			else
 				echo"<script language='javascript'>
-				alert('Please browse file');
+				alert('Please browse file only type JPG');
     			window.location.href = '../../pages/iden';
 				</script>";	
 	}	

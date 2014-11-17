@@ -172,7 +172,7 @@
 				else{
 					echo"<script language='javascript'>
 	alert('You are have the same product name');
-	window.location.href='../../../pages';
+	window.location.href='../../../../pages/member/".$sess['username']."';
 </script>";
 				}
 			}
@@ -180,7 +180,7 @@
 			{
 			   echo"<script language='javascript'>
 	alert('Please browse file only type JPG');
-	window.location.href='../../../pages';
+	window.location.href='../../../../pages/member/".$sess['username']."';
 </script>";
 			}
 			
