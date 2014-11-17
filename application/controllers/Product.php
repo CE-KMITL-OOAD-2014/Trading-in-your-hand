@@ -99,7 +99,7 @@
 				);
 				$this->load->library('email', $config);
 				$this->email->set_newline("\r\n");
-				$this->email->from('test'.$attemp.'.trading.in.your.hand@gmail.com');
+				$this->email->from('support@trading.esy.es');
 				$this->email->to($to);
 				$this->email->subject('You have sold an item on Trading in your hand');
 				$this->email->message($message);
