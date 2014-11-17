@@ -66,8 +66,6 @@
 			}
 		}
 		function send_mail($data,$bdata,$pdetail,$amount){	// Send transaction email to seller
-			for($i=0;$i<2;$i++){	// Use while to load balance when one of email down
-				$attemp = "";
 				$to = $data['email'];
 				$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$data['username'].",<br/><br/> An item you listed in Trading in your hand has been sold to ".$bdata['username'].".<br/><br/><table cellspacing='4' width='420'>
 		<tbody>
@@ -91,13 +89,13 @@
 	</table>
 				<br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com<br/>Co-Admin : nvb_kukuku@hotmail.com";	// Set message to send
 				$config = Array(	// Config value to send email
-					'protocol' => 'smtp',
-					'smtp_host' => 'ssl://smtp.googlemail.com',
-					'smtp_port' => 465,
-					'smtp_user' => 'test'.$attemp.'.trading.in.your.hand@gmail.com',
-					'smtp_pass' => 'pae123456',
-					'mailtype'  => 'html', 
-					'charset'   => 'iso-8859-1'
+						'protocol' => 'smtp',
+						'smtp_host' => 'mx1.hostinger.in.th',
+						'smtp_port' => 2525,
+						'smtp_user' => 'support@trading.esy.es',
+						'smtp_pass' => 'pae123456',
+						'mailtype'  => 'html', 
+						'charset'   => 'iso-8859-1'
 				);
 				$this->load->library('email', $config);
 				$this->email->set_newline("\r\n");
@@ -105,12 +103,7 @@
 				$this->email->to($to);
 				$this->email->subject('You have sold an item on Trading in your hand');
 				$this->email->message($message);
-				if($this->email->send())	// Send email
-					break;	// if done, break
-				if($attemp=="2")
-					break;
-				$attemp = "2";
-			}
+				$this->email->send();	// Send email
 		}
 		public function sendmessage($receiver,$message){	// Send message to message box of seller
 			$temp = $this->session->all_userdata();
