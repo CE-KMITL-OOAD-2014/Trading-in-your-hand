@@ -75,10 +75,6 @@
             <tr>
               <td class="h5"><strong>Amount</strong></td>
               <td></td>
-              <td><div class="form-group">
-                  <label for="Amount" class="sr-only">Amount</label>
-                  <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" required="required" autofocus="autofocus" />
-                </div></td>
             </tr>
             <tr>
               <td class="h5"></td>
@@ -90,6 +86,10 @@
         <p class="open_info hide"></p>
       </div>
       <div class="modal-footer">
+        <div class="form-group">
+          <label for="Amount" class="sr-only">Amount</label>
+          <input type="Amount" name="amount" id="amount" class="form-control" placeholder="Amount" required="required" autofocus="autofocus" />
+        </div>
         <div class="text-right pull-right col-md-3">
           <input type="button" value="Buy" id="buy" class="btn btn-primary btn-block btn-lg" onclick="buy();" />
         </div>
