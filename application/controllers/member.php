@@ -1,32 +1,26 @@
 <?
 class member extends CI_Controller {
 	public function twowayauthen($number){	// This function use to Confirmation code send emial address. 
-		for($i=0;$i<2;$i++){
 			$attemp = "";
 			$sess = $this->session->all_userdata();
 			$to = $sess['remail'];
 			$message = "<img src='http://forkbomb.azurewebsites.net/images/headmail.png'/><br/><br/>Dear ".$sess['rusername'].",<br/><br/> Here's the Confirmation code you'll need to complete the process: <br/><h1><b>".$number."</b></h1>If you haven't recently tried to login to Trading in your hand from the device located at ".$_SERVER['REMOTE_ADDR'].", someone else may be trying to access your account.<br/><br/>Thanks for using our website<br/><br/>The Trading in your hand team<br/>Admin : iam.pae0@gmail.com<br/>Co-Admin : nvb_kukuku@hotmail.com";	
 			$config = Array(	// Config email of bot.
 				'protocol' => 'smtp',
-				'smtp_host' => 'ssl://smtp.googlemail.com',
-				'smtp_port' => 465,
-				'smtp_user' => 'test'.$attemp.'.trading.in.your.hand@gmail.com',
+				'smtp_host' => 'mx1.hostinger.in.th',
+				'smtp_port' => 2525,
+				'smtp_user' => 'support@trading.esy.es',
 				'smtp_pass' => 'pae123456',
 				'mailtype'  => 'html', 
 				'charset'   => 'iso-8859-1'
 			);
 			$this->load->library('email', $config);
 			$this->email->set_newline("\r\n");
-			$this->email->from('test'.$attemp.'.trading.in.your.hand@gmail.com');
+			$this->email->from('support@trading.esy.es');
 			$this->email->to($to);
 			$this->email->subject('Trading-in-your-hand-Confirmation code');
 			$this->email->message($message);
-			if($this->email->send())	// Send email 
-				break;
-			if($attemp=="2")
-				break;
-			$attemp = "2";		// We use two email address for load balance.
-		}
+			$this->email->send();	// Send email 
 	}
 	public function givestar(){	// This function use to give star to seller that you have bought.
 		if ($this->uri->segment(3) === FALSE)
