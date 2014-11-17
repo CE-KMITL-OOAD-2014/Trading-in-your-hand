@@ -179,7 +179,7 @@
 			else
 			{
 			   echo"<script language='javascript'>
-	alert('Please browse file only type JPG');
+	alert('Please browse file only type JPG\nIf you browse JPG file\nIt have a problem with you picture\nPlease select a new picture');
 	window.location.href='../../../../pages/member/".$sess['username']."';
 </script>";
 			}
