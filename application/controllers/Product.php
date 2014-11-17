@@ -3,9 +3,7 @@
 		
 		function delete(){	// Delete product function
 			if ($this->uri->segment(3) === FALSE){ // Check if dont have segment 3 , redirect
-			echo"<script language='javascript'>
-    window.location.href = '../../../pages';
-</script>";
+				header('Location: '."../../../pages");
 			}
 			else{
 				if($this->session->userdata('username')){	// Check if dont login, redirect
@@ -14,20 +12,16 @@
 					$this->load->model('Product_model');
 					if($this->Product_model->checkowner($id,$sess['username'])){	// Check if dont owner of this product
 						$this->Product_model->delete($id);	// Delete product by id
-						echo"<script language='javascript'>
-    window.location.href = '../../../pages/member/".$sess['username']."';
-</script>";
+						header('Location: '."../../../../pages/member/".$sess['username']);
 					}
-					else
+					else{
 						echo"<script language='javascript'>
-	alert('You can delete only your product');
-    window.location.href = '../../../pages/login';
-</script>";
+	alert('You can delete only your product');</script>";	
+						header('Location: '."../../../pages");
+					}
 				}
 				else 
-					echo"<script language='javascript'>
-    window.location.href = '../../../pages/login';
-</script>";
+					header('Location: '."../../../pages/login");
 			}
 		}
 		function edit(){	// Edit product function
@@ -59,9 +53,7 @@
 					$detail = $_POST["detail"];
 					$data = array('id'=>$temp['id'],'name'=>$name,'price'=>$price,'amount'=>$amount,'username'=>$sess['username'],'detail'=>$detail,'pic1'=>$fname,'type'=>$type);
 					$this->Product_model->edit_product($data);	// Call model to update value to database
-					echo"<script language='javascript'>
-					window.location.href = '../../../pages/member/".$sess['username']."';
-					</script>";			
+					header('Location: '."../../../../pages/member/".$sess['username']);			
 				}
 			}
 		}
@@ -118,9 +110,8 @@
 		}
 		function buy(){
 			if($this->uri->segment(3) === FALSE||$this->uri->segment(4) === FALSE||!$this->session->userdata('username'))	// Check condition
-				echo"<script language='javascript'>
-    window.location.href = '../../../pages/addproduct';
-</script>";
+
+				header('Location: '."../../../../pages/addproduct");
 			else{
 				$data = $this->session->all_userdata();
 				$this->load->model('Product_model');
@@ -137,11 +128,12 @@
 					$this->sendmessage($to['username'],"You has been sold<br/>".$tdata['product']."<br/>Price&nbsp;".$tdata['price']."<br/>Amount&nbsp;".$tdata['amount']."<br/>Total&nbsp;".$tdata['price']*$tdata['amount']);			// send message to seller
 					header('Location: '."../../../../pages");
 				}
-				else
+				else{
 					echo"<script language='javascript'>
 					alert('Buy failed');
-    				window.location.href = '../../../../../pages/';
 					</script>";
+					header('Location: '."../../../../pages");
+				}
 			}
 		}
 		function add(){	 //add product function
@@ -173,22 +165,22 @@
 				if($this->Product_model->add_product($data)){	// Add product
 					echo"<script language='javascript'>
 	alert('Upload done');
-    window.location.href = '../../../pages/member/".$sess['username']."';
 </script>";
+					header('Location: '."../../../../pages/member/".$sess['username']);
 				}
 				else{
 					echo"<script language='javascript'>
 	alert('You are have the same product name');
-    window.location.href = '../../../pages/addproduct';
 </script>";
+					header('Location: '."../../../../pages/addproduct");
 				}
 			}
 			else
 			{
 			   echo"<script language='javascript'>
 	alert('Please browse file only type JPG');
-    window.location.href = '../../../pages/addproduct';
 </script>";
+				header('Location: '."../../../../pages/addproduct");
 			}
 			
 		}
