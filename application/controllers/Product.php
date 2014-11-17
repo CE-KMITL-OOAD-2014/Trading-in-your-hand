@@ -16,8 +16,9 @@
 					}
 					else{
 						echo"<script language='javascript'>
-	alert('You can delete only your product');</script>";	
-						header('Location: '."../../../pages");
+	alert('You can delete only your product');
+	window.location.href='../../../pages';
+	</script>";	
 					}
 				}
 				else 
@@ -131,8 +132,8 @@
 				else{
 					echo"<script language='javascript'>
 					alert('Buy failed');
+					window.location.href='../../../pages';
 					</script>";
-					header('Location: '."../../../../pages");
 				}
 			}
 		}
@@ -165,22 +166,22 @@
 				if($this->Product_model->add_product($data)){	// Add product
 					echo"<script language='javascript'>
 	alert('Upload done');
+	window.location.href='../../../../pages/member/".$sess['username']."';
 </script>";
-					header('Location: '."../../../../pages/member/".$sess['username']);
 				}
 				else{
 					echo"<script language='javascript'>
 	alert('You are have the same product name');
+	window.location.href='../../../pages';
 </script>";
-					header('Location: '."../../../../pages/addproduct");
 				}
 			}
 			else
 			{
 			   echo"<script language='javascript'>
 	alert('Please browse file only type JPG');
+	window.location.href='../../../pages';
 </script>";
-				header('Location: '."../../../../pages/addproduct");
 			}
 			
 		}
