@@ -163,34 +163,34 @@ class pages extends CI_Controller {
 				$ppage = 1;
 			else 
 				$ppage = $this->uri->segment(4);
-				if($this->session->userdata('username')){	// Check login status
-					$this->load->model('member_model');	
-					$sess = $this->session->all_userdata();
-					$score = $this->member_model->getstatusscore($sess['username'],$this->uri->segment(3));
-					$isScore = true;
-				}
-				else{
-					$score = "";
-					$isScore = false;
-				}
-				if(!$this->member_model->checkexist($this->uri->segment(3))){ // Check exist username
-						echo"<script language='javascript'>
+			if($this->session->userdata('username')){	// Check login status
+				$this->load->model('member_model');	
+				$sess = $this->session->all_userdata();
+				$score = $this->member_model->getstatusscore($sess['username'],$this->uri->segment(3));
+				$isScore = true;
+			}
+			else{
+				$score = "";
+				$isScore = false;
+			}
+			if(!$this->member_model->checkexist($this->uri->segment(3))){ // Check exist username
+					echo"<script language='javascript'>
 		alert('Sorry , There are no exist username in system');
 		window.location.href = '../../../../pages';	
 	</script>";
-				}
-				$data['username'] = $this->uri->segment(3);
-				$id = $data['username'];
-				$this->load->model('product_model');	
-				$detail = $this->member_model->memberDetail($data);	// get profile detail
-				$pdata = $this->product_model->userProduct($data);	// get product og this user
-				$data['page'] = "profile"; 
-				$temp = array( 'detail' => $detail, 'pdata' => $pdata, 'ppage' => $ppage ,'id' => $id,'score' => $score,'isScore' => $isScore); 
-				$this->load->helper('body.php');
-				$this->load->view('header.php',$data);
-				$this->load->view('space.php');
-				$this->load->view('profile',$temp);
-				$this->load->view('footer.php');
+			}
+			$data['username'] = $this->uri->segment(3);
+			$id = $data['username'];
+			$this->load->model('product_model');	
+			$detail = $this->member_model->memberDetail($data);	// get profile detail
+			$pdata = $this->product_model->userProduct($data);	// get product og this user
+			$data['page'] = "profile"; 
+			$temp = array( 'detail' => $detail, 'pdata' => $pdata, 'ppage' => $ppage ,'id' => $id,'score' => $score,'isScore' => $isScore); 
+			$this->load->helper('body.php');
+			$this->load->view('header.php',$data);
+			$this->load->view('space.php');
+			$this->load->view('profile',$temp);
+			$this->load->view('footer.php');
 		}
 	}
 	public function search(){	// Search page
