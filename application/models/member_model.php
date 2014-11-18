@@ -1,7 +1,12 @@
 <?php
 		class Member_model extends CI_Model{
 			function register($data){	// use to insert data(register) to db
-				$this->db->insert('member',$data);	
+				if(!$this->checkexist($data['username'])){
+					$this->db->insert('member',$data);	
+					return true;	
+				}
+				else
+					return false;
 			}	
 			function memberDetail($data){	// Use to get detail of this member
 				$data = $this->db->where('username',$data['username'])->get('member');

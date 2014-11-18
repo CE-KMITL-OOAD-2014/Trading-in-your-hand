@@ -72,7 +72,7 @@ class member extends CI_Controller {
 			foreach($query->result_array() as $row)
 				$id = $row['id']+1;	// get max id from db to find this id
 			$data = array('id'=>$id,'username'=>$sess['rusername'],'password'=>$sess['rpassword'],'name'=>$sess['rname'],'sname'=>$sess['rsname'],'address'=>$sess['raddress'],'email'=>$sess['remail'],'facebook'=>"https://",'twitter'=>"https://",'github'=>"https://",'googleplus'=>"https://",'iden'=>0);
-			if($this->member_model->register($data)&&$code!=$sess['rcode'])	//  if put data to db success
+			if($this->member_model->register($data))	//  if put data to db success
 				$this->session->sess_destroy();// detroy session that include confirmation code
 			$this->genlog($sess['rusername'],"Register success");
 			echo"<script language='javascript'>
