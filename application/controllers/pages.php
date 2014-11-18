@@ -131,14 +131,20 @@ class pages extends CI_Controller {
 		}
 	}
 	public function viewmessage(){	// view message page
-		$data['page'] = "Message"; 
-		$this->load->model('member_model');	
-		$mdata['data'] = $this->member_model->getmessage();
-		$this->load->helper('body.php');
-		$this->load->view('header.php',$data);
-		$this->load->view('space.php');
-		$this->load->view('viewmessage.php',$mdata);
-		$this->load->view('footer.php');		
+		if(!$this->session->userdata('username')){	// check login
+			header('Location: '."../../../../pages");
+		}
+		else
+		{
+			$data['page'] = "Message"; 
+			$this->load->model('member_model');	
+			$mdata['data'] = $this->member_model->getmessage();
+			$this->load->helper('body.php');
+			$this->load->view('header.php',$data);
+			$this->load->view('space.php');
+			$this->load->view('viewmessage.php',$mdata);
+			$this->load->view('footer.php');	
+		}
 	}
 	public function member(){ // member profile page
 		if ($this->uri->segment(3) === FALSE){ 
@@ -246,15 +252,21 @@ class pages extends CI_Controller {
 			header('Location: '."../../../../pages/login");
 	}
 	public function phistory(){	// purchase history page
-		$sess = $this->session->all_userdata();
-		$this->load->model('product_model');
-		$pdata['data'] = $this->product_model->gettransac($sess); // get transaction history form db
-		$data['page'] = "Purchase history"; 
-		$this->load->helper('body.php');
-		$this->load->view('header.php',$data);
-		$this->load->view('space.php');
-		$this->load->view('phistory.php',$pdata);
-		$this->load->view('footer.php');		
+		if(!$this->session->userdata('username')){	// check login
+			header('Location: '."../../../../pages");
+		}
+		else
+		{
+			$sess = $this->session->all_userdata();
+			$this->load->model('product_model');
+			$pdata['data'] = $this->product_model->gettransac($sess); // get transaction history form db
+			$data['page'] = "Purchase history"; 
+			$this->load->helper('body.php');
+			$this->load->view('header.php',$data);
+			$this->load->view('space.php');
+			$this->load->view('phistory.php',$pdata);
+			$this->load->view('footer.php');	
+		}
 	}
 }
 ?>
