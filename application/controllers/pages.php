@@ -122,13 +122,7 @@ class pages extends CI_Controller {
 	}
 	public function member(){ // member profile page
 		if ($this->uri->segment(3) === FALSE){ 
-			$this->load->model('member_model');	
-				if(!$this->member_model->checkexist($this->uri->segment(4))){
-					echo"<script language='javascript'>
-	alert('Sorry , There are no exist username in system');
-    window.location.href = '../../../../pages';	
-</script>";
-				}
+			header('Location: '."../../../../pages");
 		}
 		else{
 			if ($this->uri->segment(4) === FALSE)
@@ -144,6 +138,12 @@ class pages extends CI_Controller {
 				else{
 					$score = "";
 					$isScore = false;
+				}
+				if(!$this->member_model->checkexist($this->uri->segment(4))){ // Check exist username
+						echo"<script language='javascript'>
+		alert('Sorry , There are no exist username in system');
+		window.location.href = '../../../../pages';	
+	</script>";
 				}
 				$data['username'] = $this->uri->segment(3);
 				$id = $data['username'];
