@@ -159,6 +159,7 @@ class pages extends CI_Controller {
 			header('Location: '."../../../../pages");
 		}
 		else{
+			$this->load->model('member_model');	
 			if ($this->uri->segment(4) === FALSE)
 				$ppage = 1;
 			else 
