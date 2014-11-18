@@ -139,7 +139,7 @@ class pages extends CI_Controller {
 					$score = "";
 					$isScore = false;
 				}
-				if(!$this->member_model->checkexist($this->uri->segment(4))){ // Check exist username
+				if(!$this->member_model->checkexist($this->uri->segment(3))){ // Check exist username
 						echo"<script language='javascript'>
 		alert('Sorry , There are no exist username in system');
 		window.location.href = '../../../../pages';	
