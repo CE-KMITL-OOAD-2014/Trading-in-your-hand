@@ -56,9 +56,7 @@ class pages extends CI_Controller {
 	public function login(){	// ;ogin page
 		if($this->session->userdata('username')){	// check login
 			$sess = $this->session->all_userdata();
-			echo"<script language='javascript'>
-    window.location.href = '../../../pages/member/".$sess['username']."';
-</script>";
+			header('Location: '."../../../../pages/member/".$sess['username']);
 		}
 		$data['page'] = "Log in";
 		$this->load->helper('body.php');
@@ -88,9 +86,7 @@ class pages extends CI_Controller {
 			$data = $this->session->all_userdata();
 			$id = $data['username'];		
 			if ($this->uri->segment(3) === FALSE)
-				echo"<script language='javascript'>
-		window.location.href = '../../../pages/member/".$data['username']."';
-	</script>";
+				header('Location: '."../../../../pages/member/".$data['username']);
 			else{
 				$this->load->model('Product_model');
 				$pdata = $this->Product_model->getproductdetail($this->uri->segment(3)); // get product detail
@@ -103,9 +99,7 @@ class pages extends CI_Controller {
 			}
 		}
 		else
-			echo"<script language='javascript'>
-		window.location.href = '../../../pages';
-	</script>";
+			header('Location: '."../../../../pages");
 	}
 	
 	public function message(){		// Send message page
@@ -128,9 +122,7 @@ class pages extends CI_Controller {
 	}
 	public function member(){ // member profile page
 		if ($this->uri->segment(3) === FALSE){ 
-			echo"<script language='javascript'>
-    window.location.href = '../../pages';
-</script>";
+			header('Location: '."../../../../pages");
 		}
 		else{
 			if ($this->uri->segment(4) === FALSE)
@@ -201,9 +193,7 @@ class pages extends CI_Controller {
 			$data = $this->session->all_userdata();
 			$id = $data['username'];		
 			if ($this->uri->segment(3) === FALSE)
-				echo"<script language='javascript'
-		window.location.href = '../../../pages/member/".$data['username']."';
-	</script>";
+				header('Location: '."../../../../pages/member/".$data['username']);
 			else{
 				$this->load->model('Product_model');
 				$pdata = $this->Product_model->getproductdetail($this->uri->segment(3));	// get product detail
@@ -234,9 +224,7 @@ class pages extends CI_Controller {
 			$this->load->view('footer.php');
 		}
 		else
-			echo"<script language='javascript'>
-    window.location.href = '../../pages/login';
-</script>";
+			header('Location: '."../../../../pages/login");
 	}
 	public function phistory(){	// purchase history page
 		$sess = $this->session->all_userdata();
