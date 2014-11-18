@@ -122,21 +122,19 @@ class pages extends CI_Controller {
 	}
 	public function member(){ // member profile page
 		if ($this->uri->segment(3) === FALSE){ 
-			header('Location: '."../../../../pages");
-		}
-		else{
-			if ($this->uri->segment(4) === FALSE)
-				$ppage = 1;
-			else {
-				$ppage = $this->uri->segment(4);
-				$this->load->model('member_model');	
+			$this->load->model('member_model');	
 				if(!$this->member_model->checkexist($this->uri->segment(4))){
 					echo"<script language='javascript'>
 	alert('Sorry , There are no exist username in system');
     window.location.href = '../../../../pages';	
 </script>";
 				}
-			}
+		}
+		else{
+			if ($this->uri->segment(4) === FALSE)
+				$ppage = 1;
+			else 
+				$ppage = $this->uri->segment(4);
 				if($this->session->userdata('username')){	// Check login status
 					$this->load->model('member_model');	
 					$sess = $this->session->all_userdata();
