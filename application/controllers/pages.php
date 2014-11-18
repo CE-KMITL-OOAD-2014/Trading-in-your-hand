@@ -75,20 +75,25 @@ class pages extends CI_Controller {
 		$this->load->view('footer.php');
 	}
 	public function addproduct(){	// add product page
-		$this->load->model('member_model');
-		$sess = $this->session->all_userdata();
-		$checkiden = $this->member_model->memberDetail($sess);
-		if($checkiden['iden']==0)
-			echo"<script language='javascript'>
-	alert('Please identify first');
-    window.location.href = '../../../pages/member/".$sess['username']."';
-</script>";
-		$data['page'] = "addproduct";
-		$this->load->helper('body.php');
-		$this->load->view('header.php',$data);
-		$this->load->view('space.php');
-		$this->load->view('add_product.php');	
-		$this->load->view('footer.php');
+		if(!$this->session->userdata('username')){	// check login
+			header('Location: '."../../../../pages");
+		}
+		else{
+			$this->load->model('member_model');
+			$sess = $this->session->all_userdata();
+			$checkiden = $this->member_model->memberDetail($sess);
+			if($checkiden['iden']==0)
+				echo"<script language='javascript'>
+		alert('Please identify first');
+		window.location.href = '../../../pages/member/".$sess['username']."';
+	</script>";
+			$data['page'] = "addproduct";
+			$this->load->helper('body.php');
+			$this->load->view('header.php',$data);
+			$this->load->view('space.php');
+			$this->load->view('add_product.php');	
+			$this->load->view('footer.php');
+		}
 	}
 	public function editproduct(){// edit product page
 		if($this->session->userdata('username')){
@@ -112,12 +117,18 @@ class pages extends CI_Controller {
 	}
 	
 	public function message(){		// Send message page
-		$data['page'] = "Message"; 
-		$this->load->helper('body.php');
-		$this->load->view('header.php',$data);
-		$this->load->view('space.php');
-		$this->load->view('message.php');
-		$this->load->view('footer.php');
+		if(!$this->session->userdata('username')){	// check login
+			header('Location: '."../../../../pages");
+		}
+		else
+		{
+			$data['page'] = "Message"; 
+			$this->load->helper('body.php');
+			$this->load->view('header.php',$data);
+			$this->load->view('space.php');
+			$this->load->view('message.php');
+			$this->load->view('footer.php');
+		}
 	}
 	public function viewmessage(){	// view message page
 		$data['page'] = "Message"; 
