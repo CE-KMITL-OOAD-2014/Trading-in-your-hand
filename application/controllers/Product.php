@@ -127,7 +127,7 @@
 					$tdata =  array('buyer'=>$data['username'],'seller'=>$detail['username'],'product'=>$detail['name'],'price'=>$detail['price'],'amount'=>$this->uri->segment(4));
 					$this->Log_model->logtransac($tdata);
 					$this->sendmessage($to['username'],"You has been sold<br/>".$tdata['product']."<br/>Price&nbsp;".$tdata['price']."<br/>Amount&nbsp;".$tdata['amount']."<br/>Total&nbsp;".$tdata['price']*$tdata['amount']);			// send message to seller
-					header('Location: '."../../../../pages");
+					header("location:javascript://history.go(-2)");
 				}
 				else{
 					echo"<script language='javascript'>
