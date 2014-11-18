@@ -28,6 +28,10 @@ class pages extends CI_Controller {
 	}
 	public function confirm()	// confirm page
 	{
+		if($this->session->userdata('username')){	// check login
+			$sess = $this->session->all_userdata();
+			header('Location: '."../../../../pages/member/".$sess['username']);
+		}
 		$data['page'] = "confirm";
 		$this->load->helper('body.php');
 		$this->load->view('header.php',$data);
@@ -46,12 +50,17 @@ class pages extends CI_Controller {
 	}
 	public function iden()	// identify page
 	{
-		$data['page'] = "identify";
-		$this->load->helper('body.php');
-		$this->load->view('header.php',$data);
-		$this->load->view('space.php');
-		$this->load->view('indentify.php');
-		$this->load->view('footer.php');
+		if(!$this->session->userdata('username')){	// check login
+			header('Location: '."../../../../pages");
+		}
+		else{
+			$data['page'] = "identify";
+			$this->load->helper('body.php');
+			$this->load->view('header.php',$data);
+			$this->load->view('space.php');
+			$this->load->view('indentify.php');
+			$this->load->view('footer.php');
+		}
 	}
 	public function login(){	// ;ogin page
 		if($this->session->userdata('username')){	// check login
