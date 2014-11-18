@@ -138,6 +138,7 @@ class pages extends CI_Controller {
 				}
 			}
 				if($this->session->userdata('username')){	// Check login status
+					$this->load->model('member_model');	
 					$sess = $this->session->all_userdata();
 					$score = $this->member_model->getstatusscore($sess['username'],$this->uri->segment(3));
 					$isScore = true;
