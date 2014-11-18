@@ -1,3 +1,3 @@
 <?
-header('Location: '."../../../../pages");
+header('Location: '."../../../../pages/error");
 ?>

@@ -17,6 +17,14 @@ class pages extends CI_Controller {
 		$this->load->view('home.php',$temp);
 		$this->load->view('footer.php');
 	}
+	public function error(){	// Error check redirect
+		$data['page'] = "Error";
+		$this->load->helper('body.php');
+		$this->load->view('header.php',$data);
+		$this->load->view('space.php');
+		$this->load->view('error');
+		$this->load->view('footer.php');
+	}
 	public function register()	// Register page
 	{
 		$data['page'] = "Register";
