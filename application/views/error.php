@@ -8,15 +8,17 @@
 </head>
 <body>
 <div class="back"> 
-	<h2>Sorry, It's cause some error with your request link.</h2><br/>
+	<div class="container">
+	<h2>Sorry, It's cause some error with your request.</h2><br/>
     <p>Please make sure that you're enter correct link.</p>
     <p>If you're sure that you're enter correct link</p>
-    <p>Contact</p>
-    <p>Admin : iam.pae0@gmail.com</p>
-    <p>Co-Admin : nvb_kukuku@hotmail.com</p>
+    <p><b>Contact</b></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Admin : iam.pae0@gmail.com</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Co-Admin : nvb_kukuku@hotmail.com</p>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
   <!-- Include all compiled plugins (below), or include individual files as needed --> 
   <script src="../js/bootstrap.min.js"></script> 
+  </div>
 </div>
 </body>
 </html>
