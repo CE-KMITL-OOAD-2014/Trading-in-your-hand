@@ -149,7 +149,7 @@ class member extends CI_Controller {
                    'username'  => $sess['rusername'],
                    'logged_in' => TRUE
 			);
-			$this->session->set_userdata($newdata);	// Create new account
+			$this->session->set_userdata($newdata);	// Create session for login
 			$this->genlog($data['username'],"log in success");	// Generate log file
 			echo"<script language='javascript'>
 	alert('Welcome , ".$name['name']."');
