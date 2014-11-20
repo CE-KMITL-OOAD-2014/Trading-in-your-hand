@@ -19,7 +19,7 @@
           <div class="form-group">
             <p>It's just been a while...
             As an added account security measure, you'll need to grant access to this browser by entering the special code we've just sent to your email address.<br/>
-            ( For test only, this is your confirmation code : <? echo $sess['rcode'].")"; ?></p>
+            <!--( For test only, this is your confirmation code : <? echo $sess['rcode'].")"; ?></p>-->
           </div>
           <form action="<? 
 			if(!$this->session->userdata('login2'))
